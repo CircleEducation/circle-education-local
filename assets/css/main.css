@@ -115,6 +115,26 @@ body {
   color: #7e8697;
 }
 
+/* HERO IMAGES */
+
+/* HERO IMAGES */
+
+#hero-index {
+  background-image: url("/assets/images/header-index.png");
+}
+
+#hero-csharp {
+  background-image: url("/assets/images/header-csharp.png");
+}
+
+#hero-financing {
+  background-image: url("/assets/images/header-financing.png");
+}
+
+#hero-js {
+  background-image: url("/assets/images/header-javascript.png");
+}
+
 /* CUSTOM MARGINS */
 
 .bottom-48 {
@@ -196,18 +216,9 @@ nav ul ul {
   top: 60px; /* the height of the main nav */
 }
 
-footer ul ul {
-  bottom: 155px;
-  left: 88px;
-}
-
 /* Display Dropdowns on Hover */
 #nav-bar ul li:hover > ul {
   display:inherit !important;
-}
-
-footer ul li:hover > ul {
-  display:inline !important;
 }
 
 /* First Tier Dropdown */
@@ -217,30 +228,6 @@ nav ul ul li {
   display:list-item;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 3px 0 3px 10px;
-}
-
-footer ul li ul {
-  width:140px;
-  float:none;
-  display:list-item;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 3px 0 3px 10px;
-}
-
-@media (max-width: 991.98px) {
-  footer ul ul {
-    left: 220px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  footer ul ul {
-    bottom: 155px;
-    left: 175px;
-  }
-  footer ul li ul {
-    width: 120px;
-  }
 }
 
 /* INDEX */
