@@ -1,44 +1,29 @@
-{% if page.track == 'javascript' %}
+{% if page.track == 'JavaScript' %}
 
   {% assign title = "JavaScript" %}
-
-  {% assign desc =
-    "Our Javascript Track is composed of 5 courses, designed to take you from
-    beginner to job-ready in under a year, without having to quit your day job
-    or mortgage your future. If you're looking to level-up in your current job,
-    you can also apply to take any of these courses individually."
-  %}
-
-  {% assign curriculum = site.data.curriculum.javascript %}
 
 {% else %}
 
   {% assign title = "C# and .NET" %}
 
-  {% assign desc =
-    "Our C# and .NET Track is composed of 5 courses, designed to take you from
-    beginner to job-ready in under a year, without having to quit your day job
-    or mortgage your future. If you're looking to level-up in your current job,
-    you can also apply to take any of these courses individually."
-  %}
-
-  {% assign curriculum = site.data.curriculum.csharp %}
-
 {% endif %}
 
 
 <div class="container text-center narrow">
-  <h2 class="font-family-alt display-5">Our {{title}} Track Curriculum</h2>
+  <h2 class="font-family-alt display-5">Our {{title}} Curriculum</h2>
   <p class="size18">
-    {{desc}}
+    Our {{page.track}} Track is composed of 5 courses, designed to take you from
+    beginner to job-ready in under a year, without having to quit your day job
+    or mortgage your future. If you're looking to level-up in your current job,
+    you can also apply to take any of these courses individually.
   </p>
 </div>
 
-{% for course in curriculum %}
+{% for course in page.courses %}
 <div class="container extra-narrow">
   <h4 class="font-weight-bold">
     <!-- htmllint preset="none" -->
-    <i class="fas fa-circle text-{{course.color}}"></i> {{course.class}}
+    <i class="fas fa-circle text-{{course.color}}"></i> {{course.title}}
     <!-- htmllint preset="$previous" -->
   </h4>
   <ul class="size-20">

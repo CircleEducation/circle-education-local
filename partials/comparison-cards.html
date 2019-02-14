@@ -1,9 +1,11 @@
-{% if page.track == 'javascript' %}
-  {% assign track = "JavaScript" %}
+{% if page.track == 'JavaScript' %}
+
   {% assign skills = "React.js or Node.js" %}
+
 {% else %}
-  {% assign track = "C# .NET" %}
+
   {% assign skills = "C#, or .NET" %}
+
 {% endif %}
 
 <!-- Pricing Section -->
@@ -14,7 +16,7 @@
       <div class="card card-frame-highlighted text-center mb-5 mb-md-0">
         <!-- Header -->
         <header class="card-header p-5">
-          <h4 class="h5 text-primary">Full {{track}} Track</h4>
+          <h4 class="h5 text-primary">Full {{page.track}} Track</h4>
           <div>
             <span class="h1 text-dark font-weight-medium">
               <span class="align-top font-size-2">$</span>10,960
@@ -27,7 +29,7 @@
         <div class="card-body p-5 text-center">
           <p>
             Save $1,000 off the cost of individual classes and go from complete
-            beginner to job-ready in just 36 weeks with our full {{track}}
+            beginner to job-ready in just 36 weeks with our full {{page.track}}
             Track!
           </p>
           {% include_relative partials/btn-apply.html class="btn-wide" %}

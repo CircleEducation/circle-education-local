@@ -1,0 +1,47 @@
+
+<div id="hero-js" class="hero py-11">
+    <h1 class="text-white font-family-alt font-weight-bold display-4 text-center">
+        {{ page.track }} Track
+    </h1>
+</div>
+
+<main class="container">
+
+    <h2 class="display-6 text-center my-10 text-muted">
+      {{ page.overview }}
+    </h2>
+
+    {% include_relative partials/curriculum.html %}
+
+    <div class="my-10">
+      {% include_relative partials/course-guide-form.html %}
+    </div>
+
+    {% include_relative partials/comparison-cards.html %}
+
+    <div class="my-10">
+      {% include_relative partials/tuition-help.html %}
+    </div>
+
+    {% include_relative partials/course-dates.html %}
+
+    <div class="d-flex justify-content-center my-10">
+      {% include_relative partials/btn-apply.html class="btn-wide" %}
+    </div>
+
+    {% include_relative partials/campus-locations.html %}
+
+    <h2 class="font-family-alt font-weight-bold text-center display-4 mt-10">
+      Still Have Questions?
+    </h2>
+
+    <p class="size-20 mb-4 text-center">
+      From choosing the right course to understanding course details, we're here
+      to help.
+    </p>
+
+    {% include_relative partials/contact-form.html %}
+
+    <div class="my-10"></div>
+
+</main>
