@@ -1,8 +1,70 @@
 ---
 header:
-- weight: 2
-  title: Contact
-  url: "/contact"
-- weight: 1
-  title: Financing
-  url: "/financing"
+  - weight: 1
+    title: Courses &amp; Tuition
+    url: "#"
+    identifier: courses
+  - weight: 2
+    title: Contact
+    url: "/contact"
+  - weight: 3
+    title: Financing
+    url: "/financing"
+  - weight: 4
+    title: Apply
+    url: "/apply"
+    button: "btn btn-round text-white font-weight-bold primary-gradient py-1 px-6 ml-3"
+
+courses:
+  - weight: 1
+    title: JavaScript
+    url: "/javascript"
+  - weight: 2
+    title: C# .NET
+    url: "/csharp"
+
+footer-about:
+  - weight: 1
+    title: JavaScript
+    url: "/javascript"
+  - weight: 2
+    title: C# .NET
+    url: "/csharp"
+  - weight: 3
+    title: Financing
+    url: "/financing"
+  - weight: 4
+    title: Student Grievance Policy
+    url: "/student-grievances"
+  - weight: 5
+    title: Apply Now
+    url: "/apply"
+
+footer-community:
+  - weight: 1
+    title: Campus Manager
+    url: "https://campus.austincodingacademy.com"
+  - weight: 2
+    title: Upcoming Events
+    url: "https://www.eventbrite.com/o/austin-coding-academy-10937668459"
+  - weight: 3
+    title: FAQ
+    url: "/faq"
+  - weight: 4
+    title: Contact Us
+    url: "/contact"
+  - weight: 5
+    title: Become an Instructor
+    url: "/instructor-apply"
+
+social:
+  - weight: 1
+    title: facebook-square
+    url: "https://www.facebook.com/AustinCodingAcademy/"
+  - weight: 2
+    title: instagram
+    url: "https://www.instagram.com/austincodingacademy/"
+    margin: mx-5
+  - weight: 3
+    title: twitter
+    url: "https://twitter.com/AustinCoding/"

@@ -11,49 +11,35 @@
     </button>
   </div>
 
-  <div class="mx-3">
-    <button class="text-center btn btn-outline-light">
-      Courses &amp; Tuition <i class="fas fa-caret-down"></i>
-    </button>
+  {% for item in site.menus.header %}
 
-    <ul id="hidden-list" class="d-none position-absolute list-unstyled w-75 text-center mx-auto mb-0">
-      <li class="mt-2">
-        <a href="/javascript" class="text-white">
-          JavaScript
+    {% if item.children %}
+      <div class="mx-3">
+        <button class="text-center btn btn-outline-light">
+          {{ item.title }} <i class="fas fa-caret-down"></i>
+        </button>
+        <ul id="hidden-list" class="d-none position-absolute list-unstyled w-75 text-center mx-auto mb-0">
+          {% for child in item.children %}
+            <li class="mt-2">
+              <a href="{{ child.url }}" class="text-white">
+                {{ child.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% else %}
+      <div class="mx-3">
+        <a href="{{ item.url }}">
+          <button class="text-center btn btn-outline-light">
+            {{ item.title }}
+          </button>
         </a>
-      </li>
-      <li class="mt-2">
-        <a href="/csharp" class="text-white">
-          C# .NET
-        </a>
-      </li>
-    </ul>
-  </div>
+      </div>
+    {% endif %}
 
-  <div class="mx-3">
-    <a href="/financing">
-      <button class="text-center btn btn-outline-light">
-        Financing
-      </button>
-    </a>
-  </div>
+  {% endfor %}
 
-  <div class="mx-3">
-    <a href="/contact">
-      <button class="text-center btn btn-outline-light">
-        Contact
-      </button>
-    </a>
-  </div>
-
-  <div class="mx-3">
-      <a
-        class="btn outlined-cta btn-round text-white font-weight-bold py-1 px-6"
-        href="/apply"
-      >
-        Apply
-      </a>
-    </div>
 </amp-sidebar>
 
 <!-- htmllint preset="none" -->
@@ -100,74 +86,39 @@
           class="collapse navbar-collapse u-header__navbar-collapse d-none d-md-flex"
         >
           <ul class="navbar-nav u-header__navbar-nav ml-auto">
-            <!-- Courses -->
-            <li
-              class="nav-item u-header__nav-item"
-            >
-              <a
-                href="#"
-                class="text-white nav-link u-header__nav-link"
-              >
-                Courses &amp; Tuition <i class="fas fa-caret-down"></i>
-              </a>
 
-              <!-- Courses - Submenu -->
-              <ul class="d-none position-absolute list-unstyled">
-                <!-- JavaScript -->
-                <li class="position-relative py-1 pl-3">
-                  <a
-                    class="text-white nav-link"
-                    href="/javascript"
-                  >
-                    JavaScript
+            {% for item in site.menus.header %}
+
+              {% if item.children %}
+                <li class="nav-item u-header__nav-item">
+                  <a href="#" class="text-white nav-link u-header__nav-link">
+                    {{ item.title }} <i class="fas fa-caret-down"></i>
                   </a>
+                  <ul class="d-none position-absolute list-unstyled">
+                  {% for child in item.children %}
+                    <li class="position-relative py-1 pl-3">
+                      <a class="text-white nav-link" href="{{ child.url }}">
+                        {{ child.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                  </ul>
                 </li>
-                <!-- End JavaScript -->
-                <!-- C#/.Net -->
-                <li class="position-relative py-1 pl-3">
-                  <a
-                    class="text-white nav-link"
-                    href="/csharp"
-                  >
-                    C# .Net
-                  </a>
+
+              {% else %}
+                <li class="nav-item u-header__nav-item">
+                  {% if item.button %}
+                    <a class="{{ item.button }}" href="{{ item.url }}">
+                  {% else %}
+                    <a class="text-white nav-link u-header__nav-link" href="{{ item.url }}">
+                  {% endif %}
+                      {{ item.title }}
+                    </a>
                 </li>
-                <!-- End C#/.Net -->
-              </ul>
-              <!-- End Courses - Submenu -->
-            </li>
-            <!-- End Courses -->
+              {% endif %}
 
-            <!-- Financing -->
-            <li class="nav-item  u-header__nav-item">
-              <a
-                class="text-white nav-link u-header__nav-link"
-                href="/financing"
-              >
-                Financing
-              </a>
-            </li>
-            <!-- End Financing -->
+            {% endfor %}
 
-            <!-- Contact -->
-            <li class="nav-item  u-header__nav-item">
-              <a
-                class="text-white nav-link u-header__nav-link"
-                href="/contact"
-              >
-                Contact
-              </a>
-            </li>
-            <!-- End Contact -->
-
-            <li class="nav-item u-header__nav-item ml-3">
-              <a
-                class="btn btn-round text-white font-weight-bold primary-gradient py-1 px-6"
-                href="/apply"
-              >
-                Apply
-              </a>
-            </li>
           </ul>
         </div>
         <!-- End Navigation -->
