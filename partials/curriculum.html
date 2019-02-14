@@ -1,16 +1,5 @@
-{% if page.track == 'JavaScript' %}
-
-  {% assign title = "JavaScript" %}
-
-{% else %}
-
-  {% assign title = "C# and .NET" %}
-
-{% endif %}
-
-
 <div class="container text-center narrow">
-  <h2 class="font-family-alt display-5">Our {{title}} Curriculum</h2>
+  <h2 class="font-family-alt display-5">Our {{page.track}} Curriculum</h2>
   <p class="size18">
     Our {{page.track}} Track is composed of 5 courses, designed to take you from
     beginner to job-ready in under a year, without having to quit your day job

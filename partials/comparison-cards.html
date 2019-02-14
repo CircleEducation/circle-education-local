@@ -1,13 +1,3 @@
-{% if page.track == 'JavaScript' %}
-
-  {% assign skills = "React.js or Node.js" %}
-
-{% else %}
-
-  {% assign skills = "C#, or .NET" %}
-
-{% endif %}
-
 <!-- Pricing Section -->
 <div class="container">
   <div class="w-lg-80 mx-lg-auto">
@@ -55,7 +45,7 @@
         <div class="card-body p-5 text-center">
           <p>
             Level-up your career and apply to one of our single classes. You can
-            learn Front-End, {{skills}} without completing the entire
+            learn Front-End, {{page.skills}} without completing the entire
             track. <br />
           </p>
           {% include_relative partials/btn-apply.html class="btn-wide" %}
