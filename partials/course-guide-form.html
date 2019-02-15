@@ -1,15 +1,20 @@
-<h4
-  id="header-text-margins"
-  class="font-family-alt font-weight-bold text-center display-6 mb-4"
->
-  Download Our Course Guide
-</h4>
+<button on="tap:course-guide-lightbox" class="btn btn-primary my-3">
+  <h5
+    id="header-text-margins"
+    class="font-family-alt font-weight-bold text-center m-0"
+  >
+    Download Our Course Guide <i class="fas fa-file-download"></i>
+  </h5>
+</button>
+
+<amp-lightbox id="course-guide-lightbox" layout="nodisplay" scrollable>
 <form
+  class="lightbox d-flex justify-content-center align-items-center position-absolute text-white"
   target="_top"
   action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/702969c4-4c75-4b99-b6d2-59d04d6ebd03"
   method="POST"
 >
-  <div class="form-container">
+  <div class="form-container narrow px-5 px-lg-0">
     <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
     <input name="downloaded_a_courses_guide" type="hidden" value="true">
     <input name="hs_lead_status" type="hidden" value="NEW">
@@ -18,8 +23,9 @@
     <input name="hutk" type="hidden" value="">
 
     <div class="row center-form">
+
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-sm-6 my-2 my-sm-3">
         <div class="js-form-message">
           <label for="first-name" class="form-label">
             First Name <span class="text-danger">*</span>
@@ -42,7 +48,7 @@
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-sm-6 my-2 my-sm-3">
         <div class="js-form-message">
           <label for="last-name" class="form-label">
             Last Name <span class="text-danger">*</span>
@@ -65,7 +71,7 @@
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-sm-6 my-2 my-sm-3">
         <div class="js-form-message">
           <label for="email" class="form-label">
             Email <span class="text-danger">*</span>
@@ -88,7 +94,7 @@
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-sm-6 my-2 my-sm-3">
         <div class="js-form-message">
           <label for="phone" class="form-label">
             Phone <span class="text-danger">*</span>
@@ -109,7 +115,9 @@
         </div>
       </div>
       <!-- End Input -->
-      <div class="col-sm-7 col-md-6">
+
+      <!-- Input -->
+      <div class="col-sm-6 my-2 my-sm-3">
         <label class="form-label" for="best-describes">Which of these best describes you? <span class="text-danger">*</span></label>
         <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control" required>
           <option disabled selected value="">Please Select</option>
@@ -121,16 +129,32 @@
           <option value="I want to learn a new skill for my current job">I want to learn a new skill for my current job</option>
         </select>
       </div>
-      <div class="text-center col-sm-5 col-md-6 mt-4">
+      <!-- End Input -->
+
+      <!-- Input -->
+      <div class="text-center col-sm-6 my-3 d-flex align-items-end">
         <button
           type="submit"
-          class="text-white btn send-button transition-3d-hover mb-4"
+          class="text-white btn bg-purple rounded w-100"
         >
           Send
         </button>
       </div>
+      <!-- End Input -->
+
+      <!-- Input -->
+      <div
+        class="col-12 text-center my-2 my-sm-3 display-6"
+      >
+        <button class="btn btn-danger btn-wide" on="tap:course-guide-lightbox.close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <!-- End Input -->
+
     </div>
   </div>
+
   <div class="text-center">
     <div submit-error>
       <template type="amp-mustache">
@@ -138,4 +162,6 @@
       </template>
     </div>
   </div>
+
 </form>
+</amp-lightbox>
