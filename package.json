@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "cli-real-favicon": "^0.0.7",
+    "css-purge": "^3.1.7",
     "gh-pages": "^2.0.1",
     "htmllint-cli": "^0.0.7",
     "http-server": "^0.11.1",
@@ -31,8 +32,5 @@
     "sitemap-generator-cli": "^5.0.1",
     "stylelint": "^9.9.0",
     "stylelint-config-recommended": "^2.1.0"
-  },
-  "dependencies": {
-    "css-purge": "^3.1.7"
   }
 }

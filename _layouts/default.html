@@ -29,27 +29,7 @@
       rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://austincodingacademy.github.io/front/assets/vendor/font-awesome/css/fontawesome-all.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://austincodingacademy.github.io/front/assets/css/theme.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://austincodingacademy.github.io/front/assets/vendor/slick-carousel/slick/slick.css"
-    />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="/assets/css/main.css"
-    />
+    {% include css.html %}
 
     {% if site.baseurl == 'amp' %}
       {% include google-tag-manager-head-amp.html %}
@@ -63,10 +43,16 @@
   </head>
 
   <body>
-    {% if site.baseurl == 'amp' %} {% include google-tag-manager-body-amp.html
-    %} {% else %} {% include google-tag-manager-body.html %} {% endif %} {%
-    include header.html %}
+    {% if site.baseurl == 'amp' %}
+      {% include google-tag-manager-body-amp.html %}
+    {% else %}
+      {% include google-tag-manager-body.html %}
+    {% endif %}
+
+    {% include header.html %}
+
     {{ content }}
+
     {% include footer.html %}
   </body>
 </html>
