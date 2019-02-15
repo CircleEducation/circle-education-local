@@ -1,6 +1,6 @@
-@import url('https://austincodingacademy.github.io/front/assets/vendor/font-awesome/css/fontawesome-all.min.css');
-@import url('https://austincodingacademy.github.io/front/assets/css/theme.css');
-@import url('https://austincodingacademy.github.io/front/assets/vendor/slick-carousel/slick/slick.css');
+@import url('/assets/css/fontawesome-all.min.css');
+@import url('/assets/css/theme.css');
+@import url('/assets/css/slick.css');
 
 .grecaptcha-badge {
   visibility: hidden;
