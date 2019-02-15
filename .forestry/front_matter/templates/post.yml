@@ -30,7 +30,7 @@ fields:
 - type: text
   name: layout
   label: layout
-  hidden: false
+  hidden: true
   config:
     required: true
   default: post
@@ -42,7 +42,9 @@ fields:
     required: false
 pages:
 - _posts/2019-02-11-Austin Coding Academy Partners with Lyft Drivers.md
-- _posts/2019-01-22-here-is-the-title.md
+- _posts/2019-01-23-aca-partners-with-austin-public-library-to-teach-teens-to-code.md
+- '_posts/2019-02-11-Computer Science Degree vs. Coding Bootcamp: Which Is the Best
+  Choice for Aspiring Developers?.md'
 - _posts/Four exciting projects that will inspire you to learn JavaScript right now.md
 - _posts/What Will You Make as a Full-Time Web Developer?.md
 - _posts/new-in-2019-unlimited-tutoring-for-all-students.md
@@ -52,6 +54,3 @@ pages:
 - _posts/highlight-six-aca-grads-land-jobs.md
 - _posts/q-a-with-our-new-job-placement-course-director.md
 - _posts/how-to-stop-multi-tasking-and-develop-focus-1.md
-- _posts/2019-01-23-aca-partners-with-austin-public-library-to-teach-teens-to-code.md
-- '_posts/2019-02-11-Computer Science Degree vs. Coding Bootcamp: Which Is the Best
-  Choice for Aspiring Developers?.md'
