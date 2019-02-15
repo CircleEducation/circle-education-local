@@ -19,7 +19,8 @@
     "cname": "echo \"$(echo $PREVIEW)austincodingacademy.com\" >> _site/CNAME",
     "repo": "gh-pages --repo \"git@github.com:AustinCodingAcademy/$(echo $PREVIEW)austincodingacademy.com.git\" --dotfiles -d ./_site",
     "start": "jekyll serve --config _configs/default.yml",
-    "build": "bundle exec jekyll build --config _configs/default.yml && bundle exec jekyll build --config _configs/default.yml _configs/amp.yml --destination _site/amp/"
+    "build": "bundle exec jekyll build --config _configs/default.yml && bundle exec jekyll build --config _configs/default.yml _configs/amp.yml --destination _site/amp/",
+    "css": "css-purge -i '_site/assets/css/main.css, node_modules/front/assets/css/theme.css, node_modules/front/assets/vendor/font-awesome/css/fontawesome-all.min.css, node_modules/front/assets/vendor/slick-carousel/slick/slick.css' -m _site -o _includes/css.html && echo -e '<style amp-custom>\n$(cat _includes/css.html)' > _includes/css.html && echo -e '</style>' >> _includes/css.html"
   },
   "devDependencies": {
     "cli-real-favicon": "^0.0.7",
@@ -29,6 +30,7 @@
     "htmllint-cli": "^0.0.7",
     "http-server": "^0.11.1",
     "imagemin-cli": "^4.0.0",
+    "purgecss": "^1.1.0",
     "resize-cli": "^0.0.4",
     "sitemap-generator-cli": "^5.0.1",
     "stylelint": "^9.9.0",
