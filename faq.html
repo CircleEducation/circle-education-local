@@ -182,14 +182,28 @@ categories:
 
   {% endfor %}
 
-  <section class="mt-10">
+  <section class="my-10">
 
     <h2 class="font-family-alt font-weight-bold text-center display-4 mb-5">
       Still Have Questions?
     </h2>
 
-    <div>
-      {% include_relative partials/contact-form.html %}
+    <div class="d-flex flex-column justify-content-center">
+      <button class="btn btn-primary mx-auto" on="tap:contact-lightbox">
+        Contact us <i class="far fa-envelope"></i>
+      </button>
+
+      <amp-lightbox
+        id="contact-lightbox"
+        class="lightbox"
+        layout="nodisplay"
+        scrollable
+        on="tap:contact-lightbox.close"
+      >
+        <div class="container px-5 pt-5 text-white">
+          {% include_relative partials/contact-form.html %}
+        </div>
+      </amp-lightbox>
     </div>
 
   </section>

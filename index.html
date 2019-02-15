@@ -467,13 +467,30 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
   {% include_relative partials/btn-apply.html class="btn-wide" %}
 </section>
 
-<section class="mb-10 container">
+<section class="mb-10 container d-flex flex-column justify-content-center">
+
   <h2 class="font-family-alt font-weight-bold text-center display-5">
     Contact Us
   </h2>
   <p class="section-text text-center mb-4">
     Whether you have questions or you would just<br />
-    like to say hello, contact us.
+    like to say hello, let us know.
   </p>
-  {% include_relative partials/contact-form.html %}
+
+  <button class="btn btn-primary mx-auto" on="tap:contact-lightbox">
+    Contact us <i class="far fa-envelope"></i>
+  </button>
+
+  <amp-lightbox
+    id="contact-lightbox"
+    class="lightbox"
+    layout="nodisplay"
+    scrollable
+    on="tap:contact-lightbox.close"
+  >
+    <div class="container px-5 pt-5 text-white">
+      {% include_relative partials/contact-form.html %}
+    </div>
+  </amp-lightbox>
+
 </section>
