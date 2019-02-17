@@ -1,15 +1,25 @@
 ---
 title: What's the Difference Between JavaScript and C#?
 created_at: 2018-08-09 05:00:00 +0000
-updated_at: 2019-01-23 06:00:00 +0000
+updated_at: 2019-02-15 00:00:00 -0600
 date: 2019-01-23 19:11:27 +0000
-img: ''
-tags: []
-categories: []
-layout: post
----
-# What's the Difference Between JavaScript and C#?
+img: "/assets/images/Dinh.png"
+tags:
+- JavaScript
+- C#
+- Web Development
+- Classes
+categories:
+- web-development
+description: JavaScript and C# are the most used web development languages in Austin.
+  Austin Coding Academy teaches both. What's the difference?
+excerpt: 'At Austin Coding Academy, we currently offer two separate tracks for our
+  students: JavaScript and C# .NET. We believe that there isn’t one “best” option;
+  the right choice for each student has everything to do with their personal goals
+  and interests.'
+layout: 'post'
 
+---
 If you’re considering making the leap into a career in coding, there are so many factors to consider: should I get a bachelor’s degree in Computer Science or enroll in a coding school? Should I take an online class, an in-person class, or a remote class? And what language or specialty should I invest my time in learning?
 
 At Austin Coding Academy, we currently offer two separate tracks for our students: JavaScript and C# .NET. We believe that there isn’t one “best” option; the right choice for each student has everything to do with their personal goals and interests.

@@ -18,21 +18,46 @@
     "deploy": "yarn favicon && yarn build && yarn sitemap && yarn cname && cp -R .circleci/ _site/.circleci/ && yarn repo",
     "cname": "echo \"$(echo $PREVIEW)austincodingacademy.com\" >> _site/CNAME",
     "repo": "gh-pages --repo \"git@github.com:AustinCodingAcademy/$(echo $PREVIEW)austincodingacademy.com.git\" --dotfiles -d ./_site",
-    "start": "jekyll serve --config _configs/default.yml",
-    "build": "bundle exec jekyll build --config _configs/default.yml && bundle exec jekyll build --config _configs/default.yml _configs/amp.yml --destination _site/amp/"
+    "start": "concurrently \"http-server _site -p 4000 -s\" \"npm-watch\"",
+    "build": "yarn css && bundle exec jekyll build --config _configs/default.yml && yarn build-amp",
+    "build-amp": "bundle exec jekyll build --config _configs/amp.yml _configs/default.yml --destination _site/amp/",
+    "css": "bundle exec jekyll build --config _configs/default.yml && node postcss.js && echo '<style amp-custom>' > _includes/css.html && echo \"$(cat assets/css/main.min.css)\" >> _includes/css.html && echo '</style>' >> _includes/css.html"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.1.0",
     "cli-real-favicon": "^0.0.7",
+    "concurrently": "^4.1.0",
+    "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
+    "front": "austincodingacademy/front#a51873d0901db4ff119c87215efaede0491c793d",
     "gh-pages": "^2.0.1",
     "htmllint-cli": "^0.0.7",
     "http-server": "^0.11.1",
     "imagemin-cli": "^4.0.0",
+    "npm-watch": "^0.6.0",
+    "postcss": "^7.0.14",
+    "postcss-amp": "^1.3.0",
+    "postcss-amp-custom": "^1.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-no-important": "^1.0.0",
+    "purgecss": "^1.1.0",
     "resize-cli": "^0.0.4",
     "sitemap-generator-cli": "^5.0.1",
     "stylelint": "^9.9.0",
     "stylelint-config-recommended": "^2.1.0"
   },
-  "dependencies": {
-    "css-purge": "^3.1.7"
+  "watch": {
+    "build": {
+      "patterns": [
+        "./"
+      ],
+      "extensions": "html,css,md",
+      "ignore": [
+        "_site",
+        "node_modules",
+        "assets/css/main.min.css",
+        "_includes/css.html"
+      ]
+    }
   }
 }

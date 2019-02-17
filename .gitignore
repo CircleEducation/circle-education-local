@@ -8,3 +8,5 @@ node_modules
 *.log
 .DS_Store
 *.orig
+assets/css/main.min.css
+_includes/css.html
