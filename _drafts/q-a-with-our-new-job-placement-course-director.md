@@ -3,7 +3,7 @@ title: Q&A with Our New Job Placement Course Director
 created_at: 2018-11-16 00:00:00 -0600
 updated_at: 2019-01-23 00:00:00 -0600
 date: 2019-01-23 13:26:13 -0600
-
+layout: post
 ---
 # Q&A with Our New Job Placement Course Director
 
@@ -31,8 +31,8 @@ I love spending time with my wife exploring climbing areas and new cities, enjoy
 
 ### How did you end up as director of Austin Coding Academy’s Job Placement Course?
 
-I started my career in music, but after realizing I couldn’t thrive, I transitioned to recruiting, and honestly stumbled into the role. I started at Aerotek, a recruiting agency, and received incredible training there where I developed my fundamentals. From there, I moved to Indeed and became a Technical Sourcer where I learned more about the experimental side of recruiting and leveraging technology to make something that can be very mundane, (the recruiting process), fun, technical, and exciting. I also really learned what a high-functioning organization looked like and learned about different technology and its use-cases in reaching millions of people. From there I moved to Dosh and have had the opportunity to not only implement a recruiting process, but also see a company more than double in size and implement innovative HR programs and processes.  
-  
+I started my career in music, but after realizing I couldn’t thrive, I transitioned to recruiting, and honestly stumbled into the role. I started at Aerotek, a recruiting agency, and received incredible training there where I developed my fundamentals. From there, I moved to Indeed and became a Technical Sourcer where I learned more about the experimental side of recruiting and leveraging technology to make something that can be very mundane, (the recruiting process), fun, technical, and exciting. I also really learned what a high-functioning organization looked like and learned about different technology and its use-cases in reaching millions of people. From there I moved to Dosh and have had the opportunity to not only implement a recruiting process, but also see a company more than double in size and implement innovative HR programs and processes.
+
 All of that experience coupled together has culminated in teaching a job placement course with ACA where I can give insights on the tech industry, what it takes to get hired, and doing all of that with the formal training in education to build a sound curriculum, scope, and sequence.
 
  
@@ -43,8 +43,8 @@ We’ll be covering the entire job search process, from building a resume throug
 
 ### Most ACA students are transitioning from a different career or don’t have experience with the tech job search process. How are you addressing that and preparing them for what to expect when they go out and look for a job?
 
-I believe in differentiated education. Everyone comes with a different background and needs. So first and foremost, I learn about the students, their background, their strengths, their weaknesses and build a plan with them to get them job-ready.   
-  
+I believe in differentiated education. Everyone comes with a different background and needs. So first and foremost, I learn about the students, their background, their strengths, their weaknesses and build a plan with them to get them job-ready. 
+
 I also believe in transparency. There are a lot of hard truths when going through a career transition and I'm not shy to say that it's an uphill battle. You almost have to be twice as prepared as someone with a "conventional" background because you'll have to fight through preconceived notions about your readiness in such a competitive and specialized skill-based job. I also believe that it's important for students to feel encouraged and know that they have skills that will transfer over to a new industry.
 
  
@@ -77,8 +77,8 @@ PERSEVERE and be ACTIVE. Just like attacking a tough coding problem, you have to
 
 ### How do you feel about leading the job placement course and ACA's approach to job readiness?
 
-I think what separates Austin Coding Academy are the people behind the program and how much they care and are invested in making a difference in the lives of their students. I see so much movement and hear so many conversations around how can we serve better. I can tangibly see servant leadership happening here. This job placement course is yet another example of how they are constantly raising the bar for their students.   
-  
+I think what separates Austin Coding Academy are the people behind the program and how much they care and are invested in making a difference in the lives of their students. I see so much movement and hear so many conversations around how can we serve better. I can tangibly see servant leadership happening here. This job placement course is yet another example of how they are constantly raising the bar for their students. 
+
 I can't wait for things to come full circle and call some of the students I'm teaching, co-workers someday.
 
  

@@ -1,18 +1,21 @@
 ---
 tags: []
+layout: post
 title: What Will You Make as a Full-Time Web Developer?
+description: 'When deciding to join a coding bootcamp, consider job readiness. Take
+  a look at how experience, education, and more can impact your salary as a web developer.  '
 created_at: 2018-08-27 00:00:00 -0500
-updated_at: 2019-02-11 00:00:00 -0600
-img: ''
+updated_at: 2019-02-15 00:00:00 -0600
 categories:
 - web-development
-date: 2019-02-11 15:24:01 -0600
+excerpt: Let’s look at how much money you can expect to earn working as a web developer
+  and how experience, education, location, and coding specialty can all impact your
+  salary. Knowing what your skill is worth will help you negotiate better pay as you
+  advance through your career.
+img: "/assets/images/what-will-you-make-as-a-web-dev.png"
+date: 2019-02-15 16:25:36 -0600
 
 ---
-# What Will You Make as a Full-Time Web Developer?
-
-![what-will-you-make-full-time-developer](https://blog.austincodingacademy.com/hs-fs/hubfs/what-will-you-make-full-time-developer.png?width=1200&name=what-will-you-make-full-time-developer.png =1200x)
-
 As a prospective developer, you may have a lot of questions about your salary. What will your first year’s salary be? How will your salary change throughout your career? What factors will contribute the most to your compensation?
 
 Let’s look at how much money you can expect to earn working as a web developer and how experience, education, location, and coding specialty can all impact your salary. Knowing what your skill is worth will help you negotiate better pay as you advance through your career.
@@ -57,11 +60,11 @@ On average, developers in Austin will earn a $79k salary. This [occupation wage 
 
 The coding languages you learn could affect your job title and income. Use a tool like the [TIOBE index](https://www.tiobe.com/tiobe-index/) to research the market demand for different coding languages.
 
-ACA teaches its students JavaScript and C# because these languages will give graduates a large salary and in-demand skills. You can also choose to learn UX design at ACA, which is a vital skill for any website development team.
+ACA teaches its students JavaScript and C# because these languages will give graduates a large salary and in-demand skills.
 
 If you’re unsure which skills would be the best fit for your goals, here’s an article we’ve written to help you [decide which coding track is the right choice for you](https://blog.austincodingacademy.com/which-aca-track-is-right-for-you).
 
-## Start Your sSoftware Developer Career Track Today
+## Start Your Software Developer Career Track Today
 
 To get these high salaries as a software engineer, you’ll need to learn the skills first. [Austin Coding Academy’s bootcamp](https://austincodingacademy.com/apply/) is the fastest and most effective way to start your career as a full-time developer.
 

@@ -3,7 +3,7 @@ title: 'Coming Spring 2019: Lubbock Coding Academy!'
 created_at: 2018-10-24 00:00:00 -0500
 updated_at: 2018-10-24 00:00:00 -0500
 date: 2019-01-23 13:28:44 -0600
-
+layout: post
 ---
 # Coming Spring 2019: Lubbock Coding Academy!
 

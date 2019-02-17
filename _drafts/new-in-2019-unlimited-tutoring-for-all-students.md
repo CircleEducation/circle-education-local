@@ -3,7 +3,7 @@ title: 'NEW in 2019: Unlimited Tutoring for All Students'
 created_at: 2019-01-03 00:00:00 -0600
 updated_at: 2019-01-23 00:00:00 -0600
 date: 2019-01-23 12:53:25 -0600
-
+layout: post
 ---
 # NEW in 2019: Unlimited Tutoring for All Students
 

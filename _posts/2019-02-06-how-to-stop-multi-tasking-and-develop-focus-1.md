@@ -1,15 +1,22 @@
 ---
 tags: []
 title: How to Stop Multi-Tasking and Develop Focus
-created_at: 2018-03-28 00:00:00 -0500
-updated_at: 2019-02-01 00:00:00 -0600
-img: ''
-categories: []
-date: 2019-02-06 12:07:48 -0600
+created_at: 2018-03-28 05:00:00 +0000
+updated_at: 2019-02-15 00:00:00 -0600
+img: "/assets/images/How-to-Stop-Multi-Tasking-and-Develop-Focus.png"
+categories:
+- career-development
+date: 2019-02-06 18:07:48 +0000
+layout: post
+description: Increasing productivity is key to career development. Find out how cutting
+  down on multi-tasking at your job can help you excel in your role and in your career.
+excerpt: In an age of constant digital distractions, focus may seem like a foreign
+  concept. But focus is crucial for web developers; unfortunately, once you lose it,
+  getting it back is a challenge. Most of us can’t afford to lose time when work deadlines
+  are approaching, so here are some actionable tips to help develop focus and get
+  more done at work.
 
 ---
-# How to Stop Multi-Tasking and Develop Focus
-
 In an age of constant digital distractions, focus may seem like a foreign concept. Websites like Facebook, Reddit, and YouTube give us an endless supply of content that are often more engaging than the tasks we need to accomplish. But focus is crucial for developers; one misplaced character in thousands of lines of code can throw off an entire project.
 
 Unfortunately, once you lose focus, getting it back is a challenge. In fact, studies show that when people get distracted, it can take up to [25 minutes to refocus](http://blog.idonethis.com/distractions-at-work/) on the task they had been working on. If you have five distractions per day, you’re essentially wasting two hours of productivity time. Most of us can’t afford to lose that kind of time when work deadlines are approaching, so here are some actionable tips to help develop focus and get more done at work:

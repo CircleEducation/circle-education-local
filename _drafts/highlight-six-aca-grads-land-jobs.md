@@ -3,7 +3,7 @@ title: 'Highlight: Six ACA Grads Land Jobs'
 created_at: 2018-12-05 00:00:00 -0600
 updated_at: 2019-01-23 00:00:00 -0600
 date: 2019-01-23 13:18:18 -0600
-
+layout: post
 ---
 # Highlight: Six ACA Grads Land Jobs
 

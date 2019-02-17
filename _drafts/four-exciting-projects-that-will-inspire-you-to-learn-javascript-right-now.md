@@ -7,7 +7,7 @@ img: ''
 categories:
 - javaScript
 date: 2019-02-11 15:20:21 -0600
-
+layout: post
 ---
 # Four exciting projects that will inspire you to learn JavaScript right now
 
