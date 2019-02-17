@@ -19,7 +19,7 @@
     "cname": "echo \"$(echo $PREVIEW)austincodingacademy.com\" >> _site/CNAME",
     "repo": "gh-pages --repo \"git@github.com:AustinCodingAcademy/$(echo $PREVIEW)austincodingacademy.com.git\" --dotfiles -d ./_site",
     "start": "concurrently \"http-server _site -p 4000 -s\" \"npm-watch\"",
-    "build": "yarn css && bundle exec jekyll build --config _configs/default.yml && yarn build-amp",
+    "build": "touch _includes/css.html && yarn css && bundle exec jekyll build --config _configs/default.yml && yarn build-amp",
     "build-amp": "bundle exec jekyll build --config _configs/amp.yml _configs/default.yml --destination _site/amp/",
     "css": "bundle exec jekyll build --config _configs/default.yml && node postcss.js && echo '<style amp-custom>' > _includes/css.html && echo \"$(cat assets/css/main.min.css)\" >> _includes/css.html && echo '</style>' >> _includes/css.html"
   },

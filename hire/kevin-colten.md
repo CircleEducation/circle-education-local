@@ -1,81 +1,91 @@
 ---
 layout: resume
 
-profilename: Kevin Colten
-image: test.png
-jobtitle: UI/UX Designer
+fullname: Kevin Colten
+jobtitle: Chief Technology Officer, Web Developer
 
-contacts:
-  - name: Pat Owen
-    job-title: Senior Web Engineer
-    image: img09.jpg
-  - name: Jamie Owen
-    job-title: Junior Web Engineer
-    image: img08.jpg
-
-social:
-  - site: Twitter
-    link: #
-    username:
-  - site: GITHUB
-    link: #
-    username: githubtestname
-  - site: instagram
-    link: #
-    username:
-  - site: face book
-    link: #
-    username:
-  - site: LinkedIn
-    link: #
-    username: Real Name
-  - site: dribble
-    link: #
-    username: Test
-
-greeting: Hi, I'm a test profile.
 location: Austin, TX
-joined: 01/2019
-blurb: Student can write a personal bio or introduction here.
-
-email: email@domain.gov
-website: https://www.student.gov
-birthday: June 3, 1995
-workplace: Test Sites Inc.
-phone: (555) 555-5555
-language: English, French
-favoritefood: Red curry
+blurb: 'A life-learner and new technology nerd, I work hard at the things I love: programming, teaching, and learning.'
 
 skills:
-  - HTML5
-  - JavaScript
-  - Python
-  - Bootstrap
+  - HTML
+  - CSS
+  - JS
+  - jQuery
+  - Backbone.js
+  - React.js
+  - React Native
+  - Redux
+  - Node.js
+  - Ruby/Rails
+  - PHP/Laravel
+  - Python/Django
+  - Testing
+  - Selenium
+  - Mocha/Chai
+  - SQL
+  - NoSQL
+  - AWS
+  - Heroku
+  - DigitalOcean
+  - Continuous Integration
+  - CircleCI/Travis CI/Jenkins
+  - Automated Deployment
+  - Git/GitHub
+  - Grunt/Gulp/WebPack
+  - REST APIs
+  - Data Visualization
+
+github: https://github.com/kevincolten
+linkedin: https://www.linkedin.com/in/kevincolten
+
+email: kevincolten@gmail.com
+website: https://kevincolten.com
+workplace: Austin Coding Academy
+phone: (512) 593-2019
+language: English
 
 workexperience:
-  - company: Slack
-    logo: slack.png
-    start: July, 2018
-    title: Senior Button Designer
-    location: London, UK
-  - company: Slack
-    logo: slack.png
-    start: July, 2018
-    title: Senior Button Designer
-    location: London, UK
+  - company: Austin Coding Academy
+    logo: https://camo.githubusercontent.com/4be240b9d916fff63fd4755771387f2db91ccbea/687474703a2f2f656e2e67726176617461722e636f6d2f75736572696d6167652f3130373337303130302f61303835393431343535363435333631333864666161663037326337623234312e706e673f73697a653d323030
+    start: August, 2015
+    title: Chief Technology Officer
+    location: Austin, TX
+  - company: SkillsEngine
+    logo: https://media.licdn.com/dms/image/C510BAQEUfbXLPe7V8Q/company-logo_200_200/0?e=2159024400&v=beta&t=0HX39QiGoWtXrHsmVfM2nUPgyKnGin7zK9j3E0a7BRs
+    start: October, 2017
+    title: Senior Software Engineer
+    location: Austin, TX
+  - company: Anaconda
+    logo: https://dudodiprj2sv7.cloudfront.net/vendor-logos/46/UH/OTQJVNSSIAHO.JPEG
+    start: June, 2015
+    title: Web Developer
+    location: Austin, TX
+  - company: Generation Ready
+    logo: https://pbs.twimg.com/profile_images/715892872839622657/Bn-dtcwD_400x400.jpg
+    start: November, 2013
+    title: Lead Software Engineer + Architect
+    location: Austin, TX
 
 education:
-  - name: MIT
-    logo: mit.png
-    dates: 2014 - 2018
-    degree: MA in Test Profiles
+  - name: App Academy
+    dates: July 2013
+    degree: Web Development
+
+  - name: Lamar University
+    dates: August 2005 - December 2009
+    degree: B.S. Communications
+
+projects:
+  - name: Austin Coding Academy
+    desc: An accessible, affordable coding school!
+    repo: https://github.com/austincodingacademy
+  - name: Campus Manager
+    desc: A learning management system built for the modern coding class.
+    repo: https://github.com/austincodingacademy/campus-manager
+  - name: YoSQL
+    desc: Say YES to SQL! Convert MongoDB databases and nested JSON objects into relational databases
+    repo: https://github.com/kevincolten/yosql
 
 reviews:
-  - name: Mario Ejemplo
-    position: 311 Instructor
-    img: mario.jpg
-    timestamp: 00:01 1/29/19
-    post:
-      At the end of the day, it's important to not let being busy distract us from having fun. Smiling, laughing, and hanging helps us work together to achieve this.
-
 ---

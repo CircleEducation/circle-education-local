@@ -1,43 +1,40 @@
 ---
 layout: resume
 
-profilename:
+fullname:
 jobtitle:
 
-greeting:
 location:
-joined:
 blurb:
 
 skills:
-  -
+  - HTML
+  - CSS
+  - JS
 
 github:
-
 linkedin:
 
 email:
 website:
-phone:
 workplace:
+phone:
 language:
 
 workexperience:
-  - company:
-    logo:
-    start:
-    title:
-    location:
+  # - company:
+  #   logo:
+  #   start:
+  #   title:
+  #   location:
 
 education:
-  - name:
-    dates:
-    degree:
+  # - name:
+  #   dates:
+  #   degree:
 
-reviews:
-  - name:
-    position:
-    timestamp:
-    post:
-
+projects:
+  # - name:
+  #   desc:
+  #   repo:
 ---
