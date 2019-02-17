@@ -17,7 +17,7 @@ excerpt: 'At Austin Coding Academy, we currently offer two separate tracks for o
   students: JavaScript and C# .NET. We believe that there isn’t one “best” option;
   the right choice for each student has everything to do with their personal goals
   and interests.'
-layout: ''
+layout: 'post'
 
 ---
 If you’re considering making the leap into a career in coding, there are so many factors to consider: should I get a bachelor’s degree in Computer Science or enroll in a coding school? Should I take an online class, an in-person class, or a remote class? And what language or specialty should I invest my time in learning?
