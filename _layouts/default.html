@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html {{site.baseurl}}>
+<html {% if site.baseurl == '/amp' %}amp{% endif %}>
   <head>
     <meta charset="utf-8" />
     <title>
@@ -13,10 +13,10 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Favicon -->
-    {% include favicon.html %} {% include sharing.html %}
+    {% include favicon.html %}
 
-    <!-- Required meta tags -->
+    {% include sharing.html %}
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -29,44 +29,38 @@
       rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://austincodingacademy.github.io/front/assets/vendor/font-awesome/css/fontawesome-all.min.css"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    <link
-      rel="stylesheet"
-      href="https://austincodingacademy.github.io/front/assets/css/theme.css"
-    />
+    {% capture amp_css %}{% file_exists _includes/css.html %}{% endcapture %}
+    {% if amp_css == "true" %}
+      {% include css.html %}
+    {% else %}
+      <link rel="stylesheet" href="https://austincodingacademy.github.io/front/assets/css/theme.css">
+      <link rel="stylesheet" href="/assets/css/main.css">
+    {% endif %}
 
-    <link
-      rel="stylesheet"
-      href="https://austincodingacademy.github.io/front/assets/vendor/slick-carousel/slick/slick.css"
-    />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="/assets/css/main.css"
-    />
-
-    {% if site.baseurl == 'amp' %}
-      {% include google-tag-manager-head-amp.html %}
+    {% if site.baseurl == '/amp' %}
+      {% include google-tag-manager-head-amp.html%}
       <link rel="canonical" href="{{site.url}}{{page.url}}">
     {% else %}
       {% include google-tag-manager-head.html %}
-      <link rel="amphtml" href="{{site.url}}{{page.url}}">
+      <link rel="amphtml" href="{{site.url}}/amp{{page.url}}">
     {% endif %}
 
     {{ page.head }}
   </head>
 
   <body>
-    {% if site.baseurl == 'amp' %} {% include google-tag-manager-body-amp.html
-    %} {% else %} {% include google-tag-manager-body.html %} {% endif %} {%
-    include header.html %}
+    {% if site.baseurl == '/amp' %}
+      {% include google-tag-manager-body-amp.html  page_url=page.url %}
+    {% else %}
+      {% include google-tag-manager-body.html %}
+    {% endif %}
+
+    {% include header.html %}
+
     {{ content }}
+
     {% include footer.html %}
   </body>
 </html>

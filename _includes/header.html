@@ -91,14 +91,14 @@
 
               {% if item.children %}
                 <li class="nav-item u-header__nav-item">
-                  <a href="#" class="text-white nav-link u-header__nav-link">
-                    {{ item.title }} <i class="fas fa-caret-down"></i>
+                  <a href="#" class="nav-link u-header__nav-link">
+                    <span class="text-white">{{ item.title }} <i class="fas fa-caret-down"></i></span>
                   </a>
                   <ul class="d-none position-absolute list-unstyled">
                   {% for child in item.children %}
                     <li class="position-relative py-1 pl-3">
                       <a class="text-white nav-link" href="{{ child.url }}">
-                        {{ child.title }}
+                          <span class="text-white">{{ child.title }}</span>
                       </a>
                     </li>
                   {% endfor %}
@@ -112,7 +112,7 @@
                   {% else %}
                     <a class="text-white nav-link u-header__nav-link" href="{{ item.url }}">
                   {% endif %}
-                      {{ item.title }}
+                      <span class="text-white">{{ item.title }}</span>
                     </a>
                 </li>
               {% endif %}

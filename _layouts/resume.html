@@ -5,12 +5,12 @@ layout: default
   <!-- ========== MAIN ========== -->
   <main id="content" role="main">
     <!-- Content Section -->
-    <div class="bg-light">
+    <div>
       <div class="container space-2">
         <div class="row">
           <div class="col-lg-3 mb-7 mb-lg-0">
             <!-- Profile Card -->
-            <div class="card p-1 mb-4">
+            <div class="card p-1 mb-4 bg-light">
               <div class="card-body text-center">
                 <div class="mb-3">
                   <amp-img
@@ -18,14 +18,14 @@ layout: default
                     height="80"
                     layout="fixed"
                     class="u-lg-avatar rounded-circle"
-                    src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}"
-                    alt="{{page.profilename}} Gravatar"
+                    src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}?s=200"
+                    alt="{{page.fullname}} Gravatar"
                   ></amp-img>
                 </div>
 
                 <div class="mb-3">
-                  <h1 class="h6 font-weight-medium mb-0">{{page.profilename}}</h1>
-                  <small class="d-block text-muted">{{page.jobtitle}}</small>
+                  <h1 class="h6 font-weight-medium mb-0">{{page.fullname}}</h1>
+                  <small class="d-block text-muted">{{page.location}}</small>
                 </div>
 
                 <div class="mb-2">
@@ -42,8 +42,8 @@ layout: default
             <!-- End Profile Card -->
 
             <!-- Social Profiles -->
-            <div class="card mb-4">
-              <div class="card-header pt-4 pb-3 px-0 mx-4">
+            <div class="card mb-4 bg-light">
+              <div class="card-header pt-4 pb-3 px-0 mx-4 bg-light">
                 <h3 class="h6 mb-0">Connect</h3>
               </div>
 
@@ -57,7 +57,7 @@ layout: default
                       class="text-dark mx-3 display-5 fab fa-github"
                       style="width: 40px">
                     </i>
-                    <span class="text-muted">{{page.github}}</span>
+                    <span class="text-muted">GitHub</span>
                   </div>
                 </a>
               </div>
@@ -72,7 +72,7 @@ layout: default
                       class="text-dark mx-3 display-5 fab fa-linkedin"
                       style="width: 40px">
                     </i>
-                    <span class="text-muted">{{page.linkedin}}</span>
+                    <span class="text-muted">LinkedIn</span>
                   </div>
                 </a>
               </div>
@@ -84,8 +84,8 @@ layout: default
           <div class="col-lg-9">
             <!-- User Details -->
             <div class="mb-4">
-              <h2 class="h4">{{page.greeting}}</h2>
-              <h4 class="h6 text-secondary mb-0">{{page.location}}<small> - Joined in {{page.joined}}</small></h4>
+              <h2 class="h4">{{page.fullname}}</h2>
+              <h4 class="h6 text-secondary mb-0">{{page.jobtitle}}</h4>
             </div>
             <!-- End User Details -->
 
@@ -98,13 +98,13 @@ layout: default
             <!-- End Info -->
 
             <!-- Collections -->
-            <ul class="list-inline d-flex align-items-center">
+            <ul class="list-inline d-flex align-items-center flex-wrap">
               {% for skill in page.skills %}
               <li class="list-inline-item mb-3 mb-sm-0 mr-3">
                 <div class="d-flex align-items-center">
-                  <span class="badge badge-success font-weight-medium rounded py-2 px-2">
+                  <div class="badge badge-success font-weight-medium rounded py-2 px-2 my-1">
                     {{skill}}
-                  </span>
+                  </div>
                 </div>
               </li>
               {% endfor %}
@@ -181,21 +181,6 @@ layout: default
                       </div>
                     </div>
                   </li>
-
-                  <li class="list-group-item pt-0 pb-4">
-                    <div class="media">
-                      <span class="fas fa-tags list-group-icon mr-3"></span>
-                      <div class="media-body text-lh-sm">
-                        <span class="d-block mb-1">Skills:</span>
-                        {% for skill in page.skills %}
-                          <span class="text-muted">
-                            {{skill}}{% if forloop.last == false %},{% endif %}
-                          </span>
-                        {% endfor %}
-                      </div>
-                    </div>
-                  </li>
-
                 </ul>
                 <!-- End List Group -->
               </div>
@@ -209,7 +194,7 @@ layout: default
                 <div class="col-md-6 mb-7 mb-md-0">
                     <!-- Title -->
                     <div class="mb-3">
-                    <h3 class="h6 mb-0">Work experience</h3>
+                    <h6 class="mb-0 font-weight-bold">Work experience</h6>
                     </div>
                     <!-- End Title -->
 
@@ -222,7 +207,7 @@ layout: default
                             height="70"
                             layout="fixed"
                             class="u-avatar align-self-center mr-4"
-                            src="/assets/images/profiles/{{work.logo}}"
+                            src="{{work.logo}}"
                             alt="{{work.company}}"
                           ></amp-img>
                       </div>
@@ -239,7 +224,7 @@ layout: default
                 <div class="col-md-6 mb-3 mb-md-0">
                     <!-- Title -->
                     <div class="mb-3">
-                        <h3 class="h6 mb-0">Education</h3>
+                        <h6 class="mb-0 font-weight-bold">Education</h6>
                     </div>
                     <!-- End Title -->
 
@@ -259,7 +244,7 @@ layout: default
                 <div class="col-md-6 mb-7 mb-md-0">
                     <!-- Title -->
                     <div class="mb-3">
-                    <h3 class="h6 mb-0">Projects</h3>
+                    <h6 class="mb-0 font-weight-bold">Projects</h6>
                     </div>
                     <!-- End Title -->
 
@@ -269,7 +254,7 @@ layout: default
                       <div>
                           <h4 class="h6 mb-0">{{project.name}}</h4>
                           <h5 class="h6 mb-0">{{project.desc}}</h5>
-                          <span class="d-block text-secondary">at <a href="{{project.repo}}">{{project.repo}}</a></span>
+                          <a href="{{project.repo}}">{{project.repo}}</a>
                       </div>
                     </div>
                     <!-- End Info -->
