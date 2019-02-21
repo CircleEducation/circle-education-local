@@ -1,4 +1,7 @@
 {% unless page.permalink == "/contact/" %}
+<button class="btn text-white btn-success bg-purple mx-auto" on="tap:contact-lightbox">
+  Contact us <i class="far fa-envelope"></i>
+</button>
 
 <amp-lightbox
   id="contact-lightbox"
@@ -19,7 +22,7 @@
     <input name="lifecyclestage" type="hidden" value="lead">
     <input name="hs_lead_status" type="hidden" value="NEW">
     <input name="page_name" type="hidden" value="{{page.title}}">
-    <input name="page_uri" type="hidden" value="{{site.baseurl}}{{site.url}}{{page.url}}">
+    <input name="page_uri" type="hidden" value="{{site.url}}{{site.baseurl}}{{page.url}}">
     <input name="hutk" type="hidden" value="">
     <div class="row center-form">
       <!-- Input -->

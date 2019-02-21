@@ -9,19 +9,19 @@
     "lint-css": "stylelint ./**/*.css",
     "lint": "yarn lint-html && yarn lint-css",
     "test": "yarn lint",
-    "resize": "npx resize assets/images/* --max-height 450 -o assets/images/",
     "images": "imagemin assets/images/* --out-dir=assets/images/",
     "favicon": "real-favicon generate favicon.json faviconData.json assets/favicons/ && npm run favicon-inject",
     "favicon-inject": "echo '' > _includes/favicon.html && real-favicon inject faviconData.json assets/favicons _includes/favicon.html && mv assets/favicons/favicon.html _includes/favicon.html",
     "sitemap": "npm run sitemap-generator && sed -i \"s|http://127.0.0.1:8080|https://austincodingacademy.com|g\" _site/sitemap.xml",
     "sitemap-generator": "(http-server _site &) && (sitemap-generator http://127.0.0.1:8080 > _site/sitemap.xml)",
-    "deploy": "yarn favicon && yarn build && yarn sitemap && yarn cname && cp -R .circleci/ _site/.circleci/ && yarn repo",
+    "deploy": "yarn images && yarn favicon && yarn build && yarn sitemap && yarn cname && cp -R .circleci/ _site/.circleci/ && yarn repo",
     "cname": "echo \"$(echo $PREVIEW)austincodingacademy.com\" >> _site/CNAME",
     "repo": "gh-pages --repo \"git@github.com:AustinCodingAcademy/$(echo $PREVIEW)austincodingacademy.com.git\" --dotfiles -d ./_site",
     "start": "concurrently \"http-server _site -p 4000 -s\" \"npm-watch\"",
-    "build": "touch _includes/css.html && yarn css && bundle exec jekyll build --config _configs/default.yml && yarn build-amp",
-    "build-amp": "bundle exec jekyll build --config _configs/amp.yml _configs/default.yml --destination _site/amp/",
-    "css": "bundle exec jekyll build --config _configs/default.yml && node postcss.js && echo '<style amp-custom>' > _includes/css.html && echo \"$(cat assets/css/main.min.css)\" >> _includes/css.html && echo '</style>' >> _includes/css.html"
+    "build": "touch _includes/css.html && yarn css && yarn build-default && yarn build-amp",
+    "build-default": "bundle exec jekyll build --config _configs/default.yml",
+    "build-amp": "bundle exec jekyll build --config '_configs/default.yml,_configs/amp.yml' --destination _site/amp/",
+    "css": "yarn build-default && node postcss.js && echo '<style amp-custom>' > _includes/css.html && echo \"$(cat assets/css/main.min.css)\" >> _includes/css.html && echo '</style>' >> _includes/css.html"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.1.0",
@@ -40,8 +40,6 @@
     "postcss-amp-custom": "^1.1.0",
     "postcss-import": "^12.0.1",
     "postcss-no-important": "^1.0.0",
-    "purgecss": "^1.1.0",
-    "resize-cli": "^0.0.4",
     "sitemap-generator-cli": "^5.0.1",
     "stylelint": "^9.9.0",
     "stylelint-config-recommended": "^2.1.0"

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html {% if site.baseurl == '/amp' %} amp {% endif %}>
+<html {% if site.baseurl == '/amp' %}amp{% endif %}>
   <head>
     <meta charset="utf-8" />
     <title>
@@ -31,14 +31,24 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    {% include css.html %}
+    {% comment %}
+    {% capture amp_css %}{% file_exists _includes/css.html %}{% endcapture %}
+    {% if amp_css == "true" %}
+      {% include css.html %}
+    {% else %}
+      <link rel="stylesheet" href="https://austincodingacademy.github.io/front/assets/css/theme.css">
+      <link rel="stylesheet" href="/assets/css/main.css">
+    {% endif %}
+    {% endcomment %}
+    <link rel="stylesheet" href="https://austincodingacademy.github.io/front/assets/css/theme.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
 
     {% if site.baseurl == '/amp' %}
       {% include google-tag-manager-head-amp.html%}
-      <link rel="canonical" href="{{site.baseurl}}{{site.url}}{{page.url}}">
+      <link rel="canonical" href="{{site.url}}{{page.url}}">
     {% else %}
       {% include google-tag-manager-head.html %}
-      <link rel="amphtml" href="{{site.baseurl}}{{site.url}}{{page.url}}">
+      <link rel="amphtml" href="{{site.url}}/amp{{page.url}}">
     {% endif %}
 
     {{ page.head }}

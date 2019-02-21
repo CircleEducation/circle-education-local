@@ -125,19 +125,19 @@ body {
 /* HERO IMAGES */
 
 #hero-index {
-  background-image: url("/assets/images/header-index.png");
+  background-image: url("/assets/images/header-index.jpg");
 }
 
 #hero-csharp {
-  background-image: url("/assets/images/header-csharp.png");
+  background-image: url("/assets/images/header-csharp.jpg");
 }
 
 #hero-financing {
-  background-image: url("/assets/images/header-financing.png");
+  background-image: url("/assets/images/header-financing.jpg");
 }
 
 #hero-js {
-  background-image: url("/assets/images/header-javascript.png");
+  background-image: url("/assets/images/header-javascript.jpg");
 }
 
 /* CUSTOM MARGINS */
