@@ -481,16 +481,6 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
     Contact us <i class="far fa-envelope"></i>
   </button>
 
-  <amp-lightbox
-    id="contact-lightbox"
-    class="lightbox"
-    layout="nodisplay"
-    scrollable
-    on="tap:contact-lightbox.close"
-  >
-    <div class="container px-5 pt-5 text-white">
-      {% include_relative partials/contact-form.html %}
-    </div>
-  </amp-lightbox>
+  {% include_relative partials/contact-form.html %}
 
 </section>

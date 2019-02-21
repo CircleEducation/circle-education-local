@@ -1,3 +1,15 @@
+{% unless page.permalink == "/contact/" %}
+
+<amp-lightbox
+  id="contact-lightbox"
+  class="lightbox"
+  layout="nodisplay"
+  scrollable
+  on="tap:contact-lightbox.close"
+>
+  <div class="container px-5 pt-5 text-white">
+{% endunless %}
+
 <form
   action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/33cc0e23-1881-4874-a1d0-2c0307f20e41"
   method="POST"
@@ -143,3 +155,9 @@
     </div>
   </div>
 </form>
+
+
+{% unless page.permalink == "/contact/" %}
+  </div>
+</amp-lightbox>
+{% endunless %}

@@ -32,6 +32,7 @@
     {% include_relative partials/campus-locations.html %}
 
     <div class="container d-flex flex-column justify-content-center mt-10">
+
       <h2 class="font-family-alt font-weight-bold text-center display-4">
         Still Have Questions?
       </h2>
@@ -45,17 +46,8 @@
         Contact us <i class="far fa-envelope"></i>
       </button>
 
-      <amp-lightbox
-        id="contact-lightbox"
-        class="lightbox"
-        layout="nodisplay"
-        scrollable
-        on="tap:contact-lightbox.close"
-      >
-        <div class="container px-5 pt-5 text-white">
-          {% include_relative partials/contact-form.html %}
-        </div>
-      </amp-lightbox>
+      {% include_relative partials/contact-form.html %}
+
     </div>
 
     <div class="my-10"></div>
