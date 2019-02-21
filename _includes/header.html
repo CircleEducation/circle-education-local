@@ -1,39 +1,37 @@
 <!-- ========== HEADER ========== -->
 
-<amp-sidebar id="sidebar"
+<amp-sidebar
+  on="tap:sidebar.close"
+  scrollable
+  id="sidebar"
   class="m-0 bg-dark d-flex d-md-none row flex-column align-items-center justify-content-around"
   layout="nodisplay"
   side="right">
 
-  <div class="mx-5">
-    <button class="btn btn-outline-danger" on="tap:sidebar.close">
-      <i class="fas fa-times"></i>
-    </button>
-  </div>
-
   {% for item in site.menus.header %}
 
     {% if item.children %}
-      <div class="mx-3">
-        <button class="text-center btn btn-outline-light">
-          {{ item.title }} <i class="fas fa-caret-down"></i>
-        </button>
-        <ul id="hidden-list" class="d-none position-absolute list-unstyled w-75 text-center mx-auto mb-0">
-          {% for child in item.children %}
-            <li class="mt-2">
-              <a href="{{ child.url }}" class="text-white">
-                {{ child.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
+      {% for child in item.children %}
+        <div class="mx-3" on="tap:sidebar.open">
+          <a href="{{ child.url }}">
+            <button class="text-center btn btn-outline-light">
+              {{ child.title }}
+            </button>
+          </a>
+        </div>
+      {% endfor %}
     {% else %}
-      <div class="mx-3">
+      <div class="mx-3" on="tap:sidebar.open">
         <a href="{{ item.url }}">
-          <button class="text-center btn btn-outline-light">
-            {{ item.title }}
-          </button>
+          {% if item.button %}
+            <button class="text-center btn text-white primary-gradient">
+              {{ item.title }}
+            </button>
+          {% else %}
+            <button class="text-center btn btn-outline-light">
+              {{ item.title }}
+            </button>
+          {% endif %}
         </a>
       </div>
     {% endif %}
