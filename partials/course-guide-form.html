@@ -1,141 +1,159 @@
-<h4
-  id="header-text-margins"
-  class="font-family-alt font-weight-bold text-center display-6 mb-4"
->
-  Download Our Course Guide
-</h4>
-<form
-  target="_top"
-  action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/702969c4-4c75-4b99-b6d2-59d04d6ebd03"
-  method="POST"
->
-  <div class="form-container">
-    <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
-    <input name="downloaded_a_courses_guide" type="hidden" value="true">
-    <input name="hs_lead_status" type="hidden" value="NEW">
-    <input name="page_name" type="hidden" value="{{page.title}}">
-    <input name="page_uri" type="hidden" value="{{site.url}}{{site.baseurl}}{{page.url}}">
-    <input name="hutk" type="hidden" value="">
+<div class="d-flex justify-content-center">
+  <a href="#" class="btn btn-lg text-white bg-purple" on="tap:course-guide-lightbox">
+    View Our Course Guide &nbsp;<i class="fas fa-file-pdf"></i>
+  </a>
 
-    <div class="row center-form">
-      <!-- Input -->
-      <div class="col-sm-6 mb-6">
-        <div class="js-form-message">
-          <label for="first-name" class="form-label">
-            First Name <span class="text-danger">*</span>
-          </label>
+  <amp-lightbox
+    id="course-guide-lightbox"
+    layout="nodisplay"
+    scrollable
+    on="tap:course-guide-lightbox.close"
+  >
+    <form
+      class="lightbox d-flex justify-content-center align-items-center position-absolute text-white"
+      target="_top"
+      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/702969c4-4c75-4b99-b6d2-59d04d6ebd03"
+      method="POST"
+    >
+      <div class="form-container narrow px-5 px-lg-0" on="tap:course-guide-lightbox.open">
+        <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
+        <input name="downloaded_a_courses_guide" type="hidden" value="true">
+        <input name="hs_lead_status" type="hidden" value="NEW">
+        <input name="page_name" type="hidden" value="{{page.title}}">
+        <input name="page_uri" type="hidden" value="{{site.url}}{{page.url}}">
+        <input name="hutk" type="hidden" value="">
 
-          <input
-            id="first-name"
-            type="text"
-            class="form-control"
-            name="firstname"
-            placeholder="First Name"
-            aria-label="Your name"
-            required
-            data-msg="Please enter your first name."
-            data-error-class="u-has-error"
-            data-success-class="u-has-success"
-          />
+        <div class="row center-form">
+
+          <!-- Input -->
+          <div class="col-sm-6 my-2 my-sm-3">
+            <div class="js-form-message">
+              <label for="first-name" class="form-label">
+                First Name <span class="text-danger">*</span>
+              </label>
+
+              <input
+                id="first-name"
+                type="text"
+                class="form-control"
+                name="firstname"
+                placeholder="First Name"
+                aria-label="Your name"
+                required
+                data-msg="Please enter your first name."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6 my-2 my-sm-3">
+            <div class="js-form-message">
+              <label for="last-name" class="form-label">
+                Last Name <span class="text-danger">*</span>
+              </label>
+
+              <input
+                id="last-name"
+                type="text"
+                class="form-control"
+                name="lastname"
+                placeholder="Last Name"
+                aria-label="Your last name"
+                required
+                data-msg="Please enter your last name."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6 my-2 my-sm-3">
+            <div class="js-form-message">
+              <label for="email" class="form-label">
+                Email <span class="text-danger">*</span>
+              </label>
+
+              <input
+                id="email"
+                type="email"
+                class="form-control"
+                name="email"
+                placeholder="Email"
+                aria-label="Your email address"
+                required
+                data-msg="Please enter a valid email address."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6 my-2 my-sm-3">
+            <div class="js-form-message">
+              <label for="phone" class="form-label">
+                Phone <span class="text-danger">*</span>
+              </label>
+
+              <input
+                id="phone"
+                type="text"
+                class="form-control"
+                name="phone"
+                placeholder="Phone"
+                aria-label="Your phone number"
+                required
+                data-msg="Please enter your phone number."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              />
+            </div>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="col-sm-6 my-2 my-sm-3">
+            <label class="form-label" for="best-describes">Which of these best describes you? <span class="text-danger">*</span></label>
+            <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control" required>
+              <option disabled selected value="">Please Select</option>
+              <option value="I'm researching coding bootcamps">I'm researching coding bootcamps</option>
+              <option value="I'm teaching myself to code but I'm stuck">I'm teaching myself to code but I'm stuck</option>
+              <option value="I'm interested in a career in tech">I'm interested in a career in tech</option>
+              <option value="I'm an entrepreneur with an idea">I'm an entrepreneur with an idea</option>
+              <option value="I'm looking for a college alternative">I'm looking for a college alternative</option>
+              <option value="I want to learn a new skill for my current job">I want to learn a new skill for my current job</option>
+            </select>
+          </div>
+          <!-- End Input -->
+
+          <!-- Input -->
+          <div class="text-center col-sm-6 my-3 d-flex align-items-end">
+            <button
+              type="submit"
+              class="text-white btn bg-purple rounded w-100"
+            >
+              Send
+            </button>
+          </div>
+          <!-- End Input -->
+
         </div>
       </div>
-      <!-- End Input -->
 
-      <!-- Input -->
-      <div class="col-sm-6 mb-6">
-        <div class="js-form-message">
-          <label for="last-name" class="form-label">
-            Last Name <span class="text-danger">*</span>
-          </label>
-
-          <input
-            id="last-name"
-            type="text"
-            class="form-control"
-            name="lastname"
-            placeholder="Last Name"
-            aria-label="Your last name"
-            required
-            data-msg="Please enter your last name."
-            data-error-class="u-has-error"
-            data-success-class="u-has-success"
-          />
+      <div class="text-center">
+        <div submit-error>
+          <template type="amp-mustache">
+            <p class="text-danger">There was an error with your request. Please try again.</p>
+          </template>
         </div>
       </div>
-      <!-- End Input -->
 
-      <!-- Input -->
-      <div class="col-sm-6 mb-6">
-        <div class="js-form-message">
-          <label for="email" class="form-label">
-            Email <span class="text-danger">*</span>
-          </label>
-
-          <input
-            id="email"
-            type="email"
-            class="form-control"
-            name="email"
-            placeholder="Email"
-            aria-label="Your email address"
-            required
-            data-msg="Please enter a valid email address."
-            data-error-class="u-has-error"
-            data-success-class="u-has-success"
-          />
-        </div>
-      </div>
-      <!-- End Input -->
-
-      <!-- Input -->
-      <div class="col-sm-6 mb-6">
-        <div class="js-form-message">
-          <label for="phone" class="form-label">
-            Phone <span class="text-danger">*</span>
-          </label>
-
-          <input
-            id="phone"
-            type="text"
-            class="form-control"
-            name="phone"
-            placeholder="Phone"
-            aria-label="Your phone number"
-            required
-            data-msg="Please enter your phone number."
-            data-error-class="u-has-error"
-            data-success-class="u-has-success"
-          />
-        </div>
-      </div>
-      <!-- End Input -->
-      <div class="col-sm-7 col-md-6">
-        <label class="form-label" for="best-describes">Which of these best describes you? <span class="text-danger">*</span></label>
-        <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control" required>
-          <option disabled selected value="">Please Select</option>
-          <option value="I'm researching coding bootcamps">I'm researching coding bootcamps</option>
-          <option value="I'm teaching myself to code but I'm stuck">I'm teaching myself to code but I'm stuck</option>
-          <option value="I'm interested in a career in tech">I'm interested in a career in tech</option>
-          <option value="I'm an entrepreneur with an idea">I'm an entrepreneur with an idea</option>
-          <option value="I'm looking for a college alternative">I'm looking for a college alternative</option>
-          <option value="I want to learn a new skill for my current job">I want to learn a new skill for my current job</option>
-        </select>
-      </div>
-      <div class="text-center col-sm-5 col-md-6 mt-4">
-        <button
-          type="submit"
-          class="text-white btn send-button transition-3d-hover mb-4"
-        >
-          Send
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="text-center">
-    <div submit-error>
-      <template type="amp-mustache">
-        <p class="text-danger">There was an error with your request. Please try again.</p>
-      </template>
-    </div>
-  </div>
-</form>
+    </form>
+  </amp-lightbox>
+</div>

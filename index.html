@@ -19,8 +19,39 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
         Part-time coding classes taught by full-time developers here in Austin, TX
       </p>
       <div class="d-flex justify-content-center justify-content-md-start">
-        <a class="btn btn-outline-light btn-round mr-2 flex-1" href="tel:5128278498">
-          Call Us Now
+        <button
+          class="btn btn-outline-light btn-round mr-2 flex-1 d-sm-none"
+          on="tap:call-us">
+          Call for More Info
+        </button>
+        <amp-lightbox
+          id="call-us"
+          class="lightbox"
+          layout="nodisplay"
+          scrollable
+          on="tap:call-us.close">
+          <div class="mt-5 pt-5 d-flex mx-auto flex-column align-items-center">
+            <a
+              class="my-5 btn btn-light btn-round mr-2 flex-1 d-sm-none"
+              href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
+              target="_blank">
+              Schedule a Q&A
+            </a>
+            <h4 class="text-white border-top border-bottom">
+              OR
+            </h4>
+            <a
+              class="my-5 btn btn-light btn-round mr-2 flex-1 d-sm-none"
+              href="tel:5128278498">
+              Call Us Now!
+            </a>
+          </div>
+        </amp-lightbox>
+        <a
+          class="btn btn-outline-light btn-round mr-2 flex-1 d-none d-sm-block"
+          href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
+          target="_blank">
+          Schedule a Q&A
         </a>
         {% include_relative partials/btn-apply.html class='flex-1'%}
       </div>
@@ -155,8 +186,6 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
             ></amp-img>
           </div>
 
-          <!-- SVG Component -->
-          <!-- End SVG Component -->
         </div>
       </div>
       <!-- End Mockup Block -->
@@ -187,7 +216,7 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
           </p>
         </div>
         <a
-          class="btn stock-blue-button text-white hover-scale-button"
+          class="btn stock-blue-button text-white"
           href="/javascript/"
           >Learn More</a
         >
@@ -210,7 +239,7 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
           </p>
         </div>
         <a
-          class="btn stock-blue-button text-white hover-scale-button"
+          class="btn stock-blue-button text-white"
           href="/csharp"
           >Learn More</a
         >
@@ -453,13 +482,16 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
   {% include_relative partials/btn-apply.html class="btn-wide" %}
 </section>
 
-<section class="mb-10 container">
+<section class="mb-10 container d-flex flex-column justify-content-center">
+
   <h2 class="font-family-alt font-weight-bold text-center display-5">
     Contact Us
   </h2>
   <p class="section-text text-center mb-4">
     Whether you have questions or you would just<br />
-    like to say hello, contact us.
+    like to say hello, let us know.
   </p>
+
   {% include_relative partials/contact-form.html %}
+
 </section>

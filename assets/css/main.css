@@ -321,20 +321,11 @@ amp-selector.tabpanels [role=tabpanel][selected] {
   color: #77838f;
 }
 
-.center-form {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 .send-button {
   height: 50px;
   width: 100%;
   background-color: #2d2f77;
   border-radius: 3px;
-}
-
-.center-form .send-button {
-  max-width: 500px;
 }
 
 .floating-button {
@@ -360,4 +351,10 @@ div:not(.form-columns-1) .hs-form-field:not(.hs-form-field:first-child) {
 .card-deck .card {
   min-width: 260px;
   max-width: 345px;
+}
+
+.lightbox {
+  background: rgba(0,0,0,.9);
+  width: 100%;
+  height: 100%;
 }
