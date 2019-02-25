@@ -6,19 +6,28 @@
 </h2>
 
 {% for course in page.courses %}
-<div class="container mb-5">
+<div class="container mb-5" vocab="https://schema.org" typeOf="Course">
   <h4 class="font-weight-bold">
     <!-- htmllint preset="none" -->
     <i class="fas fa-circle text-{{ course.color }}"></i>
     <!-- htmllint preset="$previous" -->
-    {{ course.title }}
+    <span property="courseCode">{{ course.code }}</span>
+    <span property="name">{{ course.title }}</span>
   </h4>
+  <div class="d-none" property="description">{{ course.list }}</div>
   {% for section in course.sections %}
-  <div class="row border my-2 align-items-center">
-    <div class="col-6 col-md-3 my-4">{{ section.dates }}</div>
+  <div
+    class="row border my-2 align-items-center"
+    property="hasCourseInstance" typeOf="courseInstance">
+    <div class="d-none" property="name">{{ course.title }}</div>
+    <div class="col-6 col-md-3 my-4">
+      <time property="startDate" dateTime="{{ section.start }}">{{ section.start | date: "%B %d" }}</time>
+      -
+      <time property="endDate" dateTime="{{ section.end }}">{{ section.end | date: "%B %d" }}</time>
+    </div>
     <div class="col-6 col-md-3 my-4">{{ section.weekdays }}</div>
     <div class="col-6 col-md-2 my-4">{{ section.time }}</div>
-    <div class="col-6 col-md-4 my-4">{{ section.campus }}</div>
+    <div class="col-6 col-md-4 my-4" property="location" typeOf="Place">{{ section.campus }}<span class="d-none" property="address">{{ section.address }}</span></div>
   </div>
   {% endfor %}
 </div>
