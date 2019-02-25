@@ -6,7 +6,7 @@
 </h2>
 
 {% for course in page.courses %}
-<div class="container mb-5" vocab="https://schema.org" typeOf="Course">
+<div class="container mb-5">
   <h4 class="font-weight-bold">
     <!-- htmllint preset="none" -->
     <i class="fas fa-circle text-{{ course.color }}"></i>
@@ -14,7 +14,6 @@
     <span property="courseCode">{{ course.code }}</span>
     <span property="name">{{ course.title }}</span>
   </h4>
-  <div class="d-none" property="description">{{ course.list }}</div>
   {% for section in course.sections %}
   <div
     class="row border my-2 align-items-center"
