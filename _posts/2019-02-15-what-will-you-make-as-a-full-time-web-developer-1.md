@@ -4,8 +4,8 @@ layout: post
 title: What Will You Make as a Full-Time Web Developer?
 description: 'When deciding to join a coding bootcamp, consider job readiness. Take
   a look at how experience, education, and more can impact your salary as a web developer.  '
-created_at: 2018-08-27 00:00:00 -0500
-updated_at: 2019-02-15 00:00:00 -0600
+created_at: 2018-08-27 05:00:00 +0000
+updated_at: 2019-02-15 06:00:00 +0000
 categories:
 - web-development
 excerpt: Let’s look at how much money you can expect to earn working as a web developer
@@ -13,7 +13,9 @@ excerpt: Let’s look at how much money you can expect to earn working as a web 
   salary. Knowing what your skill is worth will help you negotiate better pay as you
   advance through your career.
 img: "/assets/images/what-will-you-make-as-a-web-dev.png"
-date: 2019-02-15 16:25:36 -0600
+date: 2019-02-15 22:25:36 +0000
+redirect_from: []
+permalink: "/blog/web-development/what-will-you-make-as-a-full-time-web-developer"
 
 ---
 As a prospective developer, you may have a lot of questions about your salary. What will your first year’s salary be? How will your salary change throughout your career? What factors will contribute the most to your compensation?
