@@ -19,8 +19,39 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
         Part-time coding classes taught by full-time developers here in Austin, TX
       </p>
       <div class="d-flex justify-content-center justify-content-md-start">
-        <a class="btn btn-outline-light btn-round mr-2 flex-1" href="tel:5128278498">
-          Call Us Now
+        <button
+          class="btn btn-outline-light btn-round mr-2 flex-1 d-sm-none"
+          on="tap:call-us">
+          Call for More Info
+        </button>
+        <amp-lightbox
+          id="call-us"
+          class="lightbox"
+          layout="nodisplay"
+          scrollable
+          on="tap:call-us.close">
+          <div class="mt-5 pt-5 d-flex mx-auto flex-column align-items-center">
+            <a
+              class="my-5 btn btn-light btn-round mr-2 flex-1 d-sm-none"
+              href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
+              target="_blank">
+              Schedule a Q&A
+            </a>
+            <h4 class="text-white border-top border-bottom">
+              OR
+            </h4>
+            <a
+              class="my-5 btn btn-light btn-round mr-2 flex-1 d-sm-none"
+              href="tel:5128278498">
+              Call Us Now!
+            </a>
+          </div>
+        </amp-lightbox>
+        <a
+          class="btn btn-outline-light btn-round mr-2 flex-1 d-none d-sm-block"
+          href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
+          target="_blank">
+          Schedule a Q&A
         </a>
         {% include_relative partials/btn-apply.html class='flex-1'%}
       </div>
@@ -35,15 +66,20 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
 
   <!-- begin tabs -->
 
-  <amp-selector class="tabs-with-flex"
+  <amp-selector
+    class="tabs-with-flex"
     role="tablist">
-    <div id="tab1"
+    <div
+      id="tab1"
       role="tab"
       class="tab-link"
       aria-controls="tabpanel1"
       option
-      selected>Night Classes</div>
-    <div id="tabpanel1"
+      selected>
+      Flexible<span class="d-none d-sm-inline">&nbsp;</span><span class="d-sm-none"><br/></span>Schedule
+    </div>
+    <div
+      id="tabpanel1"
       role="tabpanel"
       aria-labelledby="tab1"
     >
@@ -53,11 +89,9 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
           <!-- Info -->
           <div class="mb-5">
             <h3 class="h4 display-6">You can keep your day job</h3>
-            <p class="size-20">
-              Unlike many coding bootcamps, which require full-time commitment
-              and are hugely expensive, we go at a more steady pace offering
-              part-time, in-person classes twice a week.
-            </p>
+            <p class="size-20">&#8226; Classes meet part-time, twice a week in the evenings</p>
+            <p class="size-20">&#8226; 15 hours of online course work per week on your own schedule</p>
+            <p class="size-20">&#8226; Project-based, flipped-classroom methodology allows you to learn more than any full-time program</p>
             {% include_relative partials/btn-apply.html class="btn-wide" %}
           </div>
           <!-- End Info -->
@@ -78,12 +112,16 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
       </div>
       <!-- End Mockup Block -->
     </div>
-    <div id="tab2"
+    <div
+      id="tab2"
       role="tab"
       class="tab-link"
       aria-controls="tabpanel2"
-      option>Innovative Curriculum</div>
-    <div id="tabpanel2"
+      option>
+      Affordable<span class="d-none d-sm-inline">&nbsp;</span><span class="d-sm-none"><br/></span>Tuition
+    </div>
+    <div
+      id="tabpanel2"
       role="tabpanel"
       aria-labelledby="tab2"
     >
@@ -92,12 +130,11 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
         <div class="col-md mb-9 mb-lg-0">
           <!-- Info -->
           <div class="mb-5">
-            <h3 class="h4 display-6">We Help Keep You Relevant</h3>
-            <p class="size-20">
-              Our classes are taught by industry professionals currently working
-              in the field and our curriculum is updated on a regular basis so
-              you're always learning the most cutting-edge skills.
-            </p>
+            <h3 class="h4 display-6">You have tuition options</h3>
+            <p class="size-20">&#8226; $2,990 per class</p>
+            <p class="size-20">&#8226; 4 classes in our program</p>
+            <p class="size-20">&#8226; Pay course-by-course or for the entire program</p>
+            <p class="size-20">&#8226; Tuition financing through <a href="https://austincodingacademy.skills.fund/">Skills Fund</a></p>
             {% include_relative partials/btn-apply.html class="btn-wide" %}
           </div>
           <!-- End Info -->
@@ -118,12 +155,16 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
       </div>
       <!-- End Mockup Block -->
     </div>
-    <div id="tab3"
+    <div
+      id="tab3"
       role="tab"
       class="tab-link"
       aria-controls="tabpanel3"
-      option>Job Placement</div>
-    <div id="tabpanel3"
+      option>
+      Land<span class="d-none d-sm-inline">&nbsp;</span><span class="d-sm-none"><br/></span>a Job
+    </div>
+    <div
+      id="tabpanel3"
       role="tabpanel"
       aria-labelledby="tab3"
     >
@@ -132,12 +173,11 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
         <div class="col-md mb-9 mb-lg-0">
           <!-- Info -->
           <div class="mb-5">
-            <h3 class="h4 display-6">Job Placement Assistance</h3>
-            <p class="size-20">
-              We are committed to helping you get a job. We’ll show you how to
-              craft your resume, set up networking events, introduce you to
-              potential employers, and technical interviews.
-            </p>
+            <h3 class="h4 display-6">Our focus is your career</h3>
+            <p class="size-20">&#8226; Classes are taught by professional developers</p>
+            <p class="size-20">&#8226; Free Job Placement class teaches interview and job-finding skills</p>
+            <p class="size-20">&#8226; Project-based curriculum built by experts</p>
+            <p class="size-20">&#8226; Unlimited tutoring</p>            
             {% include_relative partials/btn-apply.html class="btn-wide" %}
           </div>
           <!-- End Info -->
@@ -155,8 +195,6 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
             ></amp-img>
           </div>
 
-          <!-- SVG Component -->
-          <!-- End SVG Component -->
         </div>
       </div>
       <!-- End Mockup Block -->
@@ -187,7 +225,7 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
           </p>
         </div>
         <a
-          class="btn stock-blue-button text-white hover-scale-button"
+          class="btn stock-blue-button text-white"
           href="/javascript/"
           >Learn More</a
         >
@@ -210,7 +248,7 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
           </p>
         </div>
         <a
-          class="btn stock-blue-button text-white hover-scale-button"
+          class="btn stock-blue-button text-white"
           href="/csharp"
           >Learn More</a
         >
@@ -453,13 +491,16 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
   {% include_relative partials/btn-apply.html class="btn-wide" %}
 </section>
 
-<section class="mb-10 container">
+<section class="mb-10 container d-flex flex-column justify-content-center">
+
   <h2 class="font-family-alt font-weight-bold text-center display-5">
     Contact Us
   </h2>
   <p class="section-text text-center mb-4">
     Whether you have questions or you would just<br />
-    like to say hello, contact us.
+    like to say hello, let us know.
   </p>
+
   {% include_relative partials/contact-form.html %}
+
 </section>

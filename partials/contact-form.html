@@ -1,9 +1,24 @@
+{% unless page.permalink == "/contact/" %}
+<a href="#" class="btn text-white text-white bg-purple mx-auto" on="tap:contact-lightbox">
+  Contact us &nbsp;<i class="far fa-envelope"></i>
+</a>
+
+<amp-lightbox
+  id="contact-lightbox"
+  class="lightbox"
+  layout="nodisplay"
+  scrollable
+  on="tap:contact-lightbox.close"
+>
+  <div class="container px-5 pt-5 text-white">
+{% endunless %}
+
 <form
   action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/33cc0e23-1881-4874-a1d0-2c0307f20e41"
   method="POST"
   target="_top"
 >
-  <div class="form-container">
+  <div class="form-container" on="tap:contact-lightbox.open">
     <input name="lifecyclestage" type="hidden" value="lead">
     <input name="hs_lead_status" type="hidden" value="NEW">
     <input name="page_name" type="hidden" value="{{page.title}}">
@@ -143,3 +158,9 @@
     </div>
   </div>
 </form>
+
+
+{% unless page.permalink == "/contact/" %}
+  </div>
+</amp-lightbox>
+{% endunless %}
