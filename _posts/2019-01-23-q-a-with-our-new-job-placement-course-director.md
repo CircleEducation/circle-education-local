@@ -14,6 +14,8 @@ excerpt: Austin Coding Academy recently added a 4-week job placement course, cov
   director of the course and Technical Recruiter at Dosh about why teaching more than
   just coding is important.
 img: "/assets/images/austin-coding-academy-job-placement-class.jpg"
+width: 2016
+height: 1512
 redirect_from: []
 permalink: "/blog/career-development/new-job-placement-course-q%26a"
 
