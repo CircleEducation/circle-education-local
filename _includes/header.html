@@ -1,42 +1,43 @@
 <!-- ========== HEADER ========== -->
 
-<amp-sidebar id="sidebar"
-  class="m-0 bg-dark d-flex d-md-none row flex-column align-items-center justify-content-around"
+<amp-sidebar
+  on="tap:sidebar.open"
+  scrollable
+  id="sidebar"
+  class="m-0 bg-dark d-flex d-md-none row flex-column align-items-start justify-content-start"
   layout="nodisplay"
   side="right">
-
-  <div class="mx-5">
-    <button class="btn btn-outline-danger" on="tap:sidebar.close">
-      <i class="fas fa-times"></i>
-    </button>
-  </div>
-
   {% for item in site.menus.header %}
-
-    {% if item.children %}
-      <div class="mx-3">
-        <button class="text-center btn btn-outline-light">
-          {{ item.title }} <i class="fas fa-caret-down"></i>
-        </button>
-        <ul id="hidden-list" class="d-none position-absolute list-unstyled w-75 text-center mx-auto mb-0">
-          {% for child in item.children %}
-            <li class="mt-2">
-              <a href="{{ child.url }}" class="text-white">
-                {{ child.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% else %}
-      <div class="mx-3">
-        <a href="{{ item.url }}">
-          <button class="text-center btn btn-outline-light">
+    <div class="mt-5 text-left" on="tap:sidebar.open">
+      {% if item.children %}
+        <div class="ml-5 text-white">
+          {{ item.title }}
+          <ul class="pl-5 m-0 fa-ul">
+            {% for child in item.children %}
+              <li class="mt-3">
+                <span class="fa-li">
+                  <i class="fas fa-code fa-xs"></i>
+                </span>
+                <a href="{{ child.url }}" class="text-white">
+                  {{ child.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% else %}
+        {% if item.button %}
+          <a href="{{ item.url }}" class="text-white text-left">
+            <button class="{{ item.button }}">
+              {{ item.title }}
+            </button>
+        {% else %}
+          <a href="{{ item.url }}" class="ml-5 text-white text-left">
             {{ item.title }}
-          </button>
+        {% endif %}
         </a>
-      </div>
-    {% endif %}
+      {% endif %}
+    </div>
 
   {% endfor %}
 

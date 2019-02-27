@@ -2,7 +2,7 @@
 tags: []
 title: How to Stop Multi-Tasking and Develop Focus
 created_at: 2018-03-28 05:00:00 +0000
-updated_at: 2019-02-15 00:00:00 -0600
+updated_at: 2019-02-15 06:00:00 +0000
 img: "/assets/images/How-to-Stop-Multi-Tasking-and-Develop-Focus.png"
 categories:
 - career-development
@@ -15,6 +15,8 @@ excerpt: In an age of constant digital distractions, focus may seem like a forei
   getting it back is a challenge. Most of us can’t afford to lose time when work deadlines
   are approaching, so here are some actionable tips to help develop focus and get
   more done at work.
+redirect_from: []
+permalink: "/blog/career-development/how-to-stop-multi-tasking-and-develop-focus"
 
 ---
 In an age of constant digital distractions, focus may seem like a foreign concept. Websites like Facebook, Reddit, and YouTube give us an endless supply of content that are often more engaging than the tasks we need to accomplish. But focus is crucial for developers; one misplaced character in thousands of lines of code can throw off an entire project.
