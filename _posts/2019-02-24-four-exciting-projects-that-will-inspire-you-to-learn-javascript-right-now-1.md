@@ -1,18 +1,24 @@
 ---
 tags: []
-title: Four exciting projects that will inspire you to learn JavaScript right now
-created_at: 2018-09-19 00:00:00 -0500
-updated_at: 2019-02-11 00:00:00 -0600
-img: ''
-categories:
-- javaScript
-date: 2019-02-11 15:20:21 -0600
 layout: post
+title: Four Exciting Projects That Will Inspire You to Learn JavaScript Right Now
+description: JS is the most popular coding language in the world for a variety of
+  reasons. Here are some cool projects that will inspire you to learn JavaScript now!
+created_at: 2018-09-19 00:00:00 -0500
+updated_at: 2019-02-24 00:00:00 -0600
+categories:
+- javascript
+excerpt: 'JavaScript (JS) is the most commonly-used coding language for developers
+  in 2019. JS earned its popularity because it’s easy to learn, dynamically typed,
+  fast to run, and works across most platforms, including all modern web browsers.
+  Let’s look at some impressive projects that might inspire you to start learning
+  JavaScript now:'
+img: "/assets/images/learn-javascript-four-projects.png"
+redirect_from: []
+permalink: "/blog/javascript/four-exciting-projects-that-will-inspire-you-to-learn-javascript"
+date: 2019-02-24 14:14:48 -0600
+
 ---
-# Four exciting projects that will inspire you to learn JavaScript right now
-
-![learn-javascript-projects-aca](https://blog.austincodingacademy.com/hs-fs/hubfs/learn-javascript-projects-aca.png?width=1200&name=learn-javascript-projects-aca.png =1200x)
-
 JavaScript (JS) is the [most commonly-used coding language](https://stackify.com/popular-programming-languages-2018/) for developers in 2019. JS earned its popularity because it’s easy to learn, dynamically typed, fast to run, and works across most platforms, including all modern web browsers. Coders [from all different specialties](https://blog.austincodingacademy.com/which-aca-track-is-right-for-you) will need a basic understanding of JavaScript to complete most designs—especially front-end designs.
 
 Let’s look at some impressive projects that might inspire you to want to start learning JavaScript now:

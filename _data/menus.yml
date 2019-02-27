@@ -27,6 +27,9 @@ footer-community:
   title: Campus Manager
   url: https://campus.austincodingacademy.com
 footer-about:
+- url: "/blog"
+  weight: 6
+  title: Blog
 - weight: 5
   title: Apply Now
   url: "/apply"
@@ -50,6 +53,9 @@ courses:
   title: JavaScript
   url: "/javascript"
 header:
+- url: "/faq"
+  weight: 2
+  title: FAQ
 - weight: 5
   title: Apply
   url: "/apply"
@@ -57,9 +63,6 @@ header:
 - weight: 4
   title: Financing
   url: "/financing"
-- url: "/faq"
-  weight: 2
-  title: FAQ
 - weight: 1
   title: Courses &amp; Tuition
   url: "#"

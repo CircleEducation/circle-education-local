@@ -11,22 +11,17 @@
     <!-- htmllint preset="none" -->
     <i class="fas fa-circle text-{{ course.color }}"></i>
     <!-- htmllint preset="$previous" -->
-    <span property="courseCode">{{ course.code }}</span>
-    <span property="name">{{ course.title }}</span>
+    {{ course.code }}{{ course.title }}
   </h4>
   {% for section in course.sections %}
   <div
-    class="row border my-2 align-items-center"
-    property="hasCourseInstance" typeOf="courseInstance">
-    <div class="d-none" property="name">{{ course.title }}</div>
+    class="row border my-2 align-items-center">
     <div class="col-6 col-md-3 my-4">
-      <time property="startDate" dateTime="{{ section.start }}">{{ section.start | date: "%B %d" }}</time>
-      -
-      <time property="endDate" dateTime="{{ section.end }}">{{ section.end | date: "%B %d" }}</time>
+      {{ section.start | date: "%B %d" }} - {{ section.end | date: "%B %d" }}
     </div>
     <div class="col-6 col-md-3 my-4">{{ section.weekdays }}</div>
     <div class="col-6 col-md-2 my-4">{{ section.time }}</div>
-    <div class="col-6 col-md-4 my-4" property="location" typeOf="Place">{{ section.campus }}<span class="d-none" property="address">{{ section.address }}</span></div>
+    <div class="col-6 col-md-4 my-4">{{ section.campus }}</div>
   </div>
   {% endfor %}
 </div>
