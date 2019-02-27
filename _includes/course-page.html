@@ -49,9 +49,9 @@
   <div class="my-10"></div>
 
   <script type="application/ld+json">
+  {% for course in page.courses %}
+  {% assign courseName = course.title %}
   {
-    {% for course in page.courses %}
-    {% assign courseName = course.title %}
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "{{ courseName }}",
@@ -70,7 +70,7 @@
         }
       }{% unless section == course.sections.last %},{% endunless %}
       {% endfor %}
-    ]
+    ],
     "provider": {
       "@type": "Organization",
       "name": "Austin Coding Academy",
@@ -79,8 +79,8 @@
         "url": "{{site.url}}/assets/images/logo-aca.png"
       }
     }
-    {% endfor %}
   }
+  {% endfor %}
   </script>
 
 </main>
