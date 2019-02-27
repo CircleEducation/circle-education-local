@@ -60,6 +60,7 @@
     "hasCourseInstance": [
       {% for section in course.sections %}
       {
+        "@type": "CourseInstance"
         "name": "{{ courseName }}"
         "startDate": "{{ section.start }}",
         "endDate": "{{ section.end }}",

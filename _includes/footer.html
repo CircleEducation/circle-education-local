@@ -1,12 +1,6 @@
 <!-- ========== FOOTER ========== -->
-<footer
-  class="alt-gradient"
-  itemscope
-  itemtype="https://schema.org/WPFooter">
-  <div
-    class="container space-top-2 space-bottom-1"
-    itemscope
-    itemtype="https://schema.org/LocalBusiness">
+<footer class="alt-gradient">
+  <div class="container space-top-2 space-bottom-1">
     <div class="row justify-content-lg-start mb-7">
       <div class="col-12 col-lg-6 mb-7 mx-auto mx-lg-0">
         <div
@@ -14,7 +8,6 @@
           <div class="col d-flex align-items-center justify-content-center">
             <!-- Logo -->
             <a
-              itemprop="image"
               id="logo"
               class="d-flex align-items-center"
               href="/">
@@ -40,13 +33,10 @@
                 <a
                   href="tel:{{site.phone}}"
                   class="text-white list-group-item size-18 list-group-item-action">
-                  <span class="text-white fas fa-phone"></span>&nbsp; <span itemprop="telephone">{{site.phone}}</span>
+                  <span class="text-white fas fa-phone"></span>&nbsp; {{site.phone}}
                 </a>
               </li>
-              <li
-                itemprop="address"
-                itemscope
-                itemtype="https://schema.org/PostalAddress">
+              <li>
                 <a
                   href="https://www.google.com/maps/place/Austin+Coding+Academy/@30.2688755,-97.7427528,17z/data=!3m1!4b1!4m5!3m4!1s0x8644b4e31ad087bd:0xd6644ce54fe2531c!8m2!3d30.2688755!4d-97.7405641"
                   class="text-white list-group-item size-18 list-group-item-action"
@@ -54,15 +44,12 @@
                   <ul class="list-group list-group-transparent list-group-white list-group-flush list-group-borderless mb-0 fa-ul">
                     <li><span class="fa-li"><i class="fas fa-map-marker-alt"></i></span>Downtown</li>
                     <li>(Capital Factory)</li>
-                    <li itemprop="streetAddress">701 Brazos St, Ste 1616,</li>
-                    <li itemprop="addressLocality">Austin, TX 78701</li>
+                    <li>701 Brazos St, Ste 1616</li>
+                    <li>Austin, TX 78701</li>
                   </ul>
                 </a>
               </li>
-              <li
-                itemprop="address"
-                itemscope
-                itemtype="https://schema.org/PostalAddress">
+              <li>
                 <a
                   href="https://www.google.com/maps/place/North+Austin+Coding+Academy/@30.3290949,-97.7136072,17z/data=!3m1!4b1!4m5!3m4!1s0x8644cba00a32dc3d:0x8807e75b730c450f!8m2!3d30.3290949!4d-97.7114185"
                   class="text-white list-group-item size-18 list-group-item-action"
@@ -70,8 +57,8 @@
                   <ul class="list-group list-group-transparent list-group-white list-group-flush list-group-borderless mb-0 fa-ul">
                     <li><span class="fa-li"><i class="fas fa-map-marker-alt"></i></span> North Austin</li>
                     <li>(Highland)</li>
-                    <li itemprop="streetAddress">314 E Highland Mall Blvd, Ste 114</li>
-                    <li itemprop="addressLocality">Austin, TX 78752</li>
+                    <li>314 E Highland Mall Blvd, Ste 114</li>
+                    <li>Austin, TX 78752</li>
                   </ul>
                 </a>
               </li>
@@ -85,18 +72,16 @@
 
           <div class="text-center text-lg-left col-6 ml-lg-auto mb-4">
             <!-- List Group -->
-            <ul
-              itemscope
-              itemtype="https://schema.org/SiteNavigationElement"
-              class="list-group mt-5 list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
+            <ul class="list-group mt-5 list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
               <li class="text-white footer-title size-20 font-weight-bold">
                 About
               </li>
               {% for item in site.menus.footer-about %}
                 <li>
-                  <a class="text-white list-group-item size-18 list-group-item-action"
+                  <a
+                    class="text-white list-group-item size-18 list-group-item-action"
                     href="{{ item.url }}"
-                    itemprop="url">
+                  >
                     {{ item.title }}
                   </a>
                 </li>
@@ -107,10 +92,7 @@
 
           <div class="text-center text-lg-left col-6 mb-4">
             <!-- List Group -->
-            <ul
-              itemscope
-              itemtype="https://schema.org/SiteNavigationElement"
-              class="list-group mt-5 list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
+            <ul class="list-group mt-5 list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
               <li class="text-white footer-title size-20 font-weight-bold">
                 Community
               </li>
@@ -118,7 +100,7 @@
                 <li>
                   <a class="text-white list-group-item size-18 list-group-item-action"
                     href="{{ item.url }}"
-                    itemprop="url">
+                  >
                     {{ item.title }}
                   </a>
                 </li>
@@ -130,7 +112,7 @@
 
         <div class="d-flex justify-content-center justify-content-lg-start">
           {% for item in site.menus.social %}
-            <a href="{{ item.url }}" class="{{ item.margin }}" itemprop="url">
+            <a href="{{ item.url }}" class="{{ item.margin }}">
               <span class="text-white fab fa-{{ item.title }} fa-2x"></span>
             </a>
           {% endfor %}
@@ -143,7 +125,7 @@
     <div class="text-center">
       <!-- Copyright -->
       <p class="small text-white-70 mb-0">
-        © <span itemprop="name">Austin Coding Academy</span> 2018. All rights reserved.
+        © Austin Coding Academy 2018. All rights reserved.
       </p>
       <!-- End Copyright -->
     </div>
@@ -151,3 +133,28 @@
   </div>
 </footer>
 <!-- ========== END FOOTER ========== -->
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Austin Coding Academy",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{site.url}}/assets/images/logo-aca.png"
+    },
+    "telephone": "{{ site.phone }}",
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "701 Brazos St, Ste 1616",
+        "addressLocality": "Austin, TX 78701"
+      },
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "314 E Highland Mall Blvd, Ste 114",
+        "addressLocality": "Austin, TX 78752"
+      }
+    ]
+  }
+  </script>
