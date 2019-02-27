@@ -4,8 +4,8 @@ layout: post
 title: 5 Tips to Help You Learn Coding Faster
 description: Learning coding can be a time-consuming process. We have a few tips to
   help you learn web development faster!
-created_at: 2018-03-21 00:00:00 -0500
-updated_at: 2019-02-21 00:00:00 -0600
+created_at: 2018-03-21 05:00:00 +0000
+updated_at: 2019-02-21 06:00:00 +0000
 categories:
 - web-development
 excerpt: 'Mastering a new skill can take years of focus and practice. But what if
@@ -14,7 +14,7 @@ excerpt: 'Mastering a new skill can take years of focus and practice. But what i
   you can do in your spare time every day that will help you get better in less time.
   Here are five things to try to learn programming faster.'
 img: "/assets/images/5-tips-to-master-programming-faster.png"
-date: 2019-02-21 14:22:14 -0600
+date: 2019-02-21 20:22:14 +0000
 
 ---
 Mastering a new skill can take years of focus and practice. But what if you want to speed things up a little? When it comes to getting a job as a developer, you may not want to wait years to get started. Good news: there are some things you can do in your spare time every day that will help you get better in less time. Here are five things to try to learn programming faster.

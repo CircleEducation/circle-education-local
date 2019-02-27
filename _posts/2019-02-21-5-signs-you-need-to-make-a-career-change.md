@@ -4,8 +4,8 @@ layout: post
 title: 5 Signs You Need to Make a Career Change
 description: The average person spends 20% of their life at. That's too much time
   to not enjoy your career! Here are some signs that it's time for a career switch.
-created_at: 2018-04-04 00:00:00 -0500
-updated_at: 2019-02-21 00:00:00 -0600
+created_at: 2018-04-04 05:00:00 +0000
+updated_at: 2019-02-21 06:00:00 +0000
 categories:
 - career-development
 excerpt: |2-
@@ -13,7 +13,7 @@ excerpt: |2-
 
   The average American spends at least 40 hours a week at work for several decades. A career represents too much of your lifespan for it to be something that makes you miserable. While the thought of making such a huge overhaul may be daunting, here are some signs it’s time to take a leap and move into a new career path.
 img: "/assets/images/5-signs-you-need-to-change-careers.png"
-date: 2019-02-21 14:32:26 -0600
+date: 2019-02-21 20:32:26 +0000
 
 ---
 On Sunday nights, what do you generally feel about the week ahead of you? Are you energized, enthusiastic, and ready to hit the ground running on Monday morning? Or do you feel mopey, exhausted, and full of dread? If you fall into the second camp, it may be time to make a change.
