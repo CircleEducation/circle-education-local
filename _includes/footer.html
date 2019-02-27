@@ -3,10 +3,14 @@
   <div class="container space-top-2 space-bottom-1">
     <div class="row justify-content-lg-start mb-7">
       <div class="col-12 col-lg-6 mb-7 mx-auto mx-lg-0">
-        <div class="row">
+        <div
+          class="row">
           <div class="col d-flex align-items-center justify-content-center">
             <!-- Logo -->
-            <a id="logo" class="d-flex align-items-center" href="/">
+            <a
+              id="logo"
+              class="d-flex align-items-center"
+              href="/">
               <amp-img
                 width="140px"
                 height="140px"
@@ -18,15 +22,18 @@
             <!-- End Logo -->
           </div>
 
-          <div class="col">
+          <div
+            class="col">
             <!-- List Group -->
             <ul class="list-group mt-5 list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
               <li class="text-white footer-title size-20 font-weight-bold">
                 Find Us
               </li>
               <li>
-                <a href="tel:{{site.phone}}" class="text-white list-group-item size-18 list-group-item-action">
-                  <span class="fas fa-phone"></span>&nbsp; {{site.phone}}
+                <a
+                  href="tel:{{site.phone}}"
+                  class="text-white list-group-item size-18 list-group-item-action">
+                  <span class="text-white fas fa-phone"></span>&nbsp; {{site.phone}}
                 </a>
               </li>
               <li>
@@ -37,7 +44,7 @@
                   <ul class="list-group list-group-transparent list-group-white list-group-flush list-group-borderless mb-0 fa-ul">
                     <li><span class="fa-li"><i class="fas fa-map-marker-alt"></i></span>Downtown</li>
                     <li>(Capital Factory)</li>
-                    <li>701 Brazos St, Ste 1616,</li>
+                    <li>701 Brazos St, Ste 1616</li>
                     <li>Austin, TX 78701</li>
                   </ul>
                 </a>
@@ -71,8 +78,10 @@
               </li>
               {% for item in site.menus.footer-about %}
                 <li>
-                  <a class="text-white list-group-item size-18 list-group-item-action"
-                    href="{{ item.url }}">
+                  <a
+                    class="text-white list-group-item size-18 list-group-item-action"
+                    href="{{ item.url }}"
+                  >
                     {{ item.title }}
                   </a>
                 </li>
@@ -90,7 +99,8 @@
               {% for item in site.menus.footer-community %}
                 <li>
                   <a class="text-white list-group-item size-18 list-group-item-action"
-                    href="{{ item.url }}">
+                    href="{{ item.url }}"
+                  >
                     {{ item.title }}
                   </a>
                 </li>
@@ -123,3 +133,34 @@
   </div>
 </footer>
 <!-- ========== END FOOTER ========== -->
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Austin Coding Academy",
+    "url": "{{site.url}}",
+    "priceRange": "$2990",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{site.url}}/assets/images/logo-aca.png"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{site.url}}/assets/images/header-index.jpg"
+    },
+    "telephone": "{{ site.phone }}",
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "701 Brazos St, Ste 1616",
+        "addressLocality": "Austin, TX 78701"
+      },
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "314 E Highland Mall Blvd, Ste 114",
+        "addressLocality": "Austin, TX 78752"
+      }
+    ]
+  }
+  </script>

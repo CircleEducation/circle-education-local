@@ -7,45 +7,80 @@
 
 <main class="container">
 
-    <h2 class="display-6 text-center my-10 text-muted">
-      {{ page.overview }}
+  <h2 class="display-6 text-center my-10 text-muted">
+    {{ page.overview }}
+  </h2>
+
+  {% include_relative partials/curriculum.html %}
+
+  <div class="my-10">
+    {% include_relative partials/course-guide-form.html %}
+  </div>
+
+  {% include_relative partials/comparison-cards.html %}
+
+  <div class="my-10">
+    {% include_relative partials/tuition-help.html %}
+  </div>
+
+  {% include_relative partials/course-dates.html %}
+
+  <div class="d-flex justify-content-center my-10">
+    {% include_relative partials/btn-apply.html class="btn-wide" %}
+  </div>
+
+  {% include_relative partials/campus-locations.html %}
+
+  <div class="container d-flex flex-column justify-content-center mt-10">
+
+    <h2 class="font-family-alt font-weight-bold text-center display-4">
+      Still Have Questions?
     </h2>
 
-    {% include_relative partials/curriculum.html %}
+    <p class="size-20 mb-4 text-center">
+      From choosing the right course to understanding course details, we're here
+      to help.
+    </p>
 
-    <div class="my-10">
-      {% include_relative partials/course-guide-form.html %}
-    </div>
+    {% include_relative partials/contact-form.html %}
 
-    {% include_relative partials/comparison-cards.html %}
+  </div>
 
-    <div class="my-10">
-      {% include_relative partials/tuition-help.html %}
-    </div>
+  <div class="my-10"></div>
 
-    {% include_relative partials/course-dates.html %}
-
-    <div class="d-flex justify-content-center my-10">
-      {% include_relative partials/btn-apply.html class="btn-wide" %}
-    </div>
-
-    {% include_relative partials/campus-locations.html %}
-
-    <div class="container d-flex flex-column justify-content-center mt-10">
-
-      <h2 class="font-family-alt font-weight-bold text-center display-4">
-        Still Have Questions?
-      </h2>
-
-      <p class="size-20 mb-4 text-center">
-        From choosing the right course to understanding course details, we're here
-        to help.
-      </p>
-
-      {% include_relative partials/contact-form.html %}
-
-    </div>
-
-    <div class="my-10"></div>
+  <script type="application/ld+json">
+  {
+    {% for course in page.courses %}
+    {% assign courseName = course.title %}
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "{{ courseName }}",
+    "courseCode": "{{ course.code }}",
+    "description": "{{ course.description }}",
+    "hasCourseInstance": [
+      {% for section in course.sections %}
+      {
+        "@type": "CourseInstance"
+        "name": "{{ courseName }}"
+        "startDate": "{{ section.start }}",
+        "endDate": "{{ section.end }}",
+        "location": {
+          "name": "{{ section.campus }}",
+          "address": "{{ section.address }}"
+        }
+      }{% unless section == course.sections.last %},{% endunless %}
+      {% endfor %}
+    ]
+    "provider": {
+      "@type": "Organization",
+      "name": "Austin Coding Academy",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{site.url}}/assets/images/logo-aca.png"
+      }
+    }
+    {% endfor %}
+  }
+  </script>
 
 </main>
