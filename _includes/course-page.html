@@ -65,8 +65,13 @@
         "startDate": "{{ section.start }}",
         "endDate": "{{ section.end }}",
         "location": {
+          "@type": "Place",
           "name": "{{ section.campus }}",
-          "address": "{{ section.address }}"
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "{{ section.address }}",
+            "addressLocality": "Austin"
+          }
         }
       }{% unless section == course.sections.last %},{% endunless %}
       {% endfor %}
