@@ -1,5 +1,7 @@
 <!-- ========== HEADER ========== -->
-
+{% if page.permalink == '/' %}
+  {% assign color = 'transparent' %}
+{% endif %}
 <amp-sidebar
   on="tap:sidebar.open"
   scrollable
@@ -46,10 +48,10 @@
 <!-- htmllint preset="none" -->
 <header
   id="header"
-  class="u-header {% if page.color == 'transparent' %} u-header--bg-transparent u-header--white-nav-links-md u-header--abs-top {% else %} u-header--navbar-bg {% endif %}"
+  class="u-header {% if color == 'transparent' %} u-header--bg-transparent u-header--white-nav-links-md u-header--abs-top {% else %} u-header--navbar-bg {% endif %}"
 >
   <div
-    class="u-header__section bg-{{ page.color | default: 'purple' }} p-2"
+    class="u-header__section bg-{{ color | default: 'purple' }} p-2"
   >
   <!-- htmllint preset="$previous" -->
     <div class="container">
