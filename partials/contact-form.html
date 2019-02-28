@@ -1,5 +1,8 @@
 {% unless page.permalink == "/contact/" %}
-<a href="#" class="btn text-white text-white bg-purple mx-auto" on="tap:contact-lightbox">
+<a href="#"
+  class="btn text-white text-white bg-purple mx-auto"
+  on="tap:contact-lightbox"
+  role="button">
   Contact us &nbsp;<i class="far fa-envelope"></i>
 </a>
 
@@ -9,6 +12,7 @@
   layout="nodisplay"
   scrollable
   on="tap:contact-lightbox.close"
+  role="dialog"
 >
   <div class="container px-5 pt-5 text-white">
 {% endunless %}
@@ -18,7 +22,10 @@
   method="POST"
   target="_top"
 >
-  <div class="form-container" on="tap:contact-lightbox.open">
+  <div
+    class="form-container"
+    on="tap:contact-lightbox.open"
+    role="form">
     <input name="lifecyclestage" type="hidden" value="lead">
     <input name="hs_lead_status" type="hidden" value="NEW">
     <input name="page_name" type="hidden" value="{{page.title}}">
