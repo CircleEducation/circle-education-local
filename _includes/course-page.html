@@ -50,29 +50,34 @@
 
   <div class="my-10"></div>
 
+  {% for course in page.courses %}
   <script type="application/ld+json">
   {
-    {% for course in page.courses %}
-    {% assign courseName = course.title %}
     "@context": "https://schema.org",
     "@type": "Course",
-    "name": "{{ courseName }}",
+    "name": "{{ course.title }}",
     "courseCode": "{{ course.code }}",
     "description": "{{ course.description }}",
     "hasCourseInstance": [
       {% for section in course.sections %}
       {
-        "@type": "CourseInstance"
-        "name": "{{ courseName }}"
+        "@type": "CourseInstance",
+        "name": "{{ course.title }}",
+        "description": "{{ course.description }}",
         "startDate": "{{ section.start }}",
         "endDate": "{{ section.end }}",
         "location": {
+          "@type": "Place",
           "name": "{{ section.campus }}",
-          "address": "{{ section.address }}"
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "{{ section.address }}",
+            "addressLocality": "Austin"
+          }
         }
       }{% unless section == course.sections.last %},{% endunless %}
       {% endfor %}
-    ]
+    ],
     "provider": {
       "@type": "Organization",
       "name": "Austin Coding Academy",
@@ -81,8 +86,8 @@
         "url": "{{site.url}}/assets/images/logo-aca.png"
       }
     }
-    {% endfor %}
   }
   </script>
+  {% endfor %}
 
 </main>
