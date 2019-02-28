@@ -12,6 +12,7 @@
   layout="nodisplay"
   scrollable
   on="tap:contact-lightbox.close"
+  tabindex="20"
   role="dialog"
 >
   <div class="container px-5 pt-5 text-white">
@@ -25,7 +26,8 @@
   <div
     class="form-container"
     on="tap:contact-lightbox.open"
-    role="form">
+    role="form"
+    tabindex="19">
     <input name="lifecyclestage" type="hidden" value="lead">
     <input name="hs_lead_status" type="hidden" value="NEW">
     <input name="page_name" type="hidden" value="{{page.title}}">
@@ -50,6 +52,7 @@
             data-msg="Please enter your first name."
             data-error-class="u-has-error"
             data-success-class="u-has-success"
+            tabindex="1"
           />
         </div>
       </div>
@@ -73,6 +76,7 @@
             data-msg="Please enter your last name."
             data-error-class="u-has-error"
             data-success-class="u-has-success"
+            tabindex="2"
           />
         </div>
       </div>
@@ -96,6 +100,7 @@
             data-msg="Please enter a valid email address."
             data-error-class="u-has-error"
             data-success-class="u-has-success"
+            tabindex="3"
           />
         </div>
       </div>
@@ -119,6 +124,7 @@
             data-msg="Please enter your phone number."
             data-error-class="u-has-error"
             data-success-class="u-has-success"
+            tabindex="4"
           />
         </div>
       </div>
@@ -142,6 +148,7 @@
             data-msg="Please enter a message."
             data-error-class="u-has-error"
             data-success-class="u-has-success"
+            tabindex="5"
           ></textarea>
         </div>
       </div>
@@ -163,6 +170,7 @@
                   value="Facebook / Twitter / Social Media"
                   id="check1"
                   name="how_did_you_hear_about_this_course_1"
+                  tabindex="6"
                 />
                 <label class="form-check-label" for="check1">
                   Facebook
@@ -176,6 +184,7 @@
                   value="Instagram"
                   id="check2"
                   name="how_did_you_hear_about_this_course_1"
+                  tabindex="7"
                 />
                 <label class="form-check-label" for="check2">
                   Instagram
@@ -189,6 +198,7 @@
                   value="Twitter"
                   id="check3"
                   name="how_did_you_hear_about_this_course_1"
+                  tabindex="8"
                 />
                 <label class="form-check-label" for="check3">
                   Twitter
@@ -202,6 +212,7 @@
                   value="LinkedIn"
                   id="check4"
                   name="how_did_you_hear_about_this_course_1"
+                  tabindex="9"
                 />
                 <label class="form-check-label" for="check4">
                   LinkedIn
@@ -215,6 +226,7 @@
                   value="Friends / Family"
                   id="check8"
                   name="how_did_you_hear_about_this_course_1"
+                  tabindex="10"
                 />
                 <label class="form-check-label" for="check8">
                   Friend / Family
@@ -228,6 +240,7 @@
                   value="Google or Search Engine"
                   id="check9"
                   name="how_did_you_hear_about_this_course_1"
+                  tabindex="11"
                 />
                 <label class="form-check-label" for="check9">
                   Search engine
@@ -243,6 +256,7 @@
                   value="Coding Academy Event"
                   id="check5"
                   name="how_did_you_hear_about_this_course_1"
+                  tabindex="12"
                 />
                 <label class="form-check-label" for="check5">
                   ACA event
@@ -256,6 +270,7 @@
                   value="ACA Faculty"
                   id="check6"
                   name="how_did_you_hear_about_this_course_1"
+                  tabindex="13"
                 />
                 <label class="form-check-label" for="check6">
                   ACA faculty / staff
@@ -269,6 +284,7 @@
                   value="Coding Academy Student / Alumni"
                   id="check7"
                   name="how_did_you_hear_about_this_course_1"
+                  tabindex="14"
                 />
                 <label class="form-check-label" for="check7">
                   ACA student / alumni
@@ -282,6 +298,7 @@
                   value="News - TV or Article"
                   id="check10"
                   name="how_did_you_hear_about_this_course_1"
+                  tabindex="15"
                 />
                 <label class="form-check-label" for="check10">
                   News (TV, article)
@@ -295,6 +312,7 @@
                   value="Radio"
                   id="check11"
                   name="how_did_you_hear_about_this_course_1"
+                  tabindex="16"
                 />
                 <label class="form-check-label" for="check11">
                   Radio
@@ -308,6 +326,7 @@
                   value="Other"
                   id="check12"
                   name="how_did_you_hear_about_this_course_1"
+                  tabindex="17"
                 />
                 <label class="form-check-label" for="check12">
                   Other
@@ -323,6 +342,7 @@
         <button
           type="submit"
           class="text-white btn send-button transition-3d-hover mb-4"
+          tabindex="18"
         >
           Send
         </button>

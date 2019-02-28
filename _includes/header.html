@@ -11,7 +11,11 @@
   layout="nodisplay"
   side="right">
   {% for item in site.menus.header %}
-    <div class="mt-5 text-left" on="tap:sidebar.open" role="dialog">
+    <div
+      class="mt-5 text-left"
+      on="tap:sidebar.open"
+      role="dialog"
+      tabindex="20">
       {% if item.children %}
         <div class="ml-5 text-white">
           {{ item.title }}
