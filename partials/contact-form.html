@@ -17,6 +17,7 @@
   action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/33cc0e23-1881-4874-a1d0-2c0307f20e41"
   method="POST"
   target="_top"
+  class="mb-4"
 >
   <div class="form-container" on="tap:contact-lightbox.open">
     <input name="lifecyclestage" type="hidden" value="lead">
@@ -26,7 +27,7 @@
     <input name="hutk" type="hidden" value="">
     <div class="row center-form">
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-sm-6 mb-4">
         <div class="js-form-message">
           <label for="first-name" class="form-label">
             First Name <span class="text-danger">*</span>
@@ -49,7 +50,7 @@
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-sm-6 mb-4">
         <div class="js-form-message">
           <label for="last-name" class="form-label">
             Last Name <span class="text-danger">*</span>
@@ -72,7 +73,7 @@
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-sm-6 mb-4">
         <div class="js-form-message">
           <label for="email" class="form-label">
             Email <span class="text-danger">*</span>
@@ -95,7 +96,7 @@
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-sm-6 mb-4">
         <div class="js-form-message">
           <label for="phone" class="form-label">
             Phone <span class="text-danger">*</span>
@@ -118,7 +119,7 @@
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="js-form-message mb-6 col-sm-12">
+      <div class="js-form-message mb-4 col-sm-12">
         <label for="message" class="form-label">
           Message <span class="text-danger">*</span>
         </label>
@@ -140,182 +141,16 @@
       </div>
       <!-- End Input -->
 
-      <!-- Input -->
-      <div class="col-sm-12 mb-6">
-        <div class="js-form-message form-group">
-          <label class="form-label" for="check1">
-            How did you hear about us? <span class="text-danger">*</span>
-          </label>
+      {% include_relative partials/referral-question.html %}
 
-          <div class="row px-2">
-            <div class="col">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  value="Facebook / Twitter / Social Media"
-                  id="check1"
-                  name="how_did_you_hear_about_this_course_1"
-                />
-                <label class="form-check-label" for="check1">
-                  Facebook
-                </label>
-              </div>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  value="Instagram"
-                  id="check2"
-                  name="how_did_you_hear_about_this_course_1"
-                />
-                <label class="form-check-label" for="check2">
-                  Instagram
-                </label>
-              </div>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  value="Twitter"
-                  id="check3"
-                  name="how_did_you_hear_about_this_course_1"
-                />
-                <label class="form-check-label" for="check3">
-                  Twitter
-                </label>
-              </div>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  value="LinkedIn"
-                  id="check4"
-                  name="how_did_you_hear_about_this_course_1"
-                />
-                <label class="form-check-label" for="check4">
-                  LinkedIn
-                </label>
-              </div>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  value="Friends / Family"
-                  id="check8"
-                  name="how_did_you_hear_about_this_course_1"
-                />
-                <label class="form-check-label" for="check8">
-                  Friend / Family
-                </label>
-              </div>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  value="Google or Search Engine"
-                  id="check9"
-                  name="how_did_you_hear_about_this_course_1"
-                />
-                <label class="form-check-label" for="check9">
-                  Search engine
-                </label>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  value="Coding Academy Event"
-                  id="check5"
-                  name="how_did_you_hear_about_this_course_1"
-                />
-                <label class="form-check-label" for="check5">
-                  ACA event
-                </label>
-              </div>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  value="ACA Faculty"
-                  id="check6"
-                  name="how_did_you_hear_about_this_course_1"
-                />
-                <label class="form-check-label" for="check6">
-                  ACA faculty / staff
-                </label>
-              </div>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  value="Coding Academy Student / Alumni"
-                  id="check7"
-                  name="how_did_you_hear_about_this_course_1"
-                />
-                <label class="form-check-label" for="check7">
-                  ACA student / alumni
-                </label>
-              </div>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  value="News - TV or Article"
-                  id="check10"
-                  name="how_did_you_hear_about_this_course_1"
-                />
-                <label class="form-check-label" for="check10">
-                  News (TV, article)
-                </label>
-              </div>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  value="Radio"
-                  id="check11"
-                  name="how_did_you_hear_about_this_course_1"
-                />
-                <label class="form-check-label" for="check11">
-                  Radio
-                </label>
-              </div>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  value="Other"
-                  id="check12"
-                  name="how_did_you_hear_about_this_course_1"
-                />
-                <label class="form-check-label" for="check12">
-                  Other
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Input -->
-
+      {% if page.permalink == "/contact/" %}
       <div class="text-center col-sm-12">
+      {% else %}
+      <div class="col-sm-6 mb-4 d-flex align-items-end">
+      {% endif %}
         <button
           type="submit"
-          class="text-white btn send-button transition-3d-hover mb-4"
+          class="text-white btn send-button transition-3d-hover mb-3"
         >
           Send
         </button>
@@ -330,7 +165,6 @@
     </div>
   </div>
 </form>
-
 
 {% unless page.permalink == "/contact/" %}
   </div>
