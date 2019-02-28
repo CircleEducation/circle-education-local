@@ -48,20 +48,20 @@
 
   <div class="my-10"></div>
 
-  <script type="application/ld+json">
   {% for course in page.courses %}
-  {% assign courseName = course.title %}
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Course",
-    "name": "{{ courseName }}",
+    "name": "{{ course.title }}",
     "courseCode": "{{ course.code }}",
     "description": "{{ course.description }}",
     "hasCourseInstance": [
       {% for section in course.sections %}
       {
         "@type": "CourseInstance",
-        "name": "{{ courseName }}",
+        "name": "{{ course.title }}",
+        "description": "{{ course.description }}",
         "startDate": "{{ section.start }}",
         "endDate": "{{ section.end }}",
         "location": {
@@ -85,7 +85,7 @@
       }
     }
   }
-  {% endfor %}
   </script>
+  {% endfor %}
 
 </main>
