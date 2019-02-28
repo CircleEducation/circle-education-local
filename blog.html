@@ -4,28 +4,30 @@ title: Austin Coding Academy - Blog | Learn to Code | Coding Bootcamp
 description: Read the Austin Coding Academy blog to get the latest news and tips on
   learning to code, web development, JavaScript, C#, and career development.
 permalink: "/blog/"
+hero: blog
 redirect_from: []
 ---
+<div id="hero-{{ page.hero }}" class="hero py-11">
+  <h1 class="text-white font-family-alt font-weight-bold display-4 text-center">
+    Austin Coding Academy Blog
+  </h1>
+</div>
+
 <main id="content" role="main">
   <!-- Blog Classic Section -->
   <div class="container my-10">
-    <!-- Title -->
-    <div class="w-md-80 mb-9">
-      <h1 class="font-weight-semi-bold">Blog</h1>
-    </div>
-    <!-- End Title -->
     <div class="row">
       {% for post in site.posts %}
-      <div class="col-12 col-md-6 card-deck d-block d-sm-flex justify-content-center mb-sm-7">
+      <div class="col-12 col-md-6 card-deck d-flex d-md-block align-items-center justify-content-center mb-sm-7">
         <article class="card border-0">
           <div class="card-body p-0">
             <a href="{{ post.url }}">
               <div class="mb-5">
                 <amp-img
-                  width="345px"
-                  height="172.5px"
+                  width="{{ post.width | default:345 }}px"
+                  height="{{ post.height | default:172.5 }}px"
                   layout="responsive"
-                  class="img-fluid w-100 rounded"
+                  class="img-fluid mw-100 rounded"
                   src="{{ post.img }}"
                   alt="{{blog.alt}}"
                 ></amp-img>
