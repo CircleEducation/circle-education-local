@@ -140,6 +140,16 @@ body {
   background-image: url("/assets/images/header-javascript.jpg");
 }
 
+#hero-blog {
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('/assets/images/4SGM0882-c.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size:  cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* CUSTOM MARGINS */
 
 .bottom-48 {
