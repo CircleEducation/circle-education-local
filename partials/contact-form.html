@@ -17,6 +17,7 @@
   action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/33cc0e23-1881-4874-a1d0-2c0307f20e41"
   method="POST"
   target="_top"
+  class="mb-4"
 >
   <div class="form-container" on="tap:contact-lightbox.open">
     <input name="lifecyclestage" type="hidden" value="lead">
@@ -26,7 +27,7 @@
     <input name="hutk" type="hidden" value="">
     <div class="row center-form">
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-sm-6 mb-4">
         <div class="js-form-message">
           <label for="first-name" class="form-label">
             First Name <span class="text-danger">*</span>
@@ -49,7 +50,7 @@
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-sm-6 mb-4">
         <div class="js-form-message">
           <label for="last-name" class="form-label">
             Last Name <span class="text-danger">*</span>
@@ -72,7 +73,7 @@
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-sm-6 mb-4">
         <div class="js-form-message">
           <label for="email" class="form-label">
             Email <span class="text-danger">*</span>
@@ -95,7 +96,7 @@
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="col-sm-6 mb-6">
+      <div class="col-sm-6 mb-4">
         <div class="js-form-message">
           <label for="phone" class="form-label">
             Phone <span class="text-danger">*</span>
@@ -118,7 +119,7 @@
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="js-form-message mb-6 col-sm-12">
+      <div class="js-form-message mb-4 col-sm-12">
         <label for="message" class="form-label">
           Message <span class="text-danger">*</span>
         </label>
@@ -140,10 +141,16 @@
       </div>
       <!-- End Input -->
 
+      {% include_relative partials/referral-question.html %}
+
+      {% if page.permalink == "/contact/" %}
       <div class="text-center col-sm-12">
+      {% else %}
+      <div class="col-sm-6 mb-4 d-flex align-items-end">
+      {% endif %}
         <button
           type="submit"
-          class="text-white btn send-button transition-3d-hover mb-4"
+          class="text-white btn send-button transition-3d-hover mb-3"
         >
           Send
         </button>
@@ -158,7 +165,6 @@
     </div>
   </div>
 </form>
-
 
 {% unless page.permalink == "/contact/" %}
   </div>

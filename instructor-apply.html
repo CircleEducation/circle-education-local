@@ -240,7 +240,7 @@ redirect_from: []
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="col-sm-12 mb-6">
+      <div class="col-sm-6 mb-6">
         <div class="js-form-message form-group">
           <label class="form-label" for="check2">
             When deciding on a coding school to teach at, what are the biggest factors for you?
@@ -249,28 +249,28 @@ redirect_from: []
 
           <div class="row">
             <div class="col">
-              <div class="form-check form-check-inline">
+              <div class="form-check">
                 <input class="form-check-input" type="radio" value="Curriculum" id="check-a1" name="when_deciding_on_a_coding_school_to_teach_at_what_are_the_biggest_factors_for_you_"/>
                 <label class="form-check-label" for="check-a1">
                   Curriculum
                 </label>
               </div>
 
-              <div class="form-check form-check-inline">
+              <div class="form-check">
                 <input class="form-check-input" type="radio" value="Schedule" id="check-a2" name="when_deciding_on_a_coding_school_to_teach_at_what_are_the_biggest_factors_for_you_" />
                 <label class="form-check-label" for="check-a2">
                   Schedule
                 </label>
               </div>
 
-              <div class="form-check form-check-inline">
+              <div class="form-check">
                 <input class="form-check-input" type="radio" value="Teaching Methodology" id="check-a3" name="when_deciding_on_a_coding_school_to_teach_at_what_are_the_biggest_factors_for_you_" />
                 <label class="form-check-label" for="check-a3">
                   Teaching Methodology
                 </label>
               </div>
 
-              <div class="form-check form-check-inline">
+              <div class="form-check">
                 <input class="form-check-input" type="radio" value="Culture Fit" id="check-a4" name="when_deciding_on_a_coding_school_to_teach_at_what_are_the_biggest_factors_for_you_" />
                 <label class="form-check-label" for="check-a4">
                   Culture Fit
@@ -282,9 +282,14 @@ redirect_from: []
       </div>
       <!-- End Input -->
 
+      {% include_relative partials/referral-question.html %}
+
       <button class="floating-button btn stock-blue-button text-white" type="Submit">
         Submit
       </button>
+
+      {% include_relative partials/recaptcha-text.html %}
+
     </div>
   </form>
 </div>
