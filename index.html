@@ -2,13 +2,16 @@
 layout: default
 permalink: "/"
 title: Austin Coding Academy | Learn to Code, Change Your Life
+img: "/assets/images/hero-index.jpg"
 hero: index
 description: At Austin Coding Academy, we fit learning to code into your life with
   a flexible &amp; affordable array of options, all taught by current industry professionals.
   Don’t wait - embark on a new career today!
 redirect_from: []
 ---
+<!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero">
+<!-- htmllint preset="$previous" -->
   <div class="py-11 container">
     <div class="col-md-8 pl-0">
       <div class="my-11"></div>
@@ -31,12 +34,15 @@ redirect_from: []
           scrollable
           on="tap:call-us.close">
           <div class="mt-5 pt-5 d-flex mx-auto flex-column align-items-center">
+            <!-- htmllint preset="none" -->
             <a
               class="my-5 btn btn-light btn-round mr-2 flex-1 d-sm-none"
               href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
-              target="_blank">
-              Schedule a Q&A
+              target="_blank"
+              rel="noopener">
+              Schedule a Q&amp;A
             </a>
+            <!-- htmllint preset="$previous" -->
             <h4 class="text-white border-top border-bottom">
               OR
             </h4>
@@ -47,12 +53,15 @@ redirect_from: []
             </a>
           </div>
         </amp-lightbox>
+        <!-- htmllint preset="none" -->
         <a
           class="btn btn-outline-light btn-round mr-2 flex-1 d-none d-sm-block"
           href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
-          target="_blank">
-          Schedule a Q&A
+          target="_blank"
+          rel="noopener">
+          Schedule a Q&amp;A
         </a>
+        <!-- htmllint preset="$previous" -->
         {% include_relative partials/btn-apply.html class='flex-1'%}
       </div>
     </div>

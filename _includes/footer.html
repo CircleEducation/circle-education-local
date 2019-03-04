@@ -112,9 +112,11 @@
 
         <div class="d-flex justify-content-center justify-content-lg-start">
           {% for item in site.menus.social %}
+            <!-- htmllint preset="none" -->
             <a href="{{ item.url }}" class="{{ item.margin }}">
               <span class="text-white fab fa-{{ item.title }} fa-2x"></span>
             </a>
+            <!-- htmllint preset="$previous" -->
           {% endfor %}
         </div>
 

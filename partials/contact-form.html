@@ -1,5 +1,5 @@
 {% unless page.permalink == "/contact/" %}
-<a href="#" class="btn text-white text-white bg-purple mx-auto" on="tap:contact-lightbox">
+<a href="#" class="btn text-white bg-purple mx-auto" on="tap:contact-lightbox">
   Contact us &nbsp;<i class="far fa-envelope"></i>
 </a>
 
@@ -154,7 +154,9 @@
         >
           Send
         </button>
-      </div>
+      {% if page.permalink == "/contact/" %}
+      </div>{% else %}</div>
+      {% endif %}
     </div>
   </div>
   <div class="text-center">
