@@ -28,6 +28,7 @@
           </ul>
         </div>
       {% else %}
+        <!-- htmllint preset="none" -->
         {% if item.button %}
           <a href="{{ item.url }}" class="text-white text-left">
             <button class="{{ item.button }}">
@@ -38,6 +39,7 @@
             {{ item.title }}
         {% endif %}
         </a>
+        <!-- htmllint preset="$previous" -->
       {% endif %}
     </div>
 
@@ -109,6 +111,7 @@
                 </li>
 
               {% else %}
+                <!-- htmllint preset="none" -->
                 <li class="nav-item u-header__nav-item">
                   {% if item.button %}
                     <a class="{{ item.button }}" href="{{ item.url }}">
@@ -118,6 +121,7 @@
                       <span class="text-white">{{ item.title }}</span>
                     </a>
                 </li>
+                <!-- htmllint preset="$previous" -->
               {% endif %}
 
             {% endfor %}
