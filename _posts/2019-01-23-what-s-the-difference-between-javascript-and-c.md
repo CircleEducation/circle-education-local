@@ -3,7 +3,7 @@ title: What's the Difference Between JavaScript and C#?
 created_at: 2018-08-09 05:00:00 +0000
 updated_at: 2019-02-15 06:00:00 +0000
 date: 2019-01-23 19:11:27 +0000
-img: "/assets/images/4SGM0692-c.jpg"
+img: "/assets/images/4SGM0692.jpg"
 width: 6720
 height: 4480
 tags:
