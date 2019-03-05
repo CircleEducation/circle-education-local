@@ -38,7 +38,7 @@ Matt graduated from the Full Stack Javascript track at ACA in early 2018. After 
 
 Here are six of our graduates who have landed or have already started in full-time developer roles in recent months! We couldn't be more proud of the hard work that they've put in to get to this point. Check them out:
 
-[**Nathan Simmons**](https://www.linkedin.com/in/nathanhbsimmons/)
+### [**Nathan Simmons**](https://www.linkedin.com/in/nathanhbsimmons/)
 
 Nathan graduated from the Full Stack Javascript track with ACA in July of 2018. During November he accepted a position as an Associate Software Engineer with [Malauzai Software](https://www.malauzai.com/).
 

@@ -33,7 +33,8 @@ jobs:
             - node_modules
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
-      # - run: yarn test
+      - run: yarn test
+      - run: yarn images
       - deploy:
           name: Deploy
           command: |

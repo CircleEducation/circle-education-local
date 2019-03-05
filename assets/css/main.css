@@ -125,7 +125,13 @@ body {
 /* HERO IMAGES */
 
 #hero-index {
-  background-image: url("/assets/images/header-index.jpg");
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('/assets/images/hero-index.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size:  cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 #hero-csharp {
@@ -133,7 +139,13 @@ body {
 }
 
 #hero-financing {
-  background-image: url("/assets/images/header-financing.jpg");
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('/assets/images/hero-financing.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size:  cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 #hero-js {
@@ -141,13 +153,13 @@ body {
 }
 
 #hero-blog {
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('/assets/images/4SGM0882-c.jpg');
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('/assets/images/hero-blog.jpg');
   -webkit-background-size: cover;
   -moz-background-size:  cover;
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
 }
 
 /* CUSTOM MARGINS */

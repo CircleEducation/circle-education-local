@@ -10,3 +10,4 @@ node_modules
 *.orig
 assets/css/main.min.css
 _includes/css.html
+package-lock.json
