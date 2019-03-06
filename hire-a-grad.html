@@ -17,6 +17,7 @@ grads:
         {% for grad in page.grads %}
         <div class="col-6 col-md-3">
             <div>
+                <!-- htmllint preset="none" -->
                 <amp-img
                 width="1"
                 height="1"
@@ -25,6 +26,7 @@ grads:
                 src="https://gravatar.com/avatar/{{ grad.email | downcase | md5 }}?s=200&r=pg"
                 alt="{{ grad.name }}"
                 ></amp-img>
+                <!-- htmllint preset="$previous" -->
             </div>
             <div class="card border-0 shadow-sm mt-n6 mx-3">
                 <div class="card-body text-center px-4 py-2">
