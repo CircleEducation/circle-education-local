@@ -37,6 +37,7 @@ profiles:
             <div class="row">
                 <div class="col">
                     <div>
+                        <!-- htmllint preset="none" -->
                         <amp-img
                         width="1"
                         height="1"
@@ -45,11 +46,12 @@ profiles:
                         src="https://gravatar.com/avatar/{{ grad.email | downcase | md5 }}?s=200&r=pg"
                         alt="{{ profile.name }}"
                         ></amp-img>
+                        <!-- htmllint preset="$previous" -->
                     </div>
                     <div class="card border-0 shadow-sm mt-n6 mx-3">
                         <div class="card-body text-center p-2">
                             <h3 class="h6">{{ profile.name }}</h3>
-                            <h4 class="size-14">{{ profile.title }}</h3>
+                            <h4 class="size-14">{{ profile.title }}</h4>
                             <ul class="list-inline d-flex align-items-center justify-content-around flex-wrap">
                                 <li class="list-inline-item">
                                     <a href="{{ profile.github }}" target="_blank" rel="noopener">
