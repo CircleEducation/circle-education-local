@@ -4,13 +4,18 @@
 {% endif %}
 <amp-sidebar
   on="tap:sidebar.open"
+  role="navigation"
   scrollable
   id="sidebar"
   class="m-0 bg-dark d-flex d-md-none row flex-column align-items-start justify-content-start"
   layout="nodisplay"
   side="right">
   {% for item in site.menus.header %}
-    <div class="mt-5 text-left" on="tap:sidebar.open">
+    <div
+      class="mt-5 text-left"
+      on="tap:sidebar.open"
+      role="dialog"
+      tabindex="20">
       {% if item.children %}
         <div class="ml-5 text-white">
           {{ item.title }}
@@ -80,7 +85,10 @@
         <!-- End Logo -->
 
         <!-- Responsive Toggle Button -->
-        <button class="display-5 text-white btn btn-link d-flex d-md-none" on="tap:sidebar.open">
+        <button
+          class="display-5 text-white btn btn-link d-flex d-md-none"
+          on="tap:sidebar.open"
+          role="button">
           <i class="fas fa-bars"></i>
         </button>
         <!-- End Responsive Toggle Button -->
