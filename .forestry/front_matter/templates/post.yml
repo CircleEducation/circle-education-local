@@ -1,7 +1,6 @@
 ---
 label: Post
 hide_body: false
-is_partial: false
 fields:
 - type: text
   name: title
@@ -61,7 +60,7 @@ pages:
 - _posts/2019-01-23-q-a-with-our-new-job-placement-course-director.md
 - _posts/2019-01-23-new-in-2019-unlimited-tutoring-for-all-students.md
 - _posts/2019-01-23-highlight-six-aca-grads-land-jobs.md
-- _posts/the-benefits-of-an-in-person-coding-bootcamp-vs-online-classes.md
+- _posts/2019-03-04-the-benefits-of-an-in-person-coding-bootcamp-vs-online-classes.md
 - _posts/2019-02-21-why-you-should-make-time-to-learn-to-code.md
 - _posts/2019-02-21-5-tips-to-help-you-learn-coding-faster.md
 - _posts/2019-02-21-5-signs-you-need-to-make-a-career-change.md
