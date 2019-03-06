@@ -1,0 +1,80 @@
+---
+layout: default
+permalink: "/team/"
+title: ""
+description: ""
+profiles:
+    - name:
+      title:
+      email:
+      github: https://github.com/
+      linkedin: https://linkedin.com/in/
+      rocketchat: https://chat.austincodingacademy.com/direct/
+      bio: ""
+
+    - name: Kevin Colten
+      title: Chief Technology Officer
+      email:
+      github: https://github.com/kevincolten
+      linkedin: https://linkedin.com/in/
+      rocketchat: https://chat.austincodingacademy.com/direct/kevincolten
+      bio: ""
+
+    - name: Charles Cole
+      title: Web Development Intern
+      email: charcole@protonmail.com
+      github: https://github.com/charcole
+      linkedin: https://linkedin.com/in/char-cole
+      rocketchat: https://chat.austincodingacademy.com/direct/charlescole
+      bio: ""
+
+---
+
+<div class="container">
+    <div class="row my-5 mx-auto d-flex justify-content-center align-items-end">
+        {% for profile in page.profiles %}
+        <div class="col-12 col-lg-6 mb-5">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <amp-img
+                        width="1"
+                        height="1"
+                        layout="responsive"
+                        class="img-fluid w-100 rounded"
+                        src="https://gravatar.com/avatar/{{ grad.email | downcase | md5 }}?s=200&r=pg"
+                        alt="{{ profile.name }}"
+                        ></amp-img>
+                    </div>
+                    <div class="card border-0 shadow-sm mt-n6 mx-3">
+                        <div class="card-body text-center p-2">
+                            <h3 class="h6">{{ profile.name }}</h3>
+                            <h4 class="size-14">{{ profile.title }}</h3>
+                            <ul class="list-inline d-flex align-items-center justify-content-around flex-wrap">
+                                <li class="list-inline-item">
+                                    <a href="{{ profile.github }}" target="_blank" rel="noopener">
+                                        <i class="text-dark display-7 fab fa-github"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="{{ profile.linkedin }}" target="_blank" rel="noopener">
+                                        <i class="text-dark display-7 fab fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="{{ profile.rocketchat }}" target="_blank" rel="noopener">
+                                        <i class="text-dark display-7 fab fa-rocketchat"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <p class="size-14">{{ profile.bio }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
