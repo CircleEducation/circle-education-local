@@ -155,12 +155,9 @@
       </div>
       <!-- End Input -->
       {% include_relative partials/referral-question.html %}
-
-      {% if page.permalink == "/contact/" %}
-      <div class="text-center col-sm-12">
-      {% else %}
-      <div class="col-sm-6 mb-4 d-flex align-items-end">
-      {% endif %}
+      <!-- htmllint preset="none" -->
+      <div class="{% if page.permalink == '/contact/' %} text-center col-sm-12 {% else %} col-sm-6 mb-4 d-flex align-items-end {% endif %}">
+      <!-- htmllint preset="$previous" -->
         <button
           type="submit"
           class="text-white btn send-button transition-3d-hover mb-3"
@@ -168,9 +165,7 @@
         >
           Send
         </button>
-      {% if page.permalink == "/contact/" %}
-      </div>{% else %}</div>
-      {% endif %}
+      </div>
     </div>
   </div>
   <div class="text-center">

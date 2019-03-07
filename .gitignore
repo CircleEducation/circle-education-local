@@ -11,3 +11,5 @@ node_modules
 assets/css/main.min.css
 _includes/css.html
 package-lock.json
+.env
+_data/events.yml

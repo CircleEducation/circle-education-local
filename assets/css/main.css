@@ -67,6 +67,10 @@ body {
   font-family: "montserrat", sans-serif;
 }
 
+.mw-22 {
+  max-width: 22rem;
+}
+
 /* CUSTOM FONT SIZING */
 
 .size-10 {
