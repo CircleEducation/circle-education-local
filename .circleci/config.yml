@@ -35,6 +35,7 @@ jobs:
 
       - run: yarn test
       - run: yarn images
+      - run: node events.js
       - deploy:
           name: Deploy
           command: |
