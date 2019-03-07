@@ -17,6 +17,8 @@ img: "/assets/images/4SGM0838.jpg"
 redirect_from: []
 permalink: "/blog/web-development/the-benefits-of-an-in-person-coding-bootcamp-vs-online-classes"
 date: 2019-03-04 21:22:15 +0000
+height: 2
+width: 3
 
 ---
 With the rise of coding bootcamps as a pathway into the world of tech, there are a lot of options to choose from. One of the most important decisions to make is whether you want to attend an in-person class or an online bootcamp. While both options provide their own advantages, in-person classes tend to provide better outcomes for students for a variety of reasons.
@@ -31,7 +33,7 @@ While online classes may be more accessible in certain cases, they lack essentia
 
 It can be incredibly difficult to simulate support in an online class, but it is a key component of the in-person experience. Having the ability to get live feedback from instructors and tutors can accelerate and improve the learning process, eliminate frustration, and allow for the exchange of ideas.
 
-![A woman helping a man with work on his computer ](/assets/images/giving-coding-help.jpg)
+<amp-img width="3px" height="2px" layout="responsive" src="/assets/images/giving-coding-help.jpg" alt="A woman helping a man on his computer"></amp-img>
 
 The wealth and depth of information that is available when learning to code can be a blessing and a curse. Many developers will tell you that the ability to _Google_ is a key part of their day-to-day job. It may sound silly, but it's true! Developers share knowledge with each other regularly, meaning there are plenty of answers on the web. This, however, can make it difficult and overwhelming to learn as a beginner. Where should you go for information? How do you know that the particular video you watched or article you read is a best practice?
 
@@ -55,7 +57,7 @@ Finally, many online or immersive coding bootcamps sell the idea that you can le
 
 Think about any new skill that you've ever learned. Would you say that you're willing to be a professional in it after a few weeks of study? Probably not. Web development, like anything else, is a skill that can be learned and developed. While you may be able to pick up some information over the course of a few weeks, real learning and competency comes from practice, application, and repetition.
 
-![](/assets/images/javascript-html-css-books.jpg)
+<amp-img width="3px" height="2px" layout="responsive" src="/assets/images/javascript-html-css-books.jpg" alt="Books on JavaScript, HTML, CSS"></amp-img>
 
 Compared to these programs, in-person classes generally tend to be slower than online coding schools. A less frantic pace allows for exploration and helps the learning of a vast amount of resources sink in and stick rather than rushing through material only to forget most of it shortly afterward. For this reason, in-person grads tend to be more well-rounded and job-ready candidates after graduation.
 
