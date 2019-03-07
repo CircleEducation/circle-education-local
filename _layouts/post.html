@@ -10,7 +10,60 @@ layout: default
       <!-- <div class="mb-4">
         <span class="text-muted">{{page.date}}</span>
       </div> -->
-      <h1>{{ page.title }}</h1>
+      <h1 class="font-weight-bold">{{ page.title }}</h1>
+      <div class="row my-4">
+        <div class="col col-md-8 pt-md-2">
+          <a href="mailto:{{ page.author_email }}">
+            <h5 class="text-dark">{{ page.author | default: "Austin Coding Academy" }}</h5>
+          </a>
+          <h5 class="text-muted">{{ page.updated_at | date: "%B %d, %Y" }}</h5>
+        </div>
+        <div class="col col-md-4">
+          <h5>Share this blog:</h5>
+          <ul class="share-buttons">
+              <li>
+                <!-- htmllint preset="none" -->
+                <a
+                  href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}&quote={{ page.title | replace: ' ', '%20' }}"
+                  title="Share on Facebook"
+                  target="_blank">
+                  <img alt="Share on Facebook" src="/assets/images/Facebook.svg" />
+                </a>
+                <!-- htmllint preset="$previous" -->
+              </li>
+              <li>
+                <!-- htmllint preset="none" -->
+                <a
+                  href="https://twitter.com/intent/tweet?source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}&text={{ page.title | replace: ' ', '%20' }}:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}"
+                  target="_blank"
+                  title="Tweet">
+                  <img alt="Tweet" src="/assets/images/Twitter.svg" />
+                </a>
+                <!-- htmllint preset="$previous" -->
+              </li>
+              <li>
+                <!-- htmllint preset="none" -->
+                <a
+                  href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}&title={{ page.title | replace: ' ', '%20' }}&summary=desc&source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}"
+                  target="_blank"
+                  title="Share on LinkedIn">
+                  <img alt="Share on LinkedIn" src="/assets/images/LinkedIn.svg" />
+                </a>
+                <!-- htmllint preset="$previous" -->
+              </li>
+              <li>
+                <!-- htmllint preset="none" -->
+                <a
+                  href="mailto:?subject={{ page.title | replace: ' ', '%20' }}&body=desc:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}"
+                  target="_blank"
+                  title="Send email">
+                  <img alt="Send email" src="/assets/images/Email.svg" />
+                </a>
+                <!-- htmllint preset="$previous" -->
+              </li>
+            </ul>
+        </div>
+      </div>
       {{ content }}
     </div>
   </div>
