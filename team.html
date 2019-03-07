@@ -53,7 +53,9 @@ profiles:
                                 {% if link.link %}
                                 <li class="list-inline-item">
                                     <a href="{{ link.link }}" target="_blank" rel="noopener">
+                                        <!-- htmllint preset="none" -->
                                         <i style="color: {{ link.hex }}" class="display-7 {{ link.icon }}"></i>
+                                        <!-- htmllint preset="$previous" -->
                                     </a>
                                 </li>
                                 {% endif %}
