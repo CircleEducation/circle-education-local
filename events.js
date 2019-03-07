@@ -18,12 +18,13 @@ const fetchEvents = async () => {
       status: 'live'
     })}`, { headers });
     const json = await response.json();
+    console.log(`Found ${json.events.length} events.`)
     let venues = await Promise.all(uniq(json.events.map(event => event.venue_id)).map(venueId =>
       fetch(`https://www.eventbriteapi.com/v3/venues/${venueId}`, { headers })
     ));
 
     venues = await Promise.all(venues.map(venue => venue.json()))
-
+    console.log(`Fetched ${venues.length} venues.`)
     venues = keyBy(venues, 'id');
 
     const events = json.events.map(event => ({
