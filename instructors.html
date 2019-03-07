@@ -1,0 +1,51 @@
+---
+layout: default
+title: ""
+description: ""
+permalink: /instructors
+instructors:
+    - name: Dana Wen
+      email:
+      linkedin: https://www.linkedin.com/in/danawen/
+      class: Sample Class
+      company: ChickTech Austin
+    - name: Dan Ferguson
+      email:
+      linkedin: https://www.linkedin.com/in/ferguson-dan/
+      class: Sample Class
+      company: Tyler Technologies
+    - name: Juan Rodriguez
+      email:
+      linkedin: https://www.linkedin.com/in/juanrod1/
+      class: Sample Class
+      company: L7 Informatics
+---
+<div class="container">
+    <div class="row my-5 mx-auto d-flex justify-content-center align-items-end">
+        {% for instructor in page.instructors %}
+        <div class="col-6 col-md-3">
+            <div>
+                <!-- htmllint preset="none" -->
+                <amp-img
+                width="1"
+                height="1"
+                layout="responsive"
+                class="img-fluid w-100 rounded"
+                src="https://gravatar.com/avatar/{{ grad.email | downcase | md5 }}?s=200&r=pg"
+                alt="{{ instructor.name }}"
+                ></amp-img>
+                <!-- htmllint preset="$previous" -->
+            </div>
+            <div class="card border-0 shadow-sm mt-n6 mx-3">
+                <div class="card-body text-center p-3">
+                    <a href="{{ instructor.linkedin }}">
+                        <h3 class="h6 font-weight-bold">{{ instructor.name }}</h3>
+                    </a>
+                    <h4 class="h6 font-weight-bold">{{ instructor.class }}</h4>
+                    <h5 class="size-14">{{ instructor.company }}</h5>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
