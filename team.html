@@ -4,29 +4,25 @@ permalink: "/team/"
 title: ""
 description: ""
 profiles:
-    - name:
-      title:
-      email:
-      github: https://github.com/
-      linkedin: https://linkedin.com/in/
-      rocketchat: https://chat.austincodingacademy.com/direct/
-      bio: ""
-
-    - name: Kevin Colten
-      title: Chief Technology Officer
-      email:
-      github: https://github.com/kevincolten
-      linkedin: https://linkedin.com/in/
-      rocketchat: https://chat.austincodingacademy.com/direct/kevincolten
-      bio: ""
-
     - name: Charles Cole
-      title: Web Development Intern
-      email: charcole@protonmail.com
-      github: https://github.com/charcole
-      linkedin: https://linkedin.com/in/char-cole
-      rocketchat: https://chat.austincodingacademy.com/direct/charlescole
+      title: Junior Web Developer
       bio: ""
+      links:
+        - link: mailto:charcole@protonmail.com
+          icon: fas fa-envelope-square
+          hex: "#303133"
+        - link: https://github.com/charcole
+          icon: fab fa-github-square
+          hex: "#303133"
+        - link: https://linkedin.com/in/char-cole
+          icon: fab fa-linkedin
+          hex: "#0077b5"
+        - link:
+          icon: fab fa-facebook-square
+          hex: "#3b5998"
+        - link:
+          icon: fab fa-twitter-square
+          hex: "#1da1f3"
 
 ---
 
@@ -53,21 +49,15 @@ profiles:
                             <h3 class="h6">{{ profile.name }}</h3>
                             <h4 class="size-14">{{ profile.title }}</h4>
                             <ul class="list-inline d-flex align-items-center justify-content-around flex-wrap">
+                                {% for link in profile.links %}
+                                {% if link.link %}
                                 <li class="list-inline-item">
-                                    <a href="{{ profile.github }}" target="_blank" rel="noopener">
-                                        <i class="text-dark display-7 fab fa-github"></i>
+                                    <a href="{{ link.link }}" target="_blank" rel="noopener">
+                                        <i style="color: {{ link.hex }}" class="display-7 {{ link.icon }}"></i>
                                     </a>
                                 </li>
-                                <li class="list-inline-item">
-                                    <a href="{{ profile.linkedin }}" target="_blank" rel="noopener">
-                                        <i class="text-dark display-7 fab fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="{{ profile.rocketchat }}" target="_blank" rel="noopener">
-                                        <i class="text-dark display-7 fab fa-rocketchat"></i>
-                                    </a>
-                                </li>
+                                {% endif %}
+                                {% endfor %}
                             </ul>
                         </div>
                     </div>
