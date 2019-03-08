@@ -1,0 +1,50 @@
+<div class="d-flex flex-wrap justify-content-around justify-content-sm-center">
+  {% for event in site.data.events %}
+    <div class="card card-frame text-center m-2 mw-22">
+      <!-- Card -->
+      <div class="card-body p-6">
+        <div class="mx-auto mb-4">
+          <amp-img
+            width="{{ event.width | default: 400 }}"
+            height="{{ event.height | default: 200 }}"
+            layout="responsive"
+            class="img-fluid rounded"
+            src="{{event.img}}"
+            alt="{{event.name}}"
+          ></amp-img>
+        </div>
+        <div class="mb-4">
+          <h5 class="mb-1">{{event.name}}</h5>
+          <h6 class="mb-1 text-muted">{{event.venue_name}}</h6>
+          <p class="text-muted">{{event.start_date}} {{event.start_time}}</p>
+          <p>{{event.description | truncatewords: 25}}</p>
+        </div>
+        <a class="btn btn-sm btn-soft-primary btn-wide" href="{{event.url}}" rel="noopener" target="_blank">View Details</a>
+      </div>
+      <!-- End Card -->
+    </div>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "{{event.name | strip_newlines | escape}}",
+        "startDate": "{{event.start_date_time}}",
+        "endDate": "{{event.end_date_time}}",
+        "location": {
+          "@type": "Place",
+          "name": "{{event.venue_name | strip_newlines | escape}}",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "{{event.venue_address}}",
+            "addressLocality": "{{event.venue_city}}",
+            "postalCode": "{{event.venue_zip}}",
+            "addressRegion": "{{event.venue_state}}",
+            "addressCountry": "{{event.venue_country}}"
+          }
+        },
+        "image": ["{{event.img}}"],
+        "description": "{{event.description | strip_newlines | escape}}"
+      }
+    </script>
+  {% endfor %}
+</div>

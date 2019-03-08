@@ -56,6 +56,12 @@ fields:
   description: "/blog/title-here-with-dashes-nothing-special"
   config:
     required: true
+- type: number
+  name: height
+  label: Height
+- type: number
+  name: width
+  label: Width
 pages:
 - _posts/2019-01-23-q-a-with-our-new-job-placement-course-director.md
 - _posts/2019-01-23-new-in-2019-unlimited-tutoring-for-all-students.md
