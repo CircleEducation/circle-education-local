@@ -8,32 +8,40 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
   a flexible &amp; affordable array of options, all taught by current industry professionals.
   Don’t wait - embark on a new career today!
 redirect_from: []
+instructors:
+  - name: Dana Wen
+    linkedin: danawen
+    img: danawen
+    company: ChickTech
+  - name: Juan Rodriguez
+    linkedin: juanrod1
+    img: juanrodriguez
+    company: L7 Informatics
+  - name: Dan Furguson
+    linkedin: furguson-dan
+    img: danferguson
+    company: Tyler Technologies
 logos:
   - width: "100px"
     height: "100px"
     src: "/assets/images/logo-dell.png"
     alt: "Dell"
-
   - width: "118px"
     height: "39px"
     src: "/assets/images/logo-dosh.png"
     alt: "Dosh"
-
   - width: "155px"
     height: "27px"
     src: "/assets/images/logo-flosports.png"
     alt: "Flosports"
-
   - width: "250px"
     height: "100px"
     src: "/assets/images/logo-ibm.png"
     alt: "IBM"
-
   - width: "185px"
     height: "42px"
     src: "/assets/images/logo-mooveit.png"
     alt: "Moove-It"
-
   - width: "179px"
     height: "47px"
     src: "/assets/images/logo-pluralsight.png"
@@ -364,6 +372,7 @@ logos:
   <!-- begin instructors -->
   <div class="container">
     <div class="row mw-90 my-0 mx-auto d-flex justify-content-center align-items-end">
+      {% for instructor in page.instructors %}
       <div class="col-12 col-md-4">
         <div>
           <amp-img
@@ -371,73 +380,24 @@ logos:
             height="450"
             layout="responsive"
             class="img-fluid w-100 rounded"
-            src="/assets/images/instructor-danawen.jpg"
-            alt="Dana Wen"
+            src="/assets/images/instructor-{{ instructor.img }}.jpg"
+            alt="{{ instructor.name }}"
           ></amp-img>
         </div>
         <a
-          href="https://www.linkedin.com/in/danawen/"
+          href="https://www.linkedin.com/in/{{ instructor.linkedin }}/"
           target="_blank"
           rel="noopener"
         >
           <div class="card border-0 shadow-sm mt-n6 mx-3">
             <div class="card-body text-center p-4">
-              <h3 class="h6 mb-1">Dana Wen</h3>
-              <p class="font-size-1 mb-0">ChickTech Austin</p>
+              <h3 class="h6 mb-1">{{ instructor.name }}</h3>
+              <p class="font-size-1 mb-0">{{ instructor.company }}</p>
             </div>
           </div>
         </a>
       </div>
-
-      <div class="col-12 col-md-4">
-        <div>
-            <amp-img
-              width="450"
-              height="450"
-              layout="responsive"
-              class="img-fluid w-100 rounded"
-              src="/assets/images/instructor-juanrodriguez.jpg"
-              alt="Juan Rodriguez"
-            ></amp-img>
-          </div>
-        <a
-          href="https://www.linkedin.com/in/juanrod1/"
-          target="_blank"
-          rel="noopener"
-        >
-          <div class="card border-0 shadow-sm mt-n6 mx-3">
-            <div class="card-body text-center p-4">
-              <h3 class="h6 mb-1">Juan Rodriguez</h3>
-              <p class="font-size-1 mb-0">L7 Informatics</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-12 col-md-4">
-        <div>
-          <amp-img
-            width="450"
-            height="450"
-            layout="responsive"
-            class="img-fluid w-100 rounded"
-            src="/assets/images/instructor-danferguson.jpg"
-            alt="Dan Ferguson"
-          ></amp-img>
-        </div>
-        <a
-          href="https://www.linkedin.com/in/ferguson-dan/"
-          target="_blank"
-          rel="noopener"
-        >
-          <div class="card border-0 shadow-sm mt-n6 mx-3">
-            <div class="card-body text-center p-4">
-              <h3 class="h6 mb-1">Dan Ferguson</h3>
-              <p class="font-size-1 mb-0">Tyler Technologies</p>
-            </div>
-          </div>
-        </a>
-      </div>
+      {% endfor %}
     </div>
   </div>
   <!-- end instructors -->
