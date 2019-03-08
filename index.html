@@ -8,6 +8,7 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
   a flexible &amp; affordable array of options, all taught by current industry professionals.
   Don’t wait - embark on a new career today!
 redirect_from: []
+next-class-start: April 2nd
 tabs:
   - label-1: Flexible
     label-2: Schedule
@@ -18,7 +19,7 @@ tabs:
       - Unlimited tutoring gives you the option to book one-on-one help as you need it
     image: tab-dayjob.jpg
     image-alt: Night Classes
-    id-num: 1
+    tab-number: 1
     selected: selected
   - label-1: Affordable
     label-2: Tuition
@@ -29,7 +30,7 @@ tabs:
       - Talk with our admissions team about tuition options
     image: tab-curriculum.jpg
     image-alt: Innovative Curriculum
-    id-num: 2
+    tab-number: 2
   - label-1: Job
     label-2: Placement
     title: You’ll Learn Skills That Will Get You a Job
@@ -39,8 +40,7 @@ tabs:
       - Practice technical interviews, build your resume, and get expert feedback and more in our Job Placement Course
     image: tab-jobplacement.jpg
     image-alt: Job Placement
-    id-num: 3
-
+    tab-number: 3
 instructors:
   - name: Dana Wen
     linkedin: danawen
@@ -156,18 +156,18 @@ logos:
     {% for tab in page.tabs %}
     <!-- htmllint preset="none" -->
     <div
-      id="tab{{ tab.id-num }}"
+      id="tab{{ tab.tab-number }}"
       role="tab"
       class="tab-link"
-      aria-controls="tabpanel{{ tab.id-num }}"
+      aria-controls="tabpanel{{ tab.tab-number }}"
       option
       {{ tab.selected }}>
       {{ tab.label-1}}<span class="d-none d-sm-inline">&nbsp;</span><span class="d-sm-none"><br/></span>{{ tab.label-2 }}
     </div>
     <div
-      id="tabpanel{{ tab.id-num }}"
+      id="tabpanel{{ tab.tab-number }}"
       role="tabpanel"
-      aria-labelledby="tab{{ tab.id-num }}"
+      aria-labelledby="tab{{ tab.tab-number }}"
     >
     <!-- htmllint preset="$previous" -->
       <!-- Mockup Block -->
@@ -389,7 +389,7 @@ logos:
   class="mb-10 container justify-content-center d-flex flex-column align-items-center"
 >
   <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
-    Next Classes Start April 2nd<br/>
+    Next Classes Start {{ page.next-class-start }}<br/>
   </h2>
   {% include_relative partials/btn-apply.html class="btn-wide" %}
 </section>
