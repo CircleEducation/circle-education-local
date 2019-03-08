@@ -92,10 +92,6 @@ body, p {
   font-size: 20px;
 }
 
-.font-size-large {
-  font-size: 1.05em;
-}
-
 .display-5 {
   font-size: 3rem;
   font-weight: 300;
@@ -126,8 +122,6 @@ body, p {
   font-size: 16px;
   color: #7e8697;
 }
-
-/* HERO IMAGES */
 
 /* HERO IMAGES */
 
@@ -218,20 +212,13 @@ body, p {
   border-image-width: 182px;
 }
 
-.stock-blue-button {
-  font-size: 20px;
-  border-radius: 50px;
-  background-color: #2d2f77;
-  width: 228px;
-}
-
 /* CUSTOM SECTION WIDTH */
 
-.narrow {
+.mw-850 {
   max-width: 850px;
 }
 
-.extra-narrow {
+.mw-600 {
   max-width: 600px;
 }
 
@@ -269,9 +256,6 @@ nav ul ul li {
 .company-logo-div {
   width: 270px;
   height: 160px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 @media (max-width: 767.98px) {
@@ -353,14 +337,7 @@ amp-selector.tabpanels [role=tabpanel][selected] {
 .send-button {
   height: 50px;
   width: 100%;
-  background-color: #2d2f77;
-  border-radius: 3px;
-}
 
-.floating-button {
-  display: flex;
-  justify-content: center;
-  margin: 2rem auto;
 }
 
 /* HUBSPOT */
@@ -389,15 +366,6 @@ div:not(.form-columns-1) .hs-form-field:not(.hs-form-field:first-child) {
 }
 
 /* SHARING BUTTONS */
-
-ul.share-buttons{
-  list-style: none;
-  padding: 0;
-}
-
-ul.share-buttons li{
-  display: inline;
-}
 
 ul.share-buttons .sr-only{
   position: absolute;
