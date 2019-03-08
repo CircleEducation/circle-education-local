@@ -194,23 +194,13 @@ layout: default
                 <div class="col-md-6 mb-7 mb-md-0">
                     <!-- Title -->
                     <div class="mb-3">
-                    <h6 class="mb-0 font-weight-bold">Work experience</h6>
+                    <h5 class="mb-0 font-weight-bold">Work Experience</h5>
                     </div>
                     <!-- End Title -->
 
                     {% for work in page.workexperience %}
                     <!-- Info -->
                     <div class="d-flex mb-5">
-                      <div>
-                          <amp-img
-                            width="70"
-                            height="70"
-                            layout="fixed"
-                            class="u-avatar align-self-center mr-4"
-                            src="{{work.logo}}"
-                            alt="{{work.company}}"
-                          ></amp-img>
-                      </div>
                       <div>
                           <small class="d-block text-secondary">{{work.start}}</small>
                           <h4 class="h6 mb-0">{{work.title}}</h4>
@@ -224,7 +214,7 @@ layout: default
                 <div class="col-md-6 mb-3 mb-md-0">
                     <!-- Title -->
                     <div class="mb-3">
-                        <h6 class="mb-0 font-weight-bold">Education</h6>
+                        <h5 class="mb-0 font-weight-bold">Education</h5>
                     </div>
                     <!-- End Title -->
 
@@ -244,7 +234,7 @@ layout: default
                 <div class="col-md-6 mb-7 mb-md-0">
                     <!-- Title -->
                     <div class="mb-3">
-                    <h6 class="mb-0 font-weight-bold">Projects</h6>
+                    <h5 class="mb-0 font-weight-bold">Projects</h5>
                     </div>
                     <!-- End Title -->
 
@@ -252,7 +242,7 @@ layout: default
                     <!-- Info -->
                     <div class="d-flex mb-5">
                       <div>
-                          <h4 class="h6 mb-0">{{project.name}}</h4>
+                          <h4 class="h6 mb-0 font-weight-bold">{{project.name}}</h4>
                           <h5 class="h6 mb-0">{{project.desc}}</h5>
                           <a href="{{project.repo}}">{{project.repo}}</a>
                       </div>

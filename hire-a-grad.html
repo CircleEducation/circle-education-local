@@ -3,18 +3,12 @@ layout: default
 permalink: "/hire/"
 title: "Austin Coding Academy | Hire an ACA Graduate"
 description: ""
-grads:
-    - name: Charles Cole
-      email: charcole@protonmail.com
-      github: https://github.com/charcole
-      linkedin: https://linkedin.com/in/char-cole
-      course: JavaScript
-      page: charles-cole
 ---
 
 <div class="container">
     <div class="row my-5 mx-auto d-flex justify-content-center align-items-end">
-        {% for grad in page.grads %}
+        {% for page in site.pages %}
+        {% if page.categories contains 'grad' %}
         <div class="col-6 col-md-3">
             <div>
                 <!-- htmllint preset="none" -->
@@ -23,27 +17,27 @@ grads:
                 height="1"
                 layout="responsive"
                 class="img-fluid w-100 rounded"
-                src="https://gravatar.com/avatar/{{ grad.email | downcase | md5 }}?s=200&r=pg"
-                alt="{{ grad.name }}"
+                src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=200&r=pg"
+                alt="{{ page.fullname }}"
                 ></amp-img>
                 <!-- htmllint preset="$previous" -->
             </div>
             <div class="card border-0 shadow-sm mt-n6 mx-3">
                 <div class="card-body text-center px-4 py-2">
-                    <a href="/hire/{{ grad.page }}">
-                        <h3 class="h6">{{ grad.name }}</h3>
+                    <a href="{{ page.url }}">
+                        <h3 class="h6">{{ page.fullname }}</h3>
                     </a>
                     <div class="badge badge-success size-10 rounded py-2 px-2 mx-auto my-2">
-                        {{ grad.course }}
+                        {{ page.course }}
                     </div>
                     <ul class="list-inline d-flex align-items-center justify-content-around flex-wrap">
                         <li class="list-inline-item">
-                            <a href="{{ grad.github }}" target="_blank" rel="noopener">
+                            <a href="{{ page.github }}" target="_blank" rel="noopener">
                                 <i class="text-dark display-7 fab fa-github"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="{{ grad.linkedin }}" target="_blank" rel="noopener">
+                            <a href="{{ page.linkedin }}" target="_blank" rel="noopener">
                                 <i class="text-dark display-7 fab fa-linkedin"></i>
                             </a>
                         </li>
@@ -51,6 +45,7 @@ grads:
                 </div>
             </div>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
 </div>
