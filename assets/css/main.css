@@ -4,7 +4,7 @@
   visibility: hidden;
 }
 
-body {
+body, p {
   font-family: "open sans", sans-serif;
   color: #303133;
 }
@@ -12,7 +12,6 @@ body {
 .text-default {
   color: #303133;
 }
-
 .text-purple {
   color: #2d2f77;
 }
