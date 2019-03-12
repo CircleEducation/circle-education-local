@@ -119,6 +119,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@fortawesome/fontawesome-free@^5.7.2":
+  version "5.7.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.7.2.tgz#1498c3eb78ee7c78c5488418707de90aaf58d5d7"
+  integrity sha512-Ha4HshKdCVKgu4TVCtG8XyPPYdzTzNW4/fvPnn+LT7AosRABryhlRv4cc4+o84dgpvVJN9reN7jo/c+nYujFug==
+
 "@fullhuman/postcss-purgecss@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-1.1.0.tgz#fa423630e01b09604de42637f89eac72471b8961"
@@ -5025,6 +5030,14 @@ postcss-discard-unused@^4.0.1:
     postcss-selector-parser "^3.0.0"
     uniqs "^2.0.0"
 
+postcss-font-base64@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/postcss-font-base64/-/postcss-font-base64-1.0.5.tgz#2133b2b04ad55acea91c78dda98319e88f3c5804"
+  integrity sha512-25258IzJ9dRECogbAzAW1BR++MiYtkc7jjq/qFCGfMbkN/kuZy6eEWnbP9lu7Y8I4VJxy9sjG0af6sf1azuTUg==
+  dependencies:
+    glob "^7.1.2"
+    postcss "^6.0.14"
+
 postcss-html@^0.34.0:
   version "0.34.0"
   resolved "https://registry.yarnpkg.com/postcss-html/-/postcss-html-0.34.0.tgz#9bfd637ad8c3d3a43625b5ef844dc804b3370868"
@@ -5376,7 +5389,7 @@ postcss@^5.2.6:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^6.0.22:
+postcss@^6.0.14, postcss@^6.0.22:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
   integrity sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==

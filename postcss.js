@@ -4,9 +4,10 @@ const atImport = require('postcss-import')
 const purgecss = require('@fullhuman/postcss-purgecss')
 const cssnano = require('cssnano');
 const amp = require('postcss-amp');
+const fontBase64 = require('postcss-font-base64');
 
 fs.readFile('assets/css/main.css', (err, css) => {
-  postcss([atImport, amp, purgecss({
+  postcss([fontBase64, atImport, amp, purgecss({
     content: ['./_site/**/*.html']
   }), cssnano({
     preset: ['advanced']
