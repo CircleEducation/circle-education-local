@@ -28,13 +28,6 @@
 
     {% include amp.html %}
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
     {% capture amp_css %}{% file_exists _includes/css.html %}{% endcapture %}
     {% if amp_css == "true" %}
       {% include css.html %}
