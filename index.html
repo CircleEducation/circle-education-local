@@ -8,7 +8,36 @@ description: At Austin Coding Academy, we fit learning to code into your life wi
   a flexible &amp; affordable array of options, all taught by current industry professionals.
   Don’t wait - embark on a new career today!
 redirect_from: []
+logos:
+  - width: "100px"
+    height: "100px"
+    src: "/assets/images/logo-dell.png"
+    alt: "Dell"
 
+  - width: "118px"
+    height: "39px"
+    src: "/assets/images/logo-dosh.png"
+    alt: "Dosh"
+
+  - width: "155px"
+    height: "27px"
+    src: "/assets/images/logo-flosports.png"
+    alt: "Flosports"
+
+  - width: "250px"
+    height: "100px"
+    src: "/assets/images/logo-ibm.png"
+    alt: "IBM"
+
+  - width: "185px"
+    height: "42px"
+    src: "/assets/images/logo-mooveit.png"
+    alt: "Moove-It"
+
+  - width: "179px"
+    height: "47px"
+    src: "/assets/images/logo-pluralsight.png"
+    alt: "Plural Sight"
 ---
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero">
@@ -79,9 +108,7 @@ redirect_from: []
   <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
     Why Our Students Love Us
   </h2>
-
   <!-- begin tabs -->
-
   <amp-selector
     class="tabs-with-flex"
     role="tablist">
@@ -215,8 +242,60 @@ redirect_from: []
     </div>
   </amp-selector>
   <!-- end tabs -->
-
 </section>
+
+<section class="mb-10 container">
+    <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+      Student Success Stories
+    </h2>
+    <!-- begin student-stories -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <h3 class="size-20 text-center"><strong>Lillian Situ, ACA graduate</strong></h3>
+          <h4 class="size-16 text-center">Software Engineer, Data.World</h4>
+          <div>
+            <amp-iframe
+              src="https://player.vimeo.com/video/290925619"
+              width="266.656px"
+              height="150px"
+              layout="responsive"
+              sandbox="allow-scripts allow-same-origin"
+              frameborder="0"
+              allowfullscreen
+            ></amp-iframe>
+          </div>
+          <p class="size-14 text-center">
+            "I've always been interested in programming and being able to create
+            something so being able to take what I learned at ACA and get a job with
+            it...was one of the best decisions I've made."
+          </p>
+        </div>
+        <div class="col-12 col-sm-6">
+          <h3 class="size-20 text-center"><strong>Greg Swan, ACA graduate</strong></h3>
+          <h4 class="size-16 text-center">Web Developer, Kinetic Theory</h4>
+          <div>
+            <amp-iframe
+              src="https://player.vimeo.com/video/290913789"
+              width="266.656px"
+              height="150px"
+              layout="responsive"
+              sandbox="allow-scripts allow-same-origin"
+              frameborder="0"
+              allowfullscreen
+            ></amp-iframe>
+          </div>
+          <p class="size-14 text-center">
+            "ACA prepared me for the job market the way a high school teacher
+            prepares you for college; they gave me a solid foundation of knowledge,
+            taught me what not to do, and consistently reminded me that there was a
+            job out there for me if I was willing to put in the work."
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- end student-stories -->
+  </section>
 
 <section class="mb-10 container">
   <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
@@ -362,7 +441,30 @@ redirect_from: []
     </div>
   </div>
   <!-- end instructors -->
+</section>
 
+<section class="mb-10 container">
+  <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+    Our Graduates Are Working At
+  </h2>
+  <!-- begin grad-companies -->
+  <div class="container">
+    <div id="logo-section" class="row d-flex flex-column flex-md-row justify-content-center align-items-center">
+      {% for logo in page.logos %}
+      <div class="col-sm-3 col-md-2 company-logo-div">
+        <amp-img
+          width="{{ logo.width }}"
+          height="{{ logo.height }}"
+          layout="responsive"
+          class="u-clients mw-100"
+          src="{{ logo.src }}"
+          alt="{{ logo.alt }}"
+        ></amp-img>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- end grad-companies -->
 </section>
 
 <section class="mb-10 container">
@@ -370,134 +472,6 @@ redirect_from: []
     Upcoming Events
   </h2>
   {% include_relative partials/events.html %}
-</section>
-
-<section class="mb-10 container">
-  <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
-    Our Graduates Are Working At
-  </h2>
-
-  <!-- begin grad-companies -->
-  <div class="container">
-    <div id="logo-section" class="row d-flex flex-column flex-md-row justify-content-center align-items-center">
-      <div class="col-sm-3 col-md-2 company-logo-div">
-        <amp-img
-          width="100px"
-          height="100px"
-          layout="responsive"
-          class="u-clients mw-100"
-          src="/assets/images/logo-dell.png"
-          alt="Dell"
-        ></amp-img>
-      </div>
-      <div class="col-sm-3 col-md-2 company-logo-div">
-        <amp-img
-          width="118px"
-          height="39px"
-          layout="responsive"
-          class="u-clients mw-100"
-          src="/assets/images/logo-dosh.png"
-          alt="Dosh"
-        ></amp-img>
-      </div>
-      <div class="col-sm-3 col-md-2 company-logo-div">
-        <amp-img
-          width="179px"
-          height="47px"
-          layout="responsive"
-          class="u-clients mw-100"
-          src="/assets/images/logo-pluralsight.png"
-          alt="Plural Sight"
-        ></amp-img>
-      </div>
-      <div class="col-sm-3 col-md-2 company-logo-div">
-        <amp-img
-          width="185px"
-          height="42px"
-          layout="responsive"
-          class="u-clients mw-100"
-          src="/assets/images/logo-mooveit.png"
-          alt="Moove-It"
-        ></amp-img>
-      </div>
-      <div class="col-sm-3 col-md-2 company-logo-div">
-        <amp-img
-          width="155px"
-          height="27px"
-          layout="responsive"
-          class="u-clients mw-100"
-          src="/assets/images/logo-flosports.png"
-          alt="Flosports"
-        ></amp-img>
-      </div>
-      <div class="col-sm-3 col-md-2 company-logo-div">
-        <amp-img
-          width="250px"
-          height="100px"
-          layout="responsive"
-          class="u-clients"
-          src="/assets/images/logo-ibm.png"
-          alt="IBM"
-        ></amp-img>
-      </div>
-    </div>
-  </div>
-  <!-- end grad-companies -->
-
-</section>
-
-<section class="mb-10 container">
-  <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
-    Student Success Stories
-  </h2>
-
-  <!-- begin student-stories -->
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-sm-6">
-        <h3 class="size-20 text-center"><strong>Lillian Situ</strong></h3>
-        <h4 class="size-16 text-center">Software Engineer, Data.World</h4>
-        <div>
-          <amp-iframe
-            src="https://player.vimeo.com/video/290925619"
-            width="266.656px"
-            height="150px"
-            layout="responsive"
-            sandbox="allow-scripts allow-same-origin"
-            frameborder="0"
-            allowfullscreen
-          ></amp-iframe>
-        </div>
-        <p class="size-14 text-center">
-          "I've always been interested in programming and being able to create
-          something so being able to take what I learned at ACA and get a job with
-          it...was one of the best decisions I've made."
-        </p>
-      </div>
-      <div class="col-12 col-sm-6">
-        <h3 class="size-20 text-center"><strong>Greg Swan</strong></h3>
-        <h4 class="size-16 text-center">Web Developer, Kinetic Theory</h4>
-        <div>
-          <amp-iframe
-            src="https://player.vimeo.com/video/290913789"
-            width="266.656px"
-            height="150px"
-            layout="responsive"
-            sandbox="allow-scripts allow-same-origin"
-            frameborder="0"
-            allowfullscreen
-          ></amp-iframe>
-        </div>
-        <p class="size-14 text-center">
-          "ACA prepared me for the job market the way a high school teacher
-          prepares you for college; they gave me a solid foundation of knowledge,
-          taught me what not to do, and consistently reminded me that there was a
-          job out there for me if I was willing to put in the work."
-        </p>
-      </div>
-    </div>
-  </div>
-  <!-- end student-stories -->
 </section>
 
 <section
