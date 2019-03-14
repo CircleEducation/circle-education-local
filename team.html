@@ -35,7 +35,7 @@ profiles:
       icon: fas fa-envelope-square
       hex: "#303133"
     - link: https://kevincolten.com
-      icon: fas fa-home
+      icon: fas fa-external-link-square-alt
       hex: "#303133"
     - link: https://www.linkedin.com/in/kevincolten/
       icon: fab fa-linkedin
@@ -81,7 +81,7 @@ profiles:
       icon: fas fa-envelope-square
       hex: "#303133"
     - link: https://naio-experimental.tumblr.com/
-      icon: fas fa-home
+      icon: fas fa-external-link-square-alt
       hex: "#303133"
     - link: https://www.linkedin.com/in/dotthenai/
       icon: fab fa-linkedin
@@ -125,7 +125,7 @@ profiles:
     - link: https://linkedin.com/in/char-cole
       icon: fab fa-linkedin
       hex: "#0077b5"
-    - link: https://github.com/charcole
+    - link: https://github.com/char-cole
       icon: fab fa-github-square
       hex: "#303133"
 ---
@@ -155,7 +155,7 @@ profiles:
               <div class="card-body text-center p-2">
                 <h3 class="h6">{{ profile.name }}</h3>
                 <h4 class="size-14">{{ profile.title }}</h4>
-                <ul class="list-inline d-flex align-items-center justify-content-around flex-wrap">
+                <ul class="list-inline d-flex align-items-center justify-content-center flex-wrap">
                   {% for link in profile.links %}
                     <li class="list-inline-item">
                       <a href="{{ link.link }}" target="_blank" rel="noopener">
