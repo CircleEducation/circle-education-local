@@ -1,5 +1,6 @@
 ---
 layout: resume
+categories: [ grad ]
 
 fullname: Kevin Colten
 jobtitle: Chief Technology Officer, Web Developer
@@ -43,7 +44,6 @@ email: kevincolten@gmail.com
 website: https://kevincolten.com
 workplace: Austin Coding Academy
 phone: (512) 593-2019
-language: English
 
 workexperience:
   - company: Austin Coding Academy

@@ -1,7 +1,8 @@
 ---
 layout: resume
+categories: [ ]
 
-fullname:
+name:
 jobtitle:
 
 location:
@@ -19,11 +20,9 @@ email:
 website:
 workplace:
 phone:
-language:
 
 workexperience:
   # - company:
-  #   logo:
   #   start:
   #   title:
   #   location:

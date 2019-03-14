@@ -1,0 +1,56 @@
+---
+layout: default
+permalink: "/hire/"
+title: "Austin Coding Academy | Hire an ACA Graduate"
+description: ""
+---
+
+<div class="container">
+  <div class="row my-5 mx-auto d-flex justify-content-center align-items-end">
+    {% for page in site.pages %}
+    {% if page.categories contains 'grad' %}
+    <div class="col-6 col-md-4">
+      <div>
+        <!-- htmllint preset="none" -->
+        <amp-img width="1" height="1" layout="responsive" class="img-fluid w-100 rounded" src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=200&r=pg"
+          alt="{{ page.fullname }}"></amp-img>
+        <!-- htmllint preset="$previous" -->
+      </div>
+      <div class="card shadow border-0 mt-n6 mx-3">
+        <div class="card-body text-center px-2 py-2">
+          <a href="{{ page.url }}">
+            <h3 class="h6">{{ page.fullname }}</h3>
+          </a>
+          <!-- Collections -->
+          <ul class="list-inline d-flex align-items-center flex-wrap justify-content-center">
+            {% assign skills = page.skills | slice:0, 3 %}
+            {% for skill in skills %}
+            <li class="list-inline-item mb-3 mb-sm-0 mr-3">
+              <div class="d-flex align-items-center">
+                <div class="badge badge-success font-weight-medium rounded py-2 px-2 my-1">
+                  {{skill}}
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+          <!-- End Collections -->
+          <ul class="list-inline d-flex align-items-center justify-content-around flex-wrap">
+            <li class="list-inline-item">
+              <a href="{{ page.github }}" target="_blank" rel="noopener">
+                <i class="text-dark display-7 fab fa-github"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="{{ page.linkedin }}" target="_blank" rel="noopener">
+                <i class="text-dark display-7 fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
