@@ -1,12 +1,8 @@
 <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
   Download Our Course Guide
 </h2>
-<form
-  class="d-flex justify-content-center align-items-center"
-  target="_top"
-  action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/702969c4-4c75-4b99-b6d2-59d04d6ebd03"
-  method="POST"
->
+<form class="d-flex justify-content-center align-items-center" target="_top" action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/702969c4-4c75-4b99-b6d2-59d04d6ebd03"
+  method="POST">
   <div class="form-container narrow px-5 px-lg-0">
     <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
     <input name="downloaded_a_courses_guide" type="hidden" value="true">
@@ -16,34 +12,37 @@
     <input name="hutk" type="hidden" value="">
 
     <div class="row center-form">
-
       <!-- Input -->
-      <div class="col-sm-6 mb-4">
-        <div class="js-form-message">
-          <label for="email" class="form-label">
-            Email <span class="text-danger">*</span>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="first-name" class="form-label">
+            Name <span class="text-danger">*</span>
           </label>
 
-          <input
-            id="email"
-            type="email"
-            class="form-control"
-            name="email"
-            placeholder="Email"
-            aria-label="Your email address"
-            required
-            data-msg="Please enter a valid email address."
-            data-error-class="u-has-error"
-            data-success-class="u-has-success"
-          />
+          <input id="first-name" type="text" class="form-control" name="firstname" placeholder="Name" aria-label="Your name"
+            required data-msg="Please enter your name." data-error-class="u-has-error" data-success-class="u-has-success" />
         </div>
       </div>
       <!-- End Input -->
 
-      {% include_relative partials/referral-question.html %}
+      <!-- Input -->
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="email" class="form-label">
+            Email <span class="text-danger">*</span>
+          </label>
+
+          <input id="email" type="email" class="form-control" name="email" placeholder="Email" aria-label="Your email address"
+            required data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success" />
+        </div>
+      </div>
+      <!-- End Input -->
+      <div class="col-sm-4 d-flex flex-column justify-content-end">
+        {% include_relative partials/referral-question.html %}
+      </div>
 
       <!-- Input -->
-      <div class="col-sm-6 mb-4">
+      <div class="col-sm-4 d-flex flex-column justify-content-end form-group">
         <label class="form-label" for="best-describes">Which of these best describes you? <span class="text-danger">*</span></label>
         <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control" required>
           <option disabled selected value="">Select your answer</option>
@@ -58,11 +57,8 @@
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="col-6 mb-4 d-flex align-items-end">
-        <button
-          type="submit"
-          class="text-white btn bg-purple rounded btn-block"
-        >
+      <div class="col-4 d-flex align-items-end form-group">
+        <button type="submit" class="text-white btn bg-purple rounded btn-block">
           Send
         </button>
       </div>
