@@ -31,4 +31,4 @@ exclude:
 
 permalink: /blog/:categories/:title/
 
-categories: [ grad ]
+categories: [ hire ]

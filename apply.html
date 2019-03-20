@@ -25,7 +25,7 @@ redirect_from:
       <input name="page_name" type="hidden" value="{{page.title}}">
       <input name="page_uri" type="hidden" value="{{site.url}}{{site.baseurl}}{{page.url}}">
       <input name="hutk" type="hidden" value="">
-      <div class="narrow row">
+      <div class="mw-850 row">
         <!-- Input -->
         <div class="col-sm-6 mb-6">
           <div class="js-form-message form-group">
@@ -362,8 +362,9 @@ redirect_from:
           </div>
         </div>
         <!-- End Input -->
-
-        {% include_relative partials/referral-question.html %}
+        <div class="col-sm-6 mb-4">
+          {% include referral-question.html %}
+        </div>
 
         <!-- Input -->
         <div class="col-sm-6 mb-6">
@@ -396,45 +397,44 @@ redirect_from:
 
         <!-- Input -->
         <div class="col-12 mb-6">
-            <div class="js-form-message form-group">
-              <label for="best-describes" class="form-label">
-                Which of these best describes you?
-                <span class="text-danger">*</span>
-              </label>
+          <div class="js-form-message form-group">
+            <label for="best-describes" class="form-label">
+              Which of these best describes you?
+              <span class="text-danger">*</span>
+            </label>
 
-              <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control">
-                <option value="" disabled selected>
-                  Select your answer
-                </option>
-                <option value="I'm researching coding bootcamps.">
-                  I'm researching coding bootcamps.</option>
-                <option value="I'm teaching myself to code, but I'm stuck.">
-                  I'm teaching myself to code, but I'm stuck.
-                </option>
-                <option value="I'm interested in a career in tech.">
-                  I'm interested in switching to a career in tech.
-                </option>
-                <option value="I'm an entrepreneur with an idea.">
-                  I'm an entrepreneur with an idea.
-                </option>
-                <option value="I'm looking for a college alternative.">
-                  I'm looking for a college alternative.
-                </option>
-                <option value="I want to learn a new skill for my current job.">
-                  I want to learn a new skill for my current job.
-                </option>
-              </select>
-            </div>
+            <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control">
+              <option value="" disabled selected>
+                Select your answer
+              </option>
+              <option value="I'm researching coding bootcamps.">
+                I'm researching coding bootcamps.</option>
+              <option value="I'm teaching myself to code, but I'm stuck.">
+                I'm teaching myself to code, but I'm stuck.
+              </option>
+              <option value="I'm interested in a career in tech.">
+                I'm interested in switching to a career in tech.
+              </option>
+              <option value="I'm an entrepreneur with an idea.">
+                I'm an entrepreneur with an idea.
+              </option>
+              <option value="I'm looking for a college alternative.">
+                I'm looking for a college alternative.
+              </option>
+              <option value="I want to learn a new skill for my current job.">
+                I want to learn a new skill for my current job.
+              </option>
+            </select>
           </div>
-          <!-- End Input -->
+        </div>
+        <!-- End Input -->
 
         <button
-          class="floating-button btn stock-blue-button text-white"
+          class="btn btn-wide btn-round bg-purple size-20 text-white d-flex justify-content-center my-5 mx-auto"
           type="Submit"
         >
           Submit
         </button>
-        {% include_relative partials/recaptcha-text.html %}
       </div>
     </div>
   </form>

@@ -52,7 +52,7 @@
   "watch": {
     "build": {
       "patterns": [
-        "./"
+        "./*"
       ],
       "extensions": "html,css,md",
       "ignore": [

@@ -8,11 +8,11 @@ description: ""
 <div class="container">
   <div class="row my-5 mx-auto d-flex justify-content-center align-items-end">
     {% for page in site.pages %}
-    {% if page.categories contains 'grad' %}
+    {% if page.categories contains 'hire' %}
     <div class="col-6 col-md-4">
       <div>
         <!-- htmllint preset="none" -->
-        <amp-img width="1" height="1" layout="responsive" class="img-fluid w-100 rounded" src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=200&r=pg"
+        <amp-img width="1" height="1" layout="responsive" class="img-fluid w-100 rounded" src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=400&r=pg"
           alt="{{ page.fullname }}"></amp-img>
         <!-- htmllint preset="$previous" -->
       </div>

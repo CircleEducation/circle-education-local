@@ -21,14 +21,14 @@ layout: default
       <div class="row my-4">
         <div class="col col-md-8 pt-md-2">
           <a href="mailto:{{ page.author_email }}">
-            <h5 class="text-dark">{{ page.author | default: "Austin Coding Academy" }}</h5>
+            <h5 class="text-default">{{ page.author | default: "Austin Coding Academy" }}</h5>
           </a>
           <h5 class="text-muted">{{ page.updated_at | date: "%B %d, %Y" }}</h5>
         </div>
         <div class="col col-md-4">
           <h5>Share this blog:</h5>
-          <ul class="share-buttons">
-              <li>
+          <ul class="share-buttons list-unstyled p-0">
+              <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
                   href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}&quote={{ page.title | replace: ' ', '%20' }}"
@@ -44,7 +44,7 @@ layout: default
                 </a>
                 <!-- htmllint preset="$previous" -->
               </li>
-              <li>
+              <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
                   href="https://twitter.com/intent/tweet?source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}&text={{ page.title | replace: ' ', '%20' }}:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}"
@@ -60,7 +60,7 @@ layout: default
                 </a>
                 <!-- htmllint preset="$previous" -->
               </li>
-              <li>
+              <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
                   href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}&title={{ page.title | replace: ' ', '%20' }}&summary=desc&source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}"
@@ -76,7 +76,7 @@ layout: default
                 </a>
                 <!-- htmllint preset="$previous" -->
               </li>
-              <li>
+              <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
                   href="mailto:?subject={{ page.title | replace: ' ', '%20' }}&body=desc:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}"

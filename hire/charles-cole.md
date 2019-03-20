@@ -1,6 +1,6 @@
 ---
 layout: resume
-categories: [ grad ]
+categories: [ hire ]
 
 fullname: Charles Cole
 jobtitle: Junior Web Developer
@@ -33,11 +33,11 @@ phone: (512) 674-5226
 
 workexperience:
   - company: Austin Coding Academy
-    start: December 2018
+    dates: December 2018
     title: Junior Web Developer
     location: Austin, TX
   - company: Tacodeli
-    start: September 2015
+    dates: September 2015
     title: Catering Driver
     location: Austin, TX
 
