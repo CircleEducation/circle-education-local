@@ -118,6 +118,10 @@ body {
   background-color: rgba(45,47,119, 0.1);
 }
 
+.shadow-yellow {
+  text-shadow: 2px 2px #f5b02c;
+}
+
 .btn-purple {
   color: #fff;
   background-color: #2d2f77;
@@ -135,6 +139,10 @@ body {
 
 .font-family-alt {
   font-family: "Montserrat", sans-serif;
+}
+
+.font-family-serif {
+  font-family: "Roboto Slab", sans-serif;
 }
 
 .img-logo {
@@ -191,6 +199,9 @@ body {
   background-position: 0 -1px;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 .section-text {
@@ -202,11 +213,6 @@ body {
 
 #hero-index {
   background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-index.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: top;
 }
 
@@ -216,11 +222,6 @@ body {
 
 #hero-financing {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/images/hero-financing.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: top;
 }
 
@@ -230,12 +231,12 @@ body {
 
 #hero-blog {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/images/hero-blog.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: bottom;
+}
+
+#hero-landing {
+  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)), url('/assets/images/hero-landing.jpg');
+  background-position: top right;
 }
 
 /* CUSTOM MARGINS */

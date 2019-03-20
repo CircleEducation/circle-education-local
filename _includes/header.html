@@ -2,6 +2,7 @@
 {% if page.hero %}
   {% assign color = 'transparent' %}
 {% endif %}
+{% unless page.categories contains 'landing' %}
 <amp-sidebar
   on="tap:sidebar.open"
   tabindex="1"
@@ -51,6 +52,7 @@
   {% endfor %}
 
 </amp-sidebar>
+{% endunless%}
 
 <!-- htmllint preset="none" -->
 <header
@@ -84,6 +86,7 @@
         </a>
         <!-- End Logo -->
 
+        {% unless page.categories contains 'landing' %}
         <!-- Responsive Toggle Button -->
         <button
           class="display-5 text-white btn btn-link d-flex d-md-none"
@@ -138,6 +141,7 @@
           </ul>
         </div>
         <!-- End Navigation -->
+        {% endunless %}
       </nav>
       <!-- End Nav -->
     </div>
