@@ -26,22 +26,30 @@ See https://github.com/adobe-type-tools/cmap-resources
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="google" content="notranslate">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>PDF.js viewer</title>
+    <meta
+      name="description"
+      content="{{ page.description | default : 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
+    />
+    <title>
+      {{ page.title | default: 'Austin Coding Academy | Learn to Code, Change Your Life' }}
+    </title>
 
+    <link rel="stylesheet" href="../assets/css/viewer.css">
 
-    <link rel="stylesheet" href="viewer.css">
-
-
-<!-- This snippet is used in production (included from viewer.html) -->
-<link rel="resource" type="application/l10n" href="locale/locale.properties">
-<script src="../build/pdf.js"></script>
-
+    <!-- This snippet is used in production (included from viewer.html) -->
+    <link rel="resource" type="application/l10n" href="locale/locale.properties">
+    <script src="../build/pdf.js"></script>
 
     <script src="viewer.js"></script>
+
+    {% include google-tag-manager-head.html %}
 
   </head>
 
   <body tabindex="1" class="loadingInProgress">
+
+    {% include google-tag-manager-body.html %}
+
     <div id="outerContainer">
 
       <div id="sidebarContainer">
