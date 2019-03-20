@@ -5,7 +5,14 @@ layout: default
 <main id="content" role="main">
   <!-- Description Section -->
   <div class="container space-top-1 d-flex flex-column">
-    <img src="{{page.img}}" class="w-100 w-lg-80 mx-auto">
+    <amp-img
+      src="{{ page.img }}"
+      class="w-100 w-lg-80 mx-auto"
+      layout="responsive"
+      width="{{ page.width | default:345 }}px"
+      height="{{ page.height | default:172.5 }}px"
+      alt="{{ page.alt }}"
+    ></amp-img>
     <div class="w-lg-80 mx-auto space-top-1">
       <!-- <div class="mb-4">
         <span class="text-muted">{{page.date}}</span>
@@ -14,50 +21,74 @@ layout: default
       <div class="row my-4">
         <div class="col col-md-8 pt-md-2">
           <a href="mailto:{{ page.author_email }}">
-            <h5 class="text-dark">{{ page.author | default: "Austin Coding Academy" }}</h5>
+            <h5 class="text-default">{{ page.author | default: "Austin Coding Academy" }}</h5>
           </a>
           <h5 class="text-muted">{{ page.updated_at | date: "%B %d, %Y" }}</h5>
         </div>
         <div class="col col-md-4">
           <h5>Share this blog:</h5>
-          <ul class="share-buttons">
-              <li>
+          <ul class="share-buttons list-unstyled p-0">
+              <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
                   href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}&quote={{ page.title | replace: ' ', '%20' }}"
                   title="Share on Facebook"
                   target="_blank">
-                  <img alt="Share on Facebook" src="/assets/images/Facebook.svg" />
+                  <amp-img
+                    alt="Share on Facebook"
+                    src="/assets/images/Facebook.svg"
+                    layout="fixed"
+                    width="32px"
+                    height="32px"
+                  ></amp-img>
                 </a>
                 <!-- htmllint preset="$previous" -->
               </li>
-              <li>
+              <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
                   href="https://twitter.com/intent/tweet?source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}&text={{ page.title | replace: ' ', '%20' }}:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}"
                   target="_blank"
                   title="Tweet">
-                  <img alt="Tweet" src="/assets/images/Twitter.svg" />
+                  <amp-img
+                    alt="Tweet"
+                    src="/assets/images/Twitter.svg"
+                    layout="fixed"
+                    width="32px"
+                    height="32px"
+                  ></amp-img>
                 </a>
                 <!-- htmllint preset="$previous" -->
               </li>
-              <li>
+              <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
                   href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}&title={{ page.title | replace: ' ', '%20' }}&summary=desc&source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}"
                   target="_blank"
                   title="Share on LinkedIn">
-                  <img alt="Share on LinkedIn" src="/assets/images/LinkedIn.svg" />
+                  <amp-img
+                    alt="Share on LinkedIn"
+                    src="/assets/images/LinkedIn.svg"
+                    layout="fixed"
+                    width="32px"
+                    height="32px"
+                  ></amp-img>
                 </a>
                 <!-- htmllint preset="$previous" -->
               </li>
-              <li>
+              <li class="d-inline">
                 <!-- htmllint preset="none" -->
                 <a
                   href="mailto:?subject={{ page.title | replace: ' ', '%20' }}&body=desc:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink }}"
                   target="_blank"
                   title="Send email">
-                  <img alt="Send email" src="/assets/images/Email.svg" />
+                  <amp-img
+                    alt="Send email"
+                    src="/assets/images/Email.svg"
+                    layout="fixed"
+                    width="32px"
+                    height="32px"
+                  ></amp-img>
                 </a>
                 <!-- htmllint preset="$previous" -->
               </li>

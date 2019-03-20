@@ -13,14 +13,8 @@ layout: default
             <div class="card p-1 mb-4 bg-light">
               <div class="card-body text-center">
                 <div class="mb-3">
-                  <amp-img
-                    width="80"
-                    height="80"
-                    layout="fixed"
-                    class="u-lg-avatar rounded-circle"
-                    src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}?s=200"
-                    alt="{{page.fullname}} Gravatar"
-                  ></amp-img>
+                  <amp-img width="150" height="150" layout="fixed" class="u-lg-avatar rounded-circle" src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}?s=200"
+                    alt="{{page.fullname}} Gravatar"></amp-img>
                 </div>
 
                 <div class="mb-3">
@@ -29,10 +23,7 @@ layout: default
                 </div>
 
                 <div class="mb-2">
-                  <a
-                    class="btn btn-sm btn-soft-primary transition-3d-hover"
-                    href="mailto:{{page.email}}"
-                  >
+                  <a class="btn btn-sm btn-soft-primary transition-3d-hover" href="mailto:{{page.email}}">
                     <span class="far fa-envelope mr-2"></span>
                     Send a Message
                   </a>
@@ -48,29 +39,16 @@ layout: default
               </div>
 
               <div class="card-body pt-3 pb-4 px-4">
-                <a
-                  class="media mb-4"
-                  href="{{page.github}}"
-                >
+                <a class="media mb-4" href="{{page.github}}">
                   <div class="media-body d-flex justify-content-start align-items-center">
-                    <i
-                      class="text-dark mx-3 display-5 fab fa-github"
-                      style="width: 40px">
+                    <i class="text-default mx-3 display-5 fab fa-github" style="width: 40px">
                     </i>
                     <span class="text-muted">GitHub</span>
                   </div>
                 </a>
-              </div>
-
-              <div class="card-body pt-3 pb-4 px-4">
-                <a
-                  class="media mb-4"
-                  href="{{page.linkedin.link}}"
-                >
+                <a class="media mb-4" href="{{page.linkedin.link}}">
                   <div class="media-body d-flex justify-content-start align-items-center">
-                    <i
-                      class="text-dark mx-3 display-5 fab fa-linkedin"
-                      style="width: 40px">
+                    <i class="text-default mx-3 display-5 fab fa-linkedin" style="width: 40px">
                     </i>
                     <span class="text-muted">LinkedIn</span>
                   </div>
@@ -84,8 +62,8 @@ layout: default
           <div class="col-lg-9">
             <!-- User Details -->
             <div class="mb-4">
-              <h2 class="h4">{{page.fullname}}</h2>
-              <h4 class="h6 text-secondary mb-0">{{page.jobtitle}}</h4>
+              <h2>{{page.fullname}}</h2>
+              <h4 class="text-secondary mb-0">{{page.jobtitle}}</h4>
             </div>
             <!-- End User Details -->
 
@@ -96,10 +74,10 @@ layout: default
               </p>
             </div>
             <!-- End Info -->
-
             <!-- Collections -->
             <ul class="list-inline d-flex align-items-center flex-wrap">
-              {% for skill in page.skills %}
+              {% assign skills = page.skills | slice:0, 5 %}
+              {% for skill in skills %}
               <li class="list-inline-item mb-3 mb-sm-0 mr-3">
                 <div class="d-flex align-items-center">
                   <div class="badge badge-success font-weight-medium rounded py-2 px-2 my-1">
@@ -110,7 +88,6 @@ layout: default
               {% endfor %}
             </ul>
             <!-- End Collections -->
-
             <hr class="my-7">
 
             <!-- Icon Blocks -->
@@ -149,7 +126,7 @@ layout: default
                       <span class="fas fa-mobile-alt list-group-icon mr-3"></span>
                       <div class="media-body text-lh-sm">
                         <span class="d-block mb-1">Phone number:</span>
-                        <span class="d-block text-muted">{{page.phone}}</span>
+                        <span class="d-block text-muted"><a href="tel:{{page.phone}}">{{page.phone}}</a></span>
                       </div>
                     </div>
                   </li>
@@ -191,129 +168,139 @@ layout: default
 
             <!-- Info -->
             <div class="row mb-7">
-                <div class="col-md-6 mb-7 mb-md-0">
-                    <!-- Title -->
-                    <div class="mb-3">
-                    <h6 class="mb-0 font-weight-bold">Work experience</h6>
-                    </div>
-                    <!-- End Title -->
-
-                    {% for work in page.workexperience %}
-                    <!-- Info -->
-                    <div class="d-flex mb-5">
-                      <div>
-                          <amp-img
-                            width="70"
-                            height="70"
-                            layout="fixed"
-                            class="u-avatar align-self-center mr-4"
-                            src="{{work.logo}}"
-                            alt="{{work.company}}"
-                          ></amp-img>
-                      </div>
-                      <div>
-                          <small class="d-block text-secondary">{{work.start}}</small>
-                          <h4 class="h6 mb-0">{{work.title}}</h4>
-                          <span class="d-block text-secondary">at {{work.company}} - {{work.location}}</span>
-                      </div>
-                    </div>
-                    <!-- End Info -->
-                    {% endfor %}
+              <div class="col-md-6 mb-7 mb-md-0">
+                <!-- Title -->
+                <div class="mb-3">
+                  <h4 class="mb-0 font-weight-bold">Work Experience</h4>
                 </div>
+                <!-- End Title -->
 
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <!-- Title -->
-                    <div class="mb-3">
-                        <h6 class="mb-0 font-weight-bold">Education</h6>
-                    </div>
-                    <!-- End Title -->
-
-                    {% for school in page.education %}
-                    <!-- Info -->
-                    <div class="row align-items-center mb-5">
-                        <div class="col">
-                            <small class="d-block text-secondary">{{school.dates}}</small>
-                            <h4 class="h6 mb-0">{{school.degree}}</h4>
-                            <span class="d-block text-secondary">{{school.name}}</span>
-                        </div>
-                    </div>
-                    <!-- End Info -->
-                    {% endfor %}
+                {% for work in page.workexperience %}
+                <!-- Info -->
+                <div class="media mb-5">
+                  {% if work.logo %}
+                    <amp-img src="{{work.logo}}" class="mr-3 img-logo" alt="{{work.title}}" layout="responsive" width="100" height="100"></amp-img>
+                  {% endif %}
+                  <div class="media-body">
+                    <small class="d-block text-secondary">{{work.dates}}</small>
+                    <h4 class="h6 mb-0">{{work.title}}</h4>
+                    <span class="d-block text-secondary">{{work.company}} - {{work.location}}</span>
+                  </div>
                 </div>
+                <!-- End Info -->
+                {% endfor %}
+              </div>
 
-                <div class="col-md-6 mb-7 mb-md-0">
-                    <!-- Title -->
-                    <div class="mb-3">
-                    <h6 class="mb-0 font-weight-bold">Projects</h6>
-                    </div>
-                    <!-- End Title -->
+              <div class="col-md-6 mb-3 mb-md-0">
+                <!-- Title -->
+                <div class="mb-3">
+                  <h4 class="mb-0 font-weight-bold">Education</h4>
+                </div>
+                <!-- End Title -->
 
-                    {% for project in page.projects %}
-                    <!-- Info -->
-                    <div class="d-flex mb-5">
-                      <div>
-                          <h4 class="h6 mb-0">{{project.name}}</h4>
-                          <h5 class="h6 mb-0">{{project.desc}}</h5>
-                          <a href="{{project.repo}}">{{project.repo}}</a>
+                {% for school in page.education %}
+                <!-- Info -->
+                <div class="media mb-5">
+                  {% if school.logo %}
+                    <amp-img src="{{school.logo}}" class="mr-3 img-logo" alt="{{school.name}}" layout="responsive" width="100" height="100"></amp-img>
+                  {% endif %}
+                  <div class="media-body">
+                    <small class="d-block text-secondary">{{school.dates}}</small>
+                    <h4 class="h6 mb-0">{{school.degree}}</h4>
+                    <span class="d-block text-secondary">{{school.name}}</span>
+                  </div>
+                </div>
+                <!-- End Info -->
+                {% endfor %}
+              </div>
+
+              <div class="col-md-8 mb-7 mb-md-0">
+                <!-- Title -->
+                <div class="mb-3">
+                  <h4 class="mb-0 font-weight-bold">Projects</h4>
+                </div>
+                <!-- End Title -->
+
+                {% for project in page.projects %}
+                <!-- Info -->
+                <div class="media mb-5">
+                  <div class="media-body">
+                    <h5 class="mb-0 font-weight-bold">{{project.name}}</h5>
+                    <h6 class="mb-0">{{project.desc}}</h6>
+                    <a href="{{project.repo}}">{{project.repo}}</a>
+                  </div>
+                </div>
+                <!-- End Info -->
+                {% endfor %}
+              </div>
+              <div class="col-md-4 mb-3 mb-md-0">
+                <!-- Title -->
+                <div class="mb-3">
+                  <h4 class="mb-0 font-weight-bold">Skills</h4>
+                </div>
+                <!-- End Title -->
+                <!-- Collections -->
+                <ul class="list-inline d-flex align-items-center flex-wrap">
+                  {% for skill in page.skills %}
+                  <li class="list-inline-item mb-3 mb-sm-0 mr-3">
+                    <div class="d-flex align-items-center">
+                      <div class="badge badge-default font-weight-medium rounded p-1 my-1">
+                        {{skill}}
                       </div>
                     </div>
-                    <!-- End Info -->
-                    {% endfor %}
-                </div>
+                  </li>
+                  {% endfor %}
+                </ul>
+                <!-- End Collections -->
+              </div>
             </div>
             <!-- End Info -->
 
             <!-- htmllint preset="none" -->
-            {% if page.reviews.size > 0  %}
+            {% if page.reviews.size > 0 %}
             <!-- htmllint preset="$previous" -->
 
-              <hr class="my-7">
+            <hr class="my-7">
 
-              <!-- Title -->
-              <div id="reviews" class="mb-3">
-                <h3 class="h4 mb-0">Reviews</h3>
-              </div>
-              <!-- End Title -->
+            <!-- Title -->
+            <div id="reviews" class="mb-3">
+              <h3 class="h4 mb-0">Reviews</h3>
+            </div>
+            <!-- End Title -->
 
-              {% for review in page.reviews %}
-                <!-- Reviews -->
+            {% for review in page.reviews %}
+            <!-- Reviews -->
+            <div>
+              <!-- Author -->
+              <div class="media mb-3">
                 <div>
-                  <!-- Author -->
-                  <div class="media mb-3">
-                    <div>
-                        <amp-img
-                          width="80"
-                          height="80"
-                          layout="fixed"
-                          class="u-avatar rounded-circle mr-3"
-                          src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}"
-                          alt="{{review.name}}"
-                        ></amp-img>
-                    </div>
-
-                    <div class="media-body align-self-center">
-                        <h4 class="d-inline-block mb-1">
-                            <a class="d-block h6 mb-0" href="#">
-                                {{review.name}} <br/>
-                                <span class="small">{{review.position}}</span>
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div class="media-body text-right">
-                      <small class="d-block text-muted">{{review.timestamp}}</small>
-                    </div>
-                  </div>
-                  <!-- End Author -->
-
-                    <p>
-                        {{review.post}}
-                    </p>
+                  <amp-img width="80" height="80" layout="fixed" class="u-avatar rounded-circle mr-3" src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}"
+                    alt="{{review.name}}"></amp-img>
                 </div>
-                <hr class="my-7">
-                <!-- End Reviews -->
 
-              {% endfor %}
+                <div class="media-body align-self-center">
+                  <h4 class="d-inline-block mb-1">
+                    <a class="d-block h6 mb-0" href="#">
+                      {{review.name}} <br />
+                      <span class="small">{{review.position}}</span>
+                    </a>
+                  </h4>
+                </div>
+
+                <div class="media-body text-right">
+                  <small class="d-block text-muted">{{review.timestamp}}</small>
+                </div>
+              </div>
+              <!-- End Author -->
+
+              <p>
+                {{review.post}}
+              </p>
+            </div>
+            <hr class="my-7">
+            <!-- End Reviews -->
+
+            {% endfor %}
 
             {% endif %}
 

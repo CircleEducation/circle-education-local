@@ -21,7 +21,7 @@ redirect_from: []
     <input name="hutk" type="hidden" value="">
     <input name="page_name" type="hidden" value="{{page.title}}">
     <input name="page_uri" type="hidden" value="{{site.url}}{{site.baseurl}}{{page.url}}">
-    <div class="narrow row">
+    <div class="mw-850 row">
       <!-- Input -->
       <div class="col-sm-6 mb-6">
         <div class="js-form-message form-group">
@@ -281,15 +281,13 @@ redirect_from: []
         </div>
       </div>
       <!-- End Input -->
+      <div class="col-sm-6 mb-4">
+        {% include referral-question.html %}
+      </div>
 
-      {% include_relative partials/referral-question.html %}
-
-      <button class="floating-button btn stock-blue-button text-white" type="Submit">
+      <button class="floating-button btn btn-wide btn-round bg-purple size-20 text-white" type="Submit">
         Submit
       </button>
-
-      {% include_relative partials/recaptcha-text.html %}
-
     </div>
   </form>
 </div>

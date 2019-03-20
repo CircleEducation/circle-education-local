@@ -13,7 +13,7 @@ excerpt: 'With the rise of coding bootcamps as a pathway into the world of tech,
   is whether you want to attend an in-person class or an online bootcamp. While both
   options provide their own advantages, here is why you should opt for an in-person
   experience:'
-img: "/assets/images/4SGM0838.jpg"
+img: "/assets/images/blog-benefits.jpg"
 redirect_from: []
 permalink: "/blog/web-development/the-benefits-of-an-in-person-coding-bootcamp-vs-online-classes"
 date: 2019-03-04 21:22:15 +0000

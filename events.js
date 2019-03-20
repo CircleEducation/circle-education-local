@@ -18,8 +18,9 @@ const fetchEvents = async () => {
       status: 'live'
     })}`, { headers });
     const json = await response.json();
-    console.log(`Found ${json.events.length} events.`)
-    let venues = await Promise.all(uniq(json.events.map(event => event.venue_id)).map(venueId =>
+    const austinEvents = json.events.filter(event => event.organizer_id === '10937668459');
+    console.log(`Found ${austinEvents.length} events.`)
+    let venues = await Promise.all(uniq(austinEvents.map(event => event.venue_id)).map(venueId =>
       fetch(`https://www.eventbriteapi.com/v3/venues/${venueId}`, { headers })
     ));
 
@@ -27,7 +28,7 @@ const fetchEvents = async () => {
     console.log(`Fetched ${venues.length} venues.`)
     venues = keyBy(venues, 'id');
 
-    const events = json.events.map(event => ({
+    const events = austinEvents.map(event => ({
       name: event.name.text,
       description: event.description.text,
       url: event.url,

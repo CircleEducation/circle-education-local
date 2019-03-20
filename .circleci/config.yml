@@ -32,7 +32,6 @@ jobs:
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
       - run: yarn test
-      - run: yarn images
       - run: node events.js
       - deploy:
           name: Deploy
