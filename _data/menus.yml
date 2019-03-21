@@ -11,21 +11,24 @@ social:
   title: facebook-square
   url: https://www.facebook.com/AustinCodingAcademy/
 footer-community:
-- weight: 5
+- weight: 6
   title: Become an Instructor
   url: "/instructor-apply"
 - weight: 4
   title: Contact Us
   url: "/contact"
-- weight: 3
+- weight: 4
   title: FAQ
   url: "/faq"
-- weight: 2
+- weight: 3
   title: Upcoming Events
   url: https://www.eventbrite.com/o/austin-coding-academy-10937668459
-- weight: 1
+- weight: 2
   title: Campus Manager
   url: https://campus.austincodingacademy.com
+- weight: 1
+  title: Hack Overflow
+  url: https://austincodingacademy.com/forum
 footer-about:
 - url: "/blog"
   weight: 6

@@ -15,7 +15,7 @@ excerpt: 'JavaScript (JS) is the most commonly-used coding language for develope
   JavaScript now:'
 img: "/assets/images/learn-javascript-four-projects.png"
 redirect_from: []
-permalink: "/blog/javascript/four-exciting-projects-that-will-inspire-you-to-learn-javascript"
+permalink: "/blog/javascript/four-exciting-projects-that-will-inspire-you-to-learn-javascript/"
 date: 2019-02-24 14:14:48 -0600
 
 ---
@@ -77,4 +77,4 @@ ACA offers you the fast track to a coding career. You’ll learn the most in-dem
 
 Ready to start your path towards a rewarding career? [Apply today.](https://austincodingacademy.com/apply/)
 
-For more information, you can [schedule a call with our staff](https://acaappointment.acuityscheduling.com/schedule.php?appointmentType=1406673) or [tour the campus](https://info.austincodingacademy.com/schedule-a-campus-tour). [Learn how ACA can help](https://austincodingacademy.com/why/) jumpstart your software development career today.
+For more information, you can [schedule a call with our staff](https://acaappointment.acuityscheduling.com/schedule.php?appointmentType=1406673) or [tour the campus](https://info.austincodingacademy.com/schedule-a-campus-tour). [Learn how ACA can help](https://austincodingacademy.com) jumpstart your software development career today.

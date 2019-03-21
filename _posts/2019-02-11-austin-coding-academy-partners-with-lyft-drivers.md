@@ -42,7 +42,7 @@ ACA is excited to provide Lyft drivers with the opportunity to develop skills an
 
 ## **APPLY NOW**
 
-If you are a current Lyft driver who is interested in enrolling in classes at Austin Coding Academy, you can find more information about course offerings [here](https://austincodingacademy.com/why/). To apply, click below and enter the promo code “LyftDriverATX” in the appropriate field within the application.*
+If you are a current Lyft driver who is interested in enrolling in classes at Austin Coding Academy, you can find more information about course offerings [here](https://austincodingacademy.com). To apply, click below and enter the promo code “LyftDriverATX” in the appropriate field within the application.*
 
 If you have any questions that you would like answered, you can [schedule a short Q&A](https://acaappointment.acuityscheduling.com/schedule.php?appointmentType=1406673) with our admissions team, or book a[ tour of either our North or Downtown Campus.](https://info.austincodingacademy.com/schedule-a-tour)
 

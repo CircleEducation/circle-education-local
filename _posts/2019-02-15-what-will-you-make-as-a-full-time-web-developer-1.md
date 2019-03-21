@@ -15,7 +15,7 @@ excerpt: Let’s look at how much money you can expect to earn working as a web 
 img: "/assets/images/what-will-you-make-as-a-web-dev.png"
 date: 2019-02-15 22:25:36 +0000
 redirect_from: []
-permalink: "/blog/web-development/what-will-you-make-as-a-full-time-web-developer"
+permalink: "/blog/web-development/what-will-you-make-as-a-full-time-web-developer/"
 
 ---
 As a prospective developer, you may have a lot of questions about your salary. What will your first year’s salary be? How will your salary change throughout your career? What factors will contribute the most to your compensation?
