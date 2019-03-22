@@ -52,8 +52,9 @@
 <!-- htmllint preset="none" -->
 <header
   id="header"
-  class="u-header {% if color == 'transparent' %} u-header--bg-transparent u-header--white-nav-links-md u-header--abs-top {% else %} u-header--navbar-bg {% endif %}"
+  class="{% if color == 'transparent' %} fixed-top u-header--bg-transparent {% else %} sticky-top u-header--navbar-bg {% endif %}"
 >
+  <div id="header-background" class="bg-purple d-block position-absolute" style="width:100%;height:100%;"></div>
   <div
     class="u-header__section bg-{{ color | default: 'purple' }} p-2"
   >
@@ -68,11 +69,11 @@
           class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center u-header__navbar-brand-text-white"
           href="/"
           aria-label="Logo"
-          style="width:90px; height:90px;"
+          style="width:66px; height:66px;"
         >
           <amp-img
-            width="90px"
-            height="90px"
+            width="66px"
+            height="66px"
             layout="fixed"
             alt="ACA Home"
             src="/assets/images/logo-aca-white.png"

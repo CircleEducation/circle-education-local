@@ -194,6 +194,10 @@ body, p {
 
 /* HEADER LINKS */
 
+#header-background {
+  opacity: 0;
+}
+
 .nav-item a:hover, #sidebar a:hover, .primary-gradient:hover {
   color: #ffffff;
   text-shadow: 1px 1px #f5b02c;
