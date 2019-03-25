@@ -124,13 +124,17 @@ body, p {
   border-color: #2d2f77;
 }
 
-.btn-wide {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
 .btn-round {
   border-radius: 2rem;
+}
+
+.btn {
+  min-width: 9rem;
+}
+
+.shadow-yellow:hover {
+  color: #ffffff;
+  text-shadow: 1px 1px #f5b02c;
 }
 
 .font-family-alt {
@@ -181,10 +185,6 @@ body, p {
 
 .display-7 {
   font-size: 1.95rem;
-}
-
-.flex-1 {
-  flex: 1;
 }
 
 .hero {
@@ -256,11 +256,7 @@ body, p {
 
 .primary-gradient {
   background: linear-gradient(to right, #00b3d1, #7fc89a);
-  color: white;
-}
-
-.primary-gradient:hover {
-  color: #e6e5e0;
+  color: #ffffff;
 }
 
 .alt-gradient {
