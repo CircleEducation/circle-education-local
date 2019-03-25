@@ -26,6 +26,7 @@
 
     {% include amp.html %}
 
+    {% comment %}
     {% capture amp_css %}{% file_exists _includes/css.html %}{% endcapture %}
     {% if amp_css == "true" %}
       {% include css.html %}
@@ -33,6 +34,10 @@
       <link rel="stylesheet" href="https://austincodingacademy.github.io/front/assets/css/theme.css">
       <link rel="stylesheet" href="/assets/css/main.css">
     {% endif %}
+    {% endcomment %}
+    <link rel="stylesheet" href="https://austincodingacademy.github.io/front/assets/css/theme.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
 
     {% if site.baseurl == '/amp' %}
       {% include google-tag-manager-head-amp.html%}

@@ -1,25 +1,24 @@
 ---
 social:
 - weight: 3
-  title: twitter
-  url: https://twitter.com/AustinCoding/
-- weight: 2
   title: instagram
   url: https://www.instagram.com/austincodingacademy/
-  margin: mx-5
+- weight: 2
+  title: twitter
+  url: https://twitter.com/AustinCoding/
 - weight: 1
   title: facebook-square
   url: https://www.facebook.com/AustinCodingAcademy/
 footer-community:
-- weight: 6
+- url: "/blog"
+  weight: 6
+  title: Blog
+- weight: 5
   title: Become an Instructor
   url: "/instructor-apply"
 - weight: 4
   title: Contact Us
   url: "/contact"
-- weight: 4
-  title: FAQ
-  url: "/faq"
 - weight: 3
   title: Upcoming Events
   url: https://www.eventbrite.com/o/austin-coding-academy-10937668459
@@ -30,18 +29,18 @@ footer-community:
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
 footer-about:
-- url: "/blog"
-  weight: 6
-  title: Blog
-- weight: 5
+- weight: 6
   title: Apply Now
   url: "/apply"
-- weight: 4
+- weight: 5
   title: Student Grievance Policy
   url: "/student-grievances"
-- weight: 3
+- weight: 4
   title: Financing
   url: "/financing"
+- weight: 3
+  title: FAQ
+  url: "/faq"
 - weight: 2
   title: C# .NET
   url: "/csharp"
