@@ -54,9 +54,11 @@
 <!-- htmllint preset="none" -->
 <header
   id="header"
-  class="{% if color == 'transparent' %} fixed-top u-header--bg-transparent {% else %} sticky-top u-header--navbar-bg {% endif %}"
+  class="{% unless page.categories contains 'landing' %} {% if color == 'transparent' %} fixed-top u-header--bg-transparent {% else %} sticky-top u-header--navbar-bg {% endif %} {% else %} position-absolute u-header--bg-transparent {% endunless %}"
 >
+  {% unless page.categories contains 'landing' %}
   <div id="header-background" class="bg-purple d-block position-absolute" style="width:100%;height:100%;"></div>
+  {% endunless %}
   <div
     class="u-header__section bg-{{ color | default: 'purple' }} p-2"
   >
