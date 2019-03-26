@@ -30,7 +30,7 @@ Improving accessibility to drivers who have already demonstrated a commitment to
 
 Sean Philippi has excelled as a student at ACA, where he’s on track to graduate as a full-stack Javascript developer in December of this year. As a Lyft driver and now an ACA student, Sean embodies the extra level of commitment necessary to thrive in a challenging environment.
 
-![sean-philippi](https://blog.austincodingacademy.com/hs-fs/hubfs/Untitled%20design%20(31)-890896-edited.png "Sean Philippi, Lyft driver & ACA student")
+<amp-img width="340px" height="340px" layout="fixed" src="/assets/images/sean_philippi.png" alt="Sean Philippi, Lyft driver & ACA student"></amp-img>
 
 **_“I find the courses to be well-paced and challenging. I am very grateful for having discovered ACA.”_**
 
@@ -42,7 +42,7 @@ ACA is excited to provide Lyft drivers with the opportunity to develop skills an
 
 ## **APPLY NOW**
 
-If you are a current Lyft driver who is interested in enrolling in classes at Austin Coding Academy, you can find more information about course offerings [here](https://austincodingacademy.com/why/). To apply, click below and enter the promo code “LyftDriverATX” in the appropriate field within the application.*
+If you are a current Lyft driver who is interested in enrolling in classes at Austin Coding Academy, you can find more information about course offerings [here](https://austincodingacademy.com). To apply, click below and enter the promo code “LyftDriverATX” in the appropriate field within the application.*
 
 If you have any questions that you would like answered, you can [schedule a short Q&A](https://acaappointment.acuityscheduling.com/schedule.php?appointmentType=1406673) with our admissions team, or book a[ tour of either our North or Downtown Campus.](https://info.austincodingacademy.com/schedule-a-tour)
 
