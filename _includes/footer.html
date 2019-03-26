@@ -22,52 +22,52 @@
                 <span class="text-white hover-shadow-yellow"><i class="fas fa-map-marker-alt"></i>&nbsp;North Austin</span>
               </a>
             </div>
-          </ul>
-        </div>
-        <div class="col d-flex flex-column justify-content-around align-items-start">
-          <a
-            href="tel:{{site.phone}}"
-            class="text-white hover-shadow-yellow my-2">
-            <span class="text-white hover-shadow-yellow fas fa-phone"></span>&nbsp;(512) 827-8498{{site.phone}}
-          </a>
-          <div class="my-2">
-            {% for item in site.menus.social %}
-              <!-- htmllint preset="none" -->
-              <a href="{{ item.url }}" class="{{ item.class }}">
-                <span class="text-white hover-shadow-yellow h4 fab fa-{{ item.title }}"></span>
-              </a>
-              <!-- htmllint preset="$previous" -->
-            {% endfor %}
+          </div>
+          <div class="col d-flex flex-column justify-content-around align-items-start">
+            <a
+              href="tel:{{site.phone}}"
+              class="text-white hover-shadow-yellow my-2">
+              <span class="text-white hover-shadow-yellow fas fa-phone"></span>&nbsp;(512) 827-8498{{site.phone}}
+            </a>
+            <div class="my-2">
+              {% for item in site.menus.social %}
+                <!-- htmllint preset="none" -->
+                <a href="{{ item.url }}" class="{{ item.class }}">
+                  <span class="text-white hover-shadow-yellow h4 fab fa-{{ item.title }}"></span>
+                </a>
+                <!-- htmllint preset="$previous" -->
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col text-left">
-      <h5 class="text-white font-weight-bold pb-1 border-bottom">
-        More
-      </h5>
-      <!-- List Group -->
-        <div class="row">
-          {% for item in site.menus.footer %}
-            <div class="col-6 my-2">
-              <a
-                class="text-white hover-shadow-yellow"
-                href="{{ item.url }}"
-              >
-                {{ item.title }}
-              </a>
-            </div>
-          {% endfor %}
-        </div>
-      <!-- End List Group -->
+      <div class="col text-left">
+        <h5 class="text-white font-weight-bold pb-1 border-bottom">
+          More
+        </h5>
+        <!-- List Group -->
+          <div class="row">
+            {% for item in site.menus.footer %}
+              <div class="col-6 my-2">
+                <a
+                  class="text-white hover-shadow-yellow"
+                  href="{{ item.url }}"
+                >
+                  {{ item.title }}
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        <!-- End List Group -->
+      </div>
     </div>
-  </div>
-  <div class="text-center border-top bg-purple py-3 w-100">
-    <p class="small text-white-70 mb-0">
-      © Austin Coding Academy 2019. All rights reserved.<br/>
-      <a href="https://discourse.austincodingacademy.com/tos">Terms of Service</a> | <a href="https://discourse.austincodingacademy.com/privacy">Privacy Policy</a>
-    </p>
+    <div class="text-center border-top bg-purple py-3 w-100">
+      <p class="small text-white-70 mb-0">
+        © Austin Coding Academy 2019. All rights reserved.<br/>
+        <a href="https://discourse.austincodingacademy.com/tos">Terms of Service</a> | <a href="https://discourse.austincodingacademy.com/privacy">Privacy Policy</a>
+      </p>
+    </div>
   </div>
 </footer>
 <!-- ========== END FOOTER ========== -->
