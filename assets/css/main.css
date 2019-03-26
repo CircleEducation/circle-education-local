@@ -200,6 +200,9 @@ body, p {
 
 .nav-item a:hover, #sidebar a:hover, .primary-gradient:hover {
   color: #ffffff;
+}
+
+.hover-shadow-yellow:hover {
   text-shadow: 1px 1px #f5b02c;
 }
 

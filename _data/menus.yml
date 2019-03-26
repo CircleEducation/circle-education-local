@@ -6,47 +6,31 @@ social:
 - weight: 2
   title: twitter
   url: https://twitter.com/AustinCoding/
+  class: mx-3
 - weight: 1
   title: facebook-square
   url: https://www.facebook.com/AustinCodingAcademy/
-footer-community:
-- url: "/blog"
-  weight: 6
-  title: Blog
+
+footer:
+- weight: 1
+  title: Campus Manager
+  url: https://campus.austincodingacademy.com
+- weight: 2
+  title: Hack Overflow
+  url: https://austincodingacademy.com/forum
+- weight: 3
+  title: Upcoming Events
+  url: https://www.eventbrite.com/o/austin-coding-academy-10937668459
 - weight: 5
   title: Become an Instructor
   url: "/instructor-apply"
 - weight: 4
-  title: Contact Us
-  url: "/contact"
-- weight: 3
-  title: Upcoming Events
-  url: https://www.eventbrite.com/o/austin-coding-academy-10937668459
-- weight: 2
-  title: Campus Manager
-  url: https://campus.austincodingacademy.com
-- weight: 1
-  title: Hack Overflow
-  url: https://austincodingacademy.com/forum
-footer-about:
+  title: Blog
+  url: "/blog"
 - weight: 6
-  title: Apply Now
-  url: "/apply"
-- weight: 5
   title: Student Grievance Policy
   url: "/student-grievances"
-- weight: 4
-  title: Financing
-  url: "/financing"
-- weight: 3
-  title: FAQ
-  url: "/faq"
-- weight: 2
-  title: C# .NET
-  url: "/csharp"
-- weight: 1
-  title: JavaScript
-  url: "/javascript"
+
 courses:
 - weight: 2
   title: C# .NET
@@ -54,6 +38,7 @@ courses:
 - weight: 1
   title: JavaScript
   url: "/javascript"
+
 header:
 - url: "/faq"
   weight: 2
