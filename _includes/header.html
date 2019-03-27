@@ -2,6 +2,7 @@
 {% if page.hero %}
   {% assign color = 'transparent' %}
 {% endif %}
+{% unless page.categories contains 'landing' %}
 <amp-sidebar
   on="tap:sidebar.open"
   tabindex="1"
@@ -17,15 +18,15 @@
       role="dialog"
       tabindex="20">
       {% if item.children %}
-        <div class="ml-5 text-white">
+        <div class="mx-5 text-white">
           {{ item.title }}
           <ul class="pl-5 m-0 fa-ul">
             {% for child in item.children %}
               <li class="mt-3">
                 <span class="fa-li">
-                  <i class="fas fa-code fa-xs"></i>
+                  <i class="fas fa-long-arrow-alt-right fa-xs"></i>
                 </span>
-                <a href="{{ child.url }}" class="text-white">
+                <a href="{{ child.url }}" class="text-white hover-shadow-yellow">
                   {{ child.title }}
                 </a>
               </li>
@@ -35,15 +36,12 @@
       {% else %}
         <!-- htmllint preset="none" -->
         {% if item.button %}
-          <a href="{{ item.url }}" class="text-white text-left">
-            <button class="{{ item.button }}">
-              {{ item.title }}
-            </button>
+          <a class="{{ item.button }} hover-shadow-yellow ml-5" href="{{ item.url }}">
         {% else %}
-          <a href="{{ item.url }}" class="ml-5 text-white text-left">
-            {{ item.title }}
+          <a href="{{ item.url }}" class="ml-5 text-white hover-shadow-yellow text-left">
         {% endif %}
-        </a>
+            <span class="text-white hover-shadow-yellow">{{ item.title }}</span>
+          </a>
         <!-- htmllint preset="$previous" -->
       {% endif %}
     </div>
@@ -51,12 +49,16 @@
   {% endfor %}
 
 </amp-sidebar>
+{% endunless%}
 
 <!-- htmllint preset="none" -->
 <header
   id="header"
-  class="u-header {% if color == 'transparent' %} u-header--bg-transparent u-header--white-nav-links-md u-header--abs-top {% else %} u-header--navbar-bg {% endif %}"
+  class="{% if color == 'transparent' %} fixed-top u-header--bg-transparent {% else %} sticky-top u-header--navbar-bg {% endif %}"
 >
+  {% unless page.categories contains 'landing' %}
+  <div id="header-background" class="bg-purple d-block position-absolute" style="width:100%;height:100%;"></div>
+  {% endunless %}
   <div
     class="u-header__section bg-{{ color | default: 'purple' }} p-2"
   >
@@ -71,11 +73,11 @@
           class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center u-header__navbar-brand-text-white"
           href="/"
           aria-label="Logo"
-          style="width:90px; height:90px;"
+          style="width:66px; height:66px;"
         >
           <amp-img
-            width="90px"
-            height="90px"
+            width="66px"
+            height="66px"
             layout="fixed"
             alt="ACA Home"
             src="/assets/images/logo-aca-white.png"
@@ -84,6 +86,7 @@
         </a>
         <!-- End Logo -->
 
+        {% unless page.categories contains 'landing' %}
         <!-- Responsive Toggle Button -->
         <button
           class="display-5 text-white btn btn-link d-flex d-md-none"
@@ -106,13 +109,13 @@
               {% if item.children %}
                 <li class="nav-item u-header__nav-item">
                   <a href="#" class="nav-link u-header__nav-link">
-                    <span class="text-white">{{ item.title }} <i class="fas fa-caret-down"></i></span>
+                    <span class="text-white hover-shadow-yellow">{{ item.title }} <i class="fas fa-caret-down"></i></span>
                   </a>
                   <ul class="d-none position-absolute list-unstyled">
                   {% for child in item.children %}
                     <li class="position-relative py-1 pl-3">
                       <a class="text-white nav-link" href="{{ child.url }}">
-                          <span class="text-white">{{ child.title }}</span>
+                          <span class="text-white hover-shadow-yellow">{{ child.title }}</span>
                       </a>
                     </li>
                   {% endfor %}
@@ -123,9 +126,9 @@
                 <!-- htmllint preset="none" -->
                 <li class="nav-item u-header__nav-item">
                   {% if item.button %}
-                    <a class="{{ item.button }}" href="{{ item.url }}">
+                    <a class="{{ item.button }} hover-shadow-yellow mx-3" href="{{ item.url }}">
                   {% else %}
-                    <a class="text-white nav-link u-header__nav-link" href="{{ item.url }}">
+                    <a class="text-white hover-shadow-yellow nav-link u-header__nav-link" href="{{ item.url }}">
                   {% endif %}
                       <span class="text-white">{{ item.title }}</span>
                     </a>
@@ -138,6 +141,7 @@
           </ul>
         </div>
         <!-- End Navigation -->
+        {% endunless %}
       </nav>
       <!-- End Nav -->
     </div>
