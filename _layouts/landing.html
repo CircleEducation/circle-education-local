@@ -30,7 +30,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 
-    {% comment %}
     {% capture amp_css %}{% file_exists _includes/css.html %}{% endcapture %}
     {% if amp_css == "true" %}
       {% include css.html %}
@@ -38,9 +37,6 @@
       <link rel="stylesheet" href="https://austincodingacademy.github.io/front/assets/css/theme.css">
       <link rel="stylesheet" href="/assets/css/main.css">
     {% endif %}
-    {% endcomment %}
-    <link rel="stylesheet" href="https://austincodingacademy.github.io/front/assets/css/theme.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
 
     {% if site.baseurl == '/amp' %}
       {% include google-tag-manager-head-amp.html%}
@@ -60,11 +56,25 @@
       {% include google-tag-manager-body.html %}
     {% endif %}
 
-    {% include header.html %}
+    <div class="position-absolute pl-5 pt-5">
+      <!-- Logo -->
+        <a
+          href="/"
+          aria-label="Logo"
+          style="width:80px; height:80px;"
+        >
+          <amp-img
+            width="80px"
+            height="80px"
+            layout="fixed"
+            alt="ACA Logo"
+            src="/assets/images/logo-aca-white.png"
+          ></amp-img>
+        </a>
+      <!-- End Logo -->
+    </div>
 
     {{ content }}
-
-    {% include footer.html %}
   </body>
 
 </html>
