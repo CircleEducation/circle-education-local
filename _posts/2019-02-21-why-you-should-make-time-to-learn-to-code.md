@@ -14,7 +14,7 @@ excerpt: 'Web Developers across the United States make an average of $67,990 ann
 img: "/assets/images/make-time-for-web-development-training.jpg"
 date: 2019-02-21 19:34:55 +0000
 redirect_from: []
-permalink: "/blog/web-development/why-you-should-make-time-to-learn-to-code"
+permalink: "/blog/web-development/why-you-should-make-time-to-learn-to-code/"
 
 ---
 _This piece was written by Erica Freedman, Content Specialist at SwitchUp._

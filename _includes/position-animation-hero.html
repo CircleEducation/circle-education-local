@@ -1,0 +1,16 @@
+<amp-position-observer
+  on="exit:fill-header-background.start;enter:fill-header-background.start,fill-header-background.reverse"
+  intersection-ratios=".9"
+  layout="nodisplay">
+</amp-position-observer>
+
+<amp-animation id="fill-header-background" layout="nodisplay">
+  <script type="application/json">
+    {
+      "selector": "#header-background",
+      "duration": "250",
+      "fill": "both",
+      "keyframes": {"opacity": [0, 1]}
+    }
+  </script>
+</amp-animation>

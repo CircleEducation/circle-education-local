@@ -15,7 +15,7 @@ excerpt: 'It''s a great time for job placement at Austin Coding Academy! Here ar
   put in to get to this point. Check them out:'
 img: "/assets/images/six-austin-coding-academy-grads-land-jobs.png"
 redirect_from: []
-permalink: "/blog/announcements/six-austin-coding-academy-graduates-land-jobs"
+permalink: "/blog/announcements/six-austin-coding-academy-graduates-land-jobs/"
 
 ---
 It's a great time for job placement at Austin Coding Academy! Tech in Austin is booming and at ACA we're not only focused on giving our students the best possible coding education, but also to provide our students all of the skills necessary to be successful developers when they leave our program.

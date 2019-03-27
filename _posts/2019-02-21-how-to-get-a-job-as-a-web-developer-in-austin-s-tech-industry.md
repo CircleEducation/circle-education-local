@@ -15,7 +15,7 @@ excerpt: 'Looking for your first web development job in Austin can seem extremel
 img: "/assets/images/5-ways-to-get-a-job-as-a-web-developer.png"
 date: 2019-02-21 14:59:29 -0600
 redirect_from: []
-permalink: "/blog/web-development/how-to-get-a-job-as-a-web-developer-in-austin-tech-industry"
+permalink: "/blog/web-development/how-to-get-a-job-as-a-web-developer-in-austin-tech-industry/"
 
 ---
 Looking for your first web development job in Austin can seem extremely daunting. This is especially true if you are new to town and don't have a built-in network of friends to help you get a foot in the door at a tech company.
@@ -30,8 +30,8 @@ Getting a little facetime gives you the opportunity to sharing your personality 
 
 ## 2. Use Job Boards to Find Web Development Jobs in Austin
 
-Of course you can always type “web development jobs in Austin” on Monster, LinkedIn, Indeed, and other popular job sites. But if you haven’t noticed yet, these sites are getting very saturated.  
-  
+Of course you can always type “web development jobs in Austin” on Monster, LinkedIn, Indeed, and other popular job sites. But if you haven’t noticed yet, these sites are getting very saturated.
+
 For more tailored results, here are the places to look:
 
 ### For Web Designers and Developers:

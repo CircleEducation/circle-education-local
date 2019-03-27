@@ -16,7 +16,7 @@ excerpt: In an age of constant digital distractions, focus may seem like a forei
   are approaching, so here are some actionable tips to help develop focus and get
   more done at work.
 redirect_from: []
-permalink: "/blog/career-development/how-to-stop-multi-tasking-and-develop-focus"
+permalink: "/blog/career-development/how-to-stop-multi-tasking-and-develop-focus/"
 
 ---
 In an age of constant digital distractions, focus may seem like a foreign concept. Websites like Facebook, Reddit, and YouTube give us an endless supply of content that are often more engaging than the tasks we need to accomplish. But focus is crucial for developers; one misplaced character in thousands of lines of code can throw off an entire project.
