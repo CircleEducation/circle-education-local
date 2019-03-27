@@ -94,6 +94,14 @@ body, p {
   color: #ffffff;
 }
 
+.link-underlined {
+  text-decoration: underline;
+}
+
+.link-underlined:hover {
+  text-decoration: underline;
+}
+
 .bg-purple {
   background-color: #2d2f77;
 }
