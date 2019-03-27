@@ -187,18 +187,29 @@ body, p {
   flex: 1;
 }
 
-.hero {
-  background-position: 0 -1px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .section-text {
   font-size: 16px;
   color: #7e8697;
 }
 
+/* HEADER LINKS */
+
+#header-background {
+  opacity: 0;
+}
+
+.nav-item a:hover, #sidebar a:hover, .primary-gradient:hover {
+  color: #ffffff;
+  text-shadow: 1px 1px #f5b02c;
+}
+
 /* HERO IMAGES */
+
+.hero {
+  background-position: 0 -1px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 #hero-index {
   background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-index.jpg');
@@ -257,10 +268,6 @@ body, p {
 .primary-gradient {
   background: linear-gradient(to right, #00b3d1, #7fc89a);
   color: white;
-}
-
-.primary-gradient:hover {
-  color: #e6e5e0;
 }
 
 .alt-gradient {
