@@ -62,7 +62,7 @@ header:
 - weight: 5
   title: Apply
   url: "/apply"
-  button: btn btn-round text-white font-weight-bold primary-gradient py-1 px-6 mx-3
+  button: btn btn-round text-white primary-gradient py-1 px-6
 - weight: 4
   title: Financing
   url: "/financing"
