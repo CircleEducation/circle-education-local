@@ -23,7 +23,7 @@ features:
     title: We Work with Our Students to Make Tuition Manageable
     bullets:
       - Pay course-by-course or for the entire program
-      - Finance your tuition through <a class="text-white link-underlined hover-shadow-yellow" href="https://austincodingacademy.skills.fund/">Skills Fund</a>, our primary financing partner
+      - Finance your tuition through <a class="text-white link-underlined" href="https://austincodingacademy.skills.fund/">Skills Fund</a>, our primary financing partner
       - Talk with our admissions team about tuition options
     img: wallet.png
     alt: Affordable Tuition
@@ -67,7 +67,6 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero">
 <!-- htmllint preset="$previous" -->
-  {% include position-animation-hero.html %}
   <div class="py-11 container">
     <div class="col-lg-8 pl-0">
       <div class="my-11"></div>
@@ -155,10 +154,14 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
               ></amp-img>
             </div>
             <div class="col-9 col-md-12">
-              <h5 class="font-weight-bold ml-4 ml-md-0 text-md-center">{{ feature.heading }}</h5>
+              <h5 class="font-weight-bold ml-4 ml-md-0 text-md-center">
+                {{ feature.heading }}
+              </h5>
               <ul>
                 {% for bullet in feature.bullets %}
-                  <li class="mb-2">{{ bullet }}</li>
+                  <li class="mb-2">
+                    {{ bullet }}
+                  </li>
                 {% endfor %}
               </ul>
             </div>
