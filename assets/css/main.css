@@ -128,14 +128,20 @@ body, p {
 
 .background-logo {
   min-height: 100vh;
-  background-image: url("/assets/images/logo-aca.png");
+  background-image: url("/assets/images/aca-logo-white-large.png");
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
 }
 
 .shadow-yellow {
   text-shadow: 2px 2px #f5b02c;
+}
+
+.shadow-black {
+  box-shadow: 2px 2px 5px #1e2022;
 }
 
 .btn-purple {

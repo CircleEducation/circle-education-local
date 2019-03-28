@@ -1,34 +1,82 @@
 ---
-layout: grads
 permalink: "/grads/"
 title: "Austin Coding Academy | Graduate Projects"
 description: ""
 ---
 
-<div class="container-fluid bg-purple background-logo py-10">
-  <div class="row d-flex justify-content-center align-items-end">
-    {% for page in site.pages %}
-    {% if page.categories contains 'graduate' %}
-    <div class="col-6 col-md-4 col-lg-3 mb-4">
-      <div class="d-flex justify-content-center bg-semi-transparent rounded-top py-3">
-        <!-- htmllint preset="none" -->
-        <amp-img width="150" height="150" layout="fixed" class="rounded-circle" src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=150&r=pg"
-          alt="{{ page.fullname }}"></amp-img>
-        <!-- htmllint preset="$previous" -->
-      </div>
-      <div class="text-center bg-white rounded-bottom py-2">
-        <h3 class="h6">
-          {{ page.fullname }}
-          <span class="badge badge-success p-2 rounded">{{ page.skills[0] }}</span>
-        </h3>
-        <a href="{{ page.graduateProjectURL }}">
-          <small class="text-dark link-underlined">
-            {{ page.graduateProjectURL }}
-          </small>
-        </a>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      {{ page.title | default: 'Austin Coding Academy | Learn to Code, Change Your Life' }}
+    </title>
+
+    <meta
+      name="description"
+      content="{{ page.description | default : 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
+    />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {% include favicon.html %}
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    {% include amp.html %}
+
+    <link rel="stylesheet" href="https://austincodingacademy.github.io/front/assets/css/theme.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    {{ page.head }}
+  </head>
+
+  <body>
+    <header class="container-fluid alt-gradient text-white py-2 m-0">
+      <h3 class="pl-10 font-family-alt">
+        April 2019 Graduates
+      </h3>
+    </header>
+    <div class="container-fluid bg-dark background-logo py-10">
+      <div class="row d-flex justify-content-center align-items-end">
+        {% for page in site.pages %}
+        {% if page.categories contains 'graduate' %}
+        <div class="col-6 col-md-4 col-lg-3 mb-4">
+          <div class="d-flex justify-content-center rounded-top pb-2">
+            <!-- htmllint preset="none" -->
+            <amp-img width="150" height="150"
+              layout="fixed"
+              class="rounded-circle shadow-black"
+              src="https://gravatar.com/avatar/{{ profile.email | downcase | md5 }}?s=150&r=pg"
+              alt="{{ page.fullname }}"></amp-img>
+            <!-- htmllint preset="$previous" -->
+          </div>
+          <div class="text-center text-white bg-dark shadow-black rounded py-2 mx-auto">
+            <h3 class="h6">
+              {{ page.fullname }}
+            </h3>
+            <h3 class="h6">
+              <span class="badge p-2 rounded {% if page.course == 'JavaScript' %}bg-blue{% else %}bg-green{% endif %}">{{ page.course }}</span>
+            </h3>
+            <a href="{{ page.graduateProjectURL }}">
+              <small class="text-white link-underlined">
+                {{ page.graduateProjectURL | remove: "https://" | remove: "http://" }}
+              </small>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
       </div>
     </div>
-    {% endif %}
-    {% endfor %}
-  </div>
-</div>
+    <div class="text-center border-top bg-purple py-3 w-100">
+      <p class="small text-white-70 mb-0">
+        © Austin Coding Academy 2019. All rights reserved.<br/>
+        <a class="text-white" href="https://discourse.austincodingacademy.com/tos">Terms of Service</a> | <a class="text-white" href="https://discourse.austincodingacademy.com/privacy">Privacy Policy</a>
+      </p>
+    </div>
+  </body>
+</html>
