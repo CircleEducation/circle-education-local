@@ -1,16 +1,29 @@
 <amp-position-observer
-  on="exit:fill-header-background.start;enter:fill-header-background.start,fill-header-background.reverse"
-  intersection-ratios=".9"
+  on="scroll:fill-header-background.seekTo(percent=event.percent)"
+  intersection-ratios="{{ page.intersection-ratios | default: 0 }}"
   layout="nodisplay">
 </amp-position-observer>
 
 <amp-animation id="fill-header-background" layout="nodisplay">
   <script type="application/json">
     {
-      "selector": "#header-background",
-      "duration": "250",
+      "duration": "1",
       "fill": "both",
-      "keyframes": {"opacity": [0, 1]}
+      "animations": [{
+        "selector": "#header-background",
+        "keyframes": [{
+          "opacity": "0",
+          "offset": 0.05
+        },
+        {
+          "opacity": "1",
+          "offset": 0.1
+        },
+        {
+          "opacity": "1",
+          "offset": 1
+        }]
+      }]
     }
   </script>
 </amp-animation>

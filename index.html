@@ -73,16 +73,16 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
       <h1 class="text-white font-family-alt font-weight-bold display-5">
         Change Your Life<br/>With a New Career
       </h1>
-      <p class="text-white size-31">
+      <p class="text-white size-31 mt-4 mb-3 line-typewriter anim-typewriter">
         Part-time coding classes taught by full-time developers here in Austin, TX
       </p>
-      <div class="d-flex justify-content-center justify-content-md-start">
+      <div class="d-flex justify-content-start">
         <button
-          class="btn btn-outline-light btn-round mr-2 flex-1 d-sm-none"
+          class="btn btn-outline-light btn-round mr-2 px-2 d-sm-none"
           on="tap:call-us"
           role="button"
           tabindex="1">
-          Call for More Info
+          Get More Info
         </button>
         <amp-lightbox
           id="call-us"
@@ -95,7 +95,7 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
           <div class="mt-5 pt-5 d-flex mx-auto flex-column align-items-center">
             <!-- htmllint preset="none" -->
             <a
-              class="my-5 btn btn-light btn-round mr-2 flex-1 d-sm-none"
+              class="my-5 btn btn-light btn-round mr-2 d-sm-none"
               href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
               target="_blank"
               rel="noopener"
@@ -107,7 +107,7 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
               OR
             </h4>
             <a
-              class="my-5 btn btn-light btn-round mr-2 flex-1 d-sm-none"
+              class="my-5 btn btn-light btn-round mr-2 d-sm-none"
               href="tel:5128278498"
               tabindex="2">
               Call Us Now!
@@ -116,23 +116,24 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
         </amp-lightbox>
         <!-- htmllint preset="none" -->
         <a
-          class="btn btn-outline-light btn-round mr-2 flex-1 d-none d-sm-block"
+          class="btn btn-outline-light btn-round mr-2 d-none d-sm-block"
           href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
           target="_blank"
           rel="noopener">
           Schedule a Q&amp;A
         </a>
         <!-- htmllint preset="$previous" -->
-        {% include btn-apply.html class='flex-1'%}
+        {% include btn-apply.html %}
       </div>
     </div>
   </div>
 </div>
 
-<section class="my-5">
-  <div class="container py-11">
-    {% include course-guide-form.html %}
-  </div>
+<main>
+{% include position-animation-hero.html %}
+
+<section class="my-10 container">
+  {% include course-guide-form.html %}
 </section>
 
 <section class="my-5 alt-gradient text-white">
@@ -258,7 +259,7 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
     <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
       Next Classes Start April 2nd<br/>
     </h2>
-    {% include btn-apply.html class="btn-wide" %}
+    {% include btn-apply.html %}
   </div>
 </section>
 
@@ -274,3 +275,4 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
     {% include contact-form.html %}
   </div>
 </section>
+</main>

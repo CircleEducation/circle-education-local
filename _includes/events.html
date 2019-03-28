@@ -19,7 +19,12 @@
           <p class="text-muted">{{event.start_date}} {{event.start_time}}</p>
           <p>{{event.description | truncatewords: 25}}</p>
         </div>
-        <a class="btn btn-sm btn-soft-primary btn-wide" href="{{event.url}}" rel="noopener" target="_blank">View Details</a>
+        <a class="btn btn-sm btn-soft-primary"
+          href="{{event.url}}"
+          rel="noopener"
+          target="_blank"
+          role="button"
+        >View Details</a>
       </div>
       <!-- End Card -->
     </div>
