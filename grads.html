@@ -59,7 +59,9 @@ description: ""
               {{ page.fullname }}
             </h3>
             <h3 class="h6">
+              <!-- htmllint preset="none" -->
               <span class="badge p-2 rounded {% if page.course == 'JavaScript' %}bg-blue{% else %}bg-green{% endif %}">{{ page.course }}</span>
+              <!-- htmllint preset="$previous" -->
             </h3>
             <a href="{{ page.graduateProjectURL }}">
               <small class="text-white link-underlined">
