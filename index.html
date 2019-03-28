@@ -39,23 +39,22 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero">
 <!-- htmllint preset="$previous" -->
-  {% include position-animation-hero.html %}
   <div class="py-11 container">
     <div class="col-lg-8 pl-0">
       <div class="my-11"></div>
       <h1 class="text-white font-family-alt font-weight-bold display-5">
         Change Your Life<br/>With a New Career
       </h1>
-      <p class="text-white size-31">
+      <p class="text-white size-31 mt-4 mb-3 line-typewriter anim-typewriter">
         Part-time coding classes taught by full-time developers here in Austin, TX
       </p>
-      <div class="d-flex justify-content-center justify-content-md-start">
+      <div class="d-flex justify-content-start">
         <button
-          class="btn btn-outline-light btn-round mr-2 flex-1 d-sm-none"
+          class="btn btn-outline-light btn-round mr-2 px-2 d-sm-none"
           on="tap:call-us"
           role="button"
           tabindex="1">
-          Call for More Info
+          Get More Info
         </button>
         <amp-lightbox
           id="call-us"
@@ -68,7 +67,7 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
           <div class="mt-5 pt-5 d-flex mx-auto flex-column align-items-center">
             <!-- htmllint preset="none" -->
             <a
-              class="my-5 btn btn-light btn-round mr-2 flex-1 d-sm-none"
+              class="my-5 btn btn-light btn-round mr-2 d-sm-none"
               href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
               target="_blank"
               rel="noopener"
@@ -80,7 +79,7 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
               OR
             </h4>
             <a
-              class="my-5 btn btn-light btn-round mr-2 flex-1 d-sm-none"
+              class="my-5 btn btn-light btn-round mr-2 d-sm-none"
               href="tel:5128278498"
               tabindex="2">
               Call Us Now!
@@ -89,28 +88,28 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
         </amp-lightbox>
         <!-- htmllint preset="none" -->
         <a
-          class="btn btn-outline-light btn-round mr-2 flex-1 d-none d-sm-block"
+          class="btn btn-outline-light btn-round mr-2 d-none d-sm-block"
           href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
           target="_blank"
           rel="noopener">
           Schedule a Q&amp;A
         </a>
         <!-- htmllint preset="$previous" -->
-        {% include btn-apply.html class='flex-1'%}
+        {% include btn-apply.html %}
       </div>
     </div>
   </div>
 </div>
 
-<section class="my-10 container">
+<main>
+{% include position-animation-hero.html %}
+
+<section class="mb-6 py-5 container">
   {% include course-guide-form.html %}
 </section>
 
-<section class="my-5 p-5 bg-pale">
+<section class="mb-6 py-10 alt-gradient">
   <div class="container">
-    <!-- <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
-      Why Our Students Love Us
-    </h2> -->
     <!-- begin tabs -->
     <amp-selector
       class="tabs-with-flex mt-5"
@@ -250,65 +249,62 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
       </div>
     </amp-selector>
     <!-- end tabs -->
-    <div class="mt-5 d-flex justify-content-center align-items-center">{% include btn-apply.html class="btn-wide" %}</div>
+    <div class="mt-5 d-flex justify-content-center align-items-center">{% include btn-apply.html %}</div>
   </div>
 </section>
 
-<section class="mb-10 container">
-    <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
-      Student Success Stories
-    </h2>
-    <!-- begin student-stories -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-sm-6">
-          <h3 class="size-20 text-center"><strong>Lillian Situ, ACA graduate</strong></h3>
-          <h4 class="size-16 text-center">Software Engineer, Data.World</h4>
-          <div>
-            <amp-iframe
-              src="https://player.vimeo.com/video/290925619"
-              width="266.656px"
-              height="150px"
-              layout="responsive"
-              sandbox="allow-scripts allow-same-origin"
-              frameborder="0"
-              allowfullscreen
-            ></amp-iframe>
-          </div>
-          <p class="size-14 text-center">
-            "I've always been interested in programming and being able to create
-            something so being able to take what I learned at ACA and get a job with
-            it...was one of the best decisions I've made."
-          </p>
+<section class="mb-6 py-5 container">
+  <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+    Student Success Stories
+  </h2>
+  <!-- begin student-stories -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <h3 class="size-20 text-center"><strong>Lillian Situ, ACA graduate</strong></h3>
+        <h4 class="size-16 text-center">Software Engineer, Data.World</h4>
+        <div>
+          <amp-iframe
+            src="https://player.vimeo.com/video/290925619"
+            width="266.656px"
+            height="150px"
+            layout="responsive"
+            sandbox="allow-scripts allow-same-origin"
+            frameborder="0"
+            allowfullscreen
+          ></amp-iframe>
         </div>
-        <div class="col-12 col-sm-6">
-          <h3 class="size-20 text-center"><strong>Greg Swan, ACA graduate</strong></h3>
-          <h4 class="size-16 text-center">Web Developer, Kinetic Theory</h4>
-          <div>
-            <amp-iframe
-              src="https://player.vimeo.com/video/290913789"
-              width="266.656px"
-              height="150px"
-              layout="responsive"
-              sandbox="allow-scripts allow-same-origin"
-              frameborder="0"
-              allowfullscreen
-            ></amp-iframe>
-          </div>
-          <p class="size-14 text-center">
-            "ACA prepared me for the job market the way a high school teacher
-            prepares you for college; they gave me a solid foundation of knowledge,
-            taught me what not to do, and consistently reminded me that there was a
-            job out there for me if I was willing to put in the work."
-          </p>
+        <p class="size-14 text-center">
+          "I've always been interested in programming and being able to create
+          something so being able to take what I learned at ACA and get a job with
+          it...was one of the best decisions I've made."
+        </p>
+      </div>
+      <div class="col-12 col-sm-6">
+        <h3 class="size-20 text-center"><strong>Greg Swan, ACA graduate</strong></h3>
+        <h4 class="size-16 text-center">Web Developer, Kinetic Theory</h4>
+        <div>
+          <amp-iframe
+            src="https://player.vimeo.com/video/290913789"
+            width="266.656px"
+            height="150px"
+            layout="responsive"
+            sandbox="allow-scripts allow-same-origin"
+            frameborder="0"
+            allowfullscreen
+          ></amp-iframe>
         </div>
+        <p class="size-14 text-center">
+          "ACA prepared me for the job market the way a high school teacher
+          prepares you for college; they gave me a solid foundation of knowledge,
+          taught me what not to do, and consistently reminded me that there was a
+          job out there for me if I was willing to put in the work."
+        </p>
       </div>
     </div>
-    <!-- end student-stories -->
-  </section>
-
-<section class="mb-10 container">
-  <h4 class="font-family-alt font-weight-bold text-center display-7 mb-5">
+  </div>
+  <!-- end student-stories -->
+  <h4 class="font-family-alt font-weight-bold text-center display-7 my-5">
     Our Graduates Are Working At
   </h4>
   <!-- begin grad-companies -->
@@ -331,30 +327,21 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
   <!-- end grad-companies -->
 </section>
 
-<section class="mt-5 mb-10 py-5 bg-pale">
+<section class="mb-6 py-10 alt-gradient text-white">
   <div class="container d-flex justify-content-center flex-column">
     <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
       Come Meet Us at Our Next Event
     </h2>
     {% include events.html %}
-    <h4 class="font-family-alt font-weight-bold text-center display-7 mb-5">
-      Next Classes Start {{ page.nextStartDate }}
-    </h4>
-    <div class="d-flex justify-content-center">
-      {% include btn-apply.html %}
-    </div>
   </div>
 </section>
 
-<section class="mb-10">
-  <div class="container d-flex flex-column justify-content-center align-items-center">
-    <h2 class="font-family-alt font-weight-bold text-center display-5">
-      Contact Us
-    </h2>
-    <p class="section-text text-center mb-4">
-      Whether you have questions or you would just<br />
-      like to say hello, let us know.
-    </p>
+<section class="mb-6 py-5">
+  <div class="container mw-600">
+    <h4 class="font-family-alt font-weight-bold text-center display-7 mb-5">
+      Have more questions? Let us know, and get help from a real person.
+    </h4>
     {% include contact-form.html %}
   </div>
 </section>
+</main>

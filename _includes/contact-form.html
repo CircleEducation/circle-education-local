@@ -1,6 +1,6 @@
-{% unless page.permalink == "/contact/" %}
+{% unless page.permalink == "/contact/" or "/" %}
 <a href="#"
-  class="btn text-white bg-purple btn-round btn-wide mx-auto"
+  class="btn btn-round text-white bg-purple hover-shadow-yellow mx-auto"
   on="tap:contact-lightbox"
   role="button">
   Contact us &nbsp;<i class="far fa-envelope"></i>
@@ -157,12 +157,10 @@
       <div class="col-12 mb-4">
         {% include referral-question.html %}
       </div>
-      <!-- htmllint preset="none" -->
-      <div class="{% if page.permalink == '/contact/' %} text-center col-sm-12 {% else %} col-sm-6 mb-4 d-flex align-items-end {% endif %}">
-      <!-- htmllint preset="$previous" -->
+      <div class="text-center col-sm-12 mb-4">
         <button
           type="submit"
-          class="text-white btn rounded bg-purple send-button transition-3d-hover mb-3"
+          class="text-white btn btn-round bg-purple hover-shadow-yellow"
           tabindex="18"
         >
           Send
@@ -182,7 +180,7 @@
   </div>
 </form>
 
-{% unless page.permalink == "/contact/" %}
+{% unless page.permalink == "/contact/" or "/" %}
   </div>
 </amp-lightbox>
 {% endunless %}

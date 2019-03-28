@@ -94,6 +94,14 @@ body, p {
   color: #ffffff;
 }
 
+.link-underlined {
+  text-decoration: underline;
+}
+
+.link-underlined:hover {
+  text-decoration: underline;
+}
+
 .bg-purple {
   background-color: #2d2f77;
 }
@@ -115,7 +123,15 @@ body, p {
 }
 
 .bg-pale {
-  background-color: rgba(45,47,119, 0.1);
+  background-color: rgba(45, 47, 119, .1);
+}
+
+.shadow-yellow {
+  text-shadow: 2px 2px #f5b02c;
+}
+
+.shadow-dark {
+  box-shadow: 2px 2px 5px rgba(50, 50, 50, .75);
 }
 
 .btn-purple {
@@ -124,17 +140,20 @@ body, p {
   border-color: #2d2f77;
 }
 
-.btn-wide {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
 .btn-round {
   border-radius: 2rem;
 }
 
+.btn {
+  min-width: 9rem;
+}
+
 .font-family-alt {
   font-family: "Montserrat", sans-serif;
+}
+
+.font-family-serif {
+  font-family: "Roboto Slab", sans-serif;
 }
 
 .img-logo {
@@ -183,10 +202,6 @@ body, p {
   font-size: 1.95rem;
 }
 
-.flex-1 {
-  flex: 1;
-}
-
 .section-text {
   font-size: 16px;
   color: #7e8697;
@@ -200,6 +215,9 @@ body, p {
 
 .nav-item a:hover, #sidebar a:hover, .primary-gradient:hover {
   color: #ffffff;
+}
+
+.hover-shadow-yellow:hover {
   text-shadow: 1px 1px #f5b02c;
 }
 
@@ -209,15 +227,13 @@ body, p {
   background-position: 0 -1px;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 #hero-index {
   background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-index.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: top;
 }
 
@@ -227,11 +243,6 @@ body, p {
 
 #hero-financing {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/images/hero-financing.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: top;
 }
 
@@ -241,12 +252,12 @@ body, p {
 
 #hero-blog {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/images/hero-blog.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: bottom;
+}
+
+#hero-landing {
+  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)), url('/assets/images/hero-landing.jpg');
+  background-position: top right;
 }
 
 /* CUSTOM MARGINS */
@@ -267,7 +278,7 @@ body, p {
 
 .primary-gradient {
   background: linear-gradient(to right, #00b3d1, #7fc89a);
-  color: white;
+  color: #ffffff;
 }
 
 .alt-gradient {
@@ -480,4 +491,31 @@ ul.share-buttons .sr-only {
 
 ul.share-buttons img {
   width: 32px;
+}
+
+/* TYPING ANIMATION */
+
+@media (min-width: 768px) {
+  .line-typewriter{
+    position: relative;
+    width: auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+  }
+
+  /* Animation */
+  .anim-typewriter{
+  animation: typewriter 4s steps(60) 1s 1 normal both,
+            blinkTextCursor 1400ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+  from{width: 0;}
+  to{width: 34rem;}
+  }
+  @keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+  }
 }
