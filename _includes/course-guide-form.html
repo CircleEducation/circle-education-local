@@ -3,7 +3,7 @@
 </h2>
 <form class="d-flex justify-content-center align-items-center" target="_top" action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/702969c4-4c75-4b99-b6d2-59d04d6ebd03"
   method="POST">
-  <div class="form-container narrow px-5 px-lg-0">
+  <div class="form-container mw-850 px-5 px-lg-0">
     <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
     <input name="downloaded_a_courses_guide" type="hidden" value="true">
     <input name="hs_lead_status" type="hidden" value="NEW">
@@ -37,12 +37,12 @@
         </div>
       </div>
       <!-- End Input -->
-      <div class="col-sm-4 d-flex flex-column justify-content-end">
+      <div class="col-sm-6 d-flex flex-column justify-content-end">
         {% include referral-question.html %}
       </div>
 
       <!-- Input -->
-      <div class="col-sm-4 d-flex flex-column justify-content-end form-group">
+      <div class="col-sm-6 d-flex flex-column justify-content-end form-group">
         <label class="form-label" for="best-describes">Which of these best describes you? <span class="text-danger">*</span></label>
         <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control" required>
           <option disabled selected value="">Select your answer</option>
@@ -57,8 +57,8 @@
       <!-- End Input -->
 
       <!-- Input -->
-      <div class="col-4 d-flex align-items-end form-group">
-        <button type="submit" class="text-white btn bg-purple rounded btn-block">
+      <div class="col-12 d-flex align-items-end justify-content-center form-group">
+        <button type="submit" class="btn btn-round btn-sm-block text-white bg-purple hover-shadow-yellow">
           Send
         </button>
       </div>
@@ -76,5 +76,4 @@
       </template>
     </div>
   </div>
-
 </form>

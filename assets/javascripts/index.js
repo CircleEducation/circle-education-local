@@ -16,7 +16,7 @@ $(function() {
                 <p class="text-muted">${moment.utc(event.start.local).format('ddd, MMM Do, YYYY h:mma')} - ${moment.utc(event.end.local).format('h:mma')}</p>
                 <p>${event.description.text.slice(0, 200)}...</p>
               </div>
-              <a class="btn btn-sm btn-soft-primary btn-wide" href="${event.url}" rel="noopener noreferrer" target="_blank">View Details</a>
+              <a class="btn btn-sm btn-soft-primary" role="button" href="${event.url}" rel="noopener noreferrer" target="_blank">View Details</a>
             </div>
             <!-- End Card -->
           </div>
