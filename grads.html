@@ -60,12 +60,14 @@ description: ""
             </h3>
             <h3 class="h6">
               <!-- htmllint preset="none" -->
-              <span class="badge p-2 rounded {% if page.course == 'JavaScript' %}bg-blue{% else %}bg-green{% endif %}">{{ page.course }}</span>
+              <span class="badge p-2 rounded {% if page.course == 'JavaScript' %}bg-blue{% else %}bg-green{% endif %}">
+                {{ page.course }}
+              </span>
               <!-- htmllint preset="$previous" -->
             </h3>
-            <a href="{{ page.graduateProjectURL }}">
+            <a href="{{ page.projects[0].repo }}">
               <small class="text-white link-underlined">
-                {{ page.graduateProjectURL | remove: "https://" | remove: "http://" }}
+                {{ page.projects[0].name }}
               </small>
             </a>
           </div>
