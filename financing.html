@@ -6,7 +6,7 @@ hero: financing
 title: Austin Coding Academy Financing Options | Finance Your Class
 description: At Austin Coding Academy we have options to help you pay for your coding
   education. Take a look at the financing options we have available.
-
+intersection-ratios: 0.3
 ---
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero w-100 text-center py-11">
@@ -16,6 +16,9 @@ description: At Austin Coding Academy we have options to help you pay for your c
   </h1>
   <h1 class="text-white text-center">Don’t worry, you have options.</h1>
 </div>
+
+<main>
+{% include position-animation-hero.html %}
 
 <div class="container mw-850 vertical-120">
   <div>
@@ -39,12 +42,12 @@ description: At Austin Coding Academy we have options to help you pay for your c
     <li>Affordable monthly payments</li>
   </ul>
   <a
-    class="btn btn-wide btn-round bg-purple size-20 text-white mt-5"
+    class="btn btn-round bg-purple text-white hover-shadow-yellow mt-2"
     href="https://austincodingacademy.skills.fund/"
     rel="noopener"
     target="_blank"
   >
-    Learn More
+    Learn More &nbsp;<i class="fas fa-external-link-alt"></i>
   </a>
 
   <h2 class="font-family-alt font-weight-bold top-84 display-4">
@@ -82,3 +85,4 @@ description: At Austin Coding Academy we have options to help you pay for your c
   </p>
   <div class="my-10"></div>
 </div>
+</main>

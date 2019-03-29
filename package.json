@@ -18,8 +18,8 @@
     "preview": "yarn cname && cp -R .circleci/ _site/.circleci/ && gh-pages --repo \"git@github.com:AustinCodingAcademy/austincodingacademy.com.git\" --dotfiles -d ./_site",
     "start": "concurrently \"http-server _site -p 4000 -s\" \"npm-watch\"",
     "build": "touch _includes/css.html && yarn css && yarn build-default && yarn build-amp",
-    "build-default": "bundle exec jekyll build --config _configs/default.yml",
-    "build-amp": "bundle exec jekyll build --config '_configs/default.yml,_configs/amp.yml' --destination _site/amp/",
+    "build-default": "bundle exec jekyll build --config _config.yml",
+    "build-amp": "bundle exec jekyll build --config '_config.yml,_amp.yml' --destination _site/amp/",
     "css": "yarn build-default && node postcss.js && echo '<style amp-custom>' > _includes/css.html && cat assets/css/main.min.css >> _includes/css.html && echo '</style>' >> _includes/css.html"
   },
   "devDependencies": {
