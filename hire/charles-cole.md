@@ -3,7 +3,6 @@ layout: resume
 categories: [ hire, graduate ]
 
 fullname: Charles Cole
-course: JavaScript
 jobtitle: Junior Web Developer
 
 location: Austin, TX
