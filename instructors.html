@@ -4,21 +4,54 @@ title: ""
 description: ""
 permalink: /instructors
 instructors:
-  - name: Dana Wen
-    email:
-    linkedin: https://www.linkedin.com/in/danawen/
-    class: Sample Class
-    company: ChickTech Austin
-  - name: Dan Ferguson
-    email:
-    linkedin: https://www.linkedin.com/in/ferguson-dan/
-    class: Sample Class
-    company: Tyler Technologies
+  - name: Dinh Huynh
+    email: dinh@austincodingacademy.com
+    linkedin: https://www.linkedin.com/in/dinhhuynh/
+    class: JS 211
+    campus: North
+
+  - name: Keith Kritselis
+    email: keith@austincodingacademy.com
+    linkedin: https://www.linkedin.com/in/keith-kritselis/
+    class: Web 101
+    campus: Central
+
+  - name: Emily Anne Moses
+    email: emily@austincodingacademy.com
+    linkedin: https://www.linkedin.com/in/emilyannemoses/
+    class: JS 211
+    campus: Central
+
   - name: Juan Rodriguez
-    email:
+    email: juan@austincodingacademy.com
     linkedin: https://www.linkedin.com/in/juanrod1/
-    class: Sample Class
-    company: L7 Informatics
+    class: Web 101
+    campus: North
+
+  - name: Yousif Seedhom
+    email: yousif@austincodingacadey.com
+    linkedin: https://www.linkedin.com/in/yousifs/
+    class: C# 221
+    campus: North
+
+  - name: Matt Viteri
+    email: matt@austincodingacademy.com
+    linkedin: https://www.linkedin.com/in/mxviteri/
+    class: JS 311
+    campus: North
+
+  - name: Jon Woo
+    email: jon@austincodingacademy.com
+    linkedin: https://www.linkedin.com/in/jon-woo-3a28175a/
+    class: JS 311
+    campus: Central
+
+  - name: Erik Zambrano
+    email: erik@austincodingacademy.com
+    linkedin: https://www.linkedin.com/in/e-zambrano/
+    class: .NET 321
+    campus: North
+
 ---
 <div class="container-fluid">
   <div class="row my-5 mx-auto d-flex justify-content-center align-items-end">
@@ -37,12 +70,12 @@ instructors:
           <!-- htmllint preset="$previous" -->
         </div>
         <div class="card border-0 shadow-sm mt-n6 mx-3">
-          <div class="card-body text-center p-3">
-            <a href="{{ instructor.linkedin }}">
+          <div class="text-center py-2 px-1">
+            <a href="{{ instructor.linkedin }}" target="_blank" rel="noopener">
               <h3 class="h6 font-weight-bold">{{ instructor.name }}</h3>
             </a>
             <h4 class="h6 font-weight-bold">{{ instructor.class }}</h4>
-            <h5 class="size-14">{{ instructor.company }}</h5>
+            <h5 class="size-14">{{ instructor.campus }} Campus</h5>
           </div>
         </div>
       </div>
