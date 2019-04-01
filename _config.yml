@@ -31,4 +31,4 @@ exclude:
 
 permalink: /blog/:categories/:title/
 
-categories: [ hire, landing ]
+categories: [ hire, graduate, landing ]

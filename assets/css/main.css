@@ -127,18 +127,31 @@ body, p {
   background-color: #7fc89a;
 }
 
-.bg-pale {
-  background-color: rgba(45, 47, 119, .1);
+.bg-semi-transparent {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.background-logo {
+  min-height: 100vh;
+  background-image: url("/assets/images/aca-logo-white-large.png");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
 }
 
 .shadow-yellow {
   text-shadow: 2px 2px #f5b02c;
 }
 
-.shadow-dark {
-  box-shadow: 2px 2px 5px rgba(50, 50, 50, .75);
+.shadow-black {
+  box-shadow: 2px 2px 5px #1e2022;
 }
 
+.shadow-dark {
+    box-shadow: 2px 2px 5px rgba(50, 50, 50, .75);
+}
 .btn-purple {
   color: #fff;
   background-color: #2d2f77;
