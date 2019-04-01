@@ -13,6 +13,7 @@ const headers = {
 const fetchEvents = async () => {
   try {
     const response = await fetch(`https://www.eventbriteapi.com/v3/organizations/178296646722/events/?${stringify({
+      only_public: 'true',
       order_by: 'start_asc',
       time_filter: 'current_future',
       status: 'live'
