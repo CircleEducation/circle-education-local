@@ -40,20 +40,17 @@ courses:
   url: "/javascript"
 
 header:
-- url: "/faq"
-  weight: 2
-  title: FAQ
-- weight: 5
-  title: Apply
-  url: "/apply"
-  button: btn btn-round text-white primary-gradient py-1 px-6
-- weight: 4
-  title: Financing
-  url: "/financing"
 - weight: 1
   title: Courses &amp; Tuition
   url: "#"
   identifier: courses
+- url: "/faq"
+  weight: 2
+  title: FAQ
 - weight: 3
-  title: Contact
-  url: "/contact"
+  title: Financing
+  url: "/financing"
+- weight: 10
+  title: Apply
+  url: "/apply"
+  button: btn btn-round text-white primary-gradient py-1 px-6

@@ -224,22 +224,21 @@ form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
   <h4 class="font-family-alt font-weight-bold text-center display-7 my-5">
     Our Graduates Are Working At
   </h4>
-  <!-- begin grad-companies -->
   <div class="container">
     <div id="logo-section" class="row d-flex justify-content-center align-items-center">
       {% for logo in page.logos %}
-      <div class="col-4 my-3 col-sm-3 my-sm-0 col-md-2 d-flex align-items-center company-logo-div">
-        <amp-img
-          width="{{ logo.width }}"
-          height="{{ logo.height }}"
-          layout="responsive"
-          class="u-clients mw-100"
-          src="{{ logo.src }}"
-          alt="{{ logo.alt }}"
-        ></amp-img>
-      </div>
+        <div class="col-4 my-3 col-sm-3 my-sm-0 col-md-2 d-flex align-items-center company-logo-div">
+          <amp-img
+            width="{{ logo.width }}"
+            height="{{ logo.height }}"
+            layout="responsive"
+            class="u-clients mw-100"
+            src="{{ logo.src }}"
+            alt="{{ logo.alt }}"
+          ></amp-img>
+        </div>
+      {% endfor %}
     </div>
-    <!-- end grad-companies -->
   </div>
 </section>
 
