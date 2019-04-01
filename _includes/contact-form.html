@@ -1,4 +1,4 @@
-{% unless page.permalink == "/contact/" %}
+{% unless page.permalink == "/contact/" or "/" %}
 <a href="#"
   class="btn btn-round text-white bg-purple hover-shadow-yellow mx-auto"
   on="tap:contact-lightbox"
@@ -180,7 +180,7 @@
   </div>
 </form>
 
-{% unless page.permalink == "/contact/" %}
+{% unless page.permalink == "/contact/" or "/" %}
   </div>
 </amp-lightbox>
 {% endunless %}
