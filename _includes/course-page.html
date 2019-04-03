@@ -1,34 +1,37 @@
 <!-- htmllint preset="none" -->
-<div id="hero-{{ page.hero }}" class="hero py-11">
+<div id="hero-{{ page.hero }}" class="hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
-  <h1 class="mt-5 pt-5 text-white font-family-alt font-weight-bold display-4 text-center">
+  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
       {{ page.track }} Track
   </h1>
+  <p class="text-white text-center mx-auto px-2 mw-600">
+    {{ page.hero_text }}
+  </p>
 </div>
 
 <main>
 
-  {% include position-animation-hero.html %}
+  {% include observer-and-header-animation.html %}
 
-  <section class="mb-6 py-5 container">
+  <section class="py-5 container">
     {% include curriculum.html %}
   </section>
 
-  <section class="mb-6 py-5">
+  <section class="mb-6">
     {% include course-guide-form.html %}
   </section>
 
   <section class="alt-gradient text-white my-5">
     <div class="container py-11">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
-        Two Ways to Learn
+        Take Our Full Track and Save
       </h2>
       {% include comparison-cards.html %}
       {% include tuition-help.html %}
     </div>
   </section>
 
-  <section class="my-10">
+  <section class="mb-6 py-5">
     {% include course-dates.html %}
   </section>
 
@@ -36,15 +39,17 @@
     {% include campus-locations.html %}
   </section>
 
-  <section class="d-flex flex-column justify-content-center align-items-center mx-auto mw-600 my-10">
-    <h2 class="font-family-alt font-weight-bold text-center display-4">
-      Still Have Questions?
-    </h2>
-    <p class="size-20 mb-4 text-center">
-      From choosing the right course to understanding course details, we're here
-      to help.
-    </p>
-    {% include contact-form.html %}
+  <section class="py-5">
+    <div class="d-flex flex-column justify-content-center align-items-center mx-auto mw-600">
+      <h2 class="font-family-alt font-weight-bold text-center display-4">
+        Still Have Questions?
+      </h2>
+      <p class="size-20 mb-4 text-center">
+        From choosing the right course to understanding course details, we're here
+        to help.
+      </p>
+      {% include contact-form.html %}
+    </div>
   </section>
 
   {% for course in page.courses %}

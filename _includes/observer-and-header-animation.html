@@ -1,6 +1,6 @@
 <amp-position-observer
   on="scroll:fill-header-background.seekTo(percent=event.percent)"
-  intersection-ratios="{{ page.intersection-ratios | default: 0 }}"
+  intersection-ratios="0"
   layout="nodisplay">
 </amp-position-observer>
 
@@ -13,11 +13,11 @@
         "selector": "#header-background",
         "keyframes": [{
           "opacity": "0",
-          "offset": 0.05
+          "offset": 0
         },
         {
           "opacity": "1",
-          "offset": 0.1
+          "offset": {{ page.scroll_offset_for_header | default: 0.05}}
         },
         {
           "opacity": "1",
@@ -27,3 +27,7 @@
     }
   </script>
 </amp-animation>
+
+<!-- scroll offset is higher than 0.05 for pages shorter than index, lower for pages longer than index.
+The value should be adjusted only enough to allow or approach 0% opacity at the very top of the page,
+but priority should be ensuring that the opacity animation begins immediately on first scroll. -->

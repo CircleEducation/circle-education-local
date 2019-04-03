@@ -127,6 +127,10 @@ body, p {
   background-color: #7fc89a;
 }
 
+.box-highlighted {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15)
+}
+
 .background-logo {
   min-height: 100vh;
   background-image: url("/assets/images/aca-logo-white-large.png");
@@ -178,8 +182,8 @@ body, p {
   max-width: 22rem;
 }
 
-.pt-7 {
-  padding-top: 7rem;
+.mt-90 {
+  margin-top: 90px;
 }
 
 /* CUSTOM FONT SIZING */
@@ -202,6 +206,19 @@ body, p {
 
 .size-20 {
   font-size: 20px;
+}
+
+.mobile-display-5 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+@media (max-width: 767.98px) {
+  .mobile-display-5 {
+    font-size: 2rem;
+    line-height: 1.2
+  }
 }
 
 .display-5 {
@@ -242,6 +259,7 @@ body, p {
 /* HERO IMAGES */
 
 .hero {
+  min-height: 95vh;
   background-position: 0 -1px;
   background-repeat: no-repeat;
   background-size: cover;
