@@ -39,8 +39,8 @@ skills:
   - Data Visualization
   - WebVR
 
-github: https://github.com/kevincolten
-linkedin: https://www.linkedin.com/in/kevincolten
+github: https://github.com/katiemacaulay
+linkedin: https://www.linkedin.com/in/katiemacaulay-1
 
 email: kevincolten@gmail.com
 website: https://kevincolten.com
