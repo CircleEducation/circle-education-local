@@ -6,89 +6,85 @@
   </h1>
 </div>
 
-<main class="container">
+<main>
 
   {% include position-animation-hero.html %}
 
-  <h2 class="display-6 text-center my-10 text-muted">
-    {{ page.overview }}
-  </h2>
+  <section class="mb-6 py-5 container">
+    {% include curriculum.html %}
+  </section>
 
-  {% include curriculum.html %}
-
-  <div class="my-10">
+  <section class="mb-6 py-5">
     {% include course-guide-form.html %}
-  </div>
+  </section>
 
-  {% include comparison-cards.html %}
+  <section class="alt-gradient text-white my-5">
+    <div class="container py-11">
+      <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+        Two Ways to Learn
+      </h2>
+      {% include comparison-cards.html %}
+      {% include tuition-help.html %}
+    </div>
+  </section>
 
-  <div class="my-10">
-    {% include tuition-help.html %}
-  </div>
+  <section class="my-10">
+    {% include course-dates.html %}
+  </section>
 
-  {% include course-dates.html %}
+  <section class="alt-gradient text-white my-5">
+    {% include campus-locations.html %}
+  </section>
 
-  <div class="d-flex justify-content-center my-10">
-    {% include btn-apply.html %}
-  </div>
-
-  {% include campus-locations.html %}
-
-  <div class="container d-flex flex-column justify-content-center mt-10">
-
+  <section class="d-flex flex-column justify-content-center align-items-center mx-auto mw-600 my-10">
     <h2 class="font-family-alt font-weight-bold text-center display-4">
       Still Have Questions?
     </h2>
-
     <p class="size-20 mb-4 text-center">
       From choosing the right course to understanding course details, we're here
       to help.
     </p>
-
     {% include contact-form.html %}
-
-  </div>
-
-  <div class="my-10"></div>
+  </section>
 
   {% for course in page.courses %}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "{{ course.title }}",
-    "courseCode": "{{ course.code }}",
-    "description": "{{ course.description }}",
-    "hasCourseInstance": [
-      {% for section in course.sections %}
-      {
-        "@type": "CourseInstance",
-        "name": "{{ course.title }}",
-        "description": "{{ course.description }}",
-        "startDate": "{{ section.start }}",
-        "endDate": "{{ section.end }}",
-        "location": {
-          "@type": "Place",
-          "name": "{{ section.campus }}",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "{{ section.address }}",
-            "addressLocality": "Austin"
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "{{ course.title }}",
+      "courseCode": "{{ course.code }}",
+      "description": "{{ course.description }}",
+      "hasCourseInstance": [
+        {% for section in course.sections %}
+        {
+          "@type": "CourseInstance",
+          "name": "{{ course.title }}",
+          "description": "{{ course.description }}",
+          "startDate": "{{ section.start }}",
+          "endDate": "{{ section.end }}",
+          "location": {
+            "@type": "Place",
+            "name": "{{ section.campus }}",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "{{ section.address }}",
+              "addressLocality": "Austin"
+            }
           }
+        }{% unless section == course.sections.last %},{% endunless %}
+        {% endfor %}
+      ],
+      "provider": {
+        "@type": "Organization",
+        "name": "Austin Coding Academy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{site.url}}/assets/images/logo-aca.png"
         }
-      }{% unless section == course.sections.last %},{% endunless %}
-      {% endfor %}
-    ],
-    "provider": {
-      "@type": "Organization",
-      "name": "Austin Coding Academy",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "{{site.url}}/assets/images/logo-aca.png"
       }
     }
-  }
-  </script>
+    </script>
   {% endfor %}
 
 </main>

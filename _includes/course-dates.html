@@ -1,7 +1,4 @@
-<h2
-  style="margin-bottom: 3rem"
-  class="display-5 font-family-alt text-center font-weight-bold"
->
+<h2 class="display-5 mb-5 font-family-alt text-center font-weight-bold">
   Individual Course Dates
 </h2>
 
@@ -9,13 +6,12 @@
 <div class="container mb-5">
   <h4 class="font-weight-bold">
     <!-- htmllint preset="none" -->
-    <i class="fas fa-circle text-{{ course.color }}"></i>
+    <i class="fas fa-circle text-{{ page.trackColor }}"></i>
     <!-- htmllint preset="$previous" -->
     {{ course.code }}&nbsp;{{ course.title }}
   </h4>
   {% for section in course.sections %}
-  <div
-    class="row border my-2 align-items-center">
+  <div class="row border shadow rounded my-2 align-items-center">
     <div class="col-6 col-md-3 my-4">
       {{ section.start | date: "%b %e" }} - {{ section.end | date: "%b %e" }}
     </div>

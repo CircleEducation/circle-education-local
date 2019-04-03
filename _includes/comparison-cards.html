@@ -1,12 +1,14 @@
 <!-- Pricing Section -->
-<div class="container">
+<div class="mb-5">
   <div class="w-lg-80 mx-lg-auto">
     <div class="card-deck d-flex justify-content-center align-items-center card-md-gutters-3 mb-5">
       <!-- Pricing -->
-      <div class="card card-frame-highlighted text-center mb-5 mb-md-0">
+      <div class="card shadow-black text-center mb-5 mb-md-0">
         <!-- Header -->
         <header class="card-header p-5">
-          <h4 class="h5 text-primary">Full {{page.track}} Track</h4>
+          <!-- htmllint preset="none" -->
+          <h4 class="h5 text-default">Full {{page.track}} Track</h4>
+          <!-- htmllint preset="$previous" -->
           <div>
             <span class="h1 text-default font-weight-medium">
               <span class="align-top font-size-2">$</span>10,960
@@ -22,17 +24,16 @@
             beginner to job-ready in just 36 weeks with our full {{page.track}}
             Track!
           </p>
-          {% include btn-apply.html %}
         </div>
         <!-- End Content -->
       </div>
       <!-- End Pricing -->
 
       <!-- Pricing -->
-      <div class="card text-center">
+      <div class="card shadow-black text-center">
         <!-- Header -->
         <header class="card-header p-5">
-          <h4 class="h5 text-success">Single Class</h4>
+          <h4 class="h5 text-default">Single Class</h4>
           <div>
             <span class="h1 text-default font-weight-medium">
               <span class="align-top font-size-2">$</span>2,990
@@ -48,7 +49,6 @@
             learn Front-End, {{page.skills}} without completing the entire
             track. <br />
           </p>
-          {% include btn-apply.html %}
         </div>
         <!-- End Content -->
       </div>
