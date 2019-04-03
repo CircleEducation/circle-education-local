@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: /student-grievances
 Disallow: /tutors
+Disallow: /search
 
 # Discourse
 User-agent: *
