@@ -248,7 +248,7 @@ body, p {
   opacity: 0;
 }
 
-.nav-item a:hover, #sidebar a:hover, .primary-gradient:hover {
+.nav-item a:hover, #sidebar a:hover, .cta-gradient:hover {
   color: #ffffff;
 }
 
@@ -274,16 +274,13 @@ body, p {
 }
 
 #hero-csharp {
-  background-image: url("/assets/images/header-csharp.jpg");
-}
-
-#hero-financing {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/images/hero-financing.jpg');
+  background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(127,200,154, 0.7)), url('/assets/images/hero-csharp.jpg');
   background-position: top;
 }
 
 #hero-js {
-  background-image: url("/assets/images/header-javascript.jpg");
+  background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(0,179,209, 0.7)), url('/assets/images/hero-javascript.jpg');
+  background-position: top;
 }
 
 #hero-blog {
@@ -312,13 +309,21 @@ body, p {
 
 /* CUSTOM GRADIENTS */
 
-.primary-gradient {
+.cta-gradient {
   background: linear-gradient(to right, #00b3d1, #7fc89a);
   color: #ffffff;
 }
 
-.alt-gradient {
+.js-gradient {
   background: linear-gradient(to right, #2d2f77, #00b3d1);
+}
+
+.csharp-gradient {
+  background: linear-gradient(to right, #2d2f77, #7fc89a);
+}
+
+.bg-gradient {
+  background: linear-gradient(to right, #21409a, #2d2f77);
 }
 
 /* CUSTOM BUTTONS */

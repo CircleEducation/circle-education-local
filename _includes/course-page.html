@@ -21,7 +21,9 @@
     {% include course-guide-form.html %}
   </section>
 
-  <section class="alt-gradient text-white my-5">
+  <!-- htmllint preset="none" -->
+  <section class="{{page.hero}}-gradient text-white my-5">
+  <!-- htmllint preset="$previous" -->
     <div class="container py-11">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
         Take Our Full Track and Save
@@ -32,25 +34,29 @@
   </section>
 
   <section class="mb-6 py-5">
-    <div class="container">
+    <div class="container px-2 p-md-0">
       {% include course-dates.html %}
     </div>
   </section>
 
-  <section class="alt-gradient text-white my-5">
+  <!-- htmllint preset="none" -->
+  <section class="{{page.hero}}-gradient text-white my-5">
+  <!-- htmllint preset="$previous" -->
     {% include campus-locations.html %}
   </section>
 
   <section class="py-5">
-    <div class="d-flex flex-column justify-content-center align-items-center mx-auto mw-600">
+    <div class="d-flex flex-column justify-content-center align-items-center mx-auto">
       <h2 class="font-family-alt font-weight-bold text-center display-4">
         Still Have Questions?
       </h2>
-      <p class="size-20 mb-4 text-center">
-        From choosing the right course to understanding course details, we're here
-        to help.
-      </p>
-      {% include contact-form.html %}
+      <div class="mw-600 p-2 p-md-0">
+        <p class="size-20 mb-4 text-center">
+          From choosing the right course to understanding course details, we're here
+          to help.
+        </p>
+        {% include contact-form.html %}
+      </div>
     </div>
   </section>
 

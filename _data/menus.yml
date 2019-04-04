@@ -68,4 +68,4 @@ header:
 - weight: 10
   title: Apply
   url: "/apply"
-  button: btn btn-round text-white primary-gradient py-1 px-6
+  button: btn btn-round text-white cta-gradient py-1 px-6
