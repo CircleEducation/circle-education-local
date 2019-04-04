@@ -1,4 +1,4 @@
-{% unless page.permalink == "/contact/" or "/" %}
+{% if page.contactLightbox %}
 <a href="#"
   class="btn btn-round text-white bg-purple hover-shadow-yellow mx-auto"
   on="tap:contact-lightbox"
@@ -16,7 +16,7 @@
   role="dialog"
 >
   <div class="container px-5 pt-5 text-white">
-{% endunless %}
+{% endif %}
 
 <form
   action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/33cc0e23-1881-4874-a1d0-2c0307f20e41"
@@ -180,7 +180,7 @@
   </div>
 </form>
 
-{% unless page.permalink == "/contact/" or "/" %}
+{% if page.contactLightbox %}
   </div>
 </amp-lightbox>
-{% endunless %}
+{% endif %}
