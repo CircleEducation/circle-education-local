@@ -257,8 +257,15 @@ body, p {
   text-shadow: 0 0 3px rgba(255,255,255,.5);
 }
 
+.photo-hover {
+  -webkit-transition: box-shadow .3s, transform .3s; /* Safari */
+  transition: box-shadow .3s, transform .3s;
+}
+
 .photo-hover:hover {
-  box-shadow: 0 0 10px rgba(45,47,119, 0.7);
+  box-shadow: 0 0 30px rgba(45,47,119, 0.7);
+  -webkit-transform: scale(1.025); /* Safari */
+  transform: scale(1.025);
 }
 
 /* HERO IMAGES */
