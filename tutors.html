@@ -128,6 +128,7 @@ tutors:
             <!-- Team -->
             <div>
               <div class="mx-auto mb-3">
+                <!-- htmllint preset="none" -->
                 <amp-img
                   width="100px"
                   height="100px"
@@ -136,6 +137,7 @@ tutors:
                   src="http://gravatar.com/avatar/{{ tutor.email | downcase | md5 }}?s=100&r=pg&d=retro"
                   alt="{{tutor.name}}"
                 ></amp-img>
+                <!-- htmllint preset="$previous" -->
               </div>
               <h2 class="h6 mb-0">{{tutor.name}}</h2>
               <p class="small m-0">{{tutor.skills}}</p>
