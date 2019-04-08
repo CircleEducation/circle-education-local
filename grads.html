@@ -36,6 +36,8 @@ description: ""
       href="/assets/css/main.css"
     >
 
+    {% include amp.html %}
+
     {% include favicon.html %}
 
     {{ page.head }}
@@ -51,21 +53,27 @@ description: ""
       <div class="row d-flex justify-content-center align-items-end">
         {% for page in site.pages %}
         {% if page.categories contains 'graduate' %}
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-          <div class="d-flex justify-content-center rounded-top pb-2">
+        <div class="col-12 col-md-3 px-2 mb-4">
+          <div class="d-flex justify-content-center pb-2">
             <!-- htmllint preset="none" -->
             <amp-img width="150" height="150"
               layout="fixed"
               class="rounded-circle shadow-black"
-              src="https://gravatar.com/avatar/{{ profile.email | downcase | md5 }}?s=150&r=pg"
-              alt="{{ page.fullname }}"></amp-img>
+              src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=200&r=pg&d=retro"
+              alt="{{ page.fullname }}"
+            ></amp-img>
             <!-- htmllint preset="$previous" -->
           </div>
-          <div class="text-center text-white bg-dark shadow-black rounded py-2 mx-auto">
-            <h3 class="h6">
+          <div class="text-center text-white bg-dark shadow-black rounded d-flex flex-column justify-content-between align-items-center py-2 px-1 w-75 mx-auto">
+            <h5 class="h6 m-0">
               {{ page.fullname }}
-            </h3>
-            <h3 class="h6">
+            </h5>
+            <a href="{{ page.projects[0].repo }}">
+              <small class="text-white link-underlined">
+                {{ page.projects[0].name }}
+              </small>
+            </a>
+            <h5 class="h6 m-0 mt-2">
               <!-- htmllint preset="none" -->
               {% if page.skills[0] == 'JavaScript' %}
               <span class="badge p-2 rounded bg-blue">
@@ -77,12 +85,7 @@ description: ""
               </span>
               {% endif %}
               <!-- htmllint preset="$previous" -->
-            </h3>
-            <a href="{{ page.projects[0].repo }}">
-              <small class="text-white link-underlined">
-                {{ page.projects[0].name }}
-              </small>
-            </a>
+            </h5>
           </div>
         </div>
         {% endif %}
