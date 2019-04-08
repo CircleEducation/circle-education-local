@@ -3,6 +3,15 @@ layout: default
 permalink: "/team/"
 title: ""
 description: ""
+heading: Meet the Team
+defaultBio: Austin Coding Academy is the only locally-owned and operated coding school serving Austin, TX.
+  Founded in 2014, Austin Coding Academy was built on the principle of accessibility,
+  as an alternative to costly, immersive coding bootcamps. ACA’s part-time, affordable,
+  in-person classes have served hundreds of people here in Austin and continue to produce
+  job-ready software developers. As Austin Coding Academy continues to grow, our unique and
+  talented team is committed to serving our students, partners, tech companies, and the local
+  community. Meet the people that make Austin Coding Academy, Austin’s premier source for
+  tech talent and education.
 profiles:
   - name: Chris Sica
     title: Co-Founder
@@ -130,65 +139,4 @@ profiles:
       hex: "#0077b5"
 ---
 
-<div class="container mt-90 py-5">
-  <h2 class="d-lg-none font-family-alt font-weight-bold text-center display-4 my-10">
-    Meet the Team
-  </h2>
-  <div class="row my-5 mx-auto d-flex justify-content-start">
-    <div class="col-12 col-lg">
-      <div class="row">
-        {% for profile in page.profiles %}
-          <div class="col-4 p-1">
-            <!-- htmllint preset="none" -->
-            <amp-img
-              width="200"
-              height="200"
-              layout="responsive"
-              class="img-fluid w-100 rounded photo-hover"
-              src="https://gravatar.com/avatar/{{ profile.email | downcase | md5 }}?s=400&r=pg&d=https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
-              alt="{{ profile.name }}"
-              title="{{ profile.name }}"
-              on="tap:AMP.setState({
-                selectedBio:'{{profile.bio}}',
-                selectedName:'{{profile.name}}',
-                selectedTitle:'{{profile.title}}'
-              }),bio-section.scrollTo(duration=200)"
-            ></amp-img>
-            <!-- htmllint preset="$previous" -->
-            <p class="p-1 text-center">
-              {% for link in profile.links %}
-                <a href="{{ link.link }}" target="_blank" rel="noopener">
-                  <!-- htmllint preset="none" -->
-                  <i style="color: {{ link.hex }}" class="mx-1 {{ link.icon }}"></i>
-                  <!-- htmllint preset="$previous" -->
-                </a>
-              {% endfor %}
-            </p>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="py-10 col-12 d-md-none" id="bio-section"></div>
-    <div class="col-12 col-md">
-      <h2 class="d-none d-lg-block text-center font-family-alt font-weight-bold display-5 mb-5">
-        Meet the Team
-      </h2>
-      <p class="mx-5 p-5 rounded border shadow">
-        <!-- htmllint preset="none" -->
-        <span class="d-block font-weight-bold text-center" [text]="selectedName">About ACA</span>
-        <small class="d-block font-weight-bold text-center mb-3" [text]="selectedTitle"></small>
-        <span [text]="selectedBio">
-          Austin Coding Academy is the only locally-owned and operated coding school serving Austin, TX.
-          Founded in 2014, Austin Coding Academy was built on the principle of accessibility,
-          as an alternative to costly, immersive coding bootcamps. ACA’s part-time, affordable,
-          in-person classes have served hundreds of people here in Austin and continue to produce
-          job-ready software developers. As Austin Coding Academy continues to grow, our unique and
-          talented team is committed to serving our students, partners, tech companies, and the local
-          community. Meet the people that make Austin Coding Academy, Austin’s premier source for
-          tech talent and education.
-        </span>
-        <!-- htmllint preset="$previous" -->
-      </p>
-    </div>
-  </div>
-</div>
+{% include profiles-page.html %}
