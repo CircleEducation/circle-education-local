@@ -13,47 +13,30 @@ skills:
   - React
   - Redux
   - Express.js
-  - React Native
   - HTML
   - CSS
   - JavaScript
-  - jQuery
-  - Backbone.js
-  - Ruby/Rails
-  - PHP/Laravel
-  - Python/Django
-  - Testing
-  - Selenium
-  - Mocha/Chai
-  - SQL
-  - NoSQL
-  - AWS
+  - Mocha
   - Heroku
-  - DigitalOcean
-  - Continuous Integration
-  - CircleCI/Travis CI/Jenkins
-  - Automated Deployment
   - Git/GitHub
-  - Grunt/Gulp/WebPack
+  - WebPack
   - REST APIs
-  - Data Visualization
-  - WebVR
 
 github: https://github.com/katiemacaulay
 linkedin: https://www.linkedin.com/in/katiemacaulay-1
 
-email: kevincolten@gmail.com
-website: https://kevincolten.com
+email: katiemmacaulay@gmail.com
+website: https://katiemacaulay.github.io/
 workplace: Austin Coding Academy
-phone: (512) 593-2019
+phone: (214) 460-0996
 
 workexperience:
   - company: Austin Coding Academy
     logo: https://camo.githubusercontent.com/4be240b9d916fff63fd4755771387f2db91ccbea/687474703a2f2f656e2e67726176617461722e636f6d2f75736572696d6167652f3130373337303130302f61303835393431343535363435333631333864666161663037326337623234312e706e673f73697a653d323030
-    dates: August 2015 - Present
-    title: Chief Technology Officer
+    dates: March 2019 - Present
+    title: Academic Manager Assistant
     location: Austin, TX
-  - company: SkillsEngine
+  - company: Austin Coding Academy
     logo: https://media.licdn.com/dms/image/C510BAQEUfbXLPe7V8Q/company-logo_200_200/0?e=2159024400&v=beta&t=0HX39QiGoWtXrHsmVfM2nUPgyKnGin7zK9j3E0a7BRs
     dates: October 2017 - March 2019
     title: Senior Software Engineer
