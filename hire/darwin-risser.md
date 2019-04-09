@@ -28,7 +28,7 @@ github: https://github.com/darwinrisser
 linkedin: https://www.linkedin.com/in/darwinrisser
 
 email: risser.darwin@gmail.com
-website: https://darwinrisser.github.io/gh-pages/portfolio/
+website: https://darwinrisser.dev
 workplace: Self-Employed
 phone: (512) 508-5738
 
@@ -56,7 +56,7 @@ projects:
   - name: Developer Portfolio
     desc: A personal website to display my current and past projects.
     url: https://darwinrisser.github.io/gh-pages/portfolio/
-  - name: Game of Thrones Quis
+  - name: Game of Thrones Quiz
     desc: A simple React quiz for the Game of Thrones TV series.
     url: https://darwinrisser.github.io/got-react/
 ---
