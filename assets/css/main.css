@@ -174,39 +174,7 @@ body, p {
   font-family: "Roboto Slab", sans-serif;
 }
 
-.img-logo {
-  width: 4rem;
-}
-
-.mw-22 {
-  max-width: 22rem;
-}
-
-.mt-90 {
-  margin-top: 90px;
-}
-
 /* CUSTOM FONT SIZING */
-
-.size-10 {
-  font-size: 10px;
-}
-
-.size-14 {
-  font-size: 14px;
-}
-
-.size-16 {
-  font-size: 16px;
-}
-
-.size-18 {
-  font-size: 18px;
-}
-
-.size-20 {
-  font-size: 20px;
-}
 
 .mobile-display-5 {
   font-size: 3rem;
@@ -217,6 +185,7 @@ body, p {
 @media (max-width: 767.98px) {
   .mobile-display-5 {
     font-size: 2rem;
+    font-weight: 300;
     line-height: 1.2
   }
 }
@@ -234,12 +203,8 @@ body, p {
 }
 
 .display-7 {
-  font-size: 1.95rem;
-}
-
-.section-text {
-  font-size: 16px;
-  color: #7e8697;
+  font-size: 1.5rem;
+  line-height: 1.2;
 }
 
 /* HEADER LINKS */
@@ -305,20 +270,6 @@ body, p {
   background-position: top right;
 }
 
-/* CUSTOM MARGINS */
-
-.bottom-48 {
-  margin-bottom: 48px;
-}
-
-.top-84 {
-  margin-top: 84px;
-}
-
-.vertical-120 {
-  margin: 120px auto;
-}
-
 /* CUSTOM GRADIENTS */
 
 .cta-gradient {
@@ -358,7 +309,7 @@ body, p {
   border-image-width: 182px;
 }
 
-/* CUSTOM SECTION WIDTH */
+/* CUSTOM SPACING */
 
 .mw-850 {
   max-width: 850px;
@@ -366,6 +317,18 @@ body, p {
 
 .mw-600 {
   max-width: 600px;
+}
+
+.mw-22 {
+  max-width: 22rem;
+}
+
+.img-logo {
+  width: 4rem;
+}
+
+.mt-90 {
+  margin-top: 90px;
 }
 
 /* HEADER */
@@ -489,14 +452,9 @@ amp-selector.tabpanels [role=tabpanel][selected] {
 
 /* FORMS */
 
-#policy-form li {
-  color: #77838f;
-}
-
 .send-button {
   height: 50px;
   width: 100%;
-
 }
 
 /* HUBSPOT */

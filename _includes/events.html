@@ -16,8 +16,11 @@
         <div class="mb-4">
           {% assign name = event.name | split: " | "  %}
           <h5 class="mb-1 text-default">{{ name[1] }}</h5>
-          <h6 class="mb-1 text-default">{{event.venue_name}}</h6>
-          <p>{{event.start_date}} | {{event.start_time}}</p>
+          <p>
+            {{event.venue_name}}
+            <br/>
+            {{event.start_date}} | {{event.start_time}}
+          </p>
         </div>
         <a class="btn btn-round bg-purple text-white"
           href="{{event.url}}"

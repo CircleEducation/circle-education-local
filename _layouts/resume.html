@@ -13,75 +13,58 @@ layout: default
             <div class="card p-1 mb-4 bg-light">
               <div class="card-body text-center">
                 <div class="mb-3">
-                  <amp-img width="150" height="150" layout="fixed" class="u-lg-avatar rounded-circle" src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}?s=200r=pg"
-                    alt="{{page.fullname}} Gravatar"></amp-img>
+                  <amp-img width="150" height="150"
+                    layout="fixed"
+                    class="u-lg-avatar rounded-circle"
+                    src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}?s=200r=pg"
+                    alt="Gravatar for {{page.fullname}}"
+                  ></amp-img>
                 </div>
-
-                <div class="mb-3">
-                  <h1 class="h6 font-weight-medium mb-0">{{page.fullname}}</h1>
-                  <small class="d-block text-muted">{{page.location}}</small>
-                </div>
-
-                <div class="mb-2">
-                  <a class="btn btn-sm btn-soft-primary transition-3d-hover"
-                    href="mailto:{{page.email}}"
-                    role="button"
-                  >
-                    <span class="far fa-envelope mr-2"></span>
-                    Send a Message
+                <h5>
+                  {{ page.fullname }}
+                </h5>
+                <div class="card-body p-4 d-flex justify-content-around">
+                  <a href="{{ page.github }}">
+                    <i class="text-default display-5 fab fa-github-square"></i>
+                  </a>
+                  <a href="{{ page.linkedin }}">
+                    <i class="text-default display-5 fab fa-linkedin"></i>
+                  </a>
+                  <a href="mailto:{{ page.email }}">
+                    <i class="text-default display-5 fas fa-envelope-square"></i>
                   </a>
                 </div>
               </div>
             </div>
             <!-- End Profile Card -->
-
-            <!-- Social Profiles -->
-            <div class="card mb-4 bg-light">
-              <div class="card-header pt-4 pb-3 px-0 mx-4 bg-light">
-                <h3 class="h6 mb-0">Connect</h3>
-              </div>
-
-              <div class="card-body pt-3 pb-4 px-4">
-                <a class="media mb-4" href="{{page.github}}">
-                  <div class="media-body d-flex justify-content-start align-items-center">
-                    <i class="text-default mx-3 display-5 fab fa-github" style="width: 40px">
-                    </i>
-                    <span class="text-muted">GitHub</span>
-                  </div>
-                </a>
-                <a class="media mb-4" href="{{page.linkedin.link}}">
-                  <div class="media-body d-flex justify-content-start align-items-center">
-                    <i class="text-default mx-3 display-5 fab fa-linkedin" style="width: 40px">
-                    </i>
-                    <span class="text-muted">LinkedIn</span>
-                  </div>
-                </a>
-              </div>
-
-            </div>
-            <!-- End Social Profiles -->
           </div>
-
           <div class="col-lg-9">
             <!-- User Details -->
-            <div class="mb-4">
-              <h2>{{page.fullname}}</h2>
-              <h4 class="text-secondary mb-0">{{page.jobtitle}}</h4>
+            <div class="mb-4 text-center">
+              <h1>
+                {{ page.fullname }}
+              </h1>
+              <h2 class="display-7 mb-0">
+                {{ page.skills[0] }} Developer
+              </h2>
             </div>
             <!-- End User Details -->
 
             <!-- Info -->
-            <div class="mb-4">
-              <p>
-                {{page.blurb}}
+            <div class="mb-4 px-5 d-flex text-muted text-center">
+              <i class="fas fa-quote-left mt-1"></i>
+              <p class="text-muted px-1 m-0">
+                {{ page.blurb }}
               </p>
+              <i class="fas fa-quote-right mb-1 align-self-end"></i>
             </div>
             <!-- End Info -->
+
             <!-- Collections -->
-            <ul class="list-inline d-flex align-items-center flex-wrap">
+            <ul class="list-inline d-flex justify-content-center align-items-center flex-wrap">
               {% assign skills = page.skills | slice:0, 5 %}
               {% for skill in skills %}
-              <li class="list-inline-item mb-3 mb-sm-0 mr-3">
+              <li class="list-inline-item mb-3 mb-sm-0 mx-2">
                 <div class="d-flex align-items-center">
                   <div class="badge badge-success font-weight-medium rounded py-2 px-2 my-1">
                     {{skill}}
@@ -102,8 +85,10 @@ layout: default
                     <div class="media">
                       <span class="fas fa-envelope list-group-icon mr-3"></span>
                       <div class="media-body text-lh-sm">
-                        <span class="d-block mb-1">Email:</span>
-                        <a href="mailto:{{page.email}}">{{page.email}}</a>
+                        <span class="d-block mb-1">
+                          Email:
+                        </span>
+                        <a href="mailto:{{page.email}}">{{ page.email }}</a>
                       </div>
                     </div>
                   </li>
@@ -111,8 +96,10 @@ layout: default
                     <div class="media">
                       <span class="fas fa-link list-group-icon mr-3"></span>
                       <div class="media-body text-lh-sm">
-                        <span class="d-block mb-1">Web page:</span>
-                        <a href="{{page.website}}">{{page.website}}</a>
+                        <span class="d-block mb-1">
+                          Web page:
+                        </span>
+                        <a href="{{page.website}}">{{ page.website }}</a>
                       </div>
                     </div>
                   </li>
@@ -128,8 +115,14 @@ layout: default
                     <div class="media">
                       <span class="fas fa-mobile-alt list-group-icon mr-3"></span>
                       <div class="media-body text-lh-sm">
-                        <span class="d-block mb-1">Phone number:</span>
-                        <span class="d-block text-muted"><a href="tel:{{page.phone}}">{{page.phone}}</a></span>
+                        <span class="d-block mb-1">
+                          Phone number:
+                        </span>
+                        <span class="d-block text-muted">
+                          <a href="tel:{{page.phone}}">
+                            {{ page.phone }}
+                          </a>
+                        </span>
                       </div>
                     </div>
                   </li>
@@ -138,8 +131,12 @@ layout: default
                     <div class="media">
                       <span class="fas fa-map-marker-alt list-group-icon mr-3"></span>
                       <div class="media-body text-lh-sm">
-                        <span class="d-block mb-1">Location:</span>
-                        <span class="d-block text-muted">{{page.location}}</span>
+                        <span class="d-block mb-1">
+                          Location:
+                        </span>
+                        <span class="d-block text-muted">
+                          {{ page.location }}
+                        </span>
                       </div>
                     </div>
                   </li>
@@ -156,8 +153,12 @@ layout: default
                     <div class="media">
                       <span class="fas fa-building list-group-icon mr-3"></span>
                       <div class="media-body text-lh-sm">
-                        <span class="d-block mb-1">Works at:</span>
-                        <span class="d-block text-muted">{{page.workplace}}</span>
+                        <span class="d-block mb-1">
+                          Works at:
+                        </span>
+                        <span class="d-block text-muted">
+                          {{ page.workplace }}
+                        </span>
                       </div>
                     </div>
                   </li>
@@ -174,20 +175,25 @@ layout: default
               <div class="col-md-6 mb-7 mb-md-0">
                 <!-- Title -->
                 <div class="mb-3">
-                  <h4 class="mb-0 font-weight-bold">Work Experience</h4>
+                  <h4 class="mb-0 font-weight-bold">
+                    Work Experience
+                  </h4>
                 </div>
                 <!-- End Title -->
 
                 {% for work in page.workexperience %}
                 <!-- Info -->
                 <div class="media mb-5">
-                  {% if work.logo %}
-                    <amp-img src="{{work.logo}}" class="mr-3 img-logo" alt="{{work.title}}" layout="responsive" width="100" height="100"></amp-img>
-                  {% endif %}
                   <div class="media-body">
-                    <small class="d-block text-secondary">{{work.dates}}</small>
-                    <h4 class="h6 mb-0">{{work.title}}</h4>
-                    <span class="d-block text-secondary">{{work.company}} - {{work.location}}</span>
+                    <small class="d-block text-secondary">
+                      {{ work.dates }}
+                    </small>
+                    <h4 class="h6 mb-0">
+                      {{ work.title }}
+                    </h4>
+                    <span class="d-block text-secondary">
+                      {{ work.company }} - {{ work.location }}
+                    </span>
                   </div>
                 </div>
                 <!-- End Info -->
@@ -197,20 +203,25 @@ layout: default
               <div class="col-md-6 mb-3 mb-md-0">
                 <!-- Title -->
                 <div class="mb-3">
-                  <h4 class="mb-0 font-weight-bold">Education</h4>
+                  <h4 class="mb-0 font-weight-bold">
+                    Education
+                  </h4>
                 </div>
                 <!-- End Title -->
 
                 {% for school in page.education %}
                 <!-- Info -->
                 <div class="media mb-5">
-                  {% if school.logo %}
-                    <amp-img src="{{school.logo}}" class="mr-3 img-logo" alt="{{school.name}}" layout="responsive" width="100" height="100"></amp-img>
-                  {% endif %}
                   <div class="media-body">
-                    <small class="d-block text-secondary">{{school.dates}}</small>
-                    <h4 class="h6 mb-0">{{school.degree}}</h4>
-                    <span class="d-block text-secondary">{{school.name}}</span>
+                    <small class="d-block text-secondary">
+                      {{ school.dates }}
+                    </small>
+                    <h4 class="h6 mb-0">
+                      {{ school.degree }}
+                    </h4>
+                    <span class="d-block text-secondary">
+                      {{ school.name }}
+                    </span>
                   </div>
                 </div>
                 <!-- End Info -->
@@ -220,7 +231,9 @@ layout: default
               <div class="col-md-8 mb-7 mb-md-0">
                 <!-- Title -->
                 <div class="mb-3">
-                  <h4 class="mb-0 font-weight-bold">Projects</h4>
+                  <h4 class="mb-0 font-weight-bold">
+                    Projects
+                  </h4>
                 </div>
                 <!-- End Title -->
 
@@ -228,10 +241,14 @@ layout: default
                 <!-- Info -->
                 <div class="media mb-5">
                   <div class="media-body">
-                    <h5 class="mb-0 font-weight-bold">
-                      <a href="{{project.url}}">{{project.name}}</a>
+                    <h5 class="mb-0 link-underlined">
+                      <a href="{{ project.url }}">
+                        {{ project.name }}
+                      </a>
                     </h5>
-                    <h6 class="mb-0">{{project.desc}}</h6>
+                    <p class="mb-0">
+                      {{project.desc}}
+                    </p>
                   </div>
                 </div>
                 <!-- End Info -->
@@ -240,7 +257,9 @@ layout: default
               <div class="col-md-4 mb-3 mb-md-0">
                 <!-- Title -->
                 <div class="mb-3">
-                  <h4 class="mb-0 font-weight-bold">Skills</h4>
+                  <h4 class="mb-0 font-weight-bold">
+                    Skills
+                  </h4>
                 </div>
                 <!-- End Title -->
                 <!-- Collections -->
@@ -263,51 +282,49 @@ layout: default
             <!-- htmllint preset="none" -->
             {% if page.reviews.size > 0 %}
             <!-- htmllint preset="$previous" -->
-
-            <hr class="my-7">
-
-            <!-- Title -->
-            <div id="reviews" class="mb-3">
-              <h3 class="h4 mb-0">Reviews</h3>
-            </div>
-            <!-- End Title -->
-
-            {% for review in page.reviews %}
-            <!-- Reviews -->
-            <div>
-              <!-- Author -->
-              <div class="media mb-3">
-                <div>
-                  <amp-img width="80" height="80" layout="fixed" class="u-avatar rounded-circle mr-3" src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}"
-                    alt="{{review.name}}"></amp-img>
-                </div>
-
-                <div class="media-body align-self-center">
-                  <h4 class="d-inline-block mb-1">
-                    <a class="d-block h6 mb-0" href="#">
-                      {{review.name}} <br />
-                      <span class="small">{{review.position}}</span>
-                    </a>
-                  </h4>
-                </div>
-
-                <div class="media-body text-right">
-                  <small class="d-block text-muted">{{review.timestamp}}</small>
-                </div>
+              <hr class="my-7">
+              <!-- Title -->
+              <div id="reviews" class="mb-3">
+                <h3 class="h4 mb-0">
+                  Reviews
+                </h3>
               </div>
-              <!-- End Author -->
-
-              <p>
-                {{review.post}}
-              </p>
-            </div>
-            <hr class="my-7">
-            <!-- End Reviews -->
-
-            {% endfor %}
-
+              <!-- End Title -->
+              {% for review in page.reviews %}
+                <!-- Reviews -->
+                <div>
+                  <!-- Author -->
+                  <div class="media mb-3">
+                    <div>
+                      <amp-img width="80" height="80" layout="fixed" class="u-avatar rounded-circle mr-3" src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}"
+                        alt="{{review.name}}"></amp-img>
+                    </div>
+                    <div class="media-body align-self-center">
+                      <h4 class="d-inline-block mb-1">
+                        <a class="d-block h6 mb-0" href="#">
+                          {{review.name}}
+                          <br/>
+                          <small>
+                            {{review.position}}
+                          </small>
+                        </a>
+                      </h4>
+                    </div>
+                    <div class="media-body text-right">
+                      <small class="d-block text-muted">
+                        {{review.timestamp}}
+                      </small>
+                    </div>
+                  </div>
+                  <!-- End Author -->
+                  <p>
+                    {{review.post}}
+                  </p>
+                </div>
+                <hr class="my-7">
+                <!-- End Reviews -->
+              {% endfor %}
             {% endif %}
-
           </div>
         </div>
       </div>
