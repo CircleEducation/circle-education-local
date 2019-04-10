@@ -6,7 +6,7 @@ fullname: Katie Macaulay
 jobtitle: Web Developer
 
 location: Austin, TX
-blurb: 'A life-learner and new technology enthusiast, I work hard at the things I love: programming, teaching, and learning. As a software developer of more than six years and a teacher of more than ten, I have combined my teaching experience and passion for coding to help create an accessible, living, and relevant curriculum aimed to open up the tech industry to those determined to break in. Gregarious. Arts Enthusiast. Strategic Thinker. Web Developer.'
+blurb: 'A learner and an enthusiastic programmer; I love to teach, play, and do serious work. As a beginning software developer, I love diving into projects and taking every learning opportunity. I am currently using my teaching experience to help revise curriculum for future students at Austin Coding Academy. My passion for coding has helped me create web applications for teachers. I'm an Arts enthusiast and strategic thinker.'
 
 skills:
   - Node.js
@@ -36,41 +36,28 @@ workexperience:
     dates: March 2019 - Present
     title: Academic Manager Assistant
     location: Austin, TX
-  - company: Austin Coding Academy
-    logo: https://media.licdn.com/dms/image/C510BAQEUfbXLPe7V8Q/company-logo_200_200/0?e=2159024400&v=beta&t=0HX39QiGoWtXrHsmVfM2nUPgyKnGin7zK9j3E0a7BRs
-    dates: October 2017 - March 2019
-    title: Senior Software Engineer
+  - company: St. Theresa's Catholic School
+    dates: August 2017 - Current
+    title: Web Development and Music Teacher
     location: Austin, TX
-  - company: Anaconda
-    logo: https://dudodiprj2sv7.cloudfront.net/vendor-logos/46/UH/OTQJVNSSIAHO.JPEG
-    dates: June 2015 - January 2017
-    title: Web Developer
-    location: Austin, TX
-  - company: Generation Ready
-    logo: https://pbs.twimg.com/profile_images/715892872839622657/Bn-dtcwD_400x400.jpg
-    dates: November 2013 - June 2015
-    title: Lead Software Engineer + Architect
+  - company: Wayside Schools
+    dates: July 2012 - June 2017
+    title: Teacher
     location: Austin, TX
 
 education:
-  - name: App Academy
-    dates: July 2013
+  - name: Austin Coding Academy
+    dates: July 2018
     degree: Web Development
-    logo: https://upload.wikimedia.org/wikipedia/commons/7/7e/Appacademylogo.png
+    logo: https://camo.githubusercontent.com/4be240b9d916fff63fd4755771387f2db91ccbea/687474703a2f2f656e2e67726176617461722e636f6d2f75736572696d6167652f3130373337303130302f61303835393431343535363435333631333864666161663037326337623234312e706e673f73697a653d323030
 
-  - name: Lamar University
-    dates: August 2005 - December 2009
-    degree: B.S. Communications
-    logo: https://pbs.twimg.com/profile_images/897474273501003776/jCs6fCxN_400x400.jpg
+  - name: Baylor University
+    dates: August 2006 - May 2010
+    degree: B.M.E. Music Education
+    logo: https://a2.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fncaa%2F500%2F239.png
 
 projects:
-  - name: Austin Coding Academy
-    desc: An accessible, affordable coding school!
-    url: https://github.com/austincodingacademy
-  - name: Campus Manager
-    desc: A learning management system built for the modern coding class.
-    url: https://github.com/austincodingacademy/campus-manager
-  - name: YoSQL
-    desc: Say YES to SQL! Convert MongoDB databases and nested JSON objects into relational databases
-    url: https://github.com/kevincolten/yosql
+  - name: Teacher Scheduler
+    desc: School-Year Management for teachers with large quantities of class loads.
+    url: https://github.com/katiemacaulay/TeacherScheduler
 ---
