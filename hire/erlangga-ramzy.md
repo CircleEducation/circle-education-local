@@ -6,7 +6,7 @@ fullname: Erlangga Ramzy
 jobtitle: Research Assistant , Web Developer
 
 location: Austin, TX
-blurb: 'I'm a student constantly finding new things to learn, a novice climber always ready for more problems, an all around nerd who enjoys tinkering with computers and phones, and most recently: an excited web developer hoping to break into the industry.'
+blurb: "I'm a student constantly finding new things to learn, a novice climber always ready for more problems, an all around nerd who enjoys tinkering with computers and phones, and most recently: an excited web developer hoping to break into the industry."
 
 skills:
   - JavaScript
@@ -59,7 +59,7 @@ projects:
   - name: Safe Stay
     desc: Web app to help those in need find reserouces to stay afloat.
     url:
-    - name: Navigator
+  - name: Navigator
     desc: Web app developed for IMSA to connect young professionals to industry veterans.
     url:
 ---

@@ -6,16 +6,16 @@ fullname: Katie Macaulay
 jobtitle: Web Developer
 
 location: Austin, TX
-blurb: 'A learner and an enthusiastic programmer; I love to teach, play, and do serious work. As a beginning software developer, I love diving into projects and taking every learning opportunity. I am currently using my teaching experience to help revise curriculum for future students at Austin Coding Academy. My passion for coding has helped me create web applications for teachers. I'm an Arts enthusiast and strategic thinker.'
+blurb: "A learner and an enthusiastic programmer; I love to teach, play, and do serious work. As a beginning software developer, I love diving into projects and taking every learning opportunity. I am currently using my teaching experience to help revise curriculum for future students at Austin Coding Academy. My passion for coding has helped me create web applications for teachers. I'm an Arts enthusiast and strategic thinker."
 
 skills:
+  - JavaScript
   - Node.js
   - React
   - Redux
   - Express.js
   - HTML
   - CSS
-  - JavaScript
   - Mocha
   - Heroku
   - Git/GitHub

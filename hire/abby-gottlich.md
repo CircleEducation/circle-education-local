@@ -6,16 +6,16 @@ fullname: Abby Gottlich
 jobtitle: Web Developer
 
 location: Dallas, TX
-blurb: 'Developer Designer Hybrid, Seeking a Job that Allows Me to do Both'
+blurb: "Developer Designer Hybrid, Seeking a Job that Allows Me to do Both"
 
 skills:
+  - JavaScript
   - Node.js
   - React
   - Redux
   - Express.js
   - HTML
   - CSS
-  - JavaScript
   - jQuery
   - Heroku
   - Git/GitHub
@@ -26,7 +26,7 @@ linkedin: https://www.linkedin.com/in/abbygottlich
 
 email: abby.gottlich@gmail.com
 website: https://abbygottlich.dev
-workplace: 
+workplace:
 phone: 972.948.0392
 
 workexperience:

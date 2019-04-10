@@ -6,7 +6,7 @@ fullname: Alan Houston
 jobtitle: Full Stack Web Developer
 
 location: Austin, TX
-blurb: 'I pride myself on my communication skills, work well with others, and have proven multitasking and organizational skills. I am detail-oriented, results driven, and now a full stack web developer!'
+blurb: "I pride myself on my communication skills, work well with others, and have proven multitasking and organizational skills. I am detail-oriented, results driven, and now a full stack web developer!"
 
 skills:
   - JavaScript
@@ -29,8 +29,8 @@ github: https://github.com/alanhouston
 linkedin: https://www.linkedin.com/in/alanhouston
 
 email: alanghouston@gmail.com
-website: https://kevincolten.com
-workplace: Austin Coding Academy
+website:
+workplace:
 phone: (512) 993-6800
 
 workexperience:
@@ -64,5 +64,6 @@ education:
 projects:
   - name: Armstrong Program
     desc: Workout tracker for the Armstrong Pull-up Program
-    url: 
- 
+    url:
+
+---

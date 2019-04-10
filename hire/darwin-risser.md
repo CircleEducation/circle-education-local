@@ -6,10 +6,10 @@ fullname: Darwin Risser
 jobtitle: Front-End Web Developer
 
 location: Austin, TX
-blurb: 'Front-end web developer with graphic design skills and a professional background in education. Looking for opportunities with room for a highly motivated developer to grow.'
+blurb: "Front-end web developer with graphic design skills and a professional background in education. Looking for opportunities with room for a highly motivated developer to grow."
 
 skills:
-  - Javascript
+  - JavaScript
   - React
   - Node.js
   - Redux

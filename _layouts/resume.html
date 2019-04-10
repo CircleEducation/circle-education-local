@@ -1,5 +1,6 @@
 ---
 layout: default
+title: {{ page.fullname }}
 ---
 <body>
   <!-- ========== MAIN ========== -->
@@ -8,26 +9,28 @@ layout: default
     <div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 mb-7 mb-lg-0">
+          <div class="col-9 col-md-6 col-lg-3 mb-5 mb-lg-0 mx-auto">
             <!-- Profile Card -->
             <div class="card p-1 mb-4 bg-light">
               <div class="card-body text-center">
                 <div class="mb-3">
+                  <!-- htmllint preset="none" -->
                   <amp-img width="150" height="150"
                     layout="fixed"
                     class="u-lg-avatar rounded-circle"
-                    src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}?s=200r=pg"
+                    src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}?s=200&r=pg&d=retro"
                     alt="Gravatar for {{page.fullname}}"
                   ></amp-img>
+                  <!-- htmllint preset="$previous" -->
                 </div>
-                <h5>
+                <h5 class="m-0">
                   {{ page.fullname }}
                 </h5>
-                <div class="card-body p-4 d-flex justify-content-around">
+                <div class="card-body p-4 d-flex justify-content-center">
                   <a href="{{ page.github }}">
                     <i class="text-default display-5 fab fa-github-square"></i>
                   </a>
-                  <a href="{{ page.linkedin }}">
+                  <a href="{{ page.linkedin }}" class="mx-3">
                     <i class="text-default display-5 fab fa-linkedin"></i>
                   </a>
                   <a href="mailto:{{ page.email }}">
@@ -51,7 +54,7 @@ layout: default
             <!-- End User Details -->
 
             <!-- Info -->
-            <div class="mb-4 px-5 d-flex text-muted text-center">
+            <div class="mb-4 px-5 d-flex justify-content-center text-muted text-center">
               <i class="fas fa-quote-left mt-1"></i>
               <p class="text-muted px-1 m-0">
                 {{ page.blurb }}
@@ -62,11 +65,11 @@ layout: default
 
             <!-- Collections -->
             <ul class="list-inline d-flex justify-content-center align-items-center flex-wrap">
-              {% assign skills = page.skills | slice:0, 5 %}
+              {% assign skills = page.skills | slice:1,6 %}
               {% for skill in skills %}
               <li class="list-inline-item mb-3 mb-sm-0 mx-2">
                 <div class="d-flex align-items-center">
-                  <div class="badge badge-success font-weight-medium rounded py-2 px-2 my-1">
+                  <div class="badge bg-purple text-white font-weight-medium rounded p-2 my-1">
                     {{skill}}
                   </div>
                 </div>
@@ -172,7 +175,7 @@ layout: default
 
             <!-- Info -->
             <div class="row mb-7">
-              <div class="col-md-6 mb-7 mb-md-0">
+              <div class="col-md-6 mb-5 mb-md-0">
                 <!-- Title -->
                 <div class="mb-3">
                   <h4 class="mb-0 font-weight-bold">
@@ -200,7 +203,7 @@ layout: default
                 {% endfor %}
               </div>
 
-              <div class="col-md-6 mb-3 mb-md-0">
+              <div class="col-md-6 mb-5 mb-md-0">
                 <!-- Title -->
                 <div class="mb-3">
                   <h4 class="mb-0 font-weight-bold">
@@ -228,7 +231,7 @@ layout: default
                 {% endfor %}
               </div>
 
-              <div class="col-md-8 mb-7 mb-md-0">
+              <div class="col-md-8 mb-5 mb-md-0">
                 <!-- Title -->
                 <div class="mb-3">
                   <h4 class="mb-0 font-weight-bold">
@@ -254,7 +257,7 @@ layout: default
                 <!-- End Info -->
                 {% endfor %}
               </div>
-              <div class="col-md-4 mb-3 mb-md-0">
+              <div class="col-md-4 mb-5 mb-md-0">
                 <!-- Title -->
                 <div class="mb-3">
                   <h4 class="mb-0 font-weight-bold">
@@ -267,7 +270,7 @@ layout: default
                   {% for skill in page.skills %}
                   <li class="list-inline-item mb-3 mb-sm-0 mr-3">
                     <div class="d-flex align-items-center">
-                      <div class="badge badge-light font-weight-medium rounded p-1 my-1">
+                      <div class="badge badge-light border font-weight-medium rounded p-1 my-1">
                         {{skill}}
                       </div>
                     </div>

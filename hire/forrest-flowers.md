@@ -6,7 +6,7 @@ fullname: Forrest Flowers
 jobtitle: Freelance Web Developer
 
 location: Austin, TX
-blurb: 'A fresh out of bootcamp developer who loves a challenge.'
+blurb: "A fresh out of bootcamp developer who loves a challenge."
 
 skills:
   - C# .NET
@@ -19,13 +19,13 @@ skills:
   - SQL
   - SQLite
   - Sass
-  
-  
+
+
 github: https://github.com/Forrest-Flowers
 linkedin: https://www.linkedin.com/in/forrestflowers
 
 email: forrest.w.flowers@gmail.com
-website: [WIP]
+website:
 workplace: N/A
 phone: (512) 940-6405
 
@@ -35,9 +35,9 @@ education:
   - name: Austin Coding Academy
     dates: June 25th 2018, April 27th 2019
     certificate: Web Development
-    
+
 projects:
   - name: Roll Your Life Away
     desc: A group finder for Dungeons and Dragons and other tabletop games.
-    url: https://github.com/austincodingacademy
+    url:
 ---
