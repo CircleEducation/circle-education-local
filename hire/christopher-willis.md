@@ -66,4 +66,5 @@ education:
     
   - name: UTSA
     dates: August 2000 - December 2005
-
+    degree: Computer Science
+    logo: https://upload.wikimedia.org/wikipedia/en/8/8b/University_of_Texas_at_San_Antonio_seal.svg
