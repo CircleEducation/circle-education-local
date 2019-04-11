@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire ] # don't touch
+categories: [ ] # don't touch
 
 fullname: Lawerence Williams
 jobtitle: Full Stack Web Developer

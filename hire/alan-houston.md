@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, graduation ] # don't touch
+categories: [ graduation ] # don't touch
 
 fullname: Alan Houston
 jobtitle: Full Stack Web Developer
