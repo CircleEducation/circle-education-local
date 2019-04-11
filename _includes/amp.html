@@ -68,12 +68,6 @@
 
 <script
   async
-  custom-element="amp-selector"
-  src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"
-></script>
-
-<script
-  async
   custom-element="amp-iframe"
   src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
 ></script>
@@ -102,6 +96,7 @@
   src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"
 ></script>
 
+{% if page.hero %}
 <script
   async
   custom-element="amp-position-observer"
@@ -113,6 +108,7 @@
   custom-element="amp-animation"
   src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"
 ></script>
+{% endif %}
 
 <script
   async

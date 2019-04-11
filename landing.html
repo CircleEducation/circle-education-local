@@ -10,7 +10,7 @@ color: transparent
   <div class="pt-11 pb-5 container-fluid text-white" style="min-height: 100vh">
     <div class="row">
       <div class="col-12 col-lg my-5 mb-lg-0 pl-5">
-        <h1 class="font-family-serif font-weight-bold display-4 shadow-yellow mt-3">
+        <h1 class="font-family-serif font-weight-bold display-4 text-shadow-yellow mt-3">
           See How It Works.
         </h1>
         <p class="display-7 text-white my-5">
@@ -46,7 +46,7 @@ color: transparent
               <div class="col-12">
                 <div class="form-group">
                   <label for="first-name" class="form-label">
-                    Name <span class="text-danger">*</span>
+                    Name <span class="text-red">*</span>
                   </label>
                   <input id="first-name"
                     type="text"
@@ -64,7 +64,7 @@ color: transparent
               <div class="col-12">
                 <div class="form-group">
                   <label for="email" class="form-label">
-                    Email <span class="text-danger">*</span>
+                    Email <span class="text-red">*</span>
                   </label>
                   <input id="email"
                     type="email"
@@ -81,7 +81,7 @@ color: transparent
               <!-- Input -->
               <div class="col-12 form-group">
                 <label class="form-label" for="best-describes">
-                  Which of these best describes you? <span class="text-danger">*</span>
+                  Which of these best describes you? <span class="text-red">*</span>
                 </label>
                 <select id="best-describes"
                   name="which_of_these_best_describes_you_"
@@ -100,7 +100,7 @@ color: transparent
 
               <!-- Input -->
               <div class="col-12 d-flex flex-column align-items-center form-group">
-                <button type="submit" class="btn btn-round cta-gradient mx-auto my-3">
+                <button type="submit" class="btn btn-round cta-gradient text-white mx-auto my-3">
                   Get started
                 </button>
                 {% include data-agreement.html class="link-underlined text-white" %}
@@ -113,7 +113,7 @@ color: transparent
           <div class="text-center">
             <div submit-error>
               <template type="amp-mustache">
-                <p class="text-danger">There was an error with your request. Please try again.</p>
+                <p class="text-red">There was an error with your request. Please try again.</p>
               </template>
             </div>
           </div>
