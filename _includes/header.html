@@ -5,7 +5,7 @@
 {% unless page.categories contains 'landing' %}
 <amp-sidebar
   on="tap:sidebar.open"
-  tabindex="1"
+  tabindex="-1"
   role="navigation"
   id="sidebar"
   class="m-0 bg-dark d-flex d-md-none row flex-column align-items-start justify-content-start"
@@ -16,7 +16,8 @@
       class="mt-5 text-left"
       on="tap:sidebar.open"
       role="dialog"
-      tabindex="20">
+      tabindex="-1"
+    >
       {% if item.children %}
         <div class="mx-5 text-white">
           {{ item.title }}
@@ -91,8 +92,9 @@
         <button
           class="display-5 text-white btn btn-link d-flex justify-content-end d-md-none"
           on="tap:sidebar.open"
-          tabindex="2"
-          role="button">
+          tabindex="0"
+          role="button"
+        >
           <i class="fas fa-bars"></i>
         </button>
         <!-- End Responsive Toggle Button -->
