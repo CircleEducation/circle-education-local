@@ -3,7 +3,7 @@ layout: resume #don't touch
 categories: [ hire ] # don't touch
 
 fullname: Christopher Willis
-jobtitle: Web Developer, SEO/SEM Assistant 
+jobtitle: Web Developer, SEO/SEM Assistant
 
 location: Austin, TX
 blurb: 'Life long geek and lover of technology. When I am not playing board games I am online pursuing my many interests. Got into coding at a more fundemental level with C++, but am loving higher level laungauges like Javascript and Python. Broad experience base with web (full stack), mostly in the MERN stack. '
@@ -21,7 +21,7 @@ skills:
   - Python
   - Testing
   - Mocha
-  - NoSQL(MongoDB) 
+  - NoSQL(MongoDB)
   - Heroku
   - Git/GitHub
   - REST APIs
@@ -49,7 +49,7 @@ workexperience:
     dates: June 2006 - January 2009
     title: Web Developer
     location: Austin, TX
-    
+
 education:
   - name: Austin Coding Academy
     dates: July 2018-2019
@@ -58,13 +58,17 @@ education:
   - name: Coursera
     dates: July 2017
     degree: Python Specialization
-    
+
   - name: Austin Community College
     dates: August 2015 - December 2017
     degree: Engineering
     logo: https://upload.wikimedia.org/wikipedia/en/7/7b/Austin_Community_College_%28logo%29.jpg
-    
+
   - name: UTSA
     dates: August 2000 - December 2005
     degree: Computer Science
     logo: https://upload.wikimedia.org/wikipedia/en/8/8b/University_of_Texas_at_San_Antonio_seal.svg
+
+projects:
+
+---

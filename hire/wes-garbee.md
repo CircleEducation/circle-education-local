@@ -6,7 +6,7 @@ fullname: Wes Garbee
 jobtitle: Web Developer, Enterprise ISR
 
 location: Austin, TX
-blurb: 'A life-learner and new technology enthusiast, I work hard at the things I love: programming, teaching, and learning. As a software developer of more than six years and a teacher of more than ten, I have combined my teaching experience and passion for coding to help create an accessible, living, and relevant curriculum aimed to open up the tech industry to those determined to break in.'
+blurb: "A life-learner and new technology enthusiast, I work hard at the things I love: programming, teaching, and learning. As a software developer of more than six years and a teacher of more than ten, I have combined my teaching experience and passion for coding to help create an accessible, living, and relevant curriculum aimed to open up the tech industry to those determined to break in."
 
 skills:
   - C#
@@ -65,13 +65,7 @@ education:
     logo: https://www.newsradioklbj.com/sites/g/files/exi641/f/styles/large_730/public/article-images-featured/1421041-686916.jpg?itok=OB-bP5gF
 
 projects:
-  - name: Austin Coding Academy
-    desc: An accessible, affordable coding school!
-    url: https://github.com/austincodingacademy
-  - name: Campus Manager
-    desc: A learning management system built for the modern coding class.
-    url: https://github.com/austincodingacademy/campus-manager
-  - name: YoSQL
-    desc: Say YES to SQL! Convert MongoDB databases and nested JSON objects into relational databases
-    url: https://github.com/kevincolten/yosql
+  - name:
+    desc:
+    url:
 ---
