@@ -1,5 +1,5 @@
 layout: resume #don't touch
-categories: [ hire ] # don't touch
+categories: [ ] # don't touch
 
 fullname: Kellyn Barnes
 jobtitle: Web Developer
