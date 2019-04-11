@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire ] # don't touch
+categories: [ ] # don't touch
 
 fullname: Kevin Colten
 jobtitle: Chief Technology Officer, Web Developer
