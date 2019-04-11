@@ -25,8 +25,8 @@ footer:
   title: Become an Instructor
   url: "/instructor-apply"
 - weight: 4
-  title: Blog
-  url: "/blog"
+  title: Hire a Graduate
+  url: "/hire"
 - weight: 6
   title: Student Grievance Policy
   url: "/student-grievances"
@@ -52,6 +52,9 @@ about:
 - weight: 4
   title: Contact Us
   url: "/contact"
+- weight: 5
+  title: Blog
+  url: "/blog"
 
 header:
 - weight: 1

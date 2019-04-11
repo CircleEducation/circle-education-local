@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire ] # don't touch
+categories: [ hire, graduation ] # don't touch
 
 fullname: Gabe Flores
 jobtitle: Web Developer
@@ -57,8 +57,8 @@ education:
     logo: https://austincodingacademy.com/
 
 projects:
-  - name: Austin Coding Academy
-    desc: An accessible, affordable coding school!
-    url: https://github.com/jflores353?tab=repositories
+  - name:
+    desc:
+    url:
 
 ---

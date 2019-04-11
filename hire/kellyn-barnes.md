@@ -1,12 +1,11 @@
----
 layout: resume #don't touch
 categories: [ ] # don't touch
 
-fullname: Kevin Colten
-jobtitle: Chief Technology Officer, Web Developer
+fullname: Kellyn Barnes
+jobtitle: Web Developer
 
 location: Austin, TX
-blurb: "A life-learner and new technology enthusiast, I work hard at the things I love: programming, teaching, and learning. As a software developer of more than six years and a teacher of more than ten, I have combined my teaching experience and passion for coding to help create an accessible, living, and relevant curriculum aimed to open up the tech industry to those determined to break in."
+blurb: 'Something jazzy'
 
 skills:
   - Node.js

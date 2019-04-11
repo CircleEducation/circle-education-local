@@ -1,54 +1,38 @@
 ---
 layout: resume #don't touch
-categories: [ ] # don't touch
+categories: [ ] #don't touch
 
-fullname: Kevin Colten
-jobtitle: Chief Technology Officer, Web Developer
+fullname: Wes Garbee
+jobtitle: Web Developer, Enterprise ISR
 
 location: Austin, TX
-blurb: "A life-learner and new technology enthusiast, I work hard at the things I love: programming, teaching, and learning. As a software developer of more than six years and a teacher of more than ten, I have combined my teaching experience and passion for coding to help create an accessible, living, and relevant curriculum aimed to open up the tech industry to those determined to break in."
+blurb: 'A life-learner and new technology enthusiast, I work hard at the things I love: programming, teaching, and learning. As a software developer of more than six years and a teacher of more than ten, I have combined my teaching experience and passion for coding to help create an accessible, living, and relevant curriculum aimed to open up the tech industry to those determined to break in.'
 
 skills:
-  - Node.js
-  - React
-  - Redux
-  - Express.js
-  - React Native
+  - C#
   - HTML
   - CSS
   - JavaScript
   - jQuery
-  - Backbone.js
-  - Ruby/Rails
-  - PHP/Laravel
+  - Bootstrap.js
   - Python/Django
   - Testing
-  - Selenium
-  - Mocha/Chai
+  - SQLite
   - SQL
-  - NoSQL
-  - AWS
-  - Heroku
-  - DigitalOcean
-  - Continuous Integration
-  - CircleCI/Travis CI/Jenkins
-  - Automated Deployment
   - Git/GitHub
-  - Grunt/Gulp/WebPack
-  - REST APIs
-  - Data Visualization
-  - WebVR
+  - Azure
+  - SaaS
 
-github: https://github.com/kevincolten
-linkedin: https://www.linkedin.com/in/kevincolten
+github: https://github.com/wesgarbee
+linkedin: https://www.linkedin.com/in/wesgarbee
 
-email: kevincolten@gmail.com
-website: https://kevincolten.com
-workplace: Austin Coding Academy
-phone: (512) 593-2019
+email: wgarbee@gmail.com
+website: https://www.WesGarbee.com
+workplace: ePlus Technology, inc.
+phone: (512) 630-6381
 
 workexperience:
-  - company: Austin Coding Academy
+  - company: ePlus Technology
     logo: https://camo.githubusercontent.com/4be240b9d916fff63fd4755771387f2db91ccbea/687474703a2f2f656e2e67726176617461722e636f6d2f75736572696d6167652f3130373337303130302f61303835393431343535363435333631333864666161663037326337623234312e706e673f73697a653d323030
     dates: August 2015 - Present
     title: Chief Technology Officer
@@ -70,15 +54,15 @@ workexperience:
     location: Austin, TX
 
 education:
-  - name: App Academy
-    dates: July 2013
+  - name: Austin Coding Academy
+    dates: July 2018 - April 2019
     degree: Web Development
-    logo: https://upload.wikimedia.org/wikipedia/commons/7/7e/Appacademylogo.png
+    logo: https://camo.githubusercontent.com/4be240b9d916fff63fd4755771387f2db91ccbea/687474703a2f2f656e2e67726176617461722e636f6d2f75736572696d6167652f3130373337303130302f61303835393431343535363435333631333864666161663037326337623234312e706e673f73697a653d323030
 
-  - name: Lamar University
-    dates: August 2005 - December 2009
-    degree: B.S. Communications
-    logo: https://pbs.twimg.com/profile_images/897474273501003776/jCs6fCxN_400x400.jpg
+  - name: Austin Community College
+    dates: August 2004 - May 2007
+    degree: A.A.S. Photography
+    logo: https://www.newsradioklbj.com/sites/g/files/exi641/f/styles/large_730/public/article-images-featured/1421041-686916.jpg?itok=OB-bP5gF
 
 projects:
   - name: Austin Coding Academy
