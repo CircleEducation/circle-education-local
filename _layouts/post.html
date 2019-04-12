@@ -14,19 +14,42 @@ layout: default
       alt="{{ page.alt }}"
     ></amp-img>
     <div class="w-lg-80 mx-auto space-top-1">
-      <!-- <div class="mb-4">
-        <span class="text-muted">{{page.date}}</span>
-      </div> -->
-      <h1 class="font-weight-bold">{{ page.title }}</h1>
+      <h1 class="font-weight-bold">
+        {{ page.title }}
+      </h1>
       <div class="row my-4">
         <div class="col col-md-8 pt-md-2">
-          <a href="mailto:{{ page.author_email }}">
-            <h5 class="text-default">{{ page.author | default: "Austin Coding Academy" }}</h5>
-          </a>
-          <h5 class="text-muted">{{ page.updated_at | date: "%B %d, %Y" }}</h5>
+          <div class="row">
+            <div class="{% unless page.author %}d-none {% else %}d-flex {% endunless %}col-2 justify-content-center align-items-center">
+              <amp-img width="50" height="50"
+                class="rounded-circle"
+                layout="fixed"
+                alt=" Gravatar icon for {{ page.author }}"
+                src="https://gravatar.com/avatar/{{ page.author_email | downcase | md5 }}?s=100&r=pg&d=mp"
+              ></amp-img>
+            </div>
+            <div class="col">
+              {% if page.author_email %}
+                <a href="mailto:{{ page.author_email }}">
+                  <h5 class="text-default link-underlined m-0">
+                    {{ page.author_name | default: "Austin Coding Academy" }}
+                  </h5>
+                </a>
+              {% else %}
+                <h5 class="text-default m-0">
+                  {{ page.author_name | default: "Austin Coding Academy" }}
+                </h5>
+              {% endif %}
+              <h5 class="text-muted m-0">
+                {{ page.updated_at | date: "%B %d, %Y" }}
+              </h5>
+            </div>
+          </div>
         </div>
         <div class="col col-md-4">
-          <h5>Share this blog:</h5>
+          <h5>
+            Share this blog:
+          </h5>
           <ul class="share-buttons list-unstyled p-0">
               <li class="d-inline">
                 <!-- htmllint preset="none" -->
