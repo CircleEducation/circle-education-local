@@ -20,6 +20,7 @@ layout: default
       <div class="row my-4">
         <div class="col col-md-8 pt-md-2">
           <div class="row">
+            <!-- htmllint preset="none" -->
             <div class="{% unless page.author %}d-none {% else %}d-flex {% endunless %}col-2 justify-content-center align-items-center">
               <amp-img width="50" height="50"
                 class="rounded-circle"
@@ -44,6 +45,7 @@ layout: default
                 {{ page.updated_at | date: "%B %d, %Y" }}
               </h5>
             </div>
+            <!-- htmllint preset="$previous" -->
           </div>
         </div>
         <div class="col col-md-4">
