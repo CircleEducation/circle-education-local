@@ -28,8 +28,8 @@ skills:
 github: https://github.com/alanhouston
 linkedin: https://www.linkedin.com/in/alanhouston
 
-email: alanghouston@gmail.com
-website:
+email: alanhouston5000@gmail.com
+website: alanhouston.dev
 workplace:
 phone: (512) 993-6800
 
@@ -64,6 +64,6 @@ education:
 projects:
   - name: Armstrong Program
     desc: Workout tracker for the Armstrong Pull-up Program
-    url:
+    url: armstrongprogram.herokuapp.com 
 
 ---
