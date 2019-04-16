@@ -21,11 +21,11 @@ layout: default
         <div class="col col-md-8 pt-md-2">
           <div class="row">
             <!-- htmllint preset="none" -->
-            <div class="{% unless page.author %}d-none {% else %}d-flex {% endunless %}col-2 justify-content-center align-items-center">
+            <div class="{% unless page.author_name %}d-none {% else %}d-flex {% endunless %}col-2 justify-content-center align-items-center">
               <amp-img width="50" height="50"
                 class="rounded-circle"
                 layout="fixed"
-                alt=" Gravatar icon for {{ page.author }}"
+                alt=" Gravatar icon for {{ page.author_name }}"
                 src="https://gravatar.com/avatar/{{ page.author_email | downcase | md5 }}?s=100&r=pg&d=mp"
               ></amp-img>
             </div>
@@ -157,8 +157,8 @@ layout: default
       "datePublished": "{{page.created_at}}",
       "dateModified": "{{page.updated_at}}",
       "author": {
-        "@type": "Organization",
-        "name": "{{page.author | default: 'Austin Coding Academy'}}"
+        "@type": "{% if page.author_name %}Person{% else %}Organization{% endif %}",
+        "name": "{{page.author_name | default: 'Austin Coding Academy'}}"
       },
         "publisher": {
         "@type": "Organization",
