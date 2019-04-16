@@ -74,16 +74,6 @@ header:
   button: btn btn-round text-white cta-gradient py-1 px-6
 
 tutors:
-- name: Eric Barrs
-  skills:
-    - Web 101
-    - JS 211
-    - JS 311
-  limitation:
-  email: eric@austincodingacademy.com
-  calendar: https://acaappointment.as.me/?calendarID=2522414
-  virtual: https://meet.google.com/enj-jjez-zcw
-  rocketchat: https://chat.austincodingacademy.com/direct/ericbarrs-913
 - name: Sarah Cheatham
   skills:
     - Web 101
@@ -108,7 +98,6 @@ tutors:
     - Web 101
     - C# 221
     - .Net 321
-  limitation:
   email: eddiecrochet1994@gmail.com
   calendar: https://acaappointment.as.me/schedule.php?calendarID=2705640
   virtual: https://meet.google.com/muz-nsbp-czb
@@ -118,7 +107,6 @@ tutors:
     - Web 101
     - JS 211
     - JS 311
-  limitation:
   email: andrew@austincodingacademy.com
   calendar: https://acaappointment.as.me/?calendarID=2620430
   virtual: https://meet.google.com/cqc-qach-mwk
@@ -146,7 +134,6 @@ tutors:
   skills:
     - C# Students &amp; Grads
     - JS Grads Only
-  limitation:
   email: angomablaise@gmail.com
   calendar: https://acaappointment.as.me/schedule.php?calendarID=2795465
   virtual: meet.google.com/kpz-neek-nsb
@@ -155,7 +142,6 @@ tutors:
   skills:
     - C# Students &amp; Grads
     - JS Grads Only
-  limitation:
   email: olamshin@gmail.com
   calendar: https://acaappointment.as.me/?calendarID=2803756
   virtual: meet.google.com/mjm-tgxu-fut
@@ -184,3 +170,12 @@ tutors:
   calendar: https://acaappointment.as.me/?calendarID=2803741
   virtual: https://meet.google.com/fce-bbqd-buo
   rocketchat: https://chat.austincodingacademy.com/direct/greg.swan
+- name: Eric Barrs
+  skills:
+    - Web 101
+    - JS 211
+    - JS 311
+  email: eric@austincodingacademy.com
+  calendar: https://acaappointment.as.me/?calendarID=2522414
+  virtual: https://meet.google.com/enj-jjez-zcw
+  rocketchat: https://chat.austincodingacademy.com/direct/ericbarrs-913
