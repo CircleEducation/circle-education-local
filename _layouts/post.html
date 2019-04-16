@@ -158,7 +158,7 @@ layout: default
       "dateModified": "{{page.updated_at}}",
       "author": {
         "@type": "Organization",
-        "name": "Austin Coding Academy"
+        "name": "{{page.author | default: 'Austin Coding Academy'}}"
       },
         "publisher": {
         "@type": "Organization",
