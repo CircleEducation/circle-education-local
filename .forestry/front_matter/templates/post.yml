@@ -69,12 +69,12 @@ fields:
   name: author_email
   label: Author Email
 pages:
-- _posts/2019-04-13-why-i-left-marketing-to-learn-coding-luke-stenis-austin-coding-academy-alumni-spotlight.md
-- _posts/2019-04-13-choose-a-coding-bootcamp-that-teaches-you-more-than-just-code.md
-- _posts/2019-04-13-5-awesome-apps-you-can-create-with-c.md
-- _posts/2019-04-12-5-free-coding-websites-for-beginners-learn-how-to-code-without-the-cost.md
-- _posts/2019-02-06-how-to-stop-multi-tasking-and-develop-focus-1.md
 - _posts/2019-04-11-20-tips-for-landing-your-first-job-in-web-development.md
+- _posts/2019-04-12-5-free-coding-websites-for-beginners-learn-how-to-code-without-the-cost.md
+- _posts/2019-04-13-5-awesome-apps-you-can-create-with-c.md
+- _posts/2019-04-13-choose-a-coding-bootcamp-that-teaches-you-more-than-just-code.md
+- _posts/2019-04-13-why-i-left-marketing-to-learn-coding-luke-stenis-austin-coding-academy-alumni-spotlight.md
+- _posts/2019-02-06-how-to-stop-multi-tasking-and-develop-focus-1.md
 - _posts/2019-03-04-the-benefits-of-an-in-person-coding-bootcamp-vs-online-classes.md
 - _posts/student-highlight-lillian-situ.md
 - _posts/2019-01-23-what-s-the-difference-between-javascript-and-c.md
