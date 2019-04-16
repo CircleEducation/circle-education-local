@@ -70,5 +70,11 @@ education:
     logo: https://upload.wikimedia.org/wikipedia/en/8/8b/University_of_Texas_at_San_Antonio_seal.svg
 
 projects:
-
+  - name: Nuclear Display Tool
+    desc: Hook nuclear data into visualization tools like d3 documents for science communicators 
+    url: https://github.com/Christopher-Willis/Nuclear-Display
+    
+  - name: Snack Share
+    desc: Market place for cottege food sales
+    url: https://www.snack-share.com/
 ---
