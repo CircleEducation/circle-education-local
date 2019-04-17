@@ -9,14 +9,14 @@ location: Austin, TX
 blurb: 'Life long geek and lover of technology. When I am not playing board games I am online pursuing my many interests. Got into coding at a more fundemental level with C++, but am loving higher level laungauges like Javascript and Python. Broad experience base with web (full stack), mostly in the MERN stack. '
 
 skills:
-  - Node.js
+  - JavaScript
   - React
   - Redux
   - Express.js
   - React Native
   - HTML
   - CSS
-  - JavaScript
+  - Node.js
   - jQuery
   - Python
   - Testing
