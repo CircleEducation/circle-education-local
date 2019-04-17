@@ -55,8 +55,8 @@ education:
 projects:
   - name: Developer Portfolio
     desc: A personal website to display my current and past projects.
-    url: https://darwinrisser.github.io/gh-pages/portfolio/
+    url: https://darwinrisser.dev
   - name: Game of Thrones Quiz
     desc: A simple React quiz for the Game of Thrones TV series.
-    url: https://darwinrisser.github.io/got-react/
+    url: https://darwinrisser.dev/got-react/
 ---
