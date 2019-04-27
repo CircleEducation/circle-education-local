@@ -9,7 +9,7 @@ location: San Antonio, TX
 blurb: "Creative, intuitive-thinking, and goal-oriented individual with infinite patience for troubleshooting. Current senior-most escalation tech and future web developer."
 
 skills:
-  - C# .Net
+  - C# .NET
   - HTML
   - CSS
   - JavaScript
