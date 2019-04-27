@@ -9,7 +9,7 @@ location: San Antonio, TX
 blurb: "Up and coming C#/Asp.net developer with a passion for problem solving and learning new skills"
 
 skills:
-  - C#.Net
+  - C# .Net
   - HTML
   - CSS
   - JavaScript
