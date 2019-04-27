@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [Graduation, hire] # don't touch
+categories: [ graduation, hire ] # don't touch
 
 fullname: Terry Roberts
 jobtitle: Clinical Administrator
@@ -9,7 +9,7 @@ location: Austin, TX
 blurb: "I am passionate developer interested in VR and Web Development. I like designing fully responsive websites that both look modern and have great UX/UI."
 
 skills:
-  - C#.Net
+  - C# .Net
   - HTML
   - CSS
   - JavaScript
