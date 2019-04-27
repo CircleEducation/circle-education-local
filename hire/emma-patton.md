@@ -9,21 +9,21 @@ location: Austin, TX
 blurb: "As a UI / UX designer, I love telling people’s stories. I am former journalist and current grad student with 3 years experience managing online content for a variety of online publications. My skill set includes WordPress development, SEO, social media management, and all types of design."
 
 skills:
--JavaScript
--Web Design
--user experience design 
--branding
--social media 
--wireframing
--Adobe Creative Suite 
--design thinking 
--visual design 
--html + css
--Bootstrap
--print design 
--publication layout 
--leadership
--public speaking 
+- JavaScript
+- Web Design
+- user experience design 
+- branding
+- social media 
+- wireframing
+- Adobe Creative Suite 
+- design thinking 
+- visual design 
+- html + css
+- Bootstrap
+- print design 
+- publication layout 
+- leadership
+- public speaking 
 
 
 github: https://github.com/emmaannpatton

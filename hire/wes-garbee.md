@@ -13,7 +13,7 @@ skills:
   - .NET
 
 skills:
-  - C# .Net
+  - C# .NET
   - HTML
   - CSS
   - JavaScript
