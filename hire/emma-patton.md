@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ ] # don't touch
+categories: [ hire, graduation ] # don't touch
 
 fullname: Emma Patton
 jobtitle: UI / UX Designer
@@ -9,6 +9,7 @@ location: Austin, TX
 blurb: "As a UI / UX designer, I love telling people’s stories. I am former journalist and current grad student with 3 years experience managing online content for a variety of online publications. My skill set includes WordPress development, SEO, social media management, and all types of design.“
 
 skills:
+-Web Design
 -user experience design 
 -branding
 -social media 
