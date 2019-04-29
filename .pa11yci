@@ -1,8 +1,0 @@
-{
-  "urls": [
-    {
-      "url": "http://localhost:4000/",
-      "screenCapture": "assets/pa11y-capture-index.png"
-    }
-  ]
-}
