@@ -1,8 +1,8 @@
 ---
 layout: default
-permalink: "/javascript/"
+permalink: "/web-development/"
 trackColor: blue
-title: Learn Full-stack Web Development | JavaScript Classes with Austin Coding Academy
+title: Learn Full Stack Web Development | JavaScript Classes with Austin Coding Academy
 img: "/assets/images/header-javascript.jpg"
 redirect_from: []
 hero: js
@@ -133,9 +133,8 @@ courses:
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
-  {% include scrolling-menu-observer.html %}
   <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
-    Full-stack Web Development Track
+    Full-stack Web Development
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
     {{ page.hero_text }}
@@ -144,25 +143,15 @@ courses:
 
 <main>
 
-  {% include scrolling-menu-disappearing.html %}
   {% include observer-and-header-animation.html %}
 
-  <div class="container-fluid">
-    <div class="row w-100 h-100 fixed-top pointer-events-none">
-      <div class="d-none d-md-inline col-md-2 mw-10r">
-        {% include scrolling-menu.html %}
-      </div>
-    </div>
-  </div>
-
-  <section id="curriculum" class="pt-11 container-fluid">
-    {% include scrolling-menu-animation.html id="curriculum" %}
-    <div class="row">
+  <section id="curriculum" class="py-11 container-fluid">
+  <div class="row">
       <div class="d-none d-md-inline col-md-2 mw-10r"></div>
       <div class="col-md-8 pl-5">
-        <div class="mt-3 mb-6 text-center mx-auto">
+        <div class="mb-6 text-center mx-auto">
           <h2 class="font-family-alt display-5">
-            Our Web Development Curriculum
+            Our JavaScript Curriculum
           </h2>
           <p class="mw-600 mx-auto">
             Our full track is composed of 5 courses, designed to take you from
@@ -192,8 +181,9 @@ courses:
     </div>
   </section>
 
-  <section id="course-guide" class="container-fluid py-11 mb-6">
-    {% include scrolling-menu-animation.html id="course-guide" %}
+  <!-- htmllint preset="none" -->
+  <section id="course-guide" class="container-fluid {{page.hero}}-gradient text-white py-11">
+  <!-- htmllint preset="$previous" -->
     <div class="pt-3"></div>
     <div class="row">
       <div class="d-none d-md-inline col-md-2 mw-10r"></div>
@@ -204,173 +194,8 @@ courses:
     </div>
   </section>
 
-  <!-- htmllint preset="none" -->
-  <section id="options" class="{{page.hero}}-gradient text-white my-5">
-  <!-- htmllint preset="$previous" -->
-    {% include scrolling-menu-animation.html id="options" %}
-    <div class="container-fluid py-11">
-      <div class="row">
-        <div class="d-none d-md-inline col-md-2 mw-10r"></div>
-        <div class="col-md-8">
-          <h2 class="font-family-alt font-weight-bold text-center display-6 mt-3 mb-5">
-            Take Our Full Track and Save
-          </h2>
-          <!-- Pricing Section -->
-          <div class="mb-5">
-            <div class="w-lg-80 mx-lg-auto">
-              <div class="card-deck d-flex justify-content-center align-items-center card-md-gutters-3 mb-5">
-                <!-- Pricing -->
-                <div class="card shadow-black text-center mb-5 mb-md-0">
-                  <!-- Header -->
-                  <header class="card-header p-4">
-                    <div class="shadow-dark rounded p-2">
-                      <!-- htmllint preset="none" -->
-                      <h5 class="text-default">
-                        Full Track
-                      </h5>
-                      <!-- htmllint preset="$previous" -->
-                      <div>
-                        <span class="h1 text-default font-weight-medium">
-                          <span class="align-top font-size-2">$</span>10,960
-                        </span>
-                      </div>
-                    </div>
-                  </header>
-                  <!-- End Header -->
-                  <!-- Content -->
-                  <div class="card-body p-5 text-center">
-                    <p>
-                      Save $1,000 off the cost of individual classes and go from complete
-                      beginner to job-ready in just 36 weeks with our full web development track!
-                    </p>
-                  </div>
-                  <!-- End Content -->
-                </div>
-                <!-- End Pricing -->
-                <!-- Pricing -->
-                <div class="card shadow-black text-center">
-                  <!-- Header -->
-                  <header class="card-header p-5">
-                    <h5 class="text-default">
-                      Single Class
-                    </h5>
-                    <div>
-                      <span class="h1 text-default font-weight-medium">
-                        <span class="align-top font-size-2">$</span>2,990
-                      </span>
-                    </div>
-                  </header>
-                  <!-- End Header -->
-                  <!-- Content -->
-                  <div class="card-body p-5 text-center">
-                    <p>
-                      Level-up your career and apply to one of our single classes. You can
-                      learn Front-End, {{page.skills}} without completing the entire
-                      track. <br />
-                    </p>
-                  </div>
-                  <!-- End Content -->
-                </div>
-                <!-- End Pricing -->
-              </div>
-            </div>
-          </div>
-          <!-- End Pricing Section -->
-          <div class="d-flex flex-column align-items-center">
-            <h4 class="font-family-alt font-weight-bold display-7">
-              Need Help With Tuition?
-            </h4>
-            <a class="text-white link-underlined" href="/financing">
-              <h5>
-                View Financing Options
-                <span class="fas fa-arrow-right small"></span>
-              </h5>
-            </a>
-          </div>
-        </div>
-        <div class="d-none d-md-inline col-md-2"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="dates" class="py-11 mb-6">
-    {% include scrolling-menu-animation.html id="dates" %}
-    <div class="container-fluid mt-3">
-      <div class="row">
-        <div class="d-none d-md-inline col-md-2 mw-10r"></div>
-        <div class="col-md-8">
-          {% include course-dates.html %}
-        </div>
-        <div class="d-none d-md-inline col-md-2"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- htmllint preset="none" -->
-  <section id="campuses" class="{{page.hero}}-gradient container-fluid text-white my-5">
-  <!-- htmllint preset="$previous" -->
-    {% include scrolling-menu-animation.html id="campuses" %}
-    <div class="row py-11">
-      <div class="d-none d-md-inline col-md-2 mw-10r"></div>
-      <div class="col-md-8">
-        <div class="d-flex justify-content-center mt-3">
-          <h2 class="mx-auto mb-5 display-6 font-family-alt font-weight-bold">
-            Learn at One of Our Two Locations
-          </h2>
-        </div>
-        <div class="row text-center">
-          <div class="col-12 col-md">
-            <div class="mb-2">
-              <h5 class="font-weight-bold m-0">
-                Downtown
-              </h5>
-              <small>
-                Capital Factory, 701 Brazos St, Ste 1616<br>
-                Austin, TX 78701
-              </small>
-            </div>
-            <amp-iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.884212774376!2d-97.74275278540087!3d30.26888011489123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b4e31ad087bd%3A0xd6644ce54fe2531c!2sAustin+Coding+Academy!5e0!3m2!1sen!2sus!4v1547074227021"
-              width="525"
-              height="242"
-              layout="responsive"
-              sandbox="allow-scripts allow-same-origin"
-              frameborder="0"
-              class="shadow-black border-0"
-              allowfullscreen>
-            </amp-iframe>
-          </div>
-          <div class="col-12 col-md mt-5 mt-md-0">
-            <div class="mb-2">
-              <h5 class="font-weight-bold m-0">
-                Highland
-              </h5>
-              <small>
-                314 E Highland Mall Blvd, Ste 114<br>
-                Austin, TX 78752
-              </small>
-            </div>
-            <amp-iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110200.41214904394!2d-97.78151655754779!3d30.32926183845195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644cba00a32dc3d%3A0x8807e75b730c450f!2sNorth+Austin+Coding+Academy!5e0!3m2!1sen!2sus!4v1547074172078"
-              width="525"
-              height="242"
-              layout="responsive"
-              sandbox="allow-scripts allow-same-origin"
-              frameborder="0"
-              class="shadow-black border-0"
-              allowfullscreen>
-            </amp-iframe>
-          </div>
-        </div>
-      </div>
-      <div class="d-none d-md-inline col-md-2"></div>
-    </div>
-  </section>
-
   <section id="contact" class="container-fluid py-11">
-    <!-- htmllint preset="none" -->
-    {% include scrolling-menu-animation.html id="contact" %}
-    <div class="row d-flex flex-column justify-content-center align-items-center mx-auto mt-3">
+    <div class="row d-flex flex-column justify-content-center align-items-center mx-auto">
       <div class="d-none d-md-inline col-md-2 mw-10r"></div>
       <div class="col-md-8">
         <h2 class="font-family-alt font-weight-bold text-center display-6">
@@ -428,4 +253,8 @@ courses:
     </script>
   {% endfor %}
 
+<<<<<<< HEAD:javascript.html
 </main>
+=======
+</main>
+>>>>>>> b36dc5de2bf12c1c24042d677cf8d28793e201bc:web-development.html

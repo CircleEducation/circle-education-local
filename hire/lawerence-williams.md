@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire ] # don't touch
+categories: [ hire, graduation ] # don't touch
 
 fullname: Lawerence Williams
 jobtitle: Full Stack Web Developer
@@ -24,7 +24,6 @@ skills:
   - REST APIs
   - Data Visualization
 
-
 github: https://github.com/uhuru3
 linkedin: https://www.linkedin.com/in/lawerence-williams/
 
@@ -34,15 +33,15 @@ phone: (512) 539-9572
 
 workexperience:
   - company: Personal Care Counseling Center
+    logo: https://media.licdn.com/dms/image/C510BAQEUfbXLPe7V8Q/company-logo_200_200/0?e=2159024400&v=beta&t=0HX39QiGoWtXrHsmVfM2nUPgyKnGin7zK9j3E0a7BRs
     dates: March 2012 - July 2018
     title: Administrative Assistant
     location: Austin, TX
-    
   - company: Roots And Culture
+    logo: https://dudodiprj2sv7.cloudfront.net/vendor-logos/46/UH/OTQJVNSSIAHO.JPEG
     dates: April 2010 - Current
     title: C.E.O. President
     location: Austin, TX
-
 
 education:
   - name: Austin Coding Academy
@@ -56,8 +55,7 @@ education:
     logo: https://pbs.twimg.com/profile_images/897474273501003776/jCs6fCxN_400x400.jpg
 
 projects:
-  - name: Redux Action Practice
-    desc: Fully functional app
-    url: https://github.com/AustinCodingAcademy/redux-action-practice/pull/1
-
+  - name: All Black Everything
+    desc: ...
+    url: google.com
 ---
