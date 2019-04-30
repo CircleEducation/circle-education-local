@@ -30,12 +30,17 @@
               Name <span class="text-danger">*</span>
             </label>
 
-            <input id="first-name" type="text" class="form-control" name="firstname" placeholder="Name" aria-label="Your name"
-              required data-msg="Please enter your name." data-error-class="u-has-error" data-success-class="u-has-success" />
-          </div>
+          <input id="first-name-cg"
+            type="text"
+            class="form-control"
+            name="firstname"
+            placeholder="Name"
+            required data-msg="Please enter your name."
+            data-error-class="u-has-error"
+            data-success-class="u-has-success" />
         </div>
         <!-- End Input -->
-
+          
         <!-- Input -->
         <div class="col-12">
           <div class="form-group">
@@ -78,7 +83,9 @@
           {% include data-agreement.html padding="px-lg-10" %}
         </div>
       </div>
+      {% endif %}
     </div>
+
     <div class="text-center">
       <div submit-error>
         <template type="amp-mustache">
