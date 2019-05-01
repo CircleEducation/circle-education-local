@@ -156,11 +156,39 @@
     <!-- Location -->
     <div class="w-50">
       <h5>By Location:</h5>
-      <select>
+      <amp-state 
+        id="allTutors"
+        <!-- tutor locations from front matter go here -->
+        src={{page.tutors | jsonify}}> 
+      </amp-state>
+      <div>{{page.tutors | jsonify}}</div>
+      <select
+        on="change:AMP.setState({
+          filteredTutors: allTutors.filter(
+              tutor => event.value == 'Select Location' ? true 
+              : event.value == tutor.location[0] || event.value == tutor.location[1]
+            )
+          })
+        })"
+      >
         <option value="Select Location">Select Location</option>
         <option value="Downtown Campus">Downtown Campus</option>
         <option value="North Campus">North Campus</option>
       </select>
+      <amp-list height="282"
+        [height]="(40 + 24) * filteredProducts.length"
+        layout="fixed-height"
+        [src]="filteredProducts"
+        binding="no">
+        <template type="amp-mustache">
+          <amp-img src="{{img}}"
+            layout="fixed"
+            width="60"
+            height="40"
+            alt="{{name}}"></amp-img>
+          {{name}}
+        </template>
+      </amp-list>
     </div>
     <!-- Date Picker -->
     <div class="ml-1 w-50">
