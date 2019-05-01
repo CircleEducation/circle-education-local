@@ -19,8 +19,10 @@
       tabindex="-1"
     >
     {% if item.button %}
+      <!-- htmllint preset="none" -->
       <a class="{{ item.button }} hover-white" href="{{ item.url }}">
-        {{item.title}}
+      <!-- htmllint preset="$previous" -->
+          {{item.title}}
       </a>
     {% elsif item.links %}
       <amp-accordion disable-session-states class="mx-5">
