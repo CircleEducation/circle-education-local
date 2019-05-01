@@ -152,43 +152,17 @@
 
   <!-- Filters -->
   <h4>Filters</h4>
-  <div class="d-flex flex-row justify-content-around mb-3">
-    <div class="w-50 linked-dropdown">
+  <div class="d-flex flex-row justify-content-around pb-5">
+    <!-- Location -->
+    <div class="w-50">
       <h5>By Location:</h5>
-      <amp-list layout="fixed-height"
-        class="mb-2 pb-4"
-        height="25"
-        [src]="src"
-        single-item
-        items="."
-        noloading>
-        <template type="amp-mustache" class="mb-2 pb-4">
-          <select id="country"
-            on="change: AMP.setState({
-              cities: dropdown.countries.filter(x => x.name == event.value)[0]
-            })">
-            <option value="">Choose a location</option>
-            {{#locations}}
-            <option value="{{name}}">{{location}}</option>
-            {{/locations}}
-          </select>
-        </template>
-        <div placeholder
-          role="listitem">
-          <!-- <div fallback role="listitem">Failed to load data.</div> -->
-          <select>
-            <option value="">Select Location</option>
-            <option value="">Downtown Campus</option>
-            <option value="">North Campus</option>
-          </select>
-        </div>
-      </amp-list>
-      <amp-state id="dropdown"
-        src="/assets/tutors.json"
-      >
-      </amp-state>
+      <select>
+        <option value="Select Location">Select Location</option>
+        <option value="Downtown Campus">Downtown Campus</option>
+        <option value="North Campus">North Campus</option>
+      </select>
     </div>
-
+    <!-- Date Picker -->
     <div class="ml-1 w-50">
       <h5>By Date:</h5>
       <form
@@ -209,7 +183,8 @@
 
   <div class="row">
     <!-- Tutors -->
-    {% for tutor in site.menus.tutors %}
+
+    {% for tutor in page.tutors %}
       {% if page.permalink == "/tutoring/" %}
         {% assign splitName = tutor.name | split: " " %}
         {% assign name = splitName[0] %}
