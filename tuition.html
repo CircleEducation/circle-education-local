@@ -1,0 +1,72 @@
+---
+layout: default
+permalink: /tuition
+title: Affordable Tuition | Software Engineering Classes at Austin Coding Academy
+sections:
+  - title: Full Stack Web Development Track
+    description: There are two ways to pay for our core web development program - pay up front &amp; save or pay as you go
+    options:
+      - title: Pay Up Front &amp; Save
+        description: "Integer id est massa. Aliquam pellentesque sodales nibh vel aliquam. Aenean eleifend congue blandit. Mauris vehicula ipsum ornare mi sollicitudin, quis hendrerit massa auctor. Aenean dapibus vehicula sodales."
+        price-header: Total Price
+        price: $10,960
+      - title: Pay-As-You-Go
+        description: "Proin in erat augue. Cras hendrerit consequat euismod. Phasellus placerat pulvinar tellus in fringilla. Integer mollis elementum neque id auctor. Maecenas sed tellus dignissim, finibus enim vulputate, tempor enim."
+        price-header: Total Price
+        price: $11,960
+  - title: Individual Classes + Electives
+    description: "If you're already a developer or graduate looking to level-up your career, we offer each of the courses in our web development program as individual courses. And coming soon: elective courses to learn other skills like C# and .NET"
+    options:
+      - title: Individual Classes
+        description: "Maecenas ut lacus pulvinar, laoreet enim vitae, accumsan nisl. Mauris rhoncus diam ac dolor rutrum rutrum. Ut in varius ex, vel gravida urna. In id risus nec urna consectetur malesuada eu vel nulla."
+        price-header: Course Price
+        price: $2,990
+      - title: Electives
+        description: <a href="/csharp">Coming soon!</a>
+---
+<main class="container mt-90 pt-1 pb-5">
+  <div class="my-10">
+    <h1 class="text-center font-family-alt font-weight-bold display-5">
+      Tuition
+    </h1>
+    <p class="text-center display-6">
+      We keep it simple.
+    </p>
+  </div>
+  {% for section in page.sections %}
+    <section>
+      <div class="text-center border-top border-bottom py-3 my-5 mw-600 mx-auto">
+        <h2 class="display-6 font-family-alt font-weight-bold">
+          {{section.title}}
+        </h2>
+        <p class="m-0">
+          {{section.description}}
+        </p>
+      </div>
+      {% for option in section.options %}
+        <div class="row">
+          <div class="col-md-8">
+            <h3 class="display-7">
+              {{option.title}}
+            </h3>
+            <p>
+              {{option.description}}
+            </p>
+          </div>
+          <div class="col-md-4 px-5">
+            {% if option.price %}
+              <div class="text-center">
+                <h5>
+                  {{option.price-header}}
+                </h5>
+                <p class="card-body mx-5 border rounded shadow display-6">
+                  {{option.price}}
+                </p>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+  {% endfor %}
+</main>

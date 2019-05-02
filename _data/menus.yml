@@ -60,7 +60,7 @@ header:
   links:
     - weight: 1
       title: Tuition
-      url: "#"
+      url: "/tuition"
     - weight: 2
       title: Financing
       url: "/financing"
