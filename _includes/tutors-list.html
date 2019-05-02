@@ -156,39 +156,32 @@
     <!-- Location -->
     <div class="w-50">
       <h5>By Location:</h5>
-      <amp-state 
-        id="allTutors"
-        <!-- tutor locations from front matter go here -->
-        src={{page.tutors | jsonify}}> 
+      <amp-state id="allTutors">
+        <script type="application/json">
+          {
+            "tutors": {{page.tutors | jsonify}}
+          }
+        </script>
       </amp-state>
-      <div>{{page.tutors | jsonify}}</div>
       <select
         on="change:AMP.setState({
-          filteredTutors: allTutors.filter(
-              tutor => event.value == 'Select Location' ? true 
-              : event.value == tutor.location[0] || event.value == tutor.location[1]
-            )
-          })
+          filteredTutors: allTutors.tutors.filter(x => x.location.includes(event.value))
         })"
       >
-        <option value="Select Location">Select Location</option>
-        <option value="Downtown Campus">Downtown Campus</option>
-        <option value="North Campus">North Campus</option>
+        <option disabled selected>Select Location</option>
+        <option value="ACC Highland (North Campus)">North Campus</option>
+        <option value="Capital Factory (Downtown Campus)">Downtown Campus</option>
       </select>
-      <amp-list height="282"
-        [height]="(40 + 24) * filteredProducts.length"
+      <p [text]="allTutors.tutors[0].name">default</p>
+      <p [text]="filteredTutors[1].name">default 2</p>
+      <!-- <amp-list height="282"
+        [height]="(200) * filteredTutors.length"
         layout="fixed-height"
-        [src]="filteredProducts"
+        [src]="filteredTutors"
         binding="no">
         <template type="amp-mustache">
-          <amp-img src="{{img}}"
-            layout="fixed"
-            width="60"
-            height="40"
-            alt="{{name}}"></amp-img>
-          {{name}}
         </template>
-      </amp-list>
+      </amp-list> -->
     </div>
     <!-- Date Picker -->
     <div class="ml-1 w-50">
@@ -203,15 +196,15 @@
           layout="container"
           input-selector="[name=deliverydate]"
         >
-        <input type="text" name="deliverydate">
+          <input type="date" name="deliverydate" [value]="selectedDate" on="change:AMP.setState({selectedDate: event.value})">
         </amp-date-picker>
       </form>
     </div>
   </div>
+  <p [text]="selectedDate">default date</p>
 
   <div class="row">
     <!-- Tutors -->
-
     {% for tutor in page.tutors %}
       {% if page.permalink == "/tutoring/" %}
         {% assign splitName = tutor.name | split: " " %}
