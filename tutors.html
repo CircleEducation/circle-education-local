@@ -6,3 +6,21 @@ description: ''
 redirect_from: []
 ---
 {% include tutors-list.html %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+  let tutors = [];
+  let selectedDate = null;
+  let skills = [];
+  fetch('/assets/tutors.json')
+  .then(res => res.json())
+  .then(json => {
+    tutors = json;
+  })
+  
+  const filterTutors = () => {
+//     A.every( e => B.includes(e) )
+    let filteredTutors = tutors.filter( tutor => skills.some( skill => tutor.skills.includes(skill)) && tutor.availableDates.some(availableDate => !selectedDate || availableDate === selectedDate) ).map(tutor => tutor.id)
+    // [8069545, 8069546, 8069547]
+  }
+</script>
