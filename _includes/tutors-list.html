@@ -153,55 +153,63 @@
   <!-- Filters -->
   <h4>Filters</h4>
   <div class="d-flex flex-row justify-content-around pb-5">
+    <amp-state id="tutors-from-page">
+      <script type="application/json">
+        {
+          "tutors": {{page.tutors | jsonify}}
+        }
+      </script>
+    </amp-state>
+    <amp-state id="tutors-from-api" src="/assets/tutoring.json"></amp-state>
     <!-- Location -->
     <div class="w-50">
-      <h5>By Location:</h5>
-      <amp-state id="allTutors">
-        <script type="application/json">
-          {
-            "tutors": {{page.tutors | jsonify}}
-          }
-        </script>
-      </amp-state>
-      <select
-        on="change:AMP.setState({
-          filteredTutors: allTutors.tutors.filter(x => x.location.includes(event.value))
-        })"
-      >
-        <option disabled selected>Select Location</option>
-        <option value="ACC Highland (North Campus)">North Campus</option>
-        <option value="Capital Factory (Downtown Campus)">Downtown Campus</option>
+      <h5>
+        By Location:
+      </h5>
+      <!-- htmllint preset="none" -->
+      <select on="change:AMP.setState({
+        tutors-from-page-by-location: tutors-from-page.tutors.filter(x => x.location.includes(event.value))
+      })">
+      <!-- htmllint preset="$previous" -->
+        <option disabled selected>
+          Select Location
+        </option>
+        <option value="ACC Highland (North Campus)">
+          North Campus
+        </option>
+        <option value="Capital Factory (Downtown Campus)">
+          Downtown Campus
+        </option>
       </select>
-      <p [text]="allTutors.tutors[0].name">default</p>
-      <p [text]="filteredTutors[1].name">default 2</p>
-      <!-- <amp-list height="282"
-        [height]="(200) * filteredTutors.length"
-        layout="fixed-height"
-        [src]="filteredTutors"
-        binding="no">
-        <template type="amp-mustache">
-        </template>
-      </amp-list> -->
     </div>
     <!-- Date Picker -->
     <div class="ml-1 w-50">
-      <h5>By Date:</h5>
-      <form
-        class="w-50"
-        method="post"
-        action-xhr="/form/echo-json/post"
-        target="_blank">
-        <amp-date-picker
-          mode="overlay"
-          layout="container"
-          input-selector="[name=deliverydate]"
-        >
-          <input type="date" name="deliverydate" [value]="selectedDate" on="change:AMP.setState({selectedDate: event.value})">
-        </amp-date-picker>
-      </form>
+      <h5>
+        By Date:
+      </h5>
+      <!-- htmllint preset="none" -->
+      <amp-date-picker
+        mode="overlay"
+        layout="container"
+        input-selector="[name=tutoringDate]"
+        on="select:AMP.setState({
+          filtered-tutor-availability: tutors-from-api.map(tutor => {
+            name: tutor.name,
+            id: tutor.id,
+            url: tutor.schedulingUrl,
+            availability-for-date: tutor.availableDates.filter(x => x.date == event.date)
+          }),
+          selected-date: event.date
+        })"
+      >
+      <!-- htmllint preset="$previous" -->
+        <input type="date"
+          name="tutoringDate"
+          on="change:AMP.setState({selected-date: event.value})"
+        />
+      </amp-date-picker>
     </div>
   </div>
-  <p [text]="selectedDate">default date</p>
 
   <div class="row">
     <!-- Tutors -->
