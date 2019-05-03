@@ -301,13 +301,19 @@
         </amp-date-picker>
       </form>
       <p [text]="date" >default</p>
+      <!-- ! AVAILABLE DATES -->
       <h4>Available dates</h4>
       <ul>
+          allTutors.tutors.filter(tutor => tutor.location.includes(event.value))
         {% for tutor in site.data.tutors %}
+        
           <li>
             {{ tutor.name }}
-            <a href="{{tutor.}}">
-              {{}}
+            <a href="{{tutor.schedulingUrl}}"
+              rel="noopener noreferrer" 
+              target="_blank"
+            >
+              Schedule Tutoring
             </a>
           </li>
         {% endfor %}
