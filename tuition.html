@@ -14,6 +14,9 @@ sections:
         description: "Proin in erat augue. Cras hendrerit consequat euismod. Phasellus placerat pulvinar tellus in fringilla. Integer mollis elementum neque id auctor. Maecenas sed tellus dignissim, finibus enim vulputate, tempor enim."
         price-header: Total Price
         price: $11,960
+      - title: Financing
+        description: Nam feugiat posuere dolor vel suscipit. Vivamus ipsum est, accumsan non faucibus quis, sagittis ac enim. Donec in ultricies libero. Quisque nisi massa.
+        cta: <a href="/financing" class="btn btn-round bg-purple text-white hover-white mt-2">Financing Options <span class="fas fa-arrow-right small"></span></a>
   - title: Individual Classes + Electives
     description: "If you're already a developer or graduate looking to level-up your career, we offer each of the courses in our web development program as individual courses. And coming soon: elective courses to learn other skills like C# and .NET"
     options:
@@ -24,8 +27,8 @@ sections:
       - title: Electives
         description: <a href="/csharp">Coming soon!</a>
 ---
-<main class="container mt-90 pt-1 pb-5">
-  <div class="my-10">
+<main class="mt-90 pt-1 pb-5">
+  <div class="my-10 container">
     <h1 class="text-center font-family-alt font-weight-bold display-5">
       Tuition
     </h1>
@@ -34,39 +37,49 @@ sections:
     </p>
   </div>
   {% for section in page.sections %}
-    <section>
-      <div class="text-center border-top border-bottom py-3 my-5 mw-600 mx-auto">
-        <h2 class="display-6 font-family-alt font-weight-bold">
+    <section class="mt-5 mb-10">
+      <div class="container-fluid bg-light text-center py-3 my-5">
+        <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
           {{section.title}}
         </h2>
-        <p class="m-0">
+        <p class="m-0 mx-auto mw-600">
           {{section.description}}
         </p>
       </div>
-      {% for option in section.options %}
-        <div class="row">
-          <div class="col-md-8">
-            <h3 class="display-7">
-              {{option.title}}
-            </h3>
-            <p>
-              {{option.description}}
-            </p>
+      <div class="container">
+        {% for option in section.options %}
+          <div class="row my-5">
+            <div class="col-md-8">
+              <h3 class="display-7 border-bottom">
+                {{option.title}}
+              </h3>
+              <p>
+                {{option.description}}
+              </p>
+            </div>
+            <div class="col-md-4 px-5">
+              {% if option.price %}
+                <div class="text-center">
+                  <h5>
+                    {{option.price-header}}
+                  </h5>
+                  <p class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6">
+                    {{option.price}}
+                  </p>
+                </div>
+              {% elsif option.cta %}
+                <div class="text-center">
+                  <h5>
+                    Learn More
+                  </h5>
+                  {{option.cta}}
+                </div>
+              {% endif %}
+            </div>
           </div>
-          <div class="col-md-4 px-5">
-            {% if option.price %}
-              <div class="text-center">
-                <h5>
-                  {{option.price-header}}
-                </h5>
-                <p class="card-body mx-5 border rounded shadow display-6">
-                  {{option.price}}
-                </p>
-              </div>
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
+          {% comment %}{% unless option == section.options.last %}<hr>{% endunless %}{% endcomment %}
+        {% endfor %}
+      </div>
     </section>
   {% endfor %}
 </main>
