@@ -31,9 +31,10 @@ const fetchTutoringTimes = async () => {
         tutoringAppointmentTypes[i].availableDates[j].availableTimes = availableTimes;
       }
     }
-    writeFileSync('assets/tutoring.json', JSON.stringify(tutoringAppointmentTypes, null, 2));
+    writeFileSync('_data/tutors.yaml', safeDump((tutoringAppointmentTypes)));
+    // writeFileSync('assets/tutoring.json', JSON.stringify(tutoringAppointmentTypes, null, 2));
   } catch (error) {
-    console.error(error);
+    console.error('error', error);
   }
 }
 

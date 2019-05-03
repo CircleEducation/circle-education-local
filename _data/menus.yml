@@ -35,9 +35,9 @@ header:
 - weight: 1
   title: Courses
   links:
-    - title: Full Stack Web Development
+    - title: Full-stack Web Development
       url: /web-development
-- weight: 3
+- weight: 2
   title: About Us
   links:
     - weight: 1
@@ -55,7 +55,7 @@ header:
     - weight: 5
       title: Blog
       url: "/blog"
-- weight: 2
+- weight: 3
   title: Tuition
   links:
     - weight: 1
@@ -110,7 +110,7 @@ tutors:
   - JS 211
   - JS 311
   limitation:
-  email: aselee89@gmail.com
+  email: andrew@austincodingacademy.com
   calendar: https://acaappointment.as.me/?calendarID=2620430
   virtual: https://meet.google.com/cqc-qach-mwk
   rocketchat: https://chat.austincodingacademy.com/direct/andrewlee-810
@@ -163,7 +163,7 @@ tutors:
   skills:
   - Full-stack mentor
   limitation: Graduates Only
-  email: mslilliansitu@gmail.com
+  email: lillian@austincodingacademy.com
   calendar: https://acaappointment.as.me/?calendarID=2550374
   virtual: https://meet.google.com/zhe-ixfg-snm
   rocketchat: https://chat.austincodingacademy.com/direct/lillian_situ
