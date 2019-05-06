@@ -153,14 +153,16 @@
   <!-- Filters -->
   <h4>Filters</h4>
   <div class="d-flex flex-row justify-content-around pb-5">
-    
+
     <!-- Location -->
     <div class="w-50">
       <h5>By Location:</h5>
       <!-- Amp State -->
-      <amp-state 
+      <!-- htmllint preset="none" -->
+      <amp-state
         id="allTutors"
-      > 
+      >
+      <!-- htmllint preset="$previous" -->
         <script type="application/json">
           {
             "tutors": {{page.tutors | jsonify}}
@@ -168,23 +170,27 @@
         </script>
       </amp-state>
       <!-- Amp State end -->
+      <!-- htmllint preset="none" -->
       <select
         on="change:AMP.setState({
             filteredTutors: allTutors.tutors.filter(tutor => tutor.location.includes(event.value))
           })"
       >
+      <!-- htmllint preset="$previous" -->
         <option disabled selected value="Select Location">Select Location</option>
         <option value="Capital Factory (Downtown Campus)">Capital Factory (Downtown Campus)</option>
         <option value="ACC Highland (North Campus)">ACC Highland (North Campus)</option>
       </select>
+      <!-- htmllint preset="none" -->
       <p [text]="filteredTutors[1].name">default</p>
-      <amp-list 
+      <amp-list
         height="282"
         [height]="(40 + 24) * filteredTutors.length"
         layout="fixed-height"
         [src]="filteredTutors"
         binding="no"
       >
+      <!-- htmllint preset="$previous" -->
         <!-- Template -->
         <template type="amp-mustache">
           <div class="col-6 col-md-3 mb-3">
@@ -219,7 +225,7 @@
                     {% endunless %}
                   </div>
                   <!-- End Team -->
-      
+
                   <!-- Contact -->
                   <div class="mt-2">
                     {% if page.permalink == "/tutors/" %}
@@ -244,7 +250,7 @@
                   </div>
                   <!-- End Contact -->
                 </div>
-      
+
                 <hr class="my-0">
                 {% unless page.permalink == "/tutoring/" %}
                   <!-- htmllint preset="none" -->
@@ -293,20 +299,22 @@
           layout="container"
           input-selector="[name=deliverydate]"
         >
-        
-        <input 
-          type="date" 
+
+        <input
+          type="date"
           name="deliverydate"
           on="change:AMP.setState({date: event.value})"
         >
         </amp-date-picker>
       </form>
+      <!-- htmllint preset="none" -->
       <p [text]="date" >default</p>
+      <!-- htmllint preset="$previous" -->
       <!-- ! AVAILABLE DATES -->
       <h4>Available dates</h4>
-        
 
- 
+
+
     </div>
   </div>
 
@@ -320,7 +328,7 @@
       {% else %}
         {% assign name = tutor.name %}
       {% endif %}
-      
+
     {% endfor %} -->
     <!-- End Tutors -->
   </div>
