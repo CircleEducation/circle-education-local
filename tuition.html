@@ -46,23 +46,40 @@ sections:
   </div>
   {% for section in page.sections %}
     <section class="mt-5 mb-10">
-      <div class="container-fluid bg-light text-center py-3 my-5">
-        <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
-          {{section.title}}
-        </h2>
-        <p class="m-0 mx-auto mw-600">
-          {{section.description}}
-        </p>
-        {% if section.button %}
-        <!-- Apply button -->
+      {% if section.button %}
+        <div class="container-fluid text-center py-3 my-5">
+          <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
+            {{section.title}}
+          </h2>
+          <p class="m-0 mx-auto mw-600">
+            {{section.description}}
+          </p>
+          <!-- Apply button -->
           <a class="{{ section.style }} hover-white ml-5" href="{{ section.url }}">
             <!-- htmllint preset="$previous" -->
             <span class="text-white hover-white">
               {{ section.button }}
             </span>
           </a>
-        {% endif  %}
-      </div>
+        </div>
+      {% else %}
+      <div class="container-fluid bg-light text-center py-3 my-5">
+          <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
+            {{section.title}}
+          </h2>
+          <p class="m-0 mx-auto mw-600">
+            {{section.description}}
+          </p>
+          
+          <!-- Apply button -->
+            <a class="{{ section.style }} hover-white ml-5" href="{{ section.url }}">
+              <!-- htmllint preset="$previous" -->
+              <span class="text-white hover-white">
+                {{ section.button }}
+              </span>
+            </a>
+          
+        </div>
       <div class="container">
         {% for option in section.options %}
           <div class="row my-5">
@@ -97,6 +114,7 @@ sections:
           {% comment %}{% unless option == section.options.last %}<hr>{% endunless %}{% endcomment %}
         {% endfor %}
       </div>
+      {% endif %}
     </section>
   {% endfor %}
 </main>
