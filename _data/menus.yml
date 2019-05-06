@@ -57,10 +57,11 @@ header:
       url: "/blog"
 - weight: 2
   title: Tuition
+  url: "/tuition"
   links:
     - weight: 1
       title: Tuition
-      url: "#"
+      url: "/tuition"
     - weight: 2
       title: Financing
       url: "/financing"
