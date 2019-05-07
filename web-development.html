@@ -1,12 +1,13 @@
 ---
 layout: default
-permalink: "/javascript/"
+permalink: "/web-development/"
 trackColor: blue
-title: Learn Full-stack Web Development | JavaScript Classes with Austin Coding Academy
+title: Learn Full Stack Web Development | JavaScript Classes with Austin Coding Academy
 img: "/assets/images/header-javascript.jpg"
-redirect_from: []
+redirect_from: ["/javascript/", "/javascript"]
 hero: js
 skills: React.js or Node.js
+trackColor: blue
 scroll_offset_header: 0.09
 description: Learn one of the most versatile &amp; common programming languages with
   Austin Code Academy’s JavaScript track. You’ll go from beginner to advanced within
@@ -134,7 +135,7 @@ courses:
 <div id="hero-{{ page.hero }}" class="hero py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
-    Full-stack JavaScript Track
+    Full-stack Web Development
   </h1>
   <p class="text-white text-center mx-auto px-2 mw-600">
     {{ page.hero_text }}
@@ -143,23 +144,9 @@ courses:
 
 <main>
 
-  {% include scroll-menu-anim-disappearing.html %}
   {% include observer-and-header-animation.html %}
 
-  {% comment %}
-  <div class="container-fluid">
-    <div class="row w-100 h-100 fixed-top pointer-events-none">
-      <div class="d-none d-md-inline col-md-2 mw-10r">
-        {% include scrolling-menu.html %}
-      </div>
-    </div>
-  </div>
-  {% endcomment %}
-
   <section id="curriculum" class="py-11 container-fluid">
-  {% comment %}
-  {% include scrolling-menu-observ-anim.html id="curriculum" %}
-  {% endcomment %}
   <div class="row">
       <div class="d-none d-md-inline col-md-2 mw-10r"></div>
       <div class="col-md-8 pl-5">
@@ -209,11 +196,6 @@ courses:
   </section>
 
   <section id="contact" class="container-fluid py-11">
-    <!-- htmllint preset="none" -->
-    {% comment %}
-    {% include scrolling-menu-observ-anim.html id="contact" %}
-    {% endcomment %}
-    <!-- htmllint preset="$previous" -->
     <div class="row d-flex flex-column justify-content-center align-items-center mx-auto">
       <div class="d-none d-md-inline col-md-2 mw-10r"></div>
       <div class="col-md-8">
@@ -271,5 +253,4 @@ courses:
     }
     </script>
   {% endfor %}
-
 </main>

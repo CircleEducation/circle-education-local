@@ -1,3 +1,4 @@
+
 <div class="row d-flex flex-wrap justify-content-around justify-content-sm-center">
   {% for event in site.data.events limit:3 %}
     <div class="col-12 col-md card card-frame shadow-black text-center m-2 mw-22r">
@@ -27,7 +28,9 @@
           rel="noopener"
           target="_blank"
           role="button"
-        >View Details <i class="fas fa-external-link-alt"></i></a>
+        >
+          View Details <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+        </a>
       </div>
       <!-- End Card -->
     </div>
