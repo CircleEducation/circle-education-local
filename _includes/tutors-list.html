@@ -167,9 +167,12 @@
         By Location:
       </h5>
       <!-- htmllint preset="none" -->
-      <select on="change:AMP.setState({
-        allTutorsByLocation: allTutors.tutors.filter(x => x.location.includes(event.value))
-      }),list.changeToLayoutContainer()">
+      <select
+        on="change:AMP.setState({
+            allTutorsByLocation: allTutors.tutors.filter(x => x.location.includes(event.value))
+          }),list.changeToLayoutContainer()"
+        tabindex="0"
+      >
       <!-- htmllint preset="$previous" -->
         <option disabled selected>
           Select Location
@@ -210,19 +213,21 @@
         layout="container"
         input-selector="[name=tutoringDate]"
         on="select:AMP.setState({
-          filteredTutorAvailability: tutorsData.tutors.map(tutor => {
-            name: tutor.name,
-            id: tutor.id,
-            url: tutor.schedulingUrl,
-            availabilityForDate: tutor.availableDates.filter(x => x.date == event.date)
-          }),
-          selectedDate: event.date
-        }),list.changeToLayoutContainer()"
+            filteredTutorAvailability: tutorsData.tutors.map(tutor => {
+              name: tutor.name,
+              id: tutor.id,
+              url: tutor.schedulingUrl,
+              availabilityForDate: tutor.availableDates.filter(x => x.date == event.date)
+            }),
+            selectedDate: event.date
+          }),list.changeToLayoutContainer()"
+        tabindex="0"
       >
       <!-- htmllint preset="$previous" -->
         <input type="date"
           name="tutoringDate"
           on="change:AMP.setState({selectedDate: event.value})"
+          tabindex="0"
         />
       </amp-date-picker>
     </div>
@@ -230,12 +235,11 @@
 
   <div>
     <amp-list
-      id="list"
       layout="responsive"
       src="/assets/tutors.json"
       width="396"
       height="80"
-      [src]="allTutors.tutors"
+      [src]="allTutorsByLocation"
       binding="no"
       items="."
     >
@@ -255,7 +259,7 @@
                       height="100px"
                       layout="fixed"
                       class="rounded-circle"
-                      src="http://gravatar.com/avatar/{{ tutor.email | downcase | md5 }}?s=100&r=pg&d=retro"
+                      src="http://gravatar.com/avatar/{{ email | downcase | md5 }}?s=100&r=pg&d=retro"
                       alt="{{tutor.name}}"
                     ></amp-img>
                     <!-- htmllint preset="$previous" -->
@@ -264,8 +268,8 @@
                     {{ name }}
                   </h5>
                   <p class="small m-0">
-                    {% for skill in tutor.skills %}
-                      {{skill}}{% unless skill == tutor.skills.last %} | {% endunless %}
+                    {% for skill in skills %}
+                      {{skill}}{% unless skill == skills.last %} | {% endunless %}
                     {% endfor %}
                   </p>
                   {% unless page.permalink == "/tutors/" %}
