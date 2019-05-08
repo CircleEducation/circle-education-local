@@ -155,11 +155,12 @@
   <div class="d-flex flex-row justify-content-around pb-5">
     <amp-state id="allTutors">
       <script type="application/json">
-        {{page.tutors | jsonify}}
+        {
+          "tutors": {{page.tutors | jsonify}}
+        }
       </script>
     </amp-state>
-    <!-- ! comment this out?  -->
-    <!-- <amp-state id="tutors-from-api" src="/assets/tutoring.json"></amp-state> -->
+
     <!-- Location -->
     <div class="w-50">
       <h5>
@@ -167,8 +168,8 @@
       </h5>
       <!-- htmllint preset="none" -->
       <select on="change:AMP.setState({
-        allTutorsByLocation: allTutors.filter(x => x.location.includes(event.value))
-      })">
+        allTutorsByLocation: allTutors.tutors.filter(x => x.location.includes(event.value))
+      }),list.changeToLayoutContainer()">
       <!-- htmllint preset="$previous" -->
         <option disabled selected>
           Select Location
@@ -180,14 +181,14 @@
           Downtown Campus
         </option>
       </select>
-      <p [text]="allTutors[0].location">
+      <p [text]="allTutors.tutors[0].location">
         default 1
       </p>
       <p [text]="allTutorsByLocation[0].name">
         default 2
       </p>
       <p [text]="event.value">
-        default 2
+        default 3
       </p>
     </div>
 
@@ -199,7 +200,9 @@
       <!-- htmllint preset="none" -->
       <amp-state id="tutorsData">
         <script type="application/json">
-          {{site.data.tutors | jsonify}}
+          {
+            "tutors": {{page.tutors | jsonify}}
+          }
         </script>
       </amp-state>
       <amp-date-picker
@@ -207,27 +210,131 @@
         layout="container"
         input-selector="[name=tutoringDate]"
         on="select:AMP.setState({
-          filteredTutorAvailability: tutorsData.map(tutor => {
+          filteredTutorAvailability: tutorsData.tutors.map(tutor => {
             name: tutor.name,
             id: tutor.id,
             url: tutor.schedulingUrl,
             availabilityForDate: tutor.availableDates.filter(x => x.date == event.date)
           }),
-          selected-date: event.date
-        })"
+          selectedDate: event.date
+        }),list.changeToLayoutContainer()"
       >
       <!-- htmllint preset="$previous" -->
         <input type="date"
           name="tutoringDate"
-          on="change:AMP.setState({selected-date: event.value})"
+          on="change:AMP.setState({selectedDate: event.value})"
         />
       </amp-date-picker>
     </div>
   </div>
 
-  <div class="row">
+  <div>
+    <amp-list
+      id="list"
+      layout="responsive"
+      src="/assets/tutors.json"
+      width="396"
+      height="80"
+      [src]="allTutors.tutors"
+      binding="no"
+      items="."
+    >
+      <!-- <div placeholder>Loading ...</div>
+      <div fallback>Failed to load data.</div> -->
+      <template type="amp-mustache">
+        <!-- * Tutor Card Start -->
+        <div class="col-6 col-md-3 mb-3">
+            <div class="card text-center shadow">
+              <div class="p-3 d-flex flex-column justify-content-between">
+                <!-- Team -->
+                <div>
+                  <div class="mx-auto mb-3">
+                    <!-- htmllint preset="none" -->
+                    <amp-img
+                      width="100px"
+                      height="100px"
+                      layout="fixed"
+                      class="rounded-circle"
+                      src="http://gravatar.com/avatar/{{ tutor.email | downcase | md5 }}?s=100&r=pg&d=retro"
+                      alt="{{tutor.name}}"
+                    ></amp-img>
+                    <!-- htmllint preset="$previous" -->
+                  </div>
+                  <h5 class="mb-0">
+                    {{ name }}
+                  </h5>
+                  <p class="small m-0">
+                    {% for skill in tutor.skills %}
+                      {{skill}}{% unless skill == tutor.skills.last %} | {% endunless %}
+                    {% endfor %}
+                  </p>
+                  {% unless page.permalink == "/tutors/" %}
+                    <p class="small my-1">
+                      <i>{{tutor.limitation}}</i>
+                    </p>
+                  {% endunless %}
+                </div>
+                <!-- End Team -->
+
+                <!-- Contact -->
+                <div class="mt-2">
+                  {% unless page.permalink == "/tutors/" %}
+                    <a href="{{tutor.rocketchat}}" rel="noopener" target="_blank">
+                      <i class="display-7 fab fa-rocketchat"></i>
+                    </a>
+                    <a href="mailto:{{tutor.email}}" rel="noopener" target="_blank" class="ml-3">
+                      <i class="display-7 fas fa-envelope"></i>
+                    </a>
+                  {% else %}
+                    <a href="#" on="tap:apply-now-lightbox.open" tabindex="0">
+                      <i class="display-7 fab fa-rocketchat"></i>
+                    </a>
+                    <a href="#" on="tap:apply-now-lightbox.open" tabindex="0" class="ml-3">
+                      <i class="display-7 fas fa-envelope"></i>
+                    </a>
+                  {% endunless %}
+                </div>
+                <!-- End Contact -->
+              </div>
+
+              <hr class="my-0">
+
+              {% unless page.permalink == "/tutors/" %}
+                <!-- htmllint preset="none" -->
+                <a class="{% unless tutor.calendar %} disabled {% endunless %} btn btn-sm u-btn-primary--air transition-3d-hover" href="{{tutor.calendar}}" target="_blank">
+                <!-- htmllint preset="$previous" -->
+                  <span class="far fa-calendar-alt mr-2"></span>
+                  Schedule Tutoring
+                </a>
+                <!-- htmllint preset="none" -->
+                <a class="{% unless tutor.virtual %} disabled {% endunless %} btn btn-sm u-btn-primary--air transition-3d-hover" href="{{tutor.virtual}}" target="_blank">
+                <!-- htmllint preset="$previous" -->
+                  <span class="fa fa-chalkboard-teacher mr-2"></span>
+                  Virtual Classroom
+                </a>
+              {% else %}
+                <a href="#" on="tap:apply-now-lightbox.open" tabindex="0"
+                  class="btn btn-sm u-btn-primary--air transition-3d-hover"
+                >
+                  <span class="far fa-calendar-alt mr-2"></span>
+                  Schedule Tutoring
+                </a>
+                <a href="#" on="tap:apply-now-lightbox.open" tabindex="0"
+                  class="btn btn-sm u-btn-primary--air transition-3d-hover"
+                >
+                  <span class="fa fa-chalkboard-teacher mr-2"></span>
+                  Virtual Classroom
+                </a>
+              {% endunless %}
+            </div>
+          </div>
+      </template>
+    </amp-list>
+  </div>
+
+  <!-- <div class="row"> -->
     <!-- Tutors -->
-    {% for tutor in page.tutors %}
+    <!-- {% for tutor in page.tutors %}
       {% if page.permalink == "/tutoring/" %}
         {% assign splitName = tutor.name | split: " " %}
         {% assign name = splitName[0] %}
@@ -235,7 +342,7 @@
         {% assign name = tutor.name %}
       {% endif %}
 
-    {% endfor %}
+    {% endfor %} -->
     <!-- End Tutors -->
   </div>
 </div>
