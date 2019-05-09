@@ -151,6 +151,7 @@
   </div>
 
   <!-- Filters -->
+  {% unless include.marketing %}
   <h4>Filters</h4>
   <div class="d-flex flex-row justify-content-around pb-5">
     <!-- Location -->
@@ -165,7 +166,7 @@
         class="form-control"
       >
       <!-- htmllint preset="$previous" -->
-        <option disabled selected>
+        <option value="any" selected>
           Select Location
         </option>
         <option value="austinNorth">
@@ -199,7 +200,7 @@
       </amp-date-picker>
     </div>
   </div>
-
+  {% endunless %}
 <div class="row">
   <!-- Tutors -->
   {% for tutor in include.tutors %}
@@ -231,8 +232,8 @@
               {{ name }}
             </h5>
             <p class="small m-0">
-              {% for skill in skills %}
-                {{skill}}{% unless skill == skills.last %} | {% endunless %}
+              {% for skill in tutor.skills %}
+                {{skill}}{% unless skill == tutor.skills.last %} | {% endunless %}
               {% endfor %}
             </p>
             {% unless include.marketing %}
