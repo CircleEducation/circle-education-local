@@ -155,13 +155,14 @@
   <div class="d-flex flex-row justify-content-around pb-5">
     <!-- Location -->
     <div class="w-50">
-      <h5>
+      <label class="form-label">
         By Location:
-      </h5>
+      </label>
       <!-- htmllint preset="none" -->
       <select
         on="change:AMP.setState({ location: event.value })"
         tabindex="0"
+        class="form-control"
       >
       <!-- htmllint preset="$previous" -->
         <option disabled selected>
@@ -178,9 +179,9 @@
 
     <!-- Date Picker -->
     <div class="ml-1 w-50">
-      <h5>
+      <label class="form-label">
         By Date:
-      </h5>
+      </label>
       <!-- htmllint preset="none" -->
       <amp-date-picker
         mode="overlay"
@@ -193,6 +194,7 @@
         <input type="date"
           name="tutoringDate"
           tabindex="0"
+          class="form-control"
         />
       </amp-date-picker>
     </div>
