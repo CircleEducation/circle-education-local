@@ -34,7 +34,11 @@ const fetchTutoringTimes = async () => {
         tutoringAppointmentTypes[i].availableDates[j].availableTimes = availableTimes;
       }
     }
+<<<<<<< HEAD
     writeFileSync('_data/tutors.yml', safeDump((keyBy(tutoringAppointmentTypes, 'id'))));
+=======
+    writeFileSync('_data/tutors.yml', safeDump((tutoringAppointmentTypes)));
+>>>>>>> 18e5f4877c651d281e40caaf59e1e9f9e918cb2b
   } catch (error) {
     console.error('error', error);
   }

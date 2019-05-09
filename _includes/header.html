@@ -8,7 +8,7 @@
   tabindex="-1"
   role="navigation"
   id="sidebar"
-  class="m-0 bg-dark d-flex d-md-none row flex-column align-items-start justify-content-start"
+  class="m-0 px-5 bg-dark d-flex d-md-none flex-column align-items-start justify-content-start"
   layout="nodisplay"
   side="right">
   {% for item in site.menus.header %}
@@ -65,9 +65,8 @@
       {% endif %}
     </div>
   {% endfor %}
-
 </amp-sidebar>
-{% endunless%}
+{% endunless %}
 
 <!-- htmllint preset="none" -->
 <header id="header"
@@ -128,11 +127,19 @@
                 </a>
               {% elsif item.links %}
                 <li class="nav-item u-header__nav-item">
+                  {% if item.url %}
+                  <a href="{{item.url}}" tabindex="0" class="p-2 mx-2">
+                    <span class="text-white hover-white">
+                      {{ item.title }} <i class="fas fa-caret-down"></i>
+                    </span>
+                  </a>
+                  {% else %}
                   <a tabindex="0" class="p-2 mx-2">
                     <span class="text-white hover-white">
                       {{ item.title }} <i class="fas fa-caret-down"></i>
-                      </span>
+                    </span>
                   </a>
+                  {% endif %}
                   <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
                     {% for link in item.links %}
                       {% if link.url != "#" %}
