@@ -155,9 +155,7 @@
   <div class="d-flex flex-row justify-content-around pb-5">
     <amp-state id="allTutors">
       <script type="application/json">
-        {
-          "tutors": {{page.tutors | jsonify}}
-        }
+        {{page.tutors | jsonify}}
       </script>
     </amp-state>
 
@@ -169,8 +167,8 @@
       <!-- htmllint preset="none" -->
       <select
         on="change:AMP.setState({
-            allTutorsByLocation: allTutors.tutors.filter(x => x.location.includes(event.value))
-          }),list.changeToLayoutContainer()"
+            allTutorsByLocation: allTutors.filter(x => x.location.includes(event.value))
+          }),tutors.changeToLayoutContainer()"
         tabindex="0"
       >
       <!-- htmllint preset="$previous" -->
@@ -184,14 +182,11 @@
           Downtown Campus
         </option>
       </select>
-      <p [text]="allTutors.tutors[0].location">
+      <p [text]="allTutors[0].location">
         default 1
       </p>
       <p [text]="allTutorsByLocation[0].name">
         default 2
-      </p>
-      <p [text]="event.value">
-        default 3
       </p>
     </div>
 
@@ -203,9 +198,7 @@
       <!-- htmllint preset="none" -->
       <amp-state id="tutorsData">
         <script type="application/json">
-          {
-            "tutors": {{page.tutors | jsonify}}
-          }
+          {{site.data.tutors | jsonify}}
         </script>
       </amp-state>
       <amp-date-picker
@@ -213,14 +206,14 @@
         layout="container"
         input-selector="[name=tutoringDate]"
         on="select:AMP.setState({
-            filteredTutorAvailability: tutorsData.tutors.map(tutor => {
+            filteredTutorAvailability: tutorsData.map(tutor => {
               name: tutor.name,
               id: tutor.id,
               url: tutor.schedulingUrl,
               availabilityForDate: tutor.availableDates.filter(x => x.date == event.date)
             }),
             selectedDate: event.date
-          }),list.changeToLayoutContainer()"
+          }),tutors.changeToLayoutContainer()"
         tabindex="0"
       >
       <!-- htmllint preset="$previous" -->
@@ -236,12 +229,13 @@
   <div>
     <amp-list
       layout="responsive"
-      src="/assets/tutors.json"
       width="396"
       height="80"
+      src="/assets/tutors.json"
       [src]="allTutorsByLocation"
       binding="no"
       items="."
+      id="tutors"
     >
       <!-- <div placeholder>Loading ...</div>
       <div fallback>Failed to load data.</div> -->
@@ -332,7 +326,7 @@
               {% endunless %}
             </div>
           </div>
-      </template>
+        </template>
     </amp-list>
   </div>
 
