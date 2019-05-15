@@ -94,13 +94,13 @@
       </form>
     </amp-lightbox>
   {% endif %}
-  <h2 class="font-family-alt font-weight-bold text-center display-5 mt-10">
+  <h2 class="font-family-alt font-weight-bold text-center display-5 mt-10 mb-4">
     Tutoring
   </h2>
   <h5 class="text-center mb-5 mx-auto">
     Austin Coding Academy offers unlimited tutoring to students and graduates!
   </h5>
-  <div class="row mb-10">
+  <div class="row mb-10 mt-6">
     <div class="col-md">
       <h4 class="font-weight-bold">
         One-on-One Tutoring
@@ -151,7 +151,8 @@
   </div>
 
   <!-- Video -->
-  <div class="col-sm-12">
+  {% unless include.marketing %}
+  <div class="col-sm-12 mt-6">
     <amp-iframe
       src="https://player.vimeo.com/video/333657043"
       width="525"
@@ -163,6 +164,8 @@
       allowfullscreen>
     </amp-iframe>
   </div>
+  {% endunless %}
+
 
   <!-- Filters -->
   {% unless include.marketing %}
