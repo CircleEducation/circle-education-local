@@ -288,6 +288,14 @@ body, p {
   background: linear-gradient(to right, #21409a, #2d2f77);
 }
 
+.bg-dark-primary {
+  background: url(/assets/images/BGPattern.svg);
+}
+
+.bg-dark-secondary {
+  background: url(/assets/images/WhyChooseUs.svg);
+}
+
 .border-blue {
   border: 2px solid #00b3d1;
   box-sizing: border-box;
