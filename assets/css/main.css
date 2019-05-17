@@ -287,13 +287,15 @@ body, p {
 .bg-gradient {
   background: linear-gradient(to right, #21409a, #2d2f77);
 }
-
+/* new index page backgrounds */
 .bg-dark-primary {
-  background: url(/assets/images/BGPattern.svg);
+  background: url(/assets/images/WhyChooseUs.svg);
+  background-size: cover;
 }
 
 .bg-dark-secondary {
-  background: url(/assets/images/WhyChooseUs.svg);
+  background: url(/assets/images/BGPattern.svg);
+  background-size: cover;
 }
 
 .border-blue {

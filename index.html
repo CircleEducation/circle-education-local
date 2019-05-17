@@ -13,39 +13,53 @@ amp_components: ['amp-animation', 'amp-position-observer']
 features:
 - heading: Flexible Schedule
   title: Keep Your Day Job While You Make a Career Change
-  bullets:
+  description: In-person, part-time classes meet twice a week in the evenings, so learning to code
+    fits your schedule. Our flipped classroom approach makes sure you get the most out of class.
+    Unlimited tutoring give syou the option to book 1-on-1 help on your schedule.
+  <!-- bullets:
   - In-person, part-time classes meet twice a week in the evenings, so learning to
     code fits your schedule.
   - Our flipped classroom approach makes sure you get the most out of class.
-  - Unlimited tutoring gives you the option to book 1-on-1 help on your schedule.
-  img: calendar_white.png
+  - Unlimited tutoring gives you the option to book 1-on-1 help on your schedule. -->
+  img: calendar_yellow.png
+  square: true
   alt: Calendar graphic
 - heading: Affordable Tuition
   title: We Work with Our Students to Make Tuition Manageable
-  bullets:
+  description: Pay for your tuition course-by-course or pay for the entire program up front and
+    save. Finance your tuition through <a class="text-white link-underlined" href="https://austincodingacademy.skills.fund/">
+    Skills Fund</a>, our primary financing partner. Talk with our admissions team about additional tuition options.
+  <!-- bullets:
   - Pay for your tuition course-by-course or pay for the entire program up front and
     save.
   - Finance your tuition through <a class="text-white link-underlined" href="https://austincodingacademy.skills.fund/">Skills
     Fund</a>, our primary financing partner.
-  - Talk with our admissions team about additional tuition options.
-  img: wallet_white.png
+  - Talk with our admissions team about additional tuition options. -->
+  img: wallet_red.png
+  square: true
   alt: Wallet graphic
 - heading: Unlimited Tutoring
   title: ''
-  bullets:
+  description: Don't worry, you won't fall behind. We won't let you! Our tutors are available
+    to give you the help and training you need whenever you need it, without jacking up the price.
+  <!-- bullets:
   - Don't worry, you won't fall behind. We won't let you!
   - Our tutors are available to give you the help and training you need whenever
-    you need it, without jacking up the price.
-  img: wallet_white.png
+    you need it, without jacking up the price. -->
+  img: tutoring_blue_2.png
   alt: Pencil graphic
 - heading: Job Placement
   title: You’ll Learn Skills That Will Get You a Job
-  bullets:
+  description: Develop skills that employers are looking for with our practical curriculum, taught
+    by professional developers. Receive 1-on-1 attention from our Director of Job Placement. Build
+    your resume, practice interviews, and more in our Job Placement Course.
+  <!-- bullets:
   - Develop skills that employers are looking for with our practical curriculum, taught
     by professional developers.
   - Receive 1-on-1 attention from our Director of Job Placement.
-  - Build your resume, practice interviews, and more in our Job Placement Course.
-  img: suitcase_white.png
+  - Build your resume, practice interviews, and more in our Job Placement Course. -->
+  img: suitcase_green.png
+  square: true
   alt: Suitcase graphic
 logos:
 - width: 100px
@@ -159,7 +173,7 @@ logos:
     </div>
   </section>
 
-  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3 bg-gradient text-white">
+  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3 bg-dark-primary text-white">
     <div class="mx-auto mw-850">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
         Why Choose Us?
@@ -175,27 +189,35 @@ logos:
           <div class="col-12 col-md">
             <div class="row">
               <!-- Image -->
-              <div class="col-3 mb-md-3 d-flex align-items-center justify-content-center">
-                <amp-img
-                  width="80px"
-                  height="80px"
-                  layout="fixed"
-                  src="/assets/images/{{ feature.img }}"
-                  alt=""
-                ></amp-img>
-              </div>
+              {% if feature.square %}
+                <div class="col-3 mb-md-3 d-flex align-items-center justify-content-center">
+                  <amp-img
+                    width="80px"
+                    height="80px"
+                    layout="fixed"
+                    src="/assets/images/{{ feature.img }}"
+                    alt=""
+                  ></amp-img>
+                </div>
+              {% else %}
+                <div class="col-3 mb-md-3 d-flex align-items-center justify-content-center">
+                  <amp-img
+                    width="80px"
+                    height="60px"
+                    layout="fixed"
+                    src="/assets/images/{{ feature.img }}"
+                    alt=""
+                  ></amp-img>
+                </div>
+              {% endif %}
               <!-- Text -->
               <div class="col-9">
-                <h5 class="font-weight-bold ml-4 ml-md-0 text-left">
+                <h3 class="font-weight-bold ml-4 ml-md-0 text-left">
                   <b>{{ feature.heading }}</b>
-                </h5>
-                <ul class="list-unstyled">
-                  {% for bullet in feature.bullets %}
-                    <li class="mb-2 ml-1">
-                      {{ bullet }}
-                    </li>
-                  {% endfor %}
-                </ul>
+                </h3>
+                <div class="mb-3">
+                  {{ feature.description }}
+                </div>
               </div>
             </div>
           </div>
@@ -326,7 +348,7 @@ logos:
       </div>
     </div>
   </section>
-  <section class="my-6 py-10 bg-gradient text-white">
+  <section class="my-6 py-10 bg-dark-secondary text-white">
     <div class="container d-flex justify-content-center flex-column">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
         Come Meet Us at Our Next Events
