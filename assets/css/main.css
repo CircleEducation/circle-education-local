@@ -193,6 +193,10 @@ body, p {
 .display-8 {
   font-size: 1rem;
 }
+/* quote footer */
+.display-9 {
+  font-size: .9rem !important;
+}
 
 .display-small {
   font-size: .85rem;
@@ -200,10 +204,6 @@ body, p {
 
 .large-icon {
   font-size: 3rem;
-}
-
-.quote-footer {
-  font-size: 88% !important;
 }
 
 /* HEADER LINKS */

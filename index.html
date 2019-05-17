@@ -164,7 +164,7 @@ logos:
       you can learn coding in a classroom settingthat works with your busy schedule, and be apart of
       our community, supporting and inspiring each other to be more than just coders.
     </p>
-    <p class="mw-600 mx-auto text-center">
+    <p class="mw-600 mx-auto text-center mb-4">
       <b>Ready when you are.</b>
     </p>
     <!-- Apply Button -->
@@ -225,47 +225,10 @@ logos:
       </div>
     </div>
   </section>
-
+  <!-- Course Guide Form -->
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
     {% include course-guide-form.html %}
   </section>
-
-  <!-- <section id="values" class="my-5 bg-gradient text-white">
-    <div class="container py-11">
-      <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
-        Why Austin Coding Academy
-      </h2>
-      <div class="row">
-        {% for feature in page.features %}
-          <div class="col-12 col-md">
-            <div class="row">
-              <div class="col-3 col-md-12 mb-md-3 d-flex align-items-center justify-content-center">
-                <amp-img
-                  width="80px"
-                  height="80px"
-                  layout="fixed"
-                  src="/assets/images/{{ feature.img }}"
-                  alt=""
-                ></amp-img>
-              </div>
-              <div class="col-9 col-md-12">
-                <h5 class="font-weight-bold ml-4 ml-md-0 text-md-center">
-                  {{ feature.heading }}
-                </h5>
-                <ul>
-                  {% for bullet in feature.bullets %}
-                    <li class="mb-2">
-                      {{ bullet }}
-                    </li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section> -->
 
   <section class="my-6 py-5 container">
     <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
@@ -274,13 +237,7 @@ logos:
     <!-- begin student-stories -->
     <div class="container">
       <div class="row">
-        <div class="col-12 col-sm-6">
-          <!-- <h5 class="text-center font-weight-bold">
-            Lillian Situ, ACA graduate
-          </h5>
-          <h5 class="text-center">
-            Software Engineer, data.world
-          </h5> -->
+        <div class="col-xs-12 col-sm-12 col-md-6">
           <div class="mt-4">
             <amp-iframe
               src="https://player.vimeo.com/video/290925619"
@@ -300,22 +257,11 @@ logos:
                 something so being able to take what I learned at ACA and get a job with
                 it ... was one of the best decisions I've made."
               </p>
-              <footer class="blockquote-footer quote-footer text-right mt-1">Lillian Situ, <cite title="Title">Software Engineer, data.world</cite></footer>
+              <footer class="blockquote-footer display-9 text-right mt-1">Lillian Situ, <cite title="Title">Software Engineer, data.world</cite></footer>
             </blockquote>
           </div>
-          <!-- <p class="text-center w-75 mx-auto">
-            "I've always been interested in programming and being able to create
-            something so being able to take what I learned at ACA and get a job with
-            it ... was one of the best decisions I've made."
-          </p> -->
         </div>
-        <div class="col-12 col-sm-6">
-          <!-- <h5 class="text-center font-weight-bold">
-            Greg Swan, ACA graduate
-          </h5>
-          <h5 class="text-center">
-            Web Developer, Kinetic Theory
-          </h5> -->
+        <div class="col-xs-12 col-sm-12 col-md-6">
           <div class="mt-4">
             <amp-iframe
               src="https://player.vimeo.com/video/290913789"
@@ -336,19 +282,14 @@ logos:
                 taught me what not to do, and consistently reminded me that there was a
                 job out there for me if I was willing to put in the work."
               </p>
-              <footer class="blockquote-footer quote-footer text-right mt-1">Greg Swan, <cite title="Title">Web Developer, Kinetic Theory</cite></footer>
+              <footer class="blockquote-footer display-9 text-right mt-1">Greg Swan, <cite title="Title">Web Developer, Kinetic Theory</cite></footer>
             </blockquote>
           </div>
-          <!-- <p class="text-center w-75 mx-auto">
-            "ACA ... gave me a solid foundation of knowledge,
-            taught me what not to do, and consistently reminded me that there was a
-            job out there for me if I was willing to put in the work."
-          </p> -->
         </div>
       </div>
     </div>
     <!-- end student-stories -->
-    <h4 class="font-family-alt font-weight-bold text-center display-7 mt-5">
+    <h4 class="font-family-alt font-weight-bold text-center display-7 mt-5 mb-3">
       Our Graduates Are Working At
     </h4>
     <div class="container">
@@ -376,7 +317,7 @@ logos:
       {% include events.html %}
     </div>
   </section>
-  <section class="my-6 py-5">
+  <section class="col-xs-11 col-sm-11 my-6 mx-auto py-5">
     <div class="container mw-600">
       <h3 class="font-family-alt font-weight-bold text-center display-5">
         Have More Questions?
