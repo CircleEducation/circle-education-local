@@ -15,28 +15,36 @@ features:
   title: Keep Your Day Job While You Make a Career Change
   bullets:
   - In-person, part-time classes meet twice a week in the evenings, so learning to
-    code fits your schedule
-  - Our flipped classroom approach makes sure you get the most out of class
-  - Unlimited tutoring gives you the option to book 1-on-1 help on your schedule
+    code fits your schedule.
+  - Our flipped classroom approach makes sure you get the most out of class.
+  - Unlimited tutoring gives you the option to book 1-on-1 help on your schedule.
   img: calendar_white.png
   alt: Calendar graphic
 - heading: Affordable Tuition
   title: We Work with Our Students to Make Tuition Manageable
   bullets:
   - Pay for your tuition course-by-course or pay for the entire program up front and
-    save
+    save.
   - Finance your tuition through <a class="text-white link-underlined" href="https://austincodingacademy.skills.fund/">Skills
-    Fund</a>, our primary financing partner
-  - Talk with our admissions team about additional tuition options
+    Fund</a>, our primary financing partner.
+  - Talk with our admissions team about additional tuition options.
   img: wallet_white.png
   alt: Wallet graphic
+- heading: Unlimited Tutoring
+  title: ''
+  bullets:
+  - Don't worry, you won't fall behind. We won't let you!
+  - Our tutors are available to give you the help and training you need whenever
+    you need it, without jacking up the price.
+  img: wallet_white.png
+  alt: Pencil graphic
 - heading: Job Placement
   title: You’ll Learn Skills That Will Get You a Job
   bullets:
   - Develop skills that employers are looking for with our practical curriculum, taught
-    by professional developers
-  - Receive 1-on-1 attention from our Director of Job Placement
-  - Build your resume, practice interviews, and more in our Job Placement Course
+    by professional developers.
+  - Receive 1-on-1 attention from our Director of Job Placement.
+  - Build your resume, practice interviews, and more in our Job Placement Course.
   img: suitcase_white.png
   alt: Suitcase graphic
 logos:
@@ -103,7 +111,7 @@ logos:
               target="_blank"
               rel="noopener"
             >
-              Schedule a Q&amp;A
+              Learn
             </a>
             <!-- htmllint preset="$previous" -->
             <h4 class="text-white display-7 border-top border-bottom">
@@ -118,14 +126,13 @@ logos:
         </amp-lightbox>
         <!-- htmllint preset="none" -->
         <a
-          class="btn btn-outline-light btn-round mr-2 d-none d-sm-block"
+          class="btn btn-round mr-2 d-none d-sm-block cta-gradient text-white"
           href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
           target="_blank"
           rel="noopener">
-          Schedule a Q&amp;A
+          Learn More
         </a>
         <!-- htmllint preset="$previous" -->
-        {% include btn-apply.html %}
       </div>
     </div>
   </div>
@@ -135,10 +142,73 @@ logos:
   {% include observer-and-header-animation.html %}
 
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
+    <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+      We Are Committed To Your Success
+    </h2>
+    <p class="mw-600 mx-auto text-center">
+      From learning to code, to landing your job, our team has your back. At Austin Coding Academy
+      you can learn coding in a classroom settingthat works with your busy schedule, and be apart of
+      our community, supporting and inspiring each other to be more than just coders.
+    </p>
+    <p class="mw-600 mx-auto text-center">
+      <b>Ready when you are.</b>
+    </p>
+    <!-- Apply Button -->
+    <div class="d-flex justify-content-center">
+      {% include btn-apply.html %}
+    </div>
+  </section>
+
+  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3 bg-gradient text-white">
+    <div class="mx-auto mw-850">
+      <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+        Why Choose Us?
+      </h2>
+      <p class="mw-600 mx-auto text-center text-white">
+        As fun as it is to learn how to code, we know you didn't just come to us
+        for the kicks. You need to launch a new career and we're here to help you
+        do it. <br>
+        Here's how:
+      </p>
+      <div class="col">
+        {% for feature in page.features %}
+          <div class="col-12 col-md">
+            <div class="row">
+              <!-- Image -->
+              <div class="col-3 mb-md-3 d-flex align-items-center justify-content-center">
+                <amp-img
+                  width="80px"
+                  height="80px"
+                  layout="fixed"
+                  src="/assets/images/{{ feature.img }}"
+                  alt=""
+                ></amp-img>
+              </div>
+              <!-- Text -->
+              <div class="col-9">
+                <h5 class="font-weight-bold ml-4 ml-md-0 text-left">
+                  <b>{{ feature.heading }}</b>
+                </h5>
+                <ul class="list-unstyled">
+                  {% for bullet in feature.bullets %}
+                    <li class="mb-2 ml-1">
+                      {{ bullet }}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
     {% include course-guide-form.html %}
   </section>
 
-  <section id="values" class="my-5 bg-gradient text-white">
+  <!-- <section id="values" class="my-5 bg-gradient text-white">
     <div class="container py-11">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
         Why Austin Coding Academy
@@ -173,7 +243,7 @@ logos:
         {% endfor %}
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="my-6 py-5 container">
     <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
