@@ -1,5 +1,14 @@
 {% if include.eventpage %}
 <div class="mt-90 pt-1 pb-5 d-flex flex-column align-items-center">
+  <!-- Events Page Header -->
+  <div class="my-10 container">
+    <h1 class="text-center font-family-alt font-weight-bold display-5">
+      Events
+    </h1>
+    <p class="text-center display-6">
+      Come join us at one of our upcoming events!
+    </p>
+  </div>
   <div class="d-flex flex-row flex-wrap justify-content-center w-75">
 {% else %}
 <div class="row d-flex flex-wrap justify-content-around justify-content-sm-center">
@@ -27,14 +36,7 @@
             {{event.start_date}} | {{event.start_time}}
           </p>
         </div>
-        <a class="btn btn-round bg-purple text-white"
-          href="{{event.url}}"
-          rel="noopener"
-          target="_blank"
-          role="button"
-        >
-          View Details <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-        </a>
+        {% include learn-to-code-form.html %}
       </div>
       <!-- End Card -->
     </div>
@@ -79,8 +81,6 @@
         }
       }
     </script>
-    <!-- Learn to Code Hubspot Script -->
-    {% include learn-to-code-form.html %}
 
   {% endfor %}
   {% unless include.eventpage %}
