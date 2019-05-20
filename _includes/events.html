@@ -1,11 +1,11 @@
 {% if include.eventpage %}
-<div class="container mt-90 pt-1 pb-5">
-{% endif %}
-
+<div class="mt-90 pt-1 pb-5 d-flex flex-column align-items-center">
+  <div class="d-flex flex-row flex-wrap justify-content-center w-75">
+{% else %}
 <div class="row d-flex flex-wrap justify-content-around justify-content-sm-center">
-  {% if includes.limitation %}
+{% endif %}
   {% for event in site.data.events | limit: 3 %}
-    <div class="col-12 col-md card card-frame shadow-black text-center m-2 mw-22r">
+    <div class="col-12 col-md-12 card card-frame shadow-black text-center m-2 mw-22r">
       <!-- Card -->
       <div class="card-body pt-6 pb-3">
         <div class="mx-auto mb-4">
@@ -38,6 +38,12 @@
       </div>
       <!-- End Card -->
     </div>
+    <!-- Sign Up Form -->
+    {% if include.eventpage %}
+    <form action="">
+
+    </form>
+    {% endif %}
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -61,9 +67,14 @@
         "description": "{{event.description | strip_newlines | escape}}"
       }
     </script>
-  {% endfor %}
-</div>
+    <!-- Learn to Code Hubspot Script -->
+    {% include learn-to-code-form.html %}
 
+  {% endfor %}
+  {% unless include.eventpage %}
+</div>
+{% endunless %}
 {% if include.eventpage %}
+  </div>
 </div>
 {% endif %}
