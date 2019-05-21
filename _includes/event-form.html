@@ -4,8 +4,7 @@
   role="button"
   tabindex="-1"
 >
-  Sign Up
-  <!-- View Details <i class="fas fa-external-link-alt" aria-hidden="true"></i> -->
+  Join Us
 </a>
 
 <amp-lightbox
@@ -28,9 +27,10 @@
   >
     <div class="form-container">
       <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
-      <input name="downloaded_a_courses_guide" type="hidden" value="true">
+      <!-- ! need name values, come from hubspot -->
+      <input name="event_name" type="hidden" value="{{include.event_name}}">
       <input name="hs_lead_status" type="hidden" value="NEW">
-      <input name="page_name" type="hidden" value="{{page.title}}">
+      <input name="page_name" type="hidden" value="{{page.title}} ({{include.event_date}})">
       <input name="page_uri" type="hidden" value="{{site.url}}{{page.url}}">
       <input name="hutk" type="hidden" value="">
 
