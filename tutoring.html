@@ -1,0 +1,14 @@
+---
+layout: default
+permalink: "/tutoring/"
+title: "Tutors | Unlimited Tutoring with Austin Coding Academy"
+description: ""
+redirect_from: []
+---
+{% for _page in site.pages %}
+  {% if _page.tutors %}
+    {% assign tutors = _page.tutors %}
+  {% endif %}
+{% endfor %}
+
+{% include tutors-list.html marketing=true tutors=tutors %}

@@ -1,3 +1,4 @@
+
 <div class="row d-flex flex-wrap justify-content-around justify-content-sm-center">
   {% for event in site.data.events limit:3 %}
     <div class="col-12 col-md card card-frame shadow-black text-center m-2 mw-22r">
@@ -27,7 +28,9 @@
           rel="noopener"
           target="_blank"
           role="button"
-        >View Details <i class="fas fa-external-link-alt"></i></a>
+        >
+          View Details <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+        </a>
       </div>
       <!-- End Card -->
     </div>
@@ -51,7 +54,19 @@
           }
         },
         "image": ["{{event.img}}"],
-        "description": "{{event.description | strip_newlines | escape}}"
+        "description": "{{event.description | strip_newlines | escape}}",
+        "performer": {
+          "@type": "PerformingGroup",
+          "name": "Austin Coding Academy"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "http://schema.org/InStock",
+          "priceCurrency": "USD",
+          "price": "0",
+          "validFrom": "{{event.published_date_time}}",
+          "url": "{{event.url}}"
+        }
       }
     </script>
   {% endfor %}

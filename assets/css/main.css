@@ -83,6 +83,10 @@ body, p {
   color: #ef4a2a;
 }
 
+.text-red-a {
+  color: #d83e31
+}
+
 .text-blue {
   color: #00b3d1;
 }
@@ -206,11 +210,12 @@ body, p {
 
 .nav-item a:hover, #sidebar a:hover, .cta-gradient:hover {
   color: #ffffff;
+  cursor: pointer;
 }
 
 .hover-white:hover {
   color: #ffffff;
-  text-shadow: 0 0 3px rgba(255,255,255,.5);
+  text-shadow: 0 0 4px rgba(255,255,255,.75);
 }
 
 .photo-hover {
@@ -226,8 +231,12 @@ body, p {
 
 /* HERO IMAGES */
 
+#bg-404 {
+  background-image: url(https://austincodingacademy.github.io/front/assets/svg/illustrations/error-404.svg);
+}
+
 .hero {
-  min-height: 95vh;
+  min-height: 78vh;
   background-position: 0 -1px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -362,6 +371,13 @@ body, p {
   min-width: 10rem;
 }
 
+<<<<<<< HEAD
+=======
+.navbar-logo {
+  width: 66px;
+}
+
+>>>>>>> preview
 .img-logo {
   width: 4rem;
 }
@@ -382,23 +398,37 @@ body, p {
 
 /* Position Dropdown */
 .nav-dropdown {
+<<<<<<< HEAD
   top: 60px;
   /* the height of the main nav */
   background-color: rgba(0, 0, 0, 0.8);
+=======
+  top: 3rem;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Hide Dropdowns */
+#nav-bar>ul>li>ul {
+  display: none;
+>>>>>>> preview
 }
 
 /* Display Dropdowns on Hover */
-#nav-bar ul li:hover>ul {
+#nav-bar>ul>li:hover>ul {
   display: inherit;
 }
 
 /* First Tier Dropdown */
 nav ul ul li {
-  width: 140px;
+  min-width: 7rem;
+  width: auto;
   float: none;
   display: list-item;
+<<<<<<< HEAD
   /* background-color: rgba(0, 0, 0, 0.8); */
   padding: 3px 0 3px 10px;
+=======
+>>>>>>> preview
 }
 
 /* INDEX */

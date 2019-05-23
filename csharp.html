@@ -3,187 +3,25 @@ layout: default
 permalink: /csharp/
 title: ""
 description: ""
+scroll_offset_for_header: 0.25
 hero: csharp
 course_name: C# .NET
+amp_components: ['amp-animation', 'amp-position-observer']
 hero_title: C# .NET Programming Course
 hero_text: Learn Microsoft’s powerful C# programming language and .Net framework with our part-time, in-person C# .Net Programming Course – Coming Soon.
+into_text: C# (programming language) and .Net (framework) are widely used software development technologies developed by Microsoft. But why are they worth learning?
 features:
-  - heading: Lorem, ipsum dolor.
-    img_src: calendar.png
-    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis omnis aliquam quis magnam nobis quas id nam vero, sapiente voluptatem!
-  - heading: Lorem, ipsum.
-    img_src: calendar.png
-    text: Tempor porttitor massa. Nulla ligula nibh, ultricies sit amet urna posuere, viverra ultricies est. Integer pellentesque ultricies aliquam.
-  - heading: Lorem, ipsum.
-    img_src: calendar.png
-    text: Voluptate eos quisquam pariatur assumenda ipsa accusamus rerum perferendis ut? Sit amet consectetur adipisicing elit.
-  - heading: Lorem ipsum dolor sit.
-    img_src: calendar.png
-    text: Mauris a ullamcorper arcu, ut dignissim ante. Vestibulum fringilla eget augue vel commodo. Sed nisl justo, semper quis justo efficitur.
+  - heading: Powerful – and Popular
+    text: C# is the 7th most popular language of 2019 among professional developers and has the 4th largest Stack Overflow community
+    img_src: far fa-comments
+  - heading: Building the Microsoft Platform
+    text: Developed by Microsoft, C# and .Net are the go-to technologies for developing on the Microsoft platform (i.e. Excel, Skype, etc.)
+    img_src: fab fa-microsoft
+  - heading: Designing Video Games
+    text: C# has the added benefit of being the language used by the popular game engine Unity, for designing video games
+    img_src: fas fa-gamepad
+  - heading: Simplifying Mobile App Development
+    text: Create cross-platform mobile apps that are functional on Android, iOS, and Windows using C# and .Net
+    img_src: fas fa-mobile-alt
 ---
-<!-- htmllint preset="none" -->
-<div id="hero-{{ page.hero }}" class="hero py-5 py-md-11">
-<!-- htmllint preset="$previous" -->
-  {% include scrolling-menu-observer.html %}
-  <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
-    {{ page.hero_title }}
-  </h1>
-  <p class="text-white text-center mx-auto px-2 mw-600">
-    {{ page.hero_text }}
-  </p>
-</div>
-
-<main>
-  {% include observer-and-header-animation.html %}
-  <section id="curriculum" class="pt-11 container">
-    <div class="row">
-      <div class="mt-3 mb-6 text-center col-12">
-        <h2 class="font-family-alt display-5">
-          What is {{page.course_name}}?
-        </h2>
-      </div>
-      {% for item in page.features %}
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-3 d-flex align-items-center">
-              <amp-img
-                width="80px"
-                height="80px"
-                layout="fixed"
-                src="/assets/images/{{item.img_src}}"
-                alt=""
-              ></amp-img>
-            </div>
-            <div class="col-9 d-flex flex-column">
-              <h5>
-                {{item.heading}}
-              </h5>
-              <p>
-                {{item.text}}
-              </p>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </section>
-
-  <section class="py-11">
-    <h2 class="display-6 font-family-alt text-center">
-      Coming Soon
-    </h2>
-    <p class="mw-600 mx-auto text-center">
-      Interested in learning C# .Net with Austin Coding Academy? Register your interest today and we’ll keep you in the loop about the next start date.
-    </p>
-    <form class="d-flex justify-content-center align-items-center"
-      target="_top"
-      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/b8fb52b4-28de-4133-920b-7f587724bb3d"
-      method="POST"
-    >
-      <div class="form-container mw-850 px-5 px-lg-0">
-        <input name="lifecyclestage" type="hidden" value="marketingqualifiedlead">
-        <input name="hs_lead_status" type="hidden" value="NEW">
-        <input name="page_name" type="hidden" value="{{page.title}}">
-        <input name="page_uri" type="hidden" value="{{site.url}}{{page.url}}">
-        <input name="hutk" type="hidden" value="">
-
-        <div class="row center-form">
-          <!-- Input -->
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="first-name" class="form-label">
-                First Name <span class="text-red">*</span>
-              </label>
-
-              <input id="first-name" type="text" class="form-control" name="firstname" placeholder="First name" aria-label="Your name"
-                required data-msg="Please enter your name." data-error-class="u-has-error" data-success-class="u-has-success" />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="first-name" class="form-label">
-                Last Name <span class="text-red">*</span>
-              </label>
-
-              <input id="first-name" type="text" class="form-control" name="lastname" placeholder="First name" aria-label="Your name"
-                required data-msg="Please enter your name." data-error-class="u-has-error" data-success-class="u-has-success" />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="email" class="form-label">
-                Email <span class="text-red">*</span>
-              </label>
-
-              <input id="email" type="email" class="form-control" name="email" placeholder="Email" aria-label="Your email address"
-                required data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success" />
-            </div>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-sm-6 d-flex flex-column justify-content-end form-group">
-            <label class="form-label" for="best-describes">Which of these best describes you? <span class="text-red">*</span></label>
-            <select id="best-describes" name="which_of_these_best_describes_you_" class="form-control" required>
-              <option disabled selected value="">Select your answer</option>
-              <option value="I'm researching coding bootcamps">I'm researching coding bootcamps</option>
-              <option value="I'm teaching myself to code but I'm stuck">I'm teaching myself to code but I'm stuck</option>
-              <option value="I'm interested in a career in tech">I'm interested in a career in tech</option>
-              <option value="I'm an entrepreneur with an idea">I'm an entrepreneur with an idea</option>
-              <option value="I'm looking for a college alternative">I'm looking for a college alternative</option>
-              <option value="I want to learn a new skill for my current job">I want to learn a new skill for my current job</option>
-            </select>
-          </div>
-          <!-- End Input -->
-
-          <!-- Input -->
-          <div class="js-form-message mb-4 col-sm-12">
-          <label for="message" class="form-label">
-            Message <span class="text-red">*</span>
-          </label>
-
-          <div class="input-group">
-            <textarea
-              id="message"
-              class="form-control"
-              rows="4"
-              name="message"
-              placeholder="Enter your questions or comments here"
-              aria-label="Enter your questions or comments here"
-              required
-              data-msg="Please enter a message."
-              data-error-class="u-has-error"
-              data-success-class="u-has-success"
-            ></textarea>
-          </div>
-        </div>
-        <!-- End Input -->
-
-          <!-- Input -->
-          <div class="col-12 d-flex align-items-end justify-content-center form-group">
-            <button type="submit" class="btn btn-round btn-sm-block text-white bg-purple hover-white">
-              Submit
-            </button>
-          </div>
-          <!-- End Input -->
-          <div class="col-12 d-flex justify-content-center">
-            {% include data-agreement.html %}
-          </div>
-        </div>
-        <div class="text-center">
-          <div submit-error>
-            <template type="amp-mustache">
-              <p class="text-red">There was an error with your request. Please try again.</p>
-            </template>
-          </div>
-        </div>
-      </div>
-    </form>
-  </section>
-</main>
+{% include elective-page.html %}
