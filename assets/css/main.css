@@ -367,6 +367,10 @@ body, p {
   max-width: 22rem;
 }
 
+.mw-14r {
+  max-width: 14rem;
+}
+
 .mw-10r {
   min-width: 10rem;
 }
@@ -398,11 +402,6 @@ body, p {
 
 /* Position Dropdown */
 .nav-dropdown {
-<<<<<<< HEAD
-  top: 60px;
-  /* the height of the main nav */
-  background-color: rgba(0, 0, 0, 0.8);
-=======
   top: 3rem;
   background-color: rgba(0, 0, 0, 0.85);
 }
@@ -410,7 +409,6 @@ body, p {
 /* Hide Dropdowns */
 #nav-bar>ul>li>ul {
   display: none;
->>>>>>> preview
 }
 
 /* Display Dropdowns on Hover */
@@ -424,11 +422,6 @@ nav ul ul li {
   width: auto;
   float: none;
   display: list-item;
-<<<<<<< HEAD
-  /* background-color: rgba(0, 0, 0, 0.8); */
-  padding: 3px 0 3px 10px;
-=======
->>>>>>> preview
 }
 
 /* INDEX */
@@ -442,7 +435,7 @@ nav ul ul li {
 
 .company-logo-img {
   width: 100%;
-  max-width: 6rem;
+  max-width: 8rem;
   height: auto;
 }
 
