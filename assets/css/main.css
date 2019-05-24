@@ -236,7 +236,7 @@ body, p {
 }
 
 .hero {
-  min-height: 95vh;
+  min-height: 78vh;
   background-position: 0 -1px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -367,14 +367,21 @@ body, p {
   max-width: 22rem;
 }
 
+.mw-14r {
+  max-width: 14rem;
+}
+
 .mw-10r {
   min-width: 10rem;
 }
 
+<<<<<<< HEAD
+=======
 .navbar-logo {
   width: 66px;
 }
 
+>>>>>>> preview
 .img-logo {
   width: 4rem;
 }
@@ -428,7 +435,7 @@ nav ul ul li {
 
 .company-logo-img {
   width: 100%;
-  max-width: 6rem;
+  max-width: 8rem;
   height: auto;
 }
 

@@ -1,0 +1,11 @@
+<!-- htmllint preset="none" -->
+{% if site.baseurl == '/amp' %}
+<amp-analytics config="https://swappy.callrail.com/companies/915131377/amp-analytics.json?cid=CLIENT_ID(cid-scope-cookie-fallback-name)"></amp-analytics>
+
+<amp-call-tracking config="https://swappy.callrail.com/companies/915131377/amp-swap.json?t=15129938193&cid=CLIENT_ID(cid-scope-cookie-fallback-name)">
+  <a class="{{ include.a_class }}" href="tel:5129938193"><span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp; 1 512-993-8193</a>
+</amp-call-tracking>
+{% else %}
+<a class="{{ include.a_class }}" href="tel:5129938193"><span class="{{include.icon_class}}" aria-hidden="true"></span>&nbsp; 1 512-993-8193</a>
+{% endif %}
+<!-- htmllint preset="$previous" -->
