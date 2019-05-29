@@ -1,35 +1,3 @@
-baseurl: ""
 url: "https://lubbockcodingacademy.com"
-form_url: ""
-hubspot_portal_id: ''
 phone: (806) 905-5021
 key: lubbock
-
-# Build settings
-markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-redirect-from
-  - jekyll-menus
-  - liquid-md5
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - favicon.json
-  - faviconData.json
-  - package.json
-  - yarn.lock
-  - README.md
-
-permalink: /blog/:categories/:title/
-
-categories: [ hiregraduationuate, landing ]
