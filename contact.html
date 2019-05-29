@@ -1,10 +1,40 @@
 ---
 layout: default
 permalink: "/contact/"
-title: "Contact Austin Coding Academy | Programming Classes in Austin"
-description: "Questions, comments or concerns? From classes to financing to your next
-  steps, we’ll help us find the answers. Contact us today!"
-redirect_from: []
+city:
+  austin:
+    title: "Contact Austin Coding Academy | Programming Classes in Austin"
+    description: "Questions, comments or concerns? From classes to financing to your next
+      steps, we’ll help us find the answers. Contact us today!"
+    redirect_from: []
+    locations:
+      Downtown:
+        map_url: https://www.google.com/maps/place/Austin+Coding+Academy/@30.2688755,-97.7427528,17z/data=!3m1!4b1!4m5!3m4!1s0x8644b4e31ad087bd:0xd6644ce54fe2531c!8m2!3d30.2688755!4d-97.7405641
+        address:
+        - Downtown
+        - (Capital Factory)
+        - 701 Brazos St, Ste 1616,
+        - Austin, TX 78701
+      North Austin:
+        map_url: https://www.google.com/maps/place/North+Austin+Coding+Academy/@30.3290949,-97.7136072,17z/data=!3m1!4b1!4m5!3m4!1s0x8644cba00a32dc3d:0x8807e75b730c450f!8m2!3d30.3290949!4d-97.7114185
+        address:
+        - North Austin
+        - (Highland)
+        - 314 E Highland Mall Blvd, Ste 114
+        - Austin, TX 78752
+  lubbock:
+    title: "Contact Austin Coding Academy | Programming Classes in Austin"
+    description: "Questions, comments or concerns? From classes to financing to your next
+      steps, we’ll help us find the answers. Contact us today!"
+    redirect_from: []
+    locations:
+      Downtown:
+        map_url: https://www.google.com/maps/place/Austin+Coding+Academy/@30.2688755,-97.7427528,17z/data=!3m1!4b1!4m5!3m4!1s0x8644b4e31ad087bd:0xd6644ce54fe2531c!8m2!3d30.2688755!4d-97.7405641
+        address:
+        - Downtown
+        - (Capital Factory)
+        - 701 Brazos St, Ste 1616,
+        - Austin, TX 78701
 ---
 <div class="container mt-90 pt-1 pb-5">
   <h2 class="font-family-alt font-weight-bold text-center display-5 my-10">
@@ -18,36 +48,25 @@ redirect_from: []
         give us a call 9am - 6pm Monday - Friday at
         {% include phone.html a_class="flex-nowrap" %}
       </p>
-      <a
-        class="text-default"
-        href="https://www.google.com/maps/place/Austin+Coding+Academy/@30.2688755,-97.7427528,17z/data=!3m1!4b1!4m5!3m4!1s0x8644b4e31ad087bd:0xd6644ce54fe2531c!8m2!3d30.2688755!4d-97.7405641"
-        target="_blank"
-        rel="noopener"
-      >
-        <ul class="fa-ul">
-          <li>
-            <span class="fa-li"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span> Downtown
-          </li>
-          <li>(Capital Factory)</li>
-          <li>701 Brazos St, Ste 1616,</li>
-          <li>Austin, TX 78701</li>
-        </ul>
-      </a>
-      <a
-        class="text-default"
-        href="https://www.google.com/maps/place/North+Austin+Coding+Academy/@30.3290949,-97.7136072,17z/data=!3m1!4b1!4m5!3m4!1s0x8644cba00a32dc3d:0x8807e75b730c450f!8m2!3d30.3290949!4d-97.7114185"
-        target="_blank"
-        rel="noopener"
-      >
-        <ul class="fa-ul">
-          <li>
-            <span class="fa-li"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span> North Austin
-          </li>
-          <li>(Highland)</li>
-          <li>314 E Highland Mall Blvd, Ste 114</li>
-          <li>Austin, TX 78752</li>
-        </ul>
-      </a>
+      {% for location in city.locations %}
+        <a
+          class="text-default"
+          href="{{location.map_url}}"
+          target="_blank"
+          rel="noopener"
+        >
+          {% for item in location.address %}
+            <ul class="fa-ul">
+              <li>
+                <span class="fa-li"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span> {{ item }}
+              </li>
+              <li>{{ item }}</li>
+              <li>{{ item }}</li>
+              <li>{{ item }}</li>
+            </ul>
+          {% endfor %}
+        </a>
+      {% endfor %}
     </div>
     <div class="col-xs-12 col-sm-6">
       {% include contact-form.html %}
