@@ -11,6 +11,11 @@ austin:
   redirect_from: []
   nextStartDate: April 2nd
   amp_components: ['amp-animation', 'amp-position-observer']
+  heading: Change Your Life With a New Career
+  subheading: Part-time coding classes taught by full-time developers here in Austin, TX
+  appt_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
+  phone: 5128278498
+  apply_btn: 'btn-apply.html'
   features:
   - heading: Flexible Schedule
     title: Keep Your Day Job While You Make a Career Change
@@ -104,8 +109,13 @@ lubbock:
   redirect_from: []
   nextStartDate: July 22nd
   amp_components: ['amp-animation', 'amp-position-observer']
+  heading: Change Your Life With a New Career
+  subheading: Part-time coding classes taught by full-time developers here in Lubbock, TX
+  appt_href:
+  phone: 8069055021
+  apply_btn:
   features:
-  - heading: SLDFKSKLD
+  - heading: Flexible Schedule
     title: Keep Your Day Job While You Make a Career Change
     bullets:
     - In-person, part-time classes meet twice a week in the evenings, so learning to
@@ -197,10 +207,10 @@ lubbock:
     <div class="col-8 col-md-7 col-lg-6 pl-0">
       <div class="my-11"></div>
       <h1 class="text-white font-family-alt font-weight-bold display-responsive">
-        Change Your Life With a New Career
+        {{ city.heading }}
       </h1>
       <p class="text-white mt-4 mb-3 line-typewriter anim-typewriter">
-        Part-time coding classes taught by full-time developers here in Austin, TX
+        {{ city.subheading }}
       </p>
       <div class="d-flex justify-content-start">
         <button
@@ -223,7 +233,7 @@ lubbock:
           <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center">
             <!-- htmllint preset="none" -->
             <a class="my-5 btn btn-light btn-round mr-2 d-sm-none"
-              href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
+              href="{{ city.appt_href }}"
               target="_blank"
               rel="noopener"
             >
@@ -234,7 +244,7 @@ lubbock:
               OR
             </h4>
             <a class="my-5 btn btn-light btn-round mr-2 d-sm-none"
-              href="tel:5128278498"
+              href="tel:{{ city.phone }}"
             >
               Call Us Now!
             </a>
@@ -243,13 +253,13 @@ lubbock:
         <!-- htmllint preset="none" -->
         <a
           class="btn btn-outline-light btn-round mr-2 d-none d-sm-block"
-          href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673"
+          href="{{ city.appt_href }}"
           target="_blank"
           rel="noopener">
           Schedule a Q&amp;A
         </a>
         <!-- htmllint preset="$previous" -->
-        {% include btn-apply.html %}
+        {% include {{ city.apply_btn }} %}
       </div>
     </div>
   </div>
@@ -265,7 +275,7 @@ lubbock:
   <section id="values" class="my-5 bg-gradient text-white">
     <div class="container py-11">
       <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
-        Why Austin Coding Academy
+        Why {{site.key | capitalize}} Coding Academy
       </h2>
       <div class="row">
         {% for feature in city.features %}
@@ -308,10 +318,12 @@ lubbock:
       <div class="row">
         <div class="col-12 col-sm-6">
           <h5 class="text-center font-weight-bold">
-            Lillian Situ, ACA graduate
+
+            <!-- Lillian Situ, ACA graduate -->
           </h5>
           <h5 class="text-center">
-            Software Engineer, data.world
+
+            <!-- Software Engineer, data.world -->
           </h5>
           <div>
             <amp-iframe
