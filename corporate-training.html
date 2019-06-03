@@ -2,6 +2,8 @@
 layout: default
 permalink: /corporate-training/
 title: Corporate Training | Austin Coding Academy Professional Services
+heading: Corporate Training
+subheading:
 sections:
   - title: Custom Training (flexible lengths)
     description: "Austin Coding Academy offers a wide variety of technology and skill training. Want your
@@ -26,7 +28,7 @@ sections:
     - Product design
     - Wordpress
     - Web VR
-  - title: Intensives (1-3 days)
+  - title: Intensives (1 - 3 days)
     description: "Don’t have time for an 8-week seminar? For those single technologies your team needs to learn quick,
       ACA has put together all you need to know to get started producing."
     header: "Some of our one-off intensives include:"
@@ -41,76 +43,37 @@ sections:
 <main class="mt-90 pt-1 pb-5">
   <div class="my-10 container">
     <h1 class="text-center font-family-alt font-weight-bold display-5">
-      Corporate Training
+      {{ page.heading }}
     </h1>
     <p class="text-center display-6">
-      We keep it simple.
+      {{ page.subheading }}
     </p>
   </div>
-  {% for section in page.sections %}
-    <section class="mt-5 mb-10">
-      {% if section.button %}
-      <!-- remove bg-light -->
-        <div class="container-fluid text-center py-3 my-5">
-          <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
+  <div class="d-flex flex-column align-items-center">
+    {% for section in page.sections %}
+      <section class="mw-850 mb-3">
+        <div class="container-fluid py-3">
+          <h2 class="mb-4 font-family-alt font-weight-bold">
             {{section.title}}
           </h2>
-          <p class="m-0 mx-auto mw-600">
-            {{section.description}}
-          </p>
-          <!-- Apply button -->
-          <!-- htmllint preset="none" -->
-          <a class="{{section.style}} hover-white" href="{{ section.url }}">
-          <!-- htmllint preset="$previous" -->
-            <span class="text-white hover-white">
-              {{ section.button }}
-            </span>
-          </a>
-        </div>
-      {% else %}
-      <div class="container-fluid bg-light text-center py-3 my-5">
-          <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
-            {{section.title}}
-          </h2>
-          <p class="m-0 mx-auto mw-600">
+          <p class="m-0 mw-600">
             {{section.description}}
           </p>
         </div>
-      <div class="container">
-        {% for option in section.options %}
-          <div class="row my-5">
-            <div class="col-md-8">
-              <h3 class="display-7 border-bottom">
-                {{option.title}}
-              </h3>
-              <p>
-                {{option.description}}
-              </p>
-            </div>
-            <div class="col-md-4 px-5">
-              {% if option.price %}
-                <div class="text-center">
-                  <h5>
-                    {{option.price-header}}
-                  </h5>
-                  <p class="card-body mx-11 mx-md-auto mx-lg-5 rounded border shadow display-6">
-                    {{option.price}}
-                  </p>
-                </div>
-              {% elsif option.cta %}
-                <div class="text-center">
-                  <h5>
-                    Learn More
-                  </h5>
-                  {{option.cta}}
-                </div>
-              {% endif %}
-            </div>
-          </div>
-          {% comment %}{% unless option == section.options.last %}<hr>{% endunless %}{% endcomment %}
-        {% endfor %}
-      </div>
-      {% endif %}
-    </section>
-  {% endfor %}
+        <!-- * bulletted lists -->
+        <div class="pl-3 mw-450 d-flex flex-column">
+          <h5 class="py-3">
+            {{ section.header }}
+          </h5>
+          <ul class="ml-0 fa-ul">
+            {% for bullet in section.bullets %}
+              <li>
+                <li class="mb-1"><span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}</li>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+    {% endfor %}
+  </div>
 </main>
