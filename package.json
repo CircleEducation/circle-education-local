@@ -9,6 +9,7 @@
     "lint-css": "stylelint ./**/*.css",
     "lint": "yarn lint-html && yarn lint-css",
     "test": "yarn lint",
+    "pa11y": "pa11y-ci",
     "images": "imagemin assets/images/* --out-dir=assets/images/",
     "favicon": "real-favicon generate favicon.json faviconData.json assets/favicons/ && npm run favicon-inject",
     "favicon-inject": "echo '' > _includes/favicon.html && real-favicon inject faviconData.json assets/favicons _includes/favicon.html && mv assets/favicons/favicon.html _includes/favicon.html",
@@ -19,6 +20,7 @@
     "start": "concurrently \"http-server _site -p 4000 -s\" \"npm-watch\"",
     "build": "touch _includes/css.html && yarn css && yarn build-default && yarn build-amp",
     "build-default": "bundle exec jekyll build --config _config.yml",
+    "build-lubbock": "bundle exec jekyll build --config _config.yml,_config_lubbock.yml",
     "build-amp": "bundle exec jekyll build --config '_config.yml,_amp.yml' --destination _site/amp/",
     "css": "yarn build-default && node postcss.js && echo '<!-- htmllint preset=\"none\" --><style amp-custom>' > _includes/css.html && cat assets/css/main.min.css >> _includes/css.html && echo '</style><!-- htmllint preset=\"$previous\" -->' >> _includes/css.html"
   },
@@ -62,5 +64,8 @@
         "_includes/css.html"
       ]
     }
+  },
+  "dependencies": {
+    "pa11y-ci": "^2.3.0"
   }
 }
