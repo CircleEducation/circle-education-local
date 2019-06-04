@@ -29,7 +29,8 @@
           <div class="col d-flex flex-column justify-content-around align-items-start">
             {% include phone.html a_class="text-white hover-white my-2" icon_class="text-white hover-white fas fa-phone" %}
             <div class="my-2">
-              {% for item in site.menus.social %}
+              {% assign city = site.data.menus[site.key] %}
+              {% for item in city.social %}
                 <!-- htmllint preset="none" -->
                 <a href="{{ item.url }}" class="{{ item.class }}">
                   <span class="text-white hover-white display-7 fab fa-{{ item.title }}" aria-hidden="true">
@@ -49,7 +50,7 @@
         </h5>
         <!-- List Group -->
           <div class="row">
-            {% for item in site.menus.footer %}
+            {% for item in city.footer %}
               <div class="col-6 my-2">
                 <a
                   class="text-white hover-white"
