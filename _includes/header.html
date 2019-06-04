@@ -36,7 +36,9 @@
               {% if item.links %}
                 {% for link in item.links %}
                   <li>
+                    <!-- htmllint preset="none" -->
                     <a href="{{link.url}}" class="text-blue hover-white">
+                    <!-- htmllint preset="$previous" -->
                       {{link.title}}
                     </a>
                   </li>
@@ -50,7 +52,9 @@
                     <ul class="list-unstyled">
                       {% for page in section.pages %}
                         <li>
+                          <!-- htmllint preset="none" -->
                           <a href="{{page.url}}" class="text-blue hover-white">
+                          <!-- htmllint preset="$previous" -->
                             {{page.title}}
                           </a>
                         </li>
@@ -93,7 +97,7 @@
             height="66px"
             layout="fixed"
             alt="ACA Home"
-            src="/assets/images/logo-aca-white.png"
+            src="/assets/images/logo-{{ site.acronym }}-white.png"
             class="w-100"
           ></amp-img>
           <span class="sr-only">Austin Coding Academy Logo</span>
@@ -143,10 +147,10 @@
                   <ul class="nav-dropdown position-absolute list-unstyled rounded px-3">
                     {% for link in item.links %}
                       {% if link.url != "#" %}
-                        <!-- htmllint preset="none" -->
                         <li class="position-relative p-0 my-2">
-                        <!-- htmllint preset="$previous" -->
+                          <!-- htmllint preset="none" -->
                           <a class="p-0" href="{{ link.url }}">
+                            <!-- htmllint preset="$previous" -->
                             <span class="text-white hover-white">
                               {{ link.title }}
                             </span>
@@ -156,9 +160,21 @@
                     {% endfor %}
                   </ul>
                 </li>
+              {% elsif item.title == 'Student Portal' %}
+                <li class="nav-item u-header__nav-item">
+                  <!-- htmllint preset="none" -->
+                  <a href="https://campus.{{ site.key }}codingacademy.com" tabindex="0" class="p-2 mx-2">
+                  <!-- htmllint preset="$previous" -->
+                    <span class="text-white hover-white">
+                      {{ item.title }}
+                    </span>
+                  </a>
+                </li>
               {% else %}
                 <li class="nav-item u-header__nav-item">
-                  <a href="{{item.url}}" tabindex="0" class="p-2 mx-2">
+                  <!-- htmllint preset="none" -->
+                  <a href="{{ item.url }}" tabindex="0" class="p-2 mx-2">
+                  <!-- htmllint preset="$previous" -->
                     <span class="text-white hover-white">
                       {{ item.title }}
                     </span>
