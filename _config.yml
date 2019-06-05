@@ -35,6 +35,7 @@ exclude:
   - package.json
   - yarn.lock
   - README.md
+  - '*.orig'
 
 permalink: /blog/:categories/:title/
 
