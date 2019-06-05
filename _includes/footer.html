@@ -92,13 +92,13 @@
     "address": [
       {
         "@type": "PostalAddress",
-        "streetAddress": "701 Brazos St, Ste 1616",
-        "addressLocality": "Austin, TX 78701"
+        "streetAddress": "{{ site.locations[0].street }}",
+        "addressLocality": "{{ site.locations[0].locality }}"
       },
       {
         "@type": "PostalAddress",
-        "streetAddress": "314 E Highland Mall Blvd, Ste 114",
-        "addressLocality": "Austin, TX 78752"
+        "streetAddress": "{{ site.locations[1].street }}",
+        "addressLocality": "{{ site.locations[1].locality }}"
       }
     ]
   }

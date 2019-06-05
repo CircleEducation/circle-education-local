@@ -87,7 +87,7 @@ header:
       url: "/contact"
     - weight: 5
       title: Blog
-      url: "/blog"
+      url: "https://austincodingacademy.com/blog/"
 - weight: 2
   title: Tuition
   url: "/tuition"
