@@ -92,15 +92,17 @@
           href="/"
           aria-label="Logo"
         >
+          <!-- htmllint preset="none" -->
           <amp-img
             width="66px"
             height="66px"
             layout="fixed"
-            alt="ACA Home"
+            alt="{{ site.acronym | upcase }} Home"
             src="/assets/images/logo-{{ site.acronym }}-white.png"
             class="w-100"
           ></amp-img>
-          <span class="sr-only">Austin Coding Academy Logo</span>
+          <!-- htmllint preset="$previous" -->
+          <span class="sr-only">{{ site.key | capitalize }} Coding Academy Logo</span>
         </a>
         <!-- End Logo -->
         {% unless page.categories contains 'landing' %}
