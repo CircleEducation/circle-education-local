@@ -193,6 +193,10 @@ body, p {
 .display-8 {
   font-size: 1rem;
 }
+/* quote footer */
+.display-9 {
+  font-size: .9rem !important;
+}
 
 .display-small {
   font-size: .85rem;
@@ -287,6 +291,16 @@ body, p {
 .bg-gradient {
   background: linear-gradient(to right, #21409a, #2d2f77);
 }
+/* new index page backgrounds */
+.bg-dark-primary {
+  background: url(/assets/images/WhyChooseUs.svg);
+  background-size: cover;
+}
+
+.bg-dark-secondary {
+  background: url(/assets/images/BGPattern.svg);
+  background-size: cover;
+}
 
 .border-blue {
   border: 2px solid #00b3d1;
@@ -363,8 +377,16 @@ body, p {
   max-width: 600px;
 }
 
+.mw-450 {
+  max-width: 450px;
+}
+
 .mw-22r {
   max-width: 22rem;
+}
+
+.mw-14r {
+  max-width: 14rem;
 }
 
 .mw-10r {
@@ -428,7 +450,7 @@ nav ul ul li {
 
 .company-logo-img {
   width: 100%;
-  max-width: 6rem;
+  max-width: 8rem;
   height: auto;
 }
 
