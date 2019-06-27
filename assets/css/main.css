@@ -259,6 +259,11 @@ body, p {
   background-position: top;
 }
 
+#hero-corporate {
+  background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-csharp.jpg');
+  background-position: top;
+}
+
 #hero-js {
   background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(0,179,209, 0.7)), url('/assets/images/hero-javascript.jpg');
   background-position: top;
