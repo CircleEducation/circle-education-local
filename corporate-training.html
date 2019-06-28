@@ -5,7 +5,7 @@ title: ""
 description: ""
 scroll_offset_for_header:
 hero: corporate
-amp_components: ['amp-animation', 'amp-position-observer']
+amp_components: ['amp-animation', 'amp-position-observer', 'amp-lightbox']
 hero_title: Austin Coding Academy<br> PROFESSIONAL SERVICES
 into_text: C# (programming language) and .Net (framework) are widely used software development technologies developed by Microsoft. But why are they worth learning?
 features:
@@ -89,16 +89,17 @@ austin:
 {% assign city = page[site.key] %}
 
 <!-- htmllint preset="none" -->
-<div id="hero-{{ page.hero }}" class="hero d-flex align-items-center py-5 py-md-11">
-  <!-- htmllint preset="$previous" -->
-    <h1 class="text-white font-weight-bold w-75 mx-auto font-family-alt display-4 text-center">
-      {{ page.hero_title }}
-    </h1>
-  </div>
+<div id="hero-{{ page.hero }}" class="hero d-flex flex-column align-items-center justify-content-center py-5 py-md-11">
+<!-- htmllint preset="$previous" -->
+  <h1 class="text-white font-weight-bold w-75 mx-auto font-family-alt display-4 text-center">
+    {{ page.hero_title }}
+  </h1>
+  {% include corporate-form.html %}
+</div>
 
 <main>
   {% include observer-and-header-animation.html %}
-  <section id="curriculum" class="pt-11 container">
+  <section id="curriculum" class="pt-11 pb-6 container">
     <div class="row">
       <div class="mt-3 mb-6 text-center col-12">
         <h2 class="font-family-alt display-5">
@@ -129,13 +130,21 @@ austin:
         </div>
       {% endfor %}
     </div>
+    <div class="d-flex justify-content-center">
+      <a
+        class="btn bg-purple hover-white mx-auto my-4 btn-round text-white"
+        href="/"
+        rel="noopener">
+        Request Info
+      </a>
+    </div>
   </section>
 
-  <div class="bg-textured-2 text-white w-100">
+  <div class="bg-textured-2 text-white w-100 pb-5">
     <section class="container">
-      <div class="row">
+      <div class="row pb-3">
         <div class="text-center col-12 py-4">
-          <h2 class="font-family-alt display-5">
+          <h2 class="font-family-alt display-5 mt-5">
             Our Training Offerings
           </h2>
           <p class="w-75 mx-auto text-white">
@@ -143,32 +152,30 @@ austin:
             We create curriculum based on specific gaps in your employees skills, and deliver it in the way that suits you best.
           </p>
         </div>
-        <div class="col-10 mx-auto">
-          {% for section in city.sections %}
-            <section class="mw-850 mb-3">
-              <div class="container-fluid py-3">
-                <h2 class="mb-4 font-family-alt font-weight-bold">
-                  {{section.title}}
-                </h2>
-                <p class="m-0 text-white mw-600">
-                  {{section.description}}
-                </p>
-              </div>
-              <div class="pl-3 mw-450 d-flex flex-column">
-                <h5 class="py-3">
-                  {{ section.header }}
-                </h5>
-                <ul class="fa-ul m-0">
-                  {% for bullet in section.bullets %}
-                    <li class="mb-1">
-                      <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
-                    </li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </section>
-          {% endfor %}
-        </div>
+        {% for section in city.sections %}
+          <section class="mw-850 mb-3">
+            <div class="container-fluid py-3">
+              <h2 class="mb-4 font-family-alt font-weight-bold">
+                {{section.title}}
+              </h2>
+              <p class="m-0 text-white mw-600">
+                {{section.description}}
+              </p>
+            </div>
+            <div class="pl-3 mw-450 d-flex flex-column">
+              <h5 class="py-3">
+                {{ section.header }}
+              </h5>
+              <ul class="fa-ul m-0">
+                {% for bullet in section.bullets %}
+                  <li class="mb-1">
+                    <span class="fa-li" ><i class="fas fa-chevron-right"></i></span>{{ bullet }}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </section>
+        {% endfor %}
       </div>
     </section>
   </div>
