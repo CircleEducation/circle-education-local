@@ -283,6 +283,8 @@ body, p {
 
 .cta-gradient {
   background: linear-gradient(to right, #00b3d1, #7fc89a);
+  border-right: 0 !important;
+  border-left: 0 !important;
 }
 
 .js-gradient {
@@ -297,13 +299,18 @@ body, p {
   background: linear-gradient(to right, #21409a, #2d2f77);
 }
 /* new index page backgrounds */
-.bg-dark-primary {
-  background: url(/assets/images/WhyChooseUs.svg);
+.bg-textured-1 {
+  background: url(/assets/images/bg-textured-first.svg);
   background-size: cover;
 }
 
-.bg-dark-secondary {
-  background: url(/assets/images/BGPattern.svg);
+.bg-textured-2 {
+  background: url(/assets/images/bg-textured-second.png);
+  background-size: cover;
+}
+
+.bg-textured-3 {
+  background: url(/assets/images/bg-textured-third.png);
   background-size: cover;
 }
 
