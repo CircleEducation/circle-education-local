@@ -7,23 +7,25 @@ scroll_offset_for_header:
 hero: corporate
 amp_components: ['amp-animation', 'amp-position-observer', 'amp-lightbox']
 hero_title: Austin Coding Academy<br> PROFESSIONAL SERVICES
-into_text: C# (programming language) and .Net (framework) are widely used software development technologies developed by Microsoft. But why are they worth learning?
-features:
-  - heading: Powerful – and Popular
-    text: C# is the 7th most popular language of 2019 among professional developers and has the 4th largest Stack Overflow community
-    img_src: far fa-comments
-  - heading: Building the Microsoft Platform
-    text: Developed by Microsoft, C# and .Net are the go-to technologies for developing on the Microsoft platform (i.e. Excel, Skype, etc.)
-    img_src: fab fa-microsoft
-  - heading: Designing Video Games
-    text: C# has the added benefit of being the language used by the popular game engine Unity, for designing video games
-    img_src: fas fa-gamepad
-  - heading: Simplifying Mobile App Development
-    text: Create cross-platform mobile apps that are functional on Android, iOS, and Windows using C# and .Net
-    img_src: fas fa-mobile-alt
 austin:
   heading: Corporate Training
-  subheading:
+  subheading: Train Your Talent – Your Way.
+  description: Upskill your team with our custom-built training. Maybe conventions have changed, you’re opening a new department, or pivoting.
+    We create curriculum based on specific gaps in your employees skills, and deliver it in the way that suits you best.
+  features_heading: Utilize the Benefits of Upskilling
+  features:
+    - heading: Develop Your Team’s Talent
+      text: Reward talented employees by allowing them to further their skill sets and continue to grow, develop, and create more value for your organization.
+      img_src: far fa-comments
+    - heading: Empower Your Employees
+      text: Improve upward mobility, reward hard work, and improve company culture by allowing employees excelling in non-technical roles to train up.
+      img_src: fab fa-microsoft
+    - heading: Save Time on Hiring
+      text: Promote and upskill talent from within, instead of dealing with time-consuming and expensive candidate searches, onboarding, and turnover.
+      img_src: fas fa-gamepad
+    - heading: Train for the Proficiencies You Need
+      text: Create cross-platform mobile apps that are functional on Android, iOS, and Windows using C#/.NET, Java, React Native, and many more.
+      img_src: fas fa-mobile-alt
   sections:
     - title: Custom Training (flexible lengths)
       description: "Austin Coding Academy offers a wide variety of technology and skill training. Want your
@@ -88,13 +90,25 @@ austin:
 
 {% assign city = page[site.key] %}
 
+{% include scrolling-menu-animation.html id="request" %}
+
 <!-- htmllint preset="none" -->
 <div id="hero-{{ page.hero }}" class="hero d-flex flex-column align-items-center justify-content-center py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="text-white font-weight-bold w-75 mx-auto font-family-alt display-4 text-center">
     {{ page.hero_title }}
   </h1>
-  {% include corporate-form.html %}
+  {% include corporate-form.html class="btn-outline-light" %}
+</div>
+
+<!-- Pinned Button -->
+<div
+  id="request"
+  class="text-white d-flex flex-column align-items-center"
+  style="position: fixed; top: 40%; z-index: 11111; right: 20px;"
+>
+  Get in touch!
+  <div>{% include corporate-form.html %}</div>
 </div>
 
 <main>
@@ -103,14 +117,16 @@ austin:
     <div class="row">
       <div class="mt-3 mb-6 text-center col-12">
         <h2 class="font-family-alt display-5">
-          Why upskill your workers?
+          {{ city.subheading }}
         </h2>
         <p class="w-75 mx-auto">
-          Upskill your team with our custom-built training. Maybe conventions have changed, you’re opening a new department, or pivoting.
-          We create curriculum based on specific gaps in your employees skills, and deliver it in the way that suits you best.
+          {{ city.description }}
         </p>
+        <h2 class="font-family-alt display-5 pt-6 pb-4">
+          {{ city.features_heading }}
+        </h2>
       </div>
-      {% for item in page.features %}
+      {% for item in city.features %}
         <div class="col-md-6 mb-5">
           <div class="row">
             <div class="col-3 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
@@ -133,9 +149,11 @@ austin:
     <div class="d-flex justify-content-center">
       <a
         class="btn bg-purple hover-white mx-auto my-4 btn-round text-white"
-        href="/"
-        rel="noopener">
-        Request Info
+        href="https://acaappointment.as.me/schedule.php?calendarID=3049624"
+        rel="noopener"
+        target="_blank"
+      >
+        Schedule a Meeting
       </a>
     </div>
   </section>
@@ -144,13 +162,13 @@ austin:
     <section class="container">
       <div class="row pb-3">
         <div class="text-center col-12 py-4">
-          <h2 class="font-family-alt display-5 mt-5">
-            Our Training Offerings
-          </h2>
-          <p class="w-75 mx-auto text-white">
+          <!-- <h2 class="font-family-alt display-5 mt-5">
+            Utilize the Benefits of Upskilling
+          </h2> -->
+          <!-- <p class="w-75 mx-auto text-white">
             Upskill your team with our custom-built training. Maybe conventions have changed, you’re opening a new department, or pivoting.
             We create curriculum based on specific gaps in your employees skills, and deliver it in the way that suits you best.
-          </p>
+          </p> -->
         </div>
         {% for section in city.sections %}
           <section class="mw-850 mb-3">
@@ -189,7 +207,7 @@ austin:
     </p>
     <form class="d-flex justify-content-center align-items-center"
       target="_top"
-      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/b8fb52b4-28de-4133-920b-7f587724bb3d"
+      action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/a000aab9-9870-4578-a496-2649ea46fb7e"
       method="POST"
     >
       <div class="form-container mw-850 px-5 px-lg-0">
