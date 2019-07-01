@@ -19,16 +19,16 @@ austin:
   features:
     - heading: Develop Your Team’s Talent
       text: Reward talented employees by allowing them to further their skill sets and continue to grow, develop, and create more value for your organization.
-      img_src: far fa-comments
+      img_src: Develop.png
     - heading: Empower Your Employees
       text: Improve upward mobility, reward hard work, and improve company culture by allowing employees excelling in non-technical roles to train up.
-      img_src: fab fa-microsoft
+      img_src: Empower.png
     - heading: Save Time on Hiring
       text: Promote and upskill talent from within, instead of dealing with time-consuming and expensive candidate searches, onboarding, and turnover.
-      img_src: fas fa-gamepad
+      img_src: Time.png
     - heading: Train for the Proficiencies You Need
       text: Request custom training that focuses on the technologies that you need, or pick from popular technologies.
-      img_src: fas fa-mobile-alt
+      img_src: Train.png
   sections_heading: Our Training Offerings
   sections:
     - title: Custom Training (flexible lengths)
@@ -122,9 +122,13 @@ austin:
         <div class="col-md-6 mb-5">
           <div class="row">
             <div class="col-3 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
-              <!-- htmllint preset="none" -->
-              <i class="{{item.img_src}} display-3"></i>
-              <!-- htmllint preset="$previous" -->
+              <amp-img
+                width="80px"
+                height="80px"
+                layout="fixed"
+                src="/assets/images/{{ item.img_src }}"
+                alt=""
+              ></amp-img>
             </div>
             <div class="col-9 col-md-7 col-lg-8 d-flex flex-column">
               <h5 class="font-weight-bold">
