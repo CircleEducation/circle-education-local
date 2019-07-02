@@ -142,14 +142,17 @@ austin:
         </div>
       {% endfor %}
     </div>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex bg-light align-items-center justify-content-around">
+      <h5>
+        <b>Set up a time to discuss your training needs.</b>
+      </h5>
       <a
-        class="btn bg-purple hover-white mx-auto my-4 btn-round text-white"
+        class="btn bg-purple hover-white my-4 btn-round text-white"
         href="https://acaappointment.as.me/schedule.php?calendarID=3049624"
         rel="noopener"
         target="_blank"
       >
-        Schedule a Meeting
+        Schedule a Call
       </a>
     </div>
   </section>
@@ -263,11 +266,11 @@ austin:
           <!-- Input -->
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="last-name" class="form-label">
+              <label for="city" class="form-label">
                 City <span class="text-red">*</span>
               </label>
 
-              <input id="last-name" type="text" class="form-control" name="city" placeholder="City" aria-label="City"
+              <input id="city" type="text" class="form-control" name="city" placeholder="City" aria-label="City"
                 required data-msg="Please enter your city." data-error-class="u-has-error" data-success-class="u-has-success" />
             </div>
           </div>
@@ -276,11 +279,11 @@ austin:
           <!-- Input -->
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="last-name" class="form-label">
+              <label for="state" class="form-label">
                 State/Region <span class="text-red">*</span>
               </label>
 
-              <input id="last-name" type="text" class="form-control" name="state" placeholder="State" aria-label="State"
+              <input id="state" type="text" class="form-control" name="state" placeholder="State" aria-label="State"
                 required data-msg="Please enter your state." data-error-class="u-has-error" data-success-class="u-has-success" />
             </div>
           </div>
@@ -289,11 +292,11 @@ austin:
           <!-- Input -->
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="current role" class="form-label">
+              <label for="current-role" class="form-label">
                 Current role <span class="text-red">*</span>
               </label>
 
-              <input id="current role" type="text" class="form-control" name="jobtitle" placeholder="Current role" aria-label="Current role"
+              <input id="current-role" type="text" class="form-control" name="jobtitle" placeholder="Current role" aria-label="Current role"
                 required data-msg="Please enter the name of your current role." data-error-class="u-has-error" data-success-class="u-has-success" />
             </div>
           </div>
@@ -314,36 +317,37 @@ austin:
 
           <!-- Input -->
           <div class="js-form-message mb-4 col-sm-12">
-          <label for="message" class="form-label">
-            What technologies would you like to train for?
-          </label>
+            <label for="message" class="form-label">
+              What technologies would you like to train for?
+            </label>
 
-          <div class="input-group">
-            <textarea
-              id="message"
-              class="form-control"
-              rows="4"
-              name="what_technologies_would_you_like_to_train_for_"
-              placeholder="Enter your questions or comments here"
-              aria-label="Enter your questions or comments here"
-              data-msg="Please enter a message."
-              data-error-class="u-has-error"
-              data-success-class="u-has-success"
-            ></textarea>
+            <div class="input-group">
+              <textarea
+                id="message"
+                class="form-control"
+                rows="4"
+                name="what_technologies_would_you_like_to_train_for_"
+                placeholder="Enter your questions or comments here"
+                aria-label="Enter your questions or comments here"
+                data-msg="Please enter a message."
+                data-error-class="u-has-error"
+                data-success-class="u-has-success"
+              ></textarea>
+            </div>
           </div>
-        </div>
-        <!-- End Input -->
+          <!-- End Input -->
 
-        <!-- Input -->
-        <div class="col-12 d-flex align-items-end justify-content-center form-group">
-          <button type="submit" class="btn btn-round btn-sm-block text-white bg-purple hover-white">
-            Submit
-          </button>
-        </div>
-        <!-- End Input -->
+          <!-- Input -->
+          <div class="col-12 d-flex align-items-end justify-content-center form-group">
+            <button type="submit" class="btn btn-round btn-sm-block text-white bg-purple hover-white">
+              Submit
+            </button>
+          </div>
+          <!-- End Input -->
 
-        <div class="col-12 d-flex justify-content-center">
-          {% include data-agreement.html %}
+          <div class="col-12 d-flex justify-content-center">
+            {% include data-agreement.html %}
+          </div>
         </div>
         <div class="text-center">
           <div submit-error>
