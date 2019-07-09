@@ -83,9 +83,6 @@ lubbock:
       - weight: 1
         title: Tuition
         url: "/tuition"
-  - weight: 3
-    title: For Companies
-    url: "/corporate-training"
   - weight: 4
     title: About Us
     links:
