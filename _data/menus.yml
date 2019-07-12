@@ -4,7 +4,7 @@ austin:
     title: Courses
     links:
       - title: Full Stack Web Development
-        url: /web-development
+        url: "/web-development"
   - weight: 2
     title: Tuition
     url: "/tuition"
@@ -75,7 +75,7 @@ lubbock:
     title: Courses
     links:
       - title: Full Stack Web Development
-        url: /web-development
+        url: "/web-development"
   - weight: 2
     title: Tuition
     url: "/tuition"
