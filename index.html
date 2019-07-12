@@ -78,7 +78,7 @@ austin:
   nextStartDate: April 2nd
   heading: Change Your Life With a New Career
   subheading: Part-time coding classes taught by full-time developers here in Austin, TX
-  appt_type: 1406673
+  schedule_q&a_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
   phone: 5128278498
   features:
   - heading: Flexible Schedule
@@ -139,7 +139,7 @@ lubbock:
   nextStartDate: July 22nd
   heading: Change Your Life With a New Career
   subheading: Part-time coding classes taught by full-time developers in Lubbock, TX
-  appt_type:
+  schedule_q&a_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
   phone: 8069055021
   features:
   - heading: Flexible Schedule
@@ -251,7 +251,7 @@ lubbock:
         </a>
         <a
           class="btn cta-gradient text-white hover-white btn-round mr-2 d-none d-sm-block"
-          href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType={{ city.appt_type }}"
+          href="{{ city.schedule_q&a_href }}}"
           target="_blank"
           rel="noopener">
           Schedule a Q&A
