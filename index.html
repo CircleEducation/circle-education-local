@@ -1,3 +1,4 @@
+<!-- htmllint preset="none" -->
 ---
 layout: default
 permalink: "/"
@@ -77,8 +78,8 @@ austin:
   redirect_from: []
   nextStartDate: April 2nd
   heading: Change Your Life With a New Career
-  subheading: Part-time coding classes taught by full-time developers here in Austin, TX
-  schedule_q&a_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
+  subheading: Par't-time coding classes taught by full-time developers here in Austin, TX
+  schedule_href: https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType=1406673
   phone: 5128278498
   features:
   - heading: Flexible Schedule
@@ -139,7 +140,7 @@ lubbock:
   nextStartDate: July 22nd
   heading: Change Your Life With a New Career
   subheading: Part-time coding classes taught by full-time developers in Lubbock, TX
-  schedule_q&a_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
+  schedule_href: https://acaappointment.as.me/schedule.php?appointmentType=8404564
   phone: 8069055021
   features:
   - heading: Flexible Schedule
@@ -188,8 +189,8 @@ lubbock:
     name: Greg Swan
     position: Web Developer, Kinetic Theory
   form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
-
 ---
+<!-- htmllint preset="$previous" -->
 
 {% assign city = page[site.key] %}
 <!-- htmllint preset="none" -->
@@ -251,7 +252,7 @@ lubbock:
         </a>
         <a
           class="btn cta-gradient text-white hover-white btn-round mr-2 d-none d-sm-block"
-          href="{{ city.schedule_q&a_href }}}"
+          href="{{ city.schedule_href }}}"
           target="_blank"
           rel="noopener">
           Schedule a Q&A
