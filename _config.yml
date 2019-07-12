@@ -6,6 +6,9 @@ phone: (512) 827-8498
 key: austin
 acronym: aca
 head_title: 'Austin Coding Academy | Learn to Code, Change Your Life'
+google_tag_manager: GTM-TBH7GK
+google_tag_manager_amp: GTM-KZ9XHND
+twitter: '@AustinCoding'
 filters: true
 locations:
   - address: Downtown
@@ -43,7 +46,6 @@ exclude:
   - README.md
   - '*.orig'
   - '*.json'
-  - '*.js'
 
 permalink: /blog/:categories/:title/
 
