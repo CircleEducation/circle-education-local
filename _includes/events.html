@@ -22,7 +22,14 @@
             {{event.start_date}} | {{event.start_time}}
           </p>
         </div>
-        {% include event-form.html event_name=event.name event_date=event.start_date %}
+        <a class="btn btn-round bg-purple text-white"
+          href="{{event.url}}"
+          rel="noopener"
+          target="_blank"
+          role="button"
+        >
+          View Details
+        </a>
       </div>
       <!-- End Card -->
     </div>

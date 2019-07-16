@@ -1,4 +1,42 @@
-social:
+austin_header:
+- weight: 1
+  title: Courses
+  links:
+    - title: Full Stack Web Development
+      url: "/web-development"
+- weight: 2
+  title: Tuition
+  url: "/tuition"
+  links:
+    - weight: 1
+      title: Tuition
+      url: "/tuition"
+- weight: 3
+  title: For Companies
+  url: "/corporate-training"
+- weight: 4
+  title: About Us
+  links:
+    - weight: 1
+      title: FAQ
+      url: "/faq"
+    - weight: 3
+      title: Our Team
+      url: "/team"
+    - weight: 4
+      title: Contact Us
+      url: "/contact"
+    - weight: 5
+      title: Blog
+      url: "https://austincodingacademy.com/blog/"
+- weight: 5
+  title: Student Portal
+  url: https://campus.austincodingacademy.com
+- weight: 10
+  title: Apply
+  url: "/apply"
+  button: btn btn-round text-white cta-gradient py-1 px-6
+austin_social:
 - weight: 3
   title: instagram
   url: https://www.instagram.com/austincodingacademy/
@@ -10,7 +48,7 @@ social:
   title: facebook
   url: https://www.facebook.com/AustinCodingAcademy/
 
-footer:
+austin_footer:
 - weight: 1
   title: C# .NET
   url: /csharp
@@ -30,30 +68,12 @@ footer:
   title: Student Grievance Policy
   url: "/student-grievances"
 
-header:
+lubbock_header:
 - weight: 1
   title: Courses
   links:
     - title: Full Stack Web Development
-      url: /web-development
-- weight: 3
-  title: About Us
-  links:
-    - weight: 1
-      title: FAQ
-      url: "/faq"
-    - weight: 2
-      title: Instructors
-      url: "/instructors"
-    - weight: 3
-      title: Our Team
-      url: "/team"
-    - weight: 4
-      title: Contact Us
-      url: "/contact"
-    - weight: 5
-      title: Blog
-      url: "/blog"
+      url: "/web-development"
 - weight: 2
   title: Tuition
   url: "/tuition"
@@ -61,13 +81,51 @@ header:
     - weight: 1
       title: Tuition
       url: "/tuition"
-    - weight: 2
-      title: Financing
-      url: "/financing"
 - weight: 4
+  title: About Us
+  links:
+    - weight: 1
+      title: FAQ
+      url: "/faq"
+    - weight: 4
+      title: Contact Us
+      url: "/contact"
+- weight: 5
   title: Student Portal
-  url: https://campus.austincodingacademy.com
+  url: https://campus.lubbockcodingacademy.com
 - weight: 10
   title: Apply
   url: "/apply"
   button: btn btn-round text-white cta-gradient py-1 px-6
+
+lubbock_social:
+- weight: 3
+  title: instagram
+  url: https://www.instagram.com/lubbockcodingacademy/
+- weight: 2
+  title: twitter
+  url: https://twitter.com/LubbockCoding/
+  class: mx-3
+- weight: 1
+  title: facebook
+  url: https://www.facebook.com/LubbockCodingAcademy/
+
+lubbock_footer:
+- weight: 1
+  title: C# .NET
+  url: /csharp
+- weight: 2
+  title: Hack Overflow
+  url: https://austincodingacademy.com/forum
+- weight: 3
+  title: Upcoming Events
+  url: https://www.eventbrite.com/o/lubbock-coding-academy-18046524539
+- weight: 5
+  title: Become an Instructor
+  url: "/instructor-apply"
+- weight: 4
+  title: Hire a Graduate
+  url: "/hire"
+- weight: 6
+  title: Student Grievance Policy
+  url: "/student-grievances"

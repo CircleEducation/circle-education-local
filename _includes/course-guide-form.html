@@ -3,27 +3,27 @@
     <h2 class="col-12 font-family-alt font-weight-bold text-center display-5 mb-7">
       Download Our Course Guide
     </h2>
-    <p class="mw-600 mx-auto text-center mb-6">
+    <p class="mw-600 mx-auto text-white text-center mb-6">
       Curious about what our classes entail? Download our course guide to get the rundown on how
       this whole process works, from how our programs are structured to how we can help you get
       a job in coding after you graduate.
     </p>
     <div class="row">
       <!-- Image -->
-      <div class="col-xs-11 col-sm-11 col-md-5 col-lg-5 mt-3 mx-auto">
+      <div class="d-flex flex-column justify-content-center mb-7 col-xs-11 col-sm-11 col-md-5 col-lg-5 mx-auto">
         <amp-img
-          class="rounded"
+          class="rounded border"
           layout="responsive"
           width="579"
           height="756"
-          src="/assets/images/Course-Guide-Master-Table-Content.png"
+          src="/assets/images/{{site.key}}-Course-Guide-Master-Table-Content.png"
           alt="What's inside our course guide"
         ></amp-img>
       </div>
       <!-- Form -->
       <div class="col-xs-11 col-sm-11 mx-auto col-md-7 col-lg-7 d-flex flex-column justify-content-center">
         <form
-          action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/702969c4-4c75-4b99-b6d2-59d04d6ebd03"
+          action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{site.course_guide_form_guid}}"
           target="_top"
           method="POST"
         >
@@ -37,24 +37,44 @@
 
             <div class="row center-form">
               <!-- Input -->
-              <div class="col-12">
+              <div class="col-6">
                 <div class="form-group">
                   <label for="first-name-cg" class="form-label">
-                    Name <span class="text-red-a">*</span>
+                    First Name <span class="text-red-a">*</span>
                   </label>
 
                   <input id="first-name-cg"
                     type="text"
                     class="form-control"
                     name="firstname"
-                    placeholder="Name"
-                    required data-msg="Please enter your name."
+                    placeholder="First name"
+                    required data-msg="Please enter your first name."
                     data-error-class="u-has-error"
                     data-success-class="u-has-success"
                   />
                 </div>
               </div>
-                <!-- End Input -->
+              <!-- End Input -->
+
+              <!-- Input -->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="last-name-cg" class="form-label">
+                    Last Name <span class="text-red-a">*</span>
+                  </label>
+
+                  <input id="last-name-cg"
+                    type="text"
+                    class="form-control"
+                    name="lastname"
+                    placeholder="Last name"
+                    required data-msg="Please enter your last name."
+                    data-error-class="u-has-error"
+                    data-success-class="u-has-success"
+                  />
+                </div>
+              </div>
+              <!-- End Input -->
 
               <!-- Input -->
               <div class="col-12">
@@ -138,6 +158,8 @@
             </div>
           </div>
         </form>
+        <!-- End Form -->
+
       </div>
     </div>
   </div>
