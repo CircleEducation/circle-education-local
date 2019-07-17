@@ -20,7 +20,81 @@ scroll_offset_for_header: 0.02
     </p>
   </div>
   <!-- Events Cards -->
-  <div class="d-flex flex-wrap justify-content-center w-75">
-    {% include events.html %}
+  <div class="justify-content-center w-75">
+    {% for event in site.data.events[site.key] %}
+      <!-- Start Card  -->
+      <a href="{{ event.url }}">
+        <div class="">
+          <hr class="my-2">
+          <div class="mx-auto my-4 d-flex">
+            <div
+              class="mr-4 shadow-lg rounded"
+              style="min-width: 400px;"
+            >
+              <amp-img
+                width="{{ event.width | default: 400 }}"
+                height="{{ event.height | default: 200 }}"
+                layout="responsive"
+                class="img-fluid rounded my-auto"
+                src="{{ event.img }}"
+                alt="{{ event.name }}"
+              ></amp-img>
+            </div>
+            <div class="">
+              {% assign name = event.name | split: " | "  %}
+              <h5 class="link-underlined">{{ name[1] }}</h5>
+              <div class="display-9">
+                <p>
+                  <strong>{{ event.venue_name }}</strong>, {{ event.venue_city }}, {{ event.venue_state }}
+                  <br>
+                  {{ event.start_date }} | {{ event.start_date_time | date: "%I:%M%p" }} - {{ event.end_date_time | date: "%I:%M%p" }}
+                </p>
+                <p>
+                  {% assign paragraphs = event.description | newline_to_br | split: '<br />' %}
+                  {{ paragraphs[0] }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": "{{ event.name | strip_newlines | escape }}",
+          "startDate": "{{ event.start_date_time }}",
+          "endDate": "{{ event.end_date_time }}",
+          "location": {
+            "@type": "Place",
+            "name": "{{ event.venue_name | strip_newlines | escape }}",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "{{ event.venue_address }}",
+              "addressLocality": "{{ event.venue_city }}",
+              "postalCode": "{{ event.venue_zip }}",
+              "addressRegion": "{{ event.venue_state }}",
+              "addressCountry": "{{ event.venue_country }}"
+            }
+          },
+          "image": ["{{ event.img }}"],
+          "description": "{{ event.description | strip_newlines | escape }}",
+          "performer": {
+            "@type": "PerformingGroup",
+            "name": "Austin Coding Academy"
+          },
+          "offers": {
+            "@type": "Offer",
+            "availability": "http://schema.org/InStock",
+            "priceCurrency": "USD",
+            "price": "0",
+            "validFrom": "{{ event.published_date_time }}",
+            "url": "{{ event.url }}"
+          }
+        }
+      </script>
+      <!-- End Card -->
+    {% endfor %}
   </div>
 </div>
