@@ -21,21 +21,22 @@ skills:
   - React.js
   - Redux
   - React Native
-  - Git/GitHub
-  - REST APIs
+  - Git
   - Bootstrap
-  - Jekyll
-  - AMP
   - Debugging
+  - Jekyll
   - HTML
   - CSS
+  - REST APIs
+  - AMP
   - MongoDB
   - Express.js
   - Node.js
   - jQuery
   - Heroku
-  - Mocha/Chai
   - Selenium
+  - Mocha/Chai
+  - Jasmine
   - Testing
 
 workexperience:
@@ -61,7 +62,10 @@ workexperience:
     location: Austin, TX
 
 education:
-    name: General Assembly
+  - name: Austin Coding Academy
+    dates: April 2018 - December 2018
+    degree: Javascript MERN Stack Full Stack Web Development
+  - name: General Assembly
     dates: September 2015 - August 2015
     degree: UX Design
   - name: University of West Florida
@@ -70,11 +74,8 @@ education:
 
 projects: # the first entry should be your final project MUST have a URL or you won't show up!
   - name: Your Movie Database
-    desc: "YMDB is a cinephile hobbyist site for people that love making lists, film discussion, and film exploration. The site is meant to be a minimalist competitor to
-      sites like Mubi and Letterboxd that appeals to a nerdier audience and that is specifically tailored towards list making and film discussion. The site will have
-      well-thought out limitations that make users more deliberate in how they chose films for their one and only list, which they can name and describe in the
-      description   section however they like. The site will encourage users to make a list of favorite films, not themed or best-of-decade lists and there will be a YMDB
-      top films list   that aggragates film rankings from all user lists to make an overall YMDB community ranking, similar to what rateyourmusic.com has."
+    desc: "YMDb is a cinephile hobbyist site for people that love making lists, film discussion, and film exploration. The site is meant to be a minimalist competitor to
+      sites like Mubi and Letterboxd that appeals to a nerdier audience. The purpose is to allow people to state their movie preferences through their Top Movie List while giving them the opportunity to compare their taste in movies to other members of the YMDb community. The site incentivizes list making and film discussion by utilizing well-thought out limitations that make users more deliberate in how they chose films for their one and only list, which they can name and describe in the description section however they like. There will be a YMDb Top Movies List that aggragates film rankings from all user lists to make an overall YMDb community ranking, similar to what rateyourmusic.com has. The average ranking of films will also be viewable from their page as well as the rank in the most recent user lists the film was added to."
     url: https://yourmoviedatabase.herokuapp.com
 
 ---
