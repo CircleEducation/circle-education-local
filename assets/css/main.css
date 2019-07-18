@@ -587,6 +587,19 @@ ul.share-buttons img {
   }
 }
 
+/* Event Page Card Hover */
+.hover-animate {
+  transition: 0.5s;
+}
+
+.hover-animate:hover {
+  background-color: rgb(240, 240, 240) !important;
+}
+
+.hover-animate:hover a {
+  color: #05B4D0 !important;
+}
+
 /* GRADS PAGE */
 
 .background-logo {

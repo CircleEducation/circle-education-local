@@ -20,44 +20,45 @@ scroll_offset_for_header: 0.02
     </p>
   </div>
   <!-- Events Cards -->
-  <div class="justify-content-center w-75">
+  <div id="cards-container">
     {% for event in site.data.events[site.key] %}
       <!-- Start Card  -->
-      <a href="{{ event.url }}">
-        <div class="">
-          <hr class="my-2">
-          <div class="mx-auto my-4 d-flex">
-            <div
-              class="mr-4 shadow-lg rounded"
-              style="min-width: 400px;"
-            >
-              <amp-img
-                width="{{ event.width | default: 400 }}"
-                height="{{ event.height | default: 200 }}"
-                layout="responsive"
-                class="img-fluid rounded my-auto"
-                src="{{ event.img }}"
-                alt="{{ event.name }}"
-              ></amp-img>
-            </div>
-            <div class="">
-              {% assign name = event.name | split: " | "  %}
-              <h5 class="link-underlined">{{ name[1] }}</h5>
-              <div class="display-9">
-                <p>
-                  <strong>{{ event.venue_name }}</strong>, {{ event.venue_city }}, {{ event.venue_state }}
-                  <br>
-                  {{ event.start_date }} | {{ event.start_date_time | date: "%I:%M%p" }} - {{ event.end_date_time | date: "%I:%M%p" }}
-                </p>
-                <p>
-                  {% assign paragraphs = event.description | newline_to_br | split: '<br />' %}
-                  {{ paragraphs[0] }}
-                </p>
+      <div class="hover-animate d-flex flex-column align-items-center mx-auto border-top" style="width: 90%;">
+        <a href="{{ event.url }}">
+          <div class="w-75 mx-auto">
+            <div class="mx-auto my-4 d-flex align-items-center">
+              <div
+                class="mr-4 shadow-lg rounded"
+                style="min-width: 400px; height: 200px;"
+              >
+                <amp-img
+                  width="{{ event.width | default: 400 }}"
+                  height="{{ event.height | default: 200 }}"
+                  layout="responsive"
+                  class="img-fluid rounded my-auto"
+                  src="{{ event.img }}"
+                  alt="{{ event.name }}"
+                ></amp-img>
+              </div>
+              <div>
+                {% assign name = event.name | split: " | "  %}
+                <h5 class="link-underlined">{{ name[1] }}</h5>
+                <div class="display-9">
+                  <p>
+                    <strong>{{ event.venue_name }}</strong>, {{ event.venue_city }}, {{ event.venue_state }}
+                    <br>
+                    {{ event.start_date }} | {{ event.start_date_time | date: "%I:%M%p" }} - {{ event.end_date_time | date: "%I:%M%p" }}
+                  </p>
+                  <p>
+                    {% assign paragraphs = event.description | newline_to_br | split: '<br />' %}
+                    {{ paragraphs[0] }}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
 
       <script type="application/ld+json">
         {
