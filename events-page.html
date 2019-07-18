@@ -20,16 +20,16 @@ scroll_offset_for_header: 0.02
     </p>
   </div>
   <!-- Events Cards -->
-  <div id="cards-container">
+  <div id="cards-container" class="d-flex flex-column justify-content-center align-items-center">
     {% for event in site.data.events[site.key] %}
       <!-- Start Card  -->
-      <div class="hover-animate d-flex flex-column align-items-center mx-auto border-top" style="width: 90%;">
+      <div class="hover-animate d-flex flex-column align-items-center justify-content-center mx-auto border-top col-11 flex-wrap flex-sm-nowrap">
         <a href="{{ event.url }}">
-          <div class="w-75 mx-auto">
-            <div class="mx-auto my-4 d-flex align-items-center">
+          <div class="mx-auto col-12 col-sm-9 d-flex justify-content-center align-items-center">
+            <div class="mx-auto my-4 d-flex align-items-center justify-content-center flex-wrap flex-sm-nowrap">
               <div
-                class="mr-4 shadow-lg rounded"
-                style="min-width: 400px; height: 200px;"
+                class="mr-0 mr-sm-4 mb-2 mb-sm-0 col-12 col-sm-6 rounded"
+                style="min-width: 300px;"
               >
                 <amp-img
                   width="{{ event.width | default: 400 }}"
@@ -40,7 +40,7 @@ scroll_offset_for_header: 0.02
                   alt="{{ event.name }}"
                 ></amp-img>
               </div>
-              <div>
+              <div class="mx-auto">
                 {% assign name = event.name | split: " | "  %}
                 <h5 class="link-underlined">{{ name[1] }}</h5>
                 <div class="display-9">
