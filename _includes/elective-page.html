@@ -45,11 +45,11 @@
         Coming Soon
       </h2>
       <p class="mw-600 mx-auto text-center">
-        Interested in learning {{page.course_name}} with Austin Coding Academy? Register your interest today and we’ll keep you in the loop about the next start date.
+        Interested in learning {{page.course_name}} with {{ site.key | capitalize }} Coding Academy? Register your interest today and we’ll keep you in the loop about the next start date.
       </p>
       <form class="d-flex justify-content-center align-items-center"
         target="_top"
-        action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/b8fb52b4-28de-4133-920b-7f587724bb3d"
+        action-xhr="{{site.form_url}}/{{site.hubspot_portal_id}}/{{site.corporate_form_guid}}"
         method="POST"
       >
         <div class="form-container mw-850 px-5 px-lg-0">
@@ -67,8 +67,8 @@
                   First Name <span class="text-red">*</span>
                 </label>
 
-                <input id="first-name-interest" type="text" class="form-control" name="firstname" placeholder="First name" aria-label="Your name"
-                  required data-msg="Please enter your name." data-error-class="u-has-error" data-success-class="u-has-success" />
+                <input id="first-name-interest" type="text" class="form-control" name="firstname" placeholder="First name" aria-label="First name"
+                  required data-msg="Please enter your first name." data-error-class="u-has-error" data-success-class="u-has-success" />
               </div>
             </div>
             <!-- End Input -->
@@ -80,8 +80,8 @@
                   Last Name <span class="text-red">*</span>
                 </label>
 
-                <input id="first-name" type="text" class="form-control" name="lastname" placeholder="First name" aria-label="Your name"
-                  required data-msg="Please enter your name." data-error-class="u-has-error" data-success-class="u-has-success" />
+                <input id="first-name" type="text" class="form-control" name="lastname" placeholder="Last name" aria-label="Last name"
+                  required data-msg="Please enter your last name." data-error-class="u-has-error" data-success-class="u-has-success" />
               </div>
             </div>
             <!-- End Input -->
