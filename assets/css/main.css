@@ -99,6 +99,10 @@ body, p {
   color: #ffffff;
 }
 
+.text-grey {
+  color: #cccccc;
+}
+
 .link-underlined, .link-underlined:hover {
   text-decoration: underline;
 }
@@ -193,6 +197,10 @@ body, p {
 .display-8 {
   font-size: 1rem;
 }
+/* quote footer */
+.display-9 {
+  font-size: .9rem !important;
+}
 
 .display-small {
   font-size: .85rem;
@@ -255,6 +263,11 @@ body, p {
   background-position: top;
 }
 
+#hero-corporate {
+  background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-csharp.jpg');
+  background-position: top;
+}
+
 #hero-js {
   background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(0,179,209, 0.7)), url('/assets/images/hero-javascript.jpg');
   background-position: top;
@@ -274,6 +287,8 @@ body, p {
 
 .cta-gradient {
   background: linear-gradient(to right, #00b3d1, #7fc89a);
+  border-right: 0 !important;
+  border-left: 0 !important;
 }
 
 .js-gradient {
@@ -286,6 +301,21 @@ body, p {
 
 .bg-gradient {
   background: linear-gradient(to right, #21409a, #2d2f77);
+}
+/* new index page backgrounds */
+.bg-textured-1 {
+  background: url(/assets/images/bg-textured-first.svg);
+  background-size: cover;
+}
+
+.bg-textured-2 {
+  background: url(/assets/images/bg-textured-second.png);
+  background-size: cover;
+}
+
+.bg-textured-3 {
+  background: url(/assets/images/bg-textured-third.png);
+  background-size: cover;
 }
 
 .border-blue {
@@ -325,6 +355,15 @@ body, p {
 
 /* CUSTOM BUTTONS */
 
+/* carousel nav buttons */
+.amp-carousel-button-prev {
+  background: white url(/assets/images/left_blue_arrow.svg);
+}
+
+.amp-carousel-button-next {
+  background: white url(/assets/images/right_blue_arrow.svg);
+}
+
 /* no longer used, but may be used again */
 .outlined-cta {
   min-width: 182px;
@@ -363,6 +402,10 @@ body, p {
   max-width: 600px;
 }
 
+.mw-450 {
+  max-width: 450px;
+}
+
 .mw-22r {
   max-width: 22rem;
 }
@@ -375,13 +418,10 @@ body, p {
   min-width: 10rem;
 }
 
-<<<<<<< HEAD
-=======
 .navbar-logo {
   width: 66px;
 }
 
->>>>>>> preview
 .img-logo {
   width: 4rem;
 }
