@@ -237,6 +237,18 @@ body, p {
   transform: scale(1.025);
 }
 
+/* HEADER IMAGES */
+
+#header-csharp {
+  background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(0,179,209, 0.7)), url('/assets/images/header-csharp.jpg');
+  background-position: top;
+}
+
+#header-javascript {
+  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)), url('/assets/images/header-javascript.jpg');
+  background-position: top right;
+}
+
 /* HERO IMAGES */
 
 #bg-404 {
@@ -279,6 +291,11 @@ body, p {
 }
 
 #hero-landing {
+  background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)), url('/assets/images/hero-landing.jpg');
+  background-position: top right;
+}
+
+#hero-events {
   background: linear-gradient(rgba(45, 47, 119, 0.8), rgba(45, 47, 119, 0.8)), url('/assets/images/hero-landing.jpg');
   background-position: top right;
 }
