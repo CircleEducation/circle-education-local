@@ -239,7 +239,7 @@ body, p {
 
 /* HEADER IMAGES */
 
-#header-csharp {
+#header-events {
   background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(0,179,209, 0.7)), url('/assets/images/header-csharp.jpg');
   background-position: top;
 }

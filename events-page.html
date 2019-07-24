@@ -1,21 +1,33 @@
 ---
 layout: default
-title: Events | Austin Coding Academy
-header: csharp
-description: ''
 permalink: "/events/"
 redirect_from: []
 amp_components: ["amp-img", "amp-lightbox"]
 scroll_offset_for_header: 0.02
+austin:
+  title: Events | Austin Coding Academy
+  header_img: events
+  heading: Upcoming Events
+  subheading: "Come join Austin Coding Academy at one of our next events! Whether you'd like a free introduction to coding, to attend an open house,
+    network with us at one of our monthly happy hours, or anything else – check out our upcoming events for opportunities to meet and join our growing community."
+lubbock:
+  title: Events | Lubbock Coding Academy
+  header_img: events
+  heading: Upcoming Events
+  subheading: "Come join Lubbock Coding Academy at one of our next events! Whether you'd like a free introduction to coding, to attend an open house,
+    network with us at one of our monthly happy hours, or anything else – check out our upcoming events for opportunities to meet and join our growing community."
+
 ---
+{% assign school = page[site.key] %}
+
 <!-- htmllint preset="none" -->
-<div id="header-{{ page.header }}" class="py-5 py-md-11">
+<div id="header-{{ school.header_img }}" class="py-5 py-md-11">
 <!-- htmllint preset="$previous" -->
   <h1 class="mt-10 mb-5 mb-md-10 text-white font-family-alt font-weight-bold display-4 text-center">
-    Events
+    {{ school.heading }}
   </h1>
-  <p class="text-white text-center mx-auto px-2 mw-600 display-6">
-    Come join us at one of our upcoming events!
+  <p class="text-white text-center mx-auto px-2 mw-600">
+    {{ school.subheading }}
   </p>
 </div>
 <main>
