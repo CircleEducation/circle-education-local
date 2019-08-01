@@ -2,10 +2,14 @@
 permalink: "/grads/"
 austin:
   title: "Austin Coding Academy | Graduate Projects"
-  description: ""
+  description: 'At Austin Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught
+    by current industry professionals. Don\’t wait - embark on a new career today!'
+  grad_date: August 2019
 lubbock:
   title: "Lubbock Coding Academy | Graduate Projects"
-  description: ""
+  description: 'At Lubbock Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught
+    by current industry professionals. Don\’t wait - embark on a new career today!'
+  grad_date:
 ---
 {% assign school = page[site.key] %}
 
@@ -17,7 +21,7 @@ lubbock:
     />
     <meta
       name="description"
-      content="{{ school.description | default : 'At {{ site.key | capitalize }} Coding Academy, we fit learning to code into your life with a flexible &amp; affordable array of options, all taught by current industry professionals. Don’t wait - embark on a new career today!' }}"
+      content="{{ school.description }}"
     />
     <meta
       name="viewport"
@@ -49,34 +53,52 @@ lubbock:
   </head>
 
   <body>
-    <header class="container-fluid bg-gradient text-white py-2 m-0">
-      <h3 class="pl-10 font-family-alt">
-        April 2019 Graduates
+    <header class="container-fluid bg-gradient d-flex align-items-center text-white py-2 m-0">
+      <a
+        class="navbar-logo d-flex"
+        href="/"
+        aria-label="Logo"
+      >
+        <!-- htmllint preset="none" -->
+        <amp-img
+          width="66px"
+          height="66px"
+          layout="fixed"
+          alt="{{ site.acronym | upcase }} Home"
+          src="/assets/images/logo-{{ site.acronym }}-white.png"
+          class="w-100"
+        ></amp-img>
+        <!-- htmllint preset="$previous" -->
+        <span class="sr-only">{{ site.key | capitalize }} Coding Academy Logo</span>
+      </a>
+      <h3 class="pl-4 font-family-alt mb-0">
+        {{ school.grad_date | capitalize }} Graduates
       </h3>
     </header>
-    <div class="container-fluid bg-dark background-logo py-10">
+    <div class="container-fluid py-10">
       <div class="row d-flex justify-content-center align-items-end">
         {% for page in site.pages %}
           {% if page.categories contains 'graduation' and page.projects[0].url and page.categories contains site.key %}
             {% assign track = page.skills[0] %}
             {% if track == 'JavaScript' or track == 'C# .NET' or track == 'C#' or track == '.NET' or track == 'Web Design' %}
-              <div class="col-12 col-md-3 px-2 mb-4">
+              <!-- Card Start -->
+              <div class="col-12 col-md-3 mx-2 pt-4 pb-2 mb-4 rounded shadow-black">
                 <div class="d-flex justify-content-center pb-2">
                   <!-- htmllint preset="none" -->
                   <amp-img width="150" height="150"
                     layout="fixed"
-                    class="rounded-circle shadow-black"
+                    class="rounded-circle shadow-black px-2"
                     src="https://gravatar.com/avatar/{{ page.email | downcase | md5 }}?s=200&r=pg&d=retro"
                     alt="{{ page.fullname }}"
                   ></amp-img>
                   <!-- htmllint preset="$previous" -->
                 </div>
-                <div class="text-center text-white bg-dark shadow-black rounded d-flex flex-column justify-content-between align-items-center py-2 px-1 w-75 mx-auto">
+                <div class="text-center d-flex flex-column justify-content-between align-items-center py-2 px-1 w-75 mx-auto">
                   <h5 class="h6 m-0">
                     {{ page.fullname }}
                   </h5>
                   <a href="{{ page.projects[0].url }}" target="_blank" rel="noopener">
-                    <small class="text-white link-underlined">
+                    <small class="link-underlined">
                       {{ page.projects[0].name }}
                     </small>
                   </a>
@@ -89,6 +111,7 @@ lubbock:
                   </h5>
                 </div>
               </div>
+              <!-- Card End -->
             {% endif %}
           {% endif %}
         {% endfor %}
