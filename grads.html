@@ -75,14 +75,17 @@ lubbock:
         {{ school.grad_date | capitalize }} Graduates
       </h3>
     </header>
-    <div class="container-fluid py-10">
-      <div class="row d-flex justify-content-center align-items-end">
+    <div class="container-fluid py-10 bg-textured-1">
+      <div class="row col-10 mx-auto d-flex justify-content-center align-items-end">
         {% for page in site.pages %}
           {% if page.categories contains 'graduation' and page.projects[0].url and page.categories contains site.key %}
-            {% assign track = page.skills[0] %}
-            {% if track == 'JavaScript' or track == 'C# .NET' or track == 'C#' or track == '.NET' or track == 'Web Design' %}
+            {% assign track = page.skills[0] | downcase %}
+            {% if track contains 'javascript' or track contains 'c#' or track contains '.net' or track contains 'web design' %}
               <!-- Card Start -->
-              <div class="col-12 col-md-3 mx-2 pt-4 pb-2 mb-4 rounded shadow-black">
+              <div
+                class="col-12 col-sm-3 pt-4 pb-2 mb-4 rounded shadow-black bg-white"
+                style="height: 280px;"
+              >
                 <div class="d-flex justify-content-center pb-2">
                   <!-- htmllint preset="none" -->
                   <amp-img width="150" height="150"
