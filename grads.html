@@ -80,7 +80,7 @@ lubbock:
         {% for page in site.pages %}
           {% if page.categories contains 'graduation' and page.projects[0].url and page.categories contains site.key %}
             {% assign track = page.skills[0] | downcase %}
-            {% if track contains 'javascript' or track contains 'c#' or track contains '.net' or track contains 'web design' %}
+            {% if track contains 'javascript' or track contains 'c#' or track contains 'csharp' or track contains '.net' or track contains 'web design' %}
               <!-- Card Start -->
               <div
                 class="col-12 col-sm-4 col-md-3 p-2"
