@@ -28,7 +28,7 @@ github: https://github.com/AndrewSommer89
 linkedin: https://www.linkedin.com/in/andrew-sommer/
 
 email: andrew.conrad.sommer@gmail.com
-phone: (314) 368-0630
+phone: 314-368-0630
 
 workexperience:
   - company: MCM Law
@@ -58,5 +58,6 @@ education:
 projects:
   - name: Yolf
     desc: track your golf statistics
-    url: https://www.google.com
+    url: google.com
+
 ---
