@@ -55,6 +55,6 @@ education:
 
 projects:
   - name: PersonalHealthTracker
-    desc: app to track different categories of a user''s health
+    desc: app to track different categories of a user's health
     url: https://personalhealthtrackerdm.azurewebsites.net/
 ---

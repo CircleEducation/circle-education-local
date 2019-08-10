@@ -41,7 +41,7 @@ workexperience:
     title: Account Manager
     location: "St. Louis, MO"
 
-  - company: Dewey''s Pizza
+  - company: Dewey's Pizza
     dates: 2010-2016
     title: Kitchen Manager / Cook
     location: "Austin, TX"
