@@ -28,36 +28,35 @@ github: https://github.com/AndrewSommer89
 linkedin: https://www.linkedin.com/in/andrew-sommer/
 
 email: andrew.conrad.sommer@gmail.com
-phone: 314_368_0630
+phone: (314) 368-0630
 
 workexperience:
   - company: MCM Law
     dates: 2018 - 2019
     title: Administrative Assistant
-    location: St. Louis, MO
+    location: "St. Louis, MO"
 
   - company: Total Quality Logistics
     dates: 2016 - 2017
     title: Account Manager
-    location: St. Louis, MO
+    location: "St. Louis, MO"
 
-  - company: Dewey's Pizza
+  - company: Dewey''s Pizza
     dates: 2010-2016
-    title: Kitchen Manager/ Cook
-    location: Austin, TX
+    title: Kitchen Manager / Cook
+    location: "Austin, TX"
 
 education:
   - name: Austin Coding Acaademy
     dates: October 2018 - August 2019
     degree: Web Development
- 
- - name: Maryville University
-   dates: Graduated 2015
-   degreee: Criminal Justice
+
+  - name: Maryville University
+    dates: Graduated 2015
+    degreee: Criminal Justice
 
 projects:
   - name: Yolf
     desc: track your golf statistics
-    url: # link to your deployed project
-
+    url: https://www.google.com
 ---
