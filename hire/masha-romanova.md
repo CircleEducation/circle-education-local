@@ -12,12 +12,12 @@ blurb: "'Make it simple, but significant.' -- Don Draper, Mad Men"
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
 skills:
   - Web Design
+  - User Experience Design
   - HTML
   - CSS
-  - User Experience Design
-  - Branding
-  - Wireframing
   - Adobe Creative Suite
+  - Wireframing
+  - Branding
   - Wordpress
   - Javascript
   - Bootstrap
@@ -27,6 +27,7 @@ github: https://github.com/masharomanova
 linkedin: https://www.linkedin.com/in/mromanova/
 
 email: masha@mashabydesign.com
+website: https://mashabydesign.com/
 phone: (512) 552-5977
 
 workexperience:
