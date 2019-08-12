@@ -29,15 +29,15 @@
 .fa,
 .far,
 .fas {
-  font-family: Font awesome\5 Free;
+  font-family: 'Font Awesome 5 Free';
 }
 
 .fab {
-  font-family: Font awesome\5 Brands;
+  font-family: 'Font Awesome 5 Brands';
 }
 
 @font-face {
-  font-family: Font awesome\5 Brands;
+  font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -51,7 +51,7 @@
 }
 
 @font-face {
-  font-family: Font awesome\5 Free;
+  font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -65,7 +65,7 @@
 }
 
 @font-face {
-  font-family: Font awesome\5 Free;
+  font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 900;
   font-display: auto;

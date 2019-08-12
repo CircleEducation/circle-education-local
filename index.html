@@ -209,9 +209,6 @@ lubbock:
 
 {% assign school = page[site.key] %}
 <div id="video-container" class="position-relative d-flex d-sm-block justify-content-center flex-column">
-  <!-- htmllint preset="none" -->
-  <div id="hero-{{ school.hero }}" class="hero z-10"></div>
-  <!-- htmllint preset="$previous" -->
   <div class="pl-3 pl-sm-6 ml-sm-4 py-7 py-md-11 container position-absolute z-20">
     <div class="col-8 col-md-7 col-lg-6 pl-0">
       <div class="my-11"></div>
@@ -299,6 +296,9 @@ lubbock:
       </div>
     </div>
   </div>
+  <!-- htmllint preset="none" -->
+  <div id="hero-{{ school.hero }}" class="hero z-10"></div>
+  <!-- htmllint preset="$previous" -->
   <!-- Cover Video -->
   {% assign video = page.cover_video %}
   <amp-video
