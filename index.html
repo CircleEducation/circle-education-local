@@ -6,6 +6,7 @@ cover_video:
   src: "/assets/videos/aca-intro.webm"
   src_mp4: "/assets/videos/aca-intro.mp4"
   title: 'ACA Cover Video'
+  poster: "/assets/images/aca-intro-poster.png"
 lightbox_youtube:
   src_id: "n4x3bdW-kq8"
   title: 'Karen Davis ACA Testimonial'
@@ -207,11 +208,11 @@ lubbock:
 ---
 
 {% assign school = page[site.key] %}
-<div id="video-container" class="position-relative d-flex justify-content-center flex-column">
+<div id="video-container" class="position-relative d-flex d-sm-block justify-content-center flex-column">
   <!-- htmllint preset="none" -->
   <div id="hero-{{ school.hero }}" class="hero z-10"></div>
   <!-- htmllint preset="$previous" -->
-  <div class="py-7 py-md-11 container position-absolute z-10">
+  <div class="pl-3 pl-sm-6 ml-sm-4 py-7 py-md-11 container position-absolute z-20">
     <div class="col-8 col-md-7 col-lg-6 pl-0">
       <div class="my-11"></div>
       <h1 class="text-white font-family-alt font-weight-bold display-responsive">
@@ -286,14 +287,12 @@ lubbock:
               data-videoid="{{ testimonial.src_id }}"
               width="480"
               height="270"
+              tabindex="0"
+              role="presentation"
               on="tap:testimonial-lightbox.open"
               layout="responsive"
               title="{{ testimonial.title }}"
             >
-              <source src="{{ testimonial.src_mp4 }}" type="video/mp4"/>
-              <div fallback>
-                <p>This browser does not support the video element.</p>
-              </div>
             </amp-youtube>
           </div>
         </amp-lightbox>
@@ -306,7 +305,7 @@ lubbock:
     width="640"
     height="360"
     layout="responsive"
-    poster=""
+    poster="{{ video.poster }}"
     autoplay
     loop
     title="{{ video.title }}"
