@@ -504,6 +504,10 @@ p {
   margin-top: 90px;
 }
 
+.mt-100 {
+  margin-top: 100px;
+}
+
 /* HEADER */
 
 #sidebar button {
