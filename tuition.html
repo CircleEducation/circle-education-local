@@ -150,11 +150,15 @@ lubbock:
                   <h5>
                     {{option.price-header}}
                   </h5>
-                  <p class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow display-6">
-                    {{option.price}} <span style="font-size: 1rem;">to start</span><br>
-                    +<br>
-                    {{option.price2}}<span style="font-size: 1rem;"> / 2 weeks</span>
-                  </p>
+                  <div class="card-body p-0 mx-8 mx-md-auto mx-lg-5 rounded border shadow">
+                    <div class="w-100 py-2 px-2 display-6">
+                      {{option.price}} <span style="font-size: 1rem;">to start</span>
+                    </div>
+                    <div class="w-100 pb-2 px-2 bg-light display-8">
+                      +<br>
+                      {{option.price2}}<span style="font-size: 12px;"> / 2 weeks</span>
+                    </div>
+                  </div>
                 </div>
               {% elsif option.price %}
                 <div class="text-center">
