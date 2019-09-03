@@ -126,16 +126,21 @@ lubbock:
         </div>
       {% else %}
       <div class="container-fluid bg-light text-center py-3 my-5">
-          <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
-            {{section.title}}
-          </h2>
-          <p class="m-0 mx-auto mw-600">
-            {{section.description}}
-          </p>
-        </div>
+        <h2 class="display-6 font-family-alt font-weight-bold mx-auto">
+          {{section.title}}
+        </h2>
+        <p class="m-0 mx-auto mw-600">
+          {{section.description}}
+        </p>
+      </div>
       <div class="container">
         {% for option in section.options %}
           <div class="row my-5">
+            {% if option.price-header == 'Details' %}
+              <div class="w-100 py-2 text-center text-blue">
+                New Payment Option!
+              </div>
+            {% endif %}
             <div class="col-md-8">
               <h3 class="display-7 border-bottom">
                 {{option.title}}
@@ -150,11 +155,11 @@ lubbock:
                   <h5>
                     {{option.price-header}}
                   </h5>
-                  <div class="card-body p-0 mx-8 mx-md-auto mx-lg-5 rounded border shadow">
-                    <div class="w-100 py-2 px-2 display-6">
+                  <div class="card-body mx-8 mx-md-auto mx-lg-5 rounded border shadow">
+                    <div class="display-6">
                       {{option.price}} <span style="font-size: 1rem;">to start</span>
                     </div>
-                    <div class="w-100 pb-2 px-2 bg-light display-8">
+                    <div class="display-8">
                       +<br>
                       {{option.price2}}<span style="font-size: 12px;"> / 2 weeks</span>
                     </div>
