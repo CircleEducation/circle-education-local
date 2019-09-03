@@ -136,11 +136,6 @@ lubbock:
       <div class="container">
         {% for option in section.options %}
           <div class="row my-5">
-            {% if option.price-header == 'Details' %}
-              <div class="w-100 py-2 text-center text-blue">
-                New Payment Option!
-              </div>
-            {% endif %}
             <div class="col-md-8">
               <h3 class="display-7 border-bottom">
                 {{option.title}}
