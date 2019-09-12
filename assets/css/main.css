@@ -211,16 +211,32 @@ p {
   }
 }
 
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (min-width: 850px) {
+  .display-sm-4 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
 .display-5 {
   font-size: 3rem;
   font-weight: 300;
   line-height: 1.2;
 }
 
-.display-55 {
-  font-size: 2.5rem;
-  font-weight: 300;
-  line-height: 1.2;
+@media (max-width: 850px) {
+  .display-55 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
 }
 
 .display-6 {
@@ -670,7 +686,7 @@ ul.share-buttons img {
 
   /* Animation */
   .anim-typewriter {
-    animation: typewriter 4s steps(60) 1s 1 normal both,
+    animation: typewriter 5s steps(60) 1s 1 normal both,
       blinkTextCursor 1400ms steps(44) infinite normal;
   }
   @keyframes typewriter {
