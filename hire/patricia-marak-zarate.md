@@ -47,8 +47,8 @@ education:
     degree: Web Development
 
 projects:
-  - name: ATXcrement.com
-    desc: my version of the infamous SFO app "SnapCrap" - ATX style
+  - name: AlertATX.com
+    desc: Anonymous User-Friendly report system to advise citizens of potentional Urban pitfalls
     url: https://austincodingacademy.com/
 
 ---
