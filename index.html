@@ -249,8 +249,8 @@ schools:
       <b>Ready when you are.</b>
     </p>
     <!-- start date boxes -->
-    {% assign start_dates = school.start_dates %}
-    {% if start_dates[0].date %}
+    {% assign start_dates = site.data.startDates[school.hubspot_company_id] %}
+    {% if start_dates[0].start_date %}
       <div class="display-6 mt-8 text-center">
         Our Upcoming Start Dates
       </div>
@@ -265,7 +265,7 @@ schools:
           <div class="card shadow-black mx-auto p-2">
             <div class="card-body">
               <div class="display-6 pb-4 text-center">
-                {{ start_date.date }}
+                {{ start_date.start_date | date: "%B %d, %Y" }}
               </div>
               <div class="shadow border text-center py-5">
                 <div class="display-7 text-center mb-5 px-2">
@@ -275,7 +275,7 @@ schools:
                   {{ start_date.days }}
                 </div>
                 <div class="mb-3">
-                  {{ start_date.time }}
+                  {{ option.start_time }}-{{ option.end_time }}
                 </div>
                 <div class="font-weight-bold">
                   Length:
