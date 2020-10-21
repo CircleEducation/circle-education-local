@@ -20,10 +20,11 @@ const fetchStartDates = async () => {
                 { propertyName: 'type', operator: 'EQ', value: 'Start Date' },
                 { propertyName: 'start_date', operator: 'GTE', value: DateTime.local().minus({ weeks: 1 }).toMillis()},
                 { propertyName: 'currently_enrolling', operator: 'NEQ', value: 'No' },
-              ]
+              ],
+              filters: [{ propertyName: 'cohort_start', operator: 'EQ', value: 'true' },]
             },
           ],
-          properties: ['subject', 'canonical_company_id', 'start_date', 'hs_object_id', 'currently_enrolling', 'days', 'start_time', 'end_time'],
+          properties: ['subject', 'canonical_company_id', 'start_date', 'hs_object_id', 'currently_enrolling', 'cohort_start', 'course_type', 'course_subject', 'course_length', 'days', 'start_time', 'end_time'],
           sorts: ['start_date'],
         after, limit: 100 })
       })).json()
@@ -53,6 +54,10 @@ const fetchStartDates = async () => {
         start_date: object.properties.start_date,
         currently_enrolling: object.properties.currently_enrolling,
         company_id: object.properties.canonical_company_id,
+        cohort_start: object.properties.cohort_start,
+        course_type: object.properties.course_type,
+        course_subject: object.properties.course_subject,
+        course_length: object.properties.course_length,
         days: days,
         start_time: startTime,
         end_time: endTime
