@@ -260,7 +260,7 @@ schools:
         <div class="mx-0 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
         <!-- htmllint preset="$previous" -->
           <div class="display-7 mb-4 text-center">
-            {{ start_date.location }}
+            {{ start_date.course_type }}
           </div>
           <div class="card shadow-black mx-auto p-2">
             <div class="card-body">
@@ -269,19 +269,19 @@ schools:
               </div>
               <div class="shadow border text-center py-5">
                 <div class="display-7 text-center mb-5 px-2">
-                  {{ start_date.course }}
+                  {{ start_date.course_subject }}
                 </div>
                 <div>
                   {{ start_date.days }}
                 </div>
                 <div class="mb-3">
-                  {{ option.start_time }}-{{ option.end_time }}
+                  {{ start_date.start_time }}-{{ start_date.end_time }}
                 </div>
                 <div class="font-weight-bold">
                   Length:
                 </div>
                 <div class="mb-3">
-                  {{ start_date.length }}
+                  {{ start_date.course_length }}
                 </div>
                 <div class="mt-6 {%if school.inverted %}px-6{% endif %}">
                  {% include btn-apply.html %}
