@@ -47,17 +47,6 @@ schools:
       deposit_hubspot_product_id: 87065227
       payment_plan_hubspot_product_id: "92747533"
       picture: "/assets/uploads/ccawebsite_tuitionpage_paymentplan2.png"
-    - title: Single Course (Web 101)
-      description: With our new payment plan for our online course, you can get started
-        with class by making a $490 deposit. After the total will be $2990 for Web
-        101 paid before class starts.
-      price_header: Total Price
-      price: "$490"
-      payment_deposit: "$2990"
-      payment_plan_paycove_template: ''
-      deposit_hubspot_product_id: 87065227
-      payment_plan_hubspot_product_id: ''
-      picture: ''
     - title: Finance through Climb
       description: 'Finance your education through Climb. Click here for more information:
         <a href="https://climbcredit.com/" target="_blank">Climb Credit</a>'
@@ -126,17 +115,6 @@ schools:
       deposit_hubspot_product_id: 87065227
       payment_plan_hubspot_product_id: "92747533"
       picture: "/assets/uploads/acawebsite_tuitionpage_paymentplan2.png"
-    - title: Single Course (Web 101)
-      description: With our new payment plan for our online course, you can get started
-        with class by making a $490 deposit. After the total will be $2990 for Web
-        101 paid before class starts.
-      price_header: Total Price
-      price: "$490"
-      payment_deposit: "$2990"
-      payment_plan_paycove_template: 8 Week Payment Plan
-      deposit_hubspot_product_id: 87065227
-      payment_plan_hubspot_product_id: "99071510"
-      picture: ''
     - title: Finance through Climb
       description: 'Finance your education through Climb. Click here for more information:
         <a href="https://climbcredit.com/" target="_blank">Climb Credit</a>'
@@ -218,17 +196,6 @@ schools:
       deposit_hubspot_product_id: 
       payment_plan_hubspot_product_id: ''
       picture: "/assets/uploads/lcawebsite_tuitionpage_fulltuition.png"
-    - title: Single Course (Web 101)
-      description: With our new payment plan for our online course, you can get started
-        with class by making a $490 deposit. After the total will be $1990 for Web
-        101 paid before class starts.
-      price_header: Total Price
-      price: "$490"
-      payment_deposit: "$1990"
-      payment_plan_paycove_template: ''
-      deposit_hubspot_product_id: 
-      payment_plan_hubspot_product_id: ''
-      picture: ''
     - title: Texas Tech Credit Union
       description: Pay $500 towards your first course, and cover the remainder with
         a personal loan from Texas <a target="_blank" href="https://www.texastechfcu.org/borrow/lubbock-coding-academy-loan">Tech
@@ -290,17 +257,6 @@ schools:
       deposit_hubspot_product_id: 87065234
       payment_plan_hubspot_product_id: ''
       picture: "/assets/uploads/ttcawebsite_tuitionpage_fulltuition.png"
-    - title: Single Course (Web 101)
-      description: With our new payment plan for our online course, you can get started
-        with class by making a $490 deposit. After the total will be $2490 for Web
-        101 paid before class starts.
-      price_header: Total Price
-      price: "$490"
-      payment_deposit: "$2500"
-      payment_plan_paycove_template: ''
-      deposit_hubspot_product_id: 87065227
-      payment_plan_hubspot_product_id: ''
-      picture: ''
     - title: Class by Class
       description: With our class by class option, you can get started with Texas
         Tech Coding Academy by signing up for single classes. Start with Web 101 or
@@ -356,32 +312,30 @@ schools:
       </div>
       <div class="row px-5 py-2 mb-5 justify-content-center">
       {% for option in section.options %}
-        {% unless option.title contains 'Single Course' %}
-          <div class="col-sm-6 col-md-3 border p-2 mx-4 d-flex flex-column justify-content-between mt-4">
-            <div class="shadow py-3 bg-light">
-              {% if option.picture != '' %}
-                <img src="{{ option.picture }}" layout="responsive" alt="Tuition Picture">
-              {% else %}
-                <div class="bg-textured" style="height: 100px"></div>
-              {% endif %}
-              <div class="d-flex justify-content-center">
-                <h4 class="font-weight-bold text-center">{{ option.payment_deposit }}</h4>
-              </div>
-              <div class="d-flex justify-content-center">
-                <p>{{ option.description }}</p>
-              </div>
+        <div class="col-sm-6 col-md-3 border p-2 mx-4 d-flex flex-column justify-content-between mt-4">
+          <div class="shadow py-3 bg-light">
+            {% if option.picture != '' %}
+              <img src="{{ option.picture }}" layout="responsive" alt="Tuition Picture">
+            {% else %}
+              <div class="bg-textured" style="height: 100px"></div>
+            {% endif %}
+            <div class="d-flex justify-content-center">
+              <h4 class="font-weight-bold text-center">{{ option.payment_deposit }}</h4>
             </div>
-            <div class="mt-6 {%if school.inverted %}px-6{% endif %} d-flex justify-content-center pb-5">
-              <div class="col-2 d-flex justify-content-center">
-                {% if option.title == 'ISA' %}
-                  {% include btn-apply.html href="/tuition/isa/" text="Learn More" %}
-                {% else %}
-                  {% include btn-apply.html %}
-                {% endif %}
-              </div>
+            <div class="d-flex justify-content-center">
+              <p>{{ option.description }}</p>
             </div>
           </div>
-        {% endunless %}
+          <div class="mt-6 {%if school.inverted %}px-6{% endif %} d-flex justify-content-center pb-5">
+            <div class="col-2 d-flex justify-content-center">
+              {% if option.title == 'ISA' %}
+                {% include btn-apply.html href="/tuition/isa/" text="Learn More" %}
+              {% else %}
+                {% include btn-apply.html %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
       {% endfor %}
     </div>
 
