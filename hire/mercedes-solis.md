@@ -8,7 +8,7 @@ fullname: "Mercedes Solis"
 jobtitle: "Frontend Developer/Fullstack developer"
 
 location: "Lubbock, TX"
-blurb: "" # Write what you'd like potential employers to know about you, and your story of how you became passionate for coding as a career.
+blurb: "I'm a lifelong learner and love knowing things. I strive to be a valuable member of the team." # Write what you'd like potential employers to know about you, and your story of how you became passionate for coding as a career.
 
 # first item must be JavaScript or C# or .NET or C#/.NET
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
