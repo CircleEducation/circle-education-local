@@ -1,9 +1,11 @@
+---
+
 layout: resume #don't touch
 categories: [ hire, graduation, lubbockcodingacademy ] #don't touch
 # You can change anything in quotation marks, and that will show up on your profile.
 
 fullname: "Mercedes Solis"
-jobtitle: "Producer"
+jobtitle: "Frontend Developer/Fullstack developer"
 
 location: "Lubbock, TX"
 blurb: "" # Write what you'd like potential employers to know about you, and your story of how you became passionate for coding as a career.
@@ -25,7 +27,7 @@ skills:
   - "REST APIs"
 
 github: "https://github.com/mercesolis"
-linkedin: "https://www.linkedin.com/in/your-username"
+linkedin: "https://www.linkedin.com/in/mercedes-solis/"
 
 email: "mersolis@live.com"
 phone: "806-632-2901"
@@ -36,8 +38,6 @@ workexperience:
     dates: "November 2017 - present"
     title: "Producer"
     location: "Lubbock, TX"
-
-  
 
 education:
   - name: "Lubbock Coding Acaademy"
