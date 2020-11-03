@@ -20,5 +20,5 @@ postcss([
     }
   ).then(result => {
     writeFileSync('assets/css/main.min.css', result.css)
-    if ( result.map ) writeFileSync ('assets/css/main.min.css.map', result.map)
+    // if ( result.map ) writeFileSync ('assets/css/main.min.css.map', result.map)
   })

@@ -499,7 +499,7 @@ schools:
           class="w-100 border shadow mb-4 px-4 pt-4 pt-sm-0 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded course-hover"
           style="min-height: 350px;"
         >
-          <div>
+          <div class="col-12">
             <div
               amp-fx="fade-in"
               data-duration="600ms"
@@ -509,22 +509,23 @@ schools:
             >
               <strong>{{ course.code | liquify }}: {{ course.title | liquify }}</strong>
             </div>
-            <div>
-              {% for item in course.list %}
-                <ul amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%">
+            <p amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%">{{ course.paragraph }}</p>
+            <div class="row justify-content-between">
+              <ul amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="mb-1">
+                {% for item in course.list %}
                   <li>
                     {{ item | liquify }}
                   </li>
-                </ul>
-              {% endfor %}
+                {% endfor %}
+              </ul>
+              <div
+                amp-fx="fade-in"
+                data-duration="600ms" data-margin-start="1%" data-margin-end="20%"
+                class="display-6 card-body shadow rounded border col-md-3 my-5 text-center"
+              >
+                {{ course.length | liquify }}
+              </div>
             </div>
-          </div>
-          <div
-            amp-fx="fade-in"
-            data-duration="600ms" data-margin-start="1%" data-margin-end="20%"
-            class="display-6 card-body shadow rounded border col-md-3 mb-4 text-center"
-          >
-            {{ course.length | liquify }}
           </div>
         </div>
       {% endfor %}
