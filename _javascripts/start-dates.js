@@ -30,7 +30,6 @@ const fetchStartDates = async () => {
       })).json()
       objects = json.results ? [...objects, ...json.results] : objects;
       after = json.paging ? (json.paging.next ? json.paging.next.after : null) : null;
-      console.log('start dates', objects.length)
       await Timeout.set(3000);
     } while (after);
     objects = objects.map(object => {
