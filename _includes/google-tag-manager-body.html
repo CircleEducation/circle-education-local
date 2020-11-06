@@ -10,7 +10,16 @@
 {% endfor %}
 <!-- htmllint preset="none" -->
 {% if site.baseurl == '/amp' %}
-<amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ settings.google_tag_manager_amp }}&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+<amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ settings.google_tag_manager_amp }}&gtm.url=SOURCE_URL" data-credentials="include">
+  <script type="application/json ">
+  {
+    "vars" : {
+      "google_ads_conversion_id": "{{ school.google_ads_conversion_id }}",
+      "google_ads_conversion_label": "{{ school.google_ads_conversion_label }}"
+    }
+  }
+  </script>
+</amp-analytics>
 <amp-analytics type="gtag" data-credentials="include">
   <script type="application/json">
   {
@@ -18,9 +27,7 @@
       "gtag_id": "{{ school.google_analytics }}",
       "config" : {
         "{{ school.google_analytics }}": { "groups": "default" }
-      },
-      "google_ads_conversion_id": "{{ school.google_ads_conversion_id }}",
-      "google_ads_conversion_label": "{{ school.google_ads_conversion_label }}"
+      }
     }
   }
   </script>
