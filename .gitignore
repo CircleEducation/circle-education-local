@@ -16,6 +16,7 @@ yarn.lock
 .env
 _data/events.yml
 _data/tutors.yml
+_data/startDates.yml
 *.map
 *.webp
 _configs
