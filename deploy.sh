@@ -10,6 +10,7 @@ if [ "${CIRCLE_BRANCH}" == "preview" ] || [ "${CIRCLE_BRANCH}" == "master" ]; th
   npm run images
   npm run configs
   node _javascripts/github.js
+  node _javascripts/start-dates.js
   ITER=0
   for file in ./_configs/*; do
     if [[ -f $file ]] && [[ $(($ITER % $CIRCLE_NODE_TOTAL)) == $CIRCLE_NODE_INDEX ]]; then
