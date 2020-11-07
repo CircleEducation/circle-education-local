@@ -498,16 +498,16 @@ fields:
       config:
         required: false
       label: gravatar_email
-  - name: google_ads_conversion_label
-    type: text
-    config:
-      required: false
-    label: google_ads_conversion_label
   - name: google_ads_conversion_id
     type: text
     config:
       required: false
     label: google_ads_conversion_id
+  - name: google_ads_conversion_label
+    type: text
+    config:
+      required: false
+    label: google_ads_conversion_label
 - type: field_group_list
   name: logos
   label: logos
