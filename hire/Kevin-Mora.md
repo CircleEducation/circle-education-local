@@ -52,10 +52,10 @@ education:
   - name: "American Commerical College, Lubbock TX"
     dates: "January 2010 - September 2010"
     degree: "Administration Assistant Certification"
-    
+
 education:
 - name: "South Plains College, Levelland TX"
-  dates: "August 2008 - December 2009
+  dates: "August 2008 - December 2009"
   degree: Not finished Design Communication in Associate Degree
 
 projects:
