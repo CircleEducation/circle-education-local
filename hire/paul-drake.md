@@ -33,19 +33,19 @@ phone: "(806) 620-8626"
 
 # Make sure to put your most relevant work, if you've had any technical roles or relevant skills like management, etc. Don't worry about putting every job you've had!
 workexperience:
-  - company: ""
-    dates: "October 2014 - March 2018"
-    title: "Logistics Manager"
+  - company: "Taco Bell"
+    dates: "May 2019 - October 2020"
+    title: "Service Champion"
     location: "Lubbock, TX"
 
-  - company: ""
-    dates: "June 2014 - Februrary 2016"
-    title: "Asbestos Inspector & Abatement Project Manager"
+  - company: "Sterling Ventures"
+    dates: "May 2018 - September 2018"
+    title: "Ranch Hand"
     location: "Lubbock, TX"
 
-  - company: ""
-    dates: "April 2008 - May 2014"
-    title: "Delivery Driver"
+  - company: "Blood Plasma Laboratories"
+    dates: "May 2015 - December 2015"
+    title: "Donor Floor Tech"
     location: "Lubbock, TX"
 
 education:
