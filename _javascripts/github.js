@@ -1,5 +1,5 @@
 const { Octokit } = require('@octokit/rest');
-const octokit = new Octokit({ auth: process.env.GITHUB_API_KEY });
+const octokit = new Octokit({ auth: process.env.GH_API_KEY });
 const { readdirSync } = require('fs');
 let repos = [];
 
