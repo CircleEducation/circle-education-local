@@ -14,7 +14,8 @@
     "favicon": "real-favicon generate _site/favicon.json faviconData.json assets/favicons/ && yarn favicon-inject",
     "favicon-inject": "echo '' > _includes/favicon.html && real-favicon inject faviconData.json assets/favicons _includes/favicon.html && sed -i'.original' -e 's/<html><head>//g' assets/favicons/favicon.html && sed -i'.original' -e 's/<\\/head><body><\\/body><\\/html>//g' assets/favicons/favicon.html && mv assets/favicons/favicon.html _includes/favicon.html",
     "html": "posthtml -c .posthtmlrc && sleep 4 && posthtml -c .posthtmlrc_2",
-    "images": "imagemin assets/uploads/* --out-dir=assets/uploads/ && imagemin assets/uploads/* --out-dir=assets/uploads/ --plugin=webp",
+    "images": "sh resize.sh",
+    "images-webp": "imagemin assets/uploads/* --out-dir=assets/uploads/ --plugin=webp",
     "jekyll-build": "bundle exec jekyll build --config _config.yml,_configs/$KEY.yml",
     "jekyll-build-amp": "bundle exec jekyll build --config _config.yml,_amp.yml,_configs/$KEY.yml --destination _site/amp/",
     "lint": "npm run lint-html && npm run lint-css",
@@ -86,6 +87,8 @@
     }
   },
   "dependencies": {
-    "await-timeout": "^1.1.1"
+    "await-timeout": "^1.1.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.1"
   }
 }
