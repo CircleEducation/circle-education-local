@@ -35,7 +35,7 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','{{ settings.google_tag_manager }}');</script>
   <!-- End Google Tag Manager -->
-  <script>
+  <script data-cfasync="false">
   const decodeURLParams = search => {
     const hashes = search.slice(search.indexOf("?") + 1).split("&");
     return hashes.reduce((params, hash) => {
