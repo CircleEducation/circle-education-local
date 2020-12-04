@@ -45,6 +45,15 @@
           <!-- End addresses -->
           <div class="col d-flex flex-column justify-content-around align-items-start">
             {% include phone.html a_class="text-white hover-white my-2" icon_class="text-white hover-white fas fa-phone" %}
+            {% if site.key == 'austincodingacademy' %}
+              <div class="my-2">
+                <a class="d-flex text-white hover-white" href="mailto:info@austincodingacademy.com">info@austincodingacademy.com</a>
+              </div>
+              <div class="my-2">
+                <a class="d-flex text-white hover-white" href="mailto:aca@stedwards.edu">aca@stedwards.edu</a>
+              </div>
+              <!-- <a class="text-white" href="mailto:aca@stedwards.edu">aca@stedwards.edu</a> -->
+            {% endif %}
             <div class="my-2 d-flex">
               {% assign socials = 'twitter facebook instagram' | split: ' ' ] %}
               {% for item in socials %}
@@ -106,7 +115,7 @@
       "@type": "ImageObject",
       "url": "{% include school-url.html %}/assets/uploads/header-index.jpg"
     },
-    "telephone": "{{ school.phone | phone_number }}",
+    "telephone": "{{ '15126472218' | phone_number }}",
     "address": [
       {% for location in school.locations %}
         {

@@ -60,7 +60,7 @@ amp: false
   <div id="iframe-container" class="d-flex flex-grow-1 justify-content-center align-items-center w-100 flex-column"></div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js" integrity="sha256-0FsDr6k3iiIaao/F1olkJHUfEU/eGSYClQ7ZhVc2md8=" crossorigin="anonymous"></script>
-<script>
+<script data-cfasync="false">
   const getDepositUrl = async () => {
     const email = decodeURLParams(window.location.search)['email'];
     let depositUrl = null;

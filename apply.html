@@ -33,7 +33,7 @@ admission_list:
   complete prior to your first class so you can start classes the right way!
 head_title: Start Your Application | Apply Now at {{ school.name }}
 description: Apply now to learn to code with {{ school.name }} | Fill out your short
-  application to get on the path to a career in web development.
+  application to get on the path to a career in software development.
 heading: Start Your Application
 app_descript: Get started by filling out our application and setting up a call with
   our admissions team.
@@ -319,6 +319,21 @@ edu_work_fields:
   small_width: "12"
   medium_width: "6"
   options: []
+prep_class_field:
+- name: prep_class
+  label: Prep Course Date
+  description: ''
+  type: select
+  value: ''
+  placeholder: Select Prep Course Date
+  required: false
+  small_width: "12"
+  medium_width: "6"
+  options:
+  - value: 'December 10, 12, 17, and 19'
+    label: 'Prep Course Option 1: December 10, 12, 17, and 19'
+  - value: 'January 5, 7, 12, and 14'
+    label: 'Prep Course Option 2: January 5, 7, 12, and 14'
 coupon_input:
 - name: coupon_code
   label: Coupon Code
@@ -436,6 +451,7 @@ isa_inputs:
           <div class="col-12 col-md-6 mb-4">
             {% include select-start-date.html %}
           </div>
+          {% include fields.html fields=page.prep_class_field %}
           <div class="col-12 col-md-6 mb-4">
             {% include select-payment-plan.html %}
           </div>
@@ -465,7 +481,7 @@ isa_inputs:
   </div>
 </div>
 {% if site.key == 'austincodingacademy' %}
-<script>
+<script data-cfasync="false">
   window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#describe_your_ideal_career_path').removeAttribute('required');
     document.querySelector('#what_is_an_income_share_agreement').removeAttribute('required');

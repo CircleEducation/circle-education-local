@@ -248,5 +248,10 @@
       <span class="text-white">{{ school.announcement | liquify }}</span>
     </div>
   {% endif %}
+  {% if settings.global_announcement != '' and settings.global_announcement != nil %}
+    <div class="text-center py-1 " style="background-color: #F4CCCC;">
+      <span>{{ settings.global_announcement | liquify }}</span>
+    </div>
+  {% endif %}
 </header>
 <!-- ========== END HEADER ========== -->
