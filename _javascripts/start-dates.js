@@ -1,13 +1,12 @@
 const fetch = require('node-fetch');
 const { DateTime } = require('luxon');
-const Timeout = require('await-timeout');
 const { safeDump } = require('js-yaml');
 const { writeFileSync } = require('fs');
 const { groupBy } = require('lodash');
 
 const fetchStartDates = async () => {
   try {
-    let objects = await ( await fetch('https://zql.zollege.com/api/5fca53b3d56aff00203dbc15?apiKey=f40aa249-2f29-49ac-9379-cdba5cd2c72d&format=json')).json();
+    let objects = await ( await fetch(process.env.ZQL_START_DATES_URL)).json();
     objects = objects.results.map(object => {
       let days = ''
       if(object.days){
