@@ -29,12 +29,13 @@ const fetchStartDates = async () => {
         currently_enrolling: object.currently_enrolling,
         company_id: object.canonical_company_id,
         cohort_start: object.cohort_start,
-        course_type: object.course_type.replace('NULL', "'"),
+        course_type: object.course_type ? object.course_type.replace('NULL', "'") : object.course_type,
         course_subject: object.course_subject,
         course_length: object.course_length,
         days: days,
         start_time: startTime,
-        end_time: endTime
+        end_time: endTime,
+        tbd: object.hs_pipeline_stage === '1597876' ? true : false
       }
     })
     objects = groupBy(objects, 'company_id')
