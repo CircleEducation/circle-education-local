@@ -265,7 +265,7 @@ schools:
           <div class="card shadow-black mx-auto p-2">
             <div class="card-body">
               <div class="display-6 pb-4 text-center">
-                {{ start_date.start_date | date: "%B %d, %Y" }}
+                {% if start_date.tbd == false %}{{ start_date.start_date | date: "%B %d, %Y" }}{% else %}TBD{% endif %}
               </div>
               <div class="shadow border text-center py-5">
                 <div class="display-7 text-center mb-5 px-2">
