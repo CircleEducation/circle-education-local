@@ -300,6 +300,53 @@ schools:
             </div>
             <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
         {% endif %}
+        {% for _location in school.locations %}
+          {% if _location.name contains start_date.course_type %}
+            {% assign location = _location %}
+          {% elsif start_date.course_type contains 'Online' %}
+            {% assign location = school.name %}
+          {% endif %}
+        {% endfor %}
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "{{ start_date.subject }} Classes",
+            "startDate": "{{ start_date.start_date }}",
+            "endDate": "{{ start_date.end_date }}",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "location": {
+              "@type": "Place",
+              "name": "{{ location.name }}",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "{{ location.street }}",
+                "addressLocality": "{{ location.city }}",
+                "postalCode": "{{ location.postal }}",
+                "addressRegion": "{{ location.state }}",
+                "addressCountry": "US"
+              }
+            },
+            "image": [
+              "{{ school.url }}{{ school.seal }}"
+            ],
+            "description": "Coding classes taught by local full-time developers!",
+            "offers": {
+              "@type": "Offer",
+              "url": "{{ school.url }}/tuition/",
+              "price": "{{ school.tuition }}",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2020-11-19T12:00"
+            },
+            "organizer": {
+              "@type": "Organization",
+              "name": "{{ school.name }}",
+              "url": "{{ school.url }}"
+            }
+          }
+        </script>
       {% endfor %}
       </div>
     {% else %}
