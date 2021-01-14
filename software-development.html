@@ -128,6 +128,8 @@ schools:
   next_start_date: Monday, July 13th
   backend: Node.js/Express.js
   courses:
+  - code: Pre-Class
+    sections: []
   - code: Web 101
     sections:
     - start: May 29, 2019
@@ -213,6 +215,8 @@ schools:
       hover-white center mt-4
 - key: circlecoding
   courses:
+  - code: Pre-Class
+    sections: []
   - code: Web 101
     sections:
     - start: ''
@@ -252,6 +256,8 @@ schools:
   next_start_date: Tuesday, April 7th 2020
   backend: Node.js/Express.js
   courses:
+  - code: Pre-Class
+    sections: []
   - code: Web 101
     sections:
     - start: ''
@@ -308,6 +314,8 @@ schools:
   next_start_date: SOON!
   backend: Node.js/Express.js
   courses:
+  - code: Pre-Class
+    sections: []
   - code: Web 101
     sections: []
   - code: JS 211
@@ -527,6 +535,7 @@ schools:
                 {{ course.length | liquify }}
               </div>
             </div>
+            <p>{{ course.note }}</p>
           </div>
         </div>
       {% endfor %}
