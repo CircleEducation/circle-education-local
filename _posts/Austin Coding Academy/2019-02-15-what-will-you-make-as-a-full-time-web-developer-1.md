@@ -20,7 +20,7 @@ school_keys:
 - austincodingacademy
 
 ---
-As a prospective developer, you may have a lot of questions about your salary. What will your first year’s salary be? How will your salary change throughout your career? What factors will contribute the most to your compensation? 
+As a prospective developer, you may have a lot of questions about your salary. What will your first year’s salary be? How will your salary change throughout your career? What factors will contribute the most to your compensation?
 
 Let’s look at how much money you can expect to earn working as a web developer and how experience, education, location, and coding specialty can all impact your salary. Knowing what your skill is worth will help you negotiate better pay as you advance through your career.
 
@@ -50,7 +50,7 @@ At this point in a developer’s career, they may have climbed the corporate lad
 
 Does education have a big impact on your salary? It can. It will depend on how useful your new skills are and how much time you’re required to invest before you start work.
 
-The most common options for coding education are either a[ coding bootcamp or a computer science degree](https://austincodingacademy.com/blog/web-development/computer-science-degree-vs-coding-bootcamp-which-is-the-best-choice-for-aspiring-developers/). Bootcamp graduates tend to learn more in-demand skills and can, therefore, earn [$6,000 more](https://blog.bloc.io/comparing-salaries-for-coding-bootcamps-vs-computer-science-degrees/) than degree holding developers on average. Most companies are [just as likely to hire](http://blog.indeed.com/2017/05/02/what-employers-think-about-coding-bootcamp/) bootcamp graduates as they are college graduates. Hiring manager[ Ammon Bartram writes](https://blog.triplebyte.com/bootcamps-vs-college), "All in all, we've had roughly equivalent success working with the two groups."
+The most common options for coding education are either a[ coding bootcamp or a computer science degree](https://austincodingacademy.com/blog/web-development/computer-science-degree-vs-coding-bootcamp-which-is-the-best-choice-for-aspiring-developers/). Bootcamp graduates tend to learn more in-demand skills and can, therefore, [earn more](https://www.thinkful.com/blog/coding-bootcamp-vs-degree/) than degree holding developers on average. Most companies are [just as likely to hire](http://blog.indeed.com/2017/05/02/what-employers-think-about-coding-bootcamp/) bootcamp graduates as they are college graduates. Hiring manager[ Ammon Bartram writes](https://blog.triplebyte.com/bootcamps-vs-college), "All in all, we've had roughly equivalent success working with the two groups."
 
 One major difference between bootcamps and bachelor’s degrees is the time they take to complete. ACA’s bootcamp, for example, takes only nine months, compared to four years for the typical bachelor's degree. With three additional years of working experience, you’ll learn a lot of skills on the job, giving you a strong competitive advantage over people who got a four-year degree.
 
