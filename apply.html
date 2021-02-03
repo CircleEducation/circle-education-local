@@ -497,6 +497,13 @@ isa_inputs:
         document.querySelector('#describe_your_ideal_career_path').value = "";
         document.querySelector('#what_is_an_income_share_agreement').value = "";
       }
+      const referralCode = document.querySelector('#referral_code_deposit_100')
+      if (e.target.value.toLowerCase().includes('climb')) {
+        referralCode.value = '';
+        referralCode.setAttribute('disabled', true)
+      } else {
+        referralCode.removeAttribute('disabled')
+      }
     })
   });
 </script>
