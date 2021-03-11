@@ -542,8 +542,8 @@ schools:
               <div class="text-center display-6 pt-4">
                 <!-- Find first start date of correct course type -->
                 {% assign next_start_date = "" %}
-                {% for start_date in school.start_dates %}
-                  {% if start_date.location == "St. Edward's University" and next_start_date == "" %}
+                {% for start_date in site.data.startDates[school.hubspot_company_id] %}
+                  {% if start_date.course_type == "St. Edward's University" and next_start_date == "" %}
                     {% assign next_start_date = start_date %}
                   {% endif %}
                 {% endfor %}
@@ -552,7 +552,8 @@ schools:
                 {% else %}
                   {% assign days = next_start_date.days | split: " - " %}
                 {% endif %}
-                {{ days[0] }}, {{ next_start_date.date | liquify }}
+                {% assign size = days[0] | size | minus: 1 %}
+                {{ days[0] | slice: 0, size }}, {{ next_start_date.start_date | date: "%B %d, %Y" }}
               </div>
               <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="text-center py-4">
                 {% include btn-apply.html %}
