@@ -543,7 +543,7 @@ schools:
                 <!-- Find first start date of correct course type -->
                 {% assign next_start_date = "" %}
                 {% for start_date in site.data.startDates[school.hubspot_company_id] %}
-                  {% if start_date.course_type == "St. Edward's University" and next_start_date == "" %}
+                  {% if start_date.course_type == "Online - Part Time" and next_start_date == "" %}
                     {% assign next_start_date = start_date %}
                   {% endif %}
                 {% endfor %}
