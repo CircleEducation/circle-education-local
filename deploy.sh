@@ -11,6 +11,7 @@ if [ "${CIRCLE_BRANCH}" == "preview" ] || [ "${CIRCLE_BRANCH}" == "master" ]; th
   npm run configs
   node _javascripts/github.js
   node _javascripts/start-dates.js
+  if [ ! -f _data/startDates.yml ]; exit 0; fi
   ITER=0
   for file in ./_configs/*; do
     if [[ -f $file ]] && [[ $(($ITER % $CIRCLE_NODE_TOTAL)) == $CIRCLE_NODE_INDEX ]]; then
