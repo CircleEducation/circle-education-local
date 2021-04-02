@@ -1,0 +1,270 @@
+---
+layout: default
+permalink: "/prep-course/"
+head_title: Software Development Prep Course
+description: ''
+title: Prep Course
+prep_courses:
+- course_type: 'Online - Part Time'
+  course_subject: 'Software Development Prep Course'
+  start_date: '2021-04-06'
+  start_time: '6:00pm'
+  end_time: '9:30pm'
+  course_length: 2 weeks
+  tbd: false
+- course_type: 'Online - Part Time'
+  course_subject: 'Software Development Prep Course'
+  start_date: '2021-04-20'
+  start_time: '6:00pm'
+  end_time: '9:30pm'
+  course_length: 2 weeks
+  tbd: false
+form_fields:
+- name: redirect_url
+  label: ''
+  description: ''
+  type: hidden
+  value: "{% include school-url.html %}/thank-you"
+  placeholder: ''
+  required: ''
+  small_width: ''
+  medium_width: ''
+  options: []
+- name: firstname
+  label: First Name
+  description: ''
+  type: text
+  value: ''
+  options: []
+  placeholder: First Name
+  required: true
+  small_width: 12
+  medium_width: 6
+- name: lastname
+  label: Last Name
+  description: ''
+  type: text
+  value: ''
+  placeholder: Last Name
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: email
+  label: Email
+  description: ''
+  type: email
+  value: ''
+  placeholder: name@example.com
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: phone
+  label: Phone
+  description: ''
+  type: tel
+  value: ''
+  placeholder: "Phone"
+  required: true
+  small_width: 12
+  medium_width: 6
+  options: []
+- name: prep_course_date
+  label: Please Select a Prep Course Start Date
+  description: ''
+  type: select
+  value: ''
+  placeholder: Select One
+  required: true
+  small_width: "12"
+  medium_width: "6"
+  options:
+  - value: 360345900
+    label: 'Coding Prep Course April 6, 2021'
+  - value: 360372034
+    label: 'Coding Prep Course April 20, 2021'
+  - value: 360372555
+    label: 'Coding Prep Course May 4, 2021'
+  
+---
+
+{% for _page in site.pages %}
+  {% if _page.settings %}
+    {% assign settings = _page %}
+    {% for _school in settings.schools %}
+      {% if _school.key == site.key %}
+        {% assign school = _school %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% if page.schools %}
+  {% for _school in page.schools %}
+    {% if _school.key == site.key %}
+      {% assign school = school | hash_concat: _school %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<main>
+  <section class="pt-8 container-fluid d-flex flex-column align-items-center">
+    <div class="row justify-content-center">
+      <div class="col-md-8 p-0 pl-sm-5 d-flex flex-column align-items-center text-center">
+        <h2 class="font-family-alt">
+          Software Development Prep Course
+        </h2>
+        <p class="my-5">
+          During this FREE two week introductory prep course, you will be introduced to the 
+          three main technologies of the internet: HTML, CSS, and JavaScript. From helping you 
+          set up your coding environment to building your first website, our dedicated instructors 
+          are there every step of the way to ensure you feel comfortable with all you are learning. 
+          We want you to feel prepared, excited, and confident as you start your coding journey with us.
+        </p>
+      </div>
+    </div>
+    <div class="w-50 d-flex justify-content-center">
+      <a class="btn bg-primary-light text-white hover-white {% if school.inverted != true %}btn-round{% else %}w-25{% endif %}" href="#prep-course-application">
+        <span class="{% if school.inverted != true %}hover-white text-white{% else %}text-primary-dark{% endif %}">Apply Now!</span>
+      </a>
+    </div>
+  </section>
+  
+  <section class="mb-4">
+    {% assign start_dates = page.prep_courses %}
+    {% if start_dates[0].start_date %}
+      <div class="display-6 mt-8 text-center">
+        Our Upcoming Start Dates
+      </div>
+      <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
+      {% for start_date in start_dates %}
+        <!-- htmllint preset="none" -->
+        <div class="mx-0 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
+        <!-- htmllint preset="$previous" -->
+          <div class="display-7 mb-4 text-center">
+            {{ start_date.course_type }}
+          </div>
+          <div class="card shadow-black mx-auto p-2">
+            <div class="card-body">
+              <div class="display-6 pb-4 text-center">
+                {% if start_date.tbd == false %}{{ start_date.start_date | date: "%B %d, %Y" }}{% else %}TBD{% endif %}
+              </div>
+              <div class="shadow border text-center py-5">
+                <div class="display-7 text-center mb-5 px-2">
+                  {{ start_date.course_subject }}
+                </div>
+                <div>
+                  {{ start_date.days }}
+                </div>
+                <div class="mb-3">
+                  {{ start_date.start_time }}-{{ start_date.end_time }}
+                </div>
+                <div class="font-weight-bold">
+                  Length:
+                </div>
+                <div class="mb-3">
+                  {{ start_date.course_length }}
+                </div>
+                <div class="mt-6 {%if school.inverted %}px-6{% endif %}">
+                  <a class="btn bg-primary-light text-white hover-white {% if school.inverted != true %}btn-round{% else %}w-100{% endif %}" href="#prep-course-application">
+                    <span class="{% if school.inverted != true %}hover-white text-white{% else %}text-primary-dark{% endif %}">Apply Now!</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% assign size_even = start_dates.size | modulo: 2 %}
+        {% assign for_index = forloop.index | modulo: 2 %}
+        {% assign for_index_threes = forloop.index | modulo: 3 %}
+        {% if size_even == 0 and for_index  == 0 and forloop.index != start_dates.size %}
+          </div>
+          <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
+        {% elsif size_even != 0 and for_index_threes  == 0 and forloop.index != start_dates.size %}
+            </div>
+            <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
+        {% endif %}
+        {% for _location in school.locations %}
+          {% if _location.name contains start_date.course_type %}
+            {% assign location = _location %}
+          {% elsif start_date.course_type contains 'Online' %}
+            {% assign location = school.name %}
+          {% endif %}
+        {% endfor %}
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Software Development Classes",
+            "startDate": "{{ start_date.start_date }}",
+            "endDate": "{{ start_date.end_date }}",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "location": {
+              "@type": "Place",
+              "name": "{{ location.name }}",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "{{ location.street }}",
+                "addressLocality": "{{ location.city }}",
+                "postalCode": "{{ location.postal }}",
+                "addressRegion": "{{ location.state }}",
+                "addressCountry": "US"
+              }
+            },
+            "image": [
+              "{{ school.url }}{{ school.seal }}"
+            ],
+            "description": "Coding classes taught by local full-time developers!",
+            "offers": {
+              "@type": "Offer",
+              "url": "{{ school.url }}/tuition/",
+              "price": "{{ school.tuition }}",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2020-11-19T12:00"
+            },
+            "organizer": {
+              "@type": "Organization",
+              "name": "{{ school.name }}",
+              "url": "{{ school.url }}"
+            }
+          }
+        </script>
+      {% endfor %}
+      </div>
+    {% else %}
+      <div class="d-flex justify-content-center">
+        <a class="btn bg-primary-light text-white hover-white {% if school.inverted != true %}btn-round{% else %}w-100{% endif %}" href="#prep-course-application">
+          <span class="{% if school.inverted != true %}hover-white text-white{% else %}text-primary-dark{% endif %}">Apply Now!</span>
+        </a>
+      </div>
+    {% endif %}
+  </section>
+  
+  <section id="prep-course-application" class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
+    <form
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.prep_course_form_guid }}"
+      method="POST"
+      target="_top"
+      class="w-75 my-4"
+    >
+      <div class="row d-flex justify-content-center p-sm-2 p-md-5">
+        {% include fields.html fields=page.form_fields %}
+      </div>
+      
+      <div class="my-4 d-flex flex-column align-items-center">
+        <!-- htmllint preset="none" -->
+        <button class="mb-4 btn bg-primary-light hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" >
+        <!-- htmllint preset="$previous" -->
+          Submit
+        </button>
+        <div class="d-flex flex-column align-items-center">
+          {% include data-agreement.html %}
+        </div>
+      </div>
+      
+    </form>
+  </section>
+  
+</main>
