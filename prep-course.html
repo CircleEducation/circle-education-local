@@ -7,18 +7,18 @@ title: Prep Course
 amp_components:
 - amp-recaptcha-input
 prep_courses:
-- course_type: 'Online - Part Time'
-  course_subject: 'Software Development Prep Course'
-  start_date: '2021-04-06'
-  start_time: '6:00pm'
-  end_time: '9:30pm'
+- course_type: Tuesday/Thursday
+  course_subject: Software Development Prep Course
+  start_date: 2021-04-06
+  start_time: 6:00pm
+  end_time: 9:30pm
   course_length: 2 weeks
   tbd: false
-- course_type: 'Online - Part Time'
-  course_subject: 'Software Development Prep Course'
-  start_date: '2021-04-20'
-  start_time: '6:00pm'
-  end_time: '9:30pm'
+- course_type: Tuesday/Thursday
+  course_subject: Software Development Prep Course
+  start_date: 2021-04-20
+  start_time: 6:00pm
+  end_time: 9:30pm
   course_length: 2 weeks
   tbd: false
 form_fields:
@@ -40,8 +40,8 @@ form_fields:
   options: []
   placeholder: First Name
   required: true
-  small_width: 12
-  medium_width: 6
+  small_width: "12"
+  medium_width: "6"
 - name: lastname
   label: Last Name
   description: ''
@@ -49,8 +49,8 @@ form_fields:
   value: ''
   placeholder: Last Name
   required: true
-  small_width: 12
-  medium_width: 6
+  small_width: "12"
+  medium_width: "6"
   options: []
 - name: email
   label: Email
@@ -59,18 +59,18 @@ form_fields:
   value: ''
   placeholder: name@example.com
   required: true
-  small_width: 12
-  medium_width: 6
+  small_width: "12"
+  medium_width: "6"
   options: []
 - name: phone
   label: Phone
   description: ''
   type: tel
   value: ''
-  placeholder: "Phone"
+  placeholder: Phone
   required: true
-  small_width: 12
-  medium_width: 6
+  small_width: "12"
+  medium_width: "6"
   options: []
 - name: prep_course_date
   label: Please Select a Prep Course Start Date
@@ -83,14 +83,13 @@ form_fields:
   medium_width: "6"
   options:
   - value: 360345900
-    label: 'Coding Prep Course April 6, 2021'
+    label: Coding Prep Course April 6, 2021
   - value: 360372034
-    label: 'Coding Prep Course April 20, 2021'
+    label: Coding Prep Course April 20, 2021
   - value: 360372555
-    label: 'Coding Prep Course May 4, 2021'
-  
----
+    label: Coding Prep Course May 4, 2021
 
+---
 {% for _page in site.pages %}
   {% if _page.settings %}
     {% assign settings = _page %}
