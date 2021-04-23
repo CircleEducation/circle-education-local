@@ -39,14 +39,14 @@ stories:
   position: Software Developer, Kinetic Theory
   src: ''
 heading: Change Your Life With a New Career
-subheading: Part-time coding classes taught by local full-time developers
+subheading: Start learning to code for free with a live instructor
 features:
 - heading: Flexible Schedule
   title: Keep Your Day Job While You Make a Career Change
-  description: Our program is built to work around your schedule. Part-time evening classes allow you to keep your day
-    job and continue to support yourself while launching your new career. Outside
-    of class, we provide unlimited tutoring so you can get help and support whenever
-    you need it.
+  description: Our program is built to work around your schedule. Part-time evening
+    classes allow you to keep your day job and continue to support yourself while
+    launching your new career. Outside of class, we provide unlimited tutoring so
+    you can get help and support whenever you need it.
   img: "/assets/uploads/calendar_yellow.png"
   square: true
   alt: Calendar graphic
@@ -131,6 +131,7 @@ schools:
   lightbox_youtube:
     src_id: QDoA1LgW9vA
     title: ''
+
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -233,20 +234,6 @@ schools:
 
 <main>
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3 d-flex flex-column align-items-center">
-    <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
-      We Are Committed To Your Success
-    </h2>
-    <h3 class="font-family-alt font-weight-bold text-center w-50 mb-5">
-      Learn from anywhere with our Online Software Development Course
-    </h3>
-    <p class="mw-600 mx-auto text-center">
-      From learning to code, to landing your job, our team has your back. At {{ school.name }}
-      you can learn coding in a classroom setting that works with your busy schedule, and be a part of
-      our community, supporting and inspiring each other to be more than just coders.
-    </p>
-    <p class="mw-600 mx-auto text-center pb-4">
-      <b>Ready when you are.</b>
-    </p>
     <!-- start date boxes -->
     {% assign start_dates = site.data.startDates[school.hubspot_company_id] %}
     {% if start_dates[0].start_date %}
