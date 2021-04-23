@@ -233,6 +233,69 @@ schools:
 </div>
 
 <main>
+  <section class="mt-4 py-5 container-fluid px-lg-3 bg-textured text-white">
+    <div class="mx-auto mw-850">
+      <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
+        What We Offer
+      </h2>
+      <p class="px-1 mw-600 mx-auto text-center text-white">
+        As fun as it is to learn how to code, we know you didn't just come to us
+        for the kicks. You need to launch a new career and we're here to help you
+        do it.
+        <br>
+        <br>
+        Here's how:
+      </p>
+      <div>
+        {% assign features = school.features | default: page.features %}
+        {% for feature in features %}
+          <div class="col-12">
+            <div class="row d-flex justify-content-center align-items-center">
+              <!-- Image -->
+              {% if feature.square %}
+                <div
+                  style="max-width: 112px; max-height: 112px;"
+                  class="col-3 mr-sm-4 mb-sm-3 d-none d-md-flex align-items-center justify-content-center "
+                >
+                  <amp-img
+                    width="80px"
+                    height="80px"
+                    layout="responsive"
+                    class="w-100"
+                    src="{{ feature.img | liquify }}"
+                    alt="{{ feature.alt | liquify }}"
+                  ></amp-img>
+                </div>
+              {% else %}
+                <div
+                  style="max-width: 112px; max-height: 84px;"
+                  class="col-3 mr-sm-4 mb-sm-3 d-none d-md-flex align-items-center justify-content-center "
+                >
+                  <amp-img
+                    width="80px"
+                    height="60px"
+                    layout="responsive"
+                    class="w-100"
+                    src="{{ feature.img | liquify }}"
+                    alt="{{ feature.alt | liquify }}"
+                  ></amp-img>
+                </div>
+              {% endif %}
+              <!-- Text -->
+              <div class="col-sm-11 col-md-9">
+                <h3 class="font-weight-bold text-left">
+                  <b>{{ feature.heading | liquify }}</b>
+                </h3>
+                <div class="mb-3">
+                  {{ feature.description | liquify }}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3 d-flex flex-column align-items-center">
     <!-- start date boxes -->
     {% assign start_dates = site.data.startDates[school.hubspot_company_id] %}
@@ -341,70 +404,6 @@ schools:
       </div>
     {% endif %}
     <!-- start date boxes end -->
-  </section>
-
-  <section class="mt-4 py-5 container-fluid px-lg-3 bg-textured text-white">
-    <div class="mx-auto mw-850">
-      <h2 class="font-family-alt font-weight-bold text-center display-5 mb-5">
-        Why Choose Us?
-      </h2>
-      <p class="px-1 mw-600 mx-auto text-center text-white">
-        As fun as it is to learn how to code, we know you didn't just come to us
-        for the kicks. You need to launch a new career and we're here to help you
-        do it.
-        <br>
-        <br>
-        Here's how:
-      </p>
-      <div>
-        {% assign features = school.features | default: page.features %}
-        {% for feature in features %}
-          <div class="col-12">
-            <div class="row d-flex justify-content-center align-items-center">
-              <!-- Image -->
-              {% if feature.square %}
-                <div
-                  style="max-width: 112px; max-height: 112px;"
-                  class="col-3 mr-sm-4 mb-sm-3 d-none d-md-flex align-items-center justify-content-center "
-                >
-                  <amp-img
-                    width="80px"
-                    height="80px"
-                    layout="responsive"
-                    class="w-100"
-                    src="{{ feature.img | liquify }}"
-                    alt="{{ feature.alt | liquify }}"
-                  ></amp-img>
-                </div>
-              {% else %}
-                <div
-                  style="max-width: 112px; max-height: 84px;"
-                  class="col-3 mr-sm-4 mb-sm-3 d-none d-md-flex align-items-center justify-content-center "
-                >
-                  <amp-img
-                    width="80px"
-                    height="60px"
-                    layout="responsive"
-                    class="w-100"
-                    src="{{ feature.img | liquify }}"
-                    alt="{{ feature.alt | liquify }}"
-                  ></amp-img>
-                </div>
-              {% endif %}
-              <!-- Text -->
-              <div class="col-sm-11 col-md-9">
-                <h3 class="font-weight-bold text-left">
-                  <b>{{ feature.heading | liquify }}</b>
-                </h3>
-                <div class="mb-3">
-                  {{ feature.description | liquify }}
-                </div>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
   </section>
   {% if school.course_guide != '' %}
   <!-- Course Guide Form -->
