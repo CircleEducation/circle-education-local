@@ -191,6 +191,14 @@ a {
   min-width: 9rem;
 }
 
+a.btn.bg-primary-light:hover {
+  background-color: rgba(var(--primary-dark), 1);
+}
+
+a.btn.bg-primary-light:hover span {
+  color: white;
+}
+
 .font-family-alt {
   font-family: 'Montserrat', sans-serif;
 }

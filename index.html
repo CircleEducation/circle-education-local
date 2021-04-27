@@ -152,17 +152,8 @@ schools:
         {{ page.subheading | liquify }}
       </p>
       <div class="d-flex justify-content-start">
-        <a
-        class="btn {% if school.inverted != true %}btn-round{% endif %} col-5 btn-outline-dark mr-2 d-block"
-        href="/course-guide/"
-        rel="noopener"
-        href="#"
-      >
-        Course Guide
-      </a>
-
-        <div class="col-5 p-0">
-          {% include btn-apply.html %}
+        <div class="p-0">
+          {% include btn-apply.html href="/prep-course/" text="Register Now for the Free Prep Course" %}
          </div>
       </div>
     </div>
