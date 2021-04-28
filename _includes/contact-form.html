@@ -53,10 +53,10 @@
         <input name="hs_lead_status" type="hidden" value="NEW">
         <input name="form_event_type" type="hidden" value="{{ school.name }} General Contact Form"> 
         <input name="form_source_url" type="hidden" value="{{ school.url | append: page.url }}"> 
-        <!-- <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}"> -->
-        <!-- <input name="redirect_url" type="hidden" value="{% include school-url.html %}/thank-you/"> -->
+        <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}"> 
+        <input name="redirect_url" type="hidden" value="{% include school-url.html %}/thank-you/"> 
         <input name="zollege_school_new_" type="hidden" value="{{ school.name }}">
-        <!-- <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" /> -->
+        <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" /> 
         <div class="row center-form">
 
           {% for _page in site.pages %}
