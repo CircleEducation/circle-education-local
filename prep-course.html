@@ -250,6 +250,10 @@ form_fields:
       target="_top"
       class="w-75 my-4"
     >
+
+      <input name="form_event_type" type="hidden" value="{{ school.name }} Prep Course"> 
+      <input name="form_source_url" type="hidden" value="{{ school.url | append: page.url }}"> 
+
       <div class="row d-flex justify-content-center p-sm-2 p-md-5">
         {% include fields.html fields=page.form_fields %}
       </div>
