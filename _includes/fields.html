@@ -1,5 +1,6 @@
 <input name="page_name" type="hidden" value="{{ page.head_title | liquify }}">
 <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
+<input name="zollege_school_new_" type="hidden" value="{{ school.name }}" />
 {% if redirect_url != nil %}
   <input name="redirect_url" type="hidden" value="{{ include.redirect_url | liquify }}">
 {% endif %}
@@ -65,7 +66,7 @@
             <template type="amp-mustache" info-template>
               <span [text]="{{ field.name | liquify }} != null ? 'You picked ' + {{ field.name }} + '.' : 'You will see your chosen date here.'">You will see your chosen date here.</span>
             </template>
-          </amp-date-picker> 
+          </amp-date-picker>
         </div>
       </div>
     {% else %}
