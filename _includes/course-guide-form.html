@@ -81,6 +81,9 @@
             <input name="redirect_url" type="hidden" value="{{ settings.pdf_viewer_url | liquify }}{{ include.course_guide_href | default: school.course_guide }}">
             <input name="zollege_school_new_" type="hidden" value="{{ school.name }}">
             <input name="callrail_company_id" type="hidden" value="{{ school.callrail_company_id }}" />
+            <input name="form_event_type" type="hidden" value="{{ school.name }} Course Guide Download"> 
+            <input name="form_source_url" type="hidden" value="{{ school.url | append: page.url }}"> 
+            
 
             <div class="row center-form">
               <!-- Input -->
