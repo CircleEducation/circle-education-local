@@ -2,43 +2,41 @@
 tags: []
 layout: post
 title: Freedom Through Education
-description: Zollege Public Benefit Corporation has announced the acquisition of Austin
-  Coding Academy, one of the largest coding bootcamps in the state of Texas and a
-  leader in technology education.
-created_at: 2020-02-07T09:52:59.000-06:00
-updated_at: 2020-02-07T10:00:00.000-06:00
+description: Our mission is to produce freedom through education.
+created_at: 2021-05-12 09:52:59 -0500
+updated_at: 2021-05-12 10:00:00 -0500
 categories:
 - press-release
-excerpt: 'Austin, TX – January 2020 –  Zollege Public Benefit Corporation has announced
-  the acquisition of Austin Coding Academy, one of the largest coding bootcamps in
-  the state of Texas and a leader in technology education. '
+excerpt: We believe in empowering students with quality training and aim to lead them
+  toward fulfilling careers in high-growth fields. This is our definition of freedom
+  and every day we work to create success for the lives of our students. The difference
+  in our model is clear!
 redirect_from: []
-permalink: "/blog/press-release/zollege-pbc-acquires-austin-coding-academy/"
+permalink: "/blog/freedom-through-education"
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
 school_keys:
 - austincodingacademy
 - circlecoding
 - lubbockcodingacademy
-img: "/assets/uploads/0220_Zollege_YouTubeArt.jpg"
+img: "/assets/uploads/austincodingacademy_ck7_009.jpg"
+canonical_link: ''
 
 ---
-**Austin, TX – January 2020** –  [Zollege Public Benefit Corporation](https://zollege.com/ "Zollege Public Benefit Corporation") has announced the acquisition of [Austin Coding Academy](https://austincodingacademy.com/ "Austin Coding Academy"), one of the largest coding bootcamps in the state of Texas and a leader in technology education. Austin Coding Academy currently serves over 200 students in Austin and Lubbock ([Lubbock Coding Academy](https://lubbockcodingacademy.com/ "Lubbock Coding Academy")), providing practical and accessible technical training in software development, as well as partnering with universities and companies to source tech talent and create innovative training solutions to help build a stronger workforce.
+Our mission is to produce freedom through education. Furthering your education should not include massive student loan debt and everyone should know that there are alternative paths that don't require decades of repaying borrowed money. We also know that school is not your only obligation. The convenience of a flexible class schedule allows students to maintain their everyday responsibilities without sacrificing engaging and effective course material. We believe in empowering students with quality training and aim to lead them toward fulfilling careers in high-growth fields. This is our definition of freedom and every day we work to create success for the lives of our students. The difference in our model is clear!
 
-Austin Coding Academy and Zollege share the same passion - debt free education. They believe an education in web development should be accessible to any and everyone who wants to learn. Beginning in the spring, in addition to Austin and Lubbock Coding Academies, new schools across Texas will open with the name, Circle Coding Academy. [Circle Coding Academy](https://circlecoding.com/ "Circle Coding Academy") will host its first cohort in Dallas beginning on April 13, 2020, at the Centrl Office Downtown location.
+#### **College is extremely expensive**
 
-Another school under the Zollege umbrella is, [Vandelay Education](https://www.vandelayeducation.com/ "Vandelay Education"). Vandelay’s mission is to lead the change in the for-profit certificate market, so that the majority of certificate students will begin their career with zero federal financial aid and minimal debt. They have over 100 dental and medical schools across the nation that practice this mission.
+The problem with “traditional” education in our country is no secret - high cost with a disproportionate reward. A lot of students experience a negative return on their education investment - largely because the job they get after college may not support their desired lifestyle, coupled with trying to pay off their college loan debt. Currently, our country faces a $1.6 trillion debt crisis because of student loans, and according to the Harvard Business Review, this burden is anticipated to grow 7% every year. If you take into consideration the lack of return (careers) earned by students who have basically mortgaged their future, we can recognize a failing system that does not work for everyone equally. However, in every situation we are faced with, no matter how stark, opportunity finds a way to present itself!
 
-The Circle Coding Academy brand, and its parent, Circle Education, will join Vandelay Education as part of Zollege PBC, operating under the chartered mission of ending student debt and training the future workforce through innovative technical education. With the support of Zollege PBC, Circle Education will pursue national expansion through additional coding bootcamps, to be named “[Circle Coding Academy](https://circlecoding.com/ "Circle Coding Academy")”, K-12 after-school and summer programs, to be named “[Early Code](https://earlycode.com/ "Early Code")”, and through continued strategic partnerships with public and private entities aimed at increasing access to tech and creating innovative training solutions.
+#### **Is college a “Must”?**
 
-Locations:
+More than half of all graduating seniors will decide to enroll in a 4-year university while more than 40% will not earn their degree in those 4 years! Our role in education is to make sure there are rewarding alternatives with an immediate impact on your life. A dental assisting/medical assisting/coding career has the opportunity to jumpstart your life, help you pursue independence, and give you the confidence to advance. Degrees from traditional colleges and universities are not required to pursue the field! In fact, you just need to be well trained by industry professionals, pass the required certification exams, and complete an externship.
 
-**Zollege HQ** - home of the offices for Austin Coding Academy, Circle Education, and Vandelay Education
+#### **Landing a job.**
 
-1335 E. Whitestone Blvd.
+The primary reason we put ourselves through strenuous circumstances is to hopefully reap the reward at the end; the same goes for pursuing a degree. However, many college graduates don’t even work in the industry they studied. Our programs are designed to focus on the reward at the end. Not only does career-ready training benefit the student but it also benefits the employer by making hiring decisions that much easier. Furthermore, it also boosts our economy by placing people in long-term employment much faster. Our team of Admissions Advisors, Hiring Team Specialists and Campus Managers assist you from the time you apply, through each week of class, and _especially_ after graduation when securing the perfect job for you.
 
-Suite W-100
+#### **You have options.**
 
-Cedar Park, TX 78613
-
-Both Austin Coding Academy and Lubbock Coding Academy will continue to operate normally in their respective cities, with classes continuing to be held at both Austin Coding Academy - Highland and Austin Coding Academy - Capital Factory in Austin and at the South Plains College Lubbock Center in Lubbock. Leadership at Austin Coding Academy will remain unchanged.
+You are not alone in thinking that attending a university is a “must” right out of high school. After all, this is a message that has been ingrained in us as the only option, but that couldn’t be further from the truth. You see, you deserve an education system that works for _you_ and leads to a meaningful career. Our company is centered around this model and is backed by a community of leaders, programmers, specialists, and top-tier instructors prepared to challenge conventional postsecondary education.
