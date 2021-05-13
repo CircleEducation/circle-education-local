@@ -24,7 +24,9 @@ img: "/assets/uploads/austincodingacademy_ck7_009.jpg"
 canonical_link: ''
 
 ---
-Our mission is to produce freedom through education. Furthering your education should not include massive student loan debt and everyone should know that there are alternative paths that don't require decades of repaying borrowed money. We also know that school is not your only obligation. The convenience of a flexible class schedule allows students to maintain their everyday responsibilities without sacrificing engaging and effective course material. We believe in empowering students with quality training and aim to lead them toward fulfilling careers in high-growth fields. This is our definition of freedom and every day we work to create success for the lives of our students. The difference in our model is clear!
+## Freedom Through Education
+
+Our mission is to produce **freedom through education**. Furthering your education should not include massive student loan debt and everyone should know that there are alternative paths that don't require decades of repaying borrowed money. We also know that school is not your only obligation. The convenience of a flexible class schedule allows students to maintain their everyday responsibilities without sacrificing engaging and effective course material. We believe in empowering students with quality training and aim to lead them toward fulfilling careers in high-growth fields. This is our definition of freedom and every day we work to create success for the lives of our students. The difference in our model is clear!
 
 #### **College is extremely expensive**
 
