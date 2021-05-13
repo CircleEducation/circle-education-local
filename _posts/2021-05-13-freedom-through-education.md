@@ -16,6 +16,7 @@ permalink: "/blog/freedom-through-education"
 author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
 school_keys:
+- texastechcodingacademy
 - austincodingacademy
 - circlecoding
 - lubbockcodingacademy
