@@ -26,7 +26,7 @@ const fetchStartDates = async () => {
         name: object.subject,
         hubspot_ticket_id: object.hs_object_id,
         start_date: object.start_date,
-        currently_enrolling: object.currently_enrolling,
+        currently_enrolling: ['True', true, 'true', null].includes(object.currently_enrolling),
         company_id: object.canonical_company_id,
         cohort_start: object.cohort_start,
         course_type: object.course_type ? object.course_type.replace('NULL', "'") : object.course_type,

@@ -9,19 +9,19 @@
       setTimeout(() => document.querySelector(window.location.hash).scrollIntoView(), 1000)
     }
 
-    ['href', 'action', 'action-xhr'].forEach(attr => {
-      document.querySelectorAll('[' + attr + ']').forEach(el => {
-        const parser = document.createElement('a');
-        parser.href = el.getAttribute(attr);
-        const existingSearch = parser.search.replace('?', '').split('&').filter(param => param);
-        const newSearch = location.search.replace('?', '').split('&').filter(param => param);
-        const combinedSearch = existingSearch.concat(newSearch).filter((item, pos, self) => {
-          return self.findIndex(i => item.includes(i.split('=')[0])) === pos;
-        });
-        if (combinedSearch.length) {
-          el.setAttribute(attr, el.getAttribute(attr).split('?')[0] + '?' +  combinedSearch.join('&'))
-        }
-      });
-    });
+    // ['href', 'action', 'action-xhr'].forEach(attr => {
+    //   document.querySelectorAll('[' + attr + ']').forEach(el => {
+    //     const parser = document.createElement('a');
+    //     parser.href = el.getAttribute(attr);
+    //     const existingSearch = parser.search.replace('?', '').split('&').filter(param => param);
+    //     const newSearch = location.search.replace('?', '').split('&').filter(param => param);
+    //     const combinedSearch = existingSearch.concat(newSearch).filter((item, pos, self) => {
+    //       return self.findIndex(i => item.includes(i.split('=')[0])) === pos;
+    //     });
+    //     if (combinedSearch.length) {
+    //       el.setAttribute(attr, el.getAttribute(attr).split('?')[0] + '?' +  combinedSearch.join('&'))
+    //     }
+    //   });
+    // });
   })
   </script>
