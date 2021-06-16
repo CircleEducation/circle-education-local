@@ -73,6 +73,7 @@ GEM
 
 PLATFORMS
   universal-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   jekyll (~> 4.1.1)
@@ -83,4 +84,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   2.2.3
+   2.2.19
