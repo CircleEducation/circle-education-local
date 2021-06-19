@@ -420,7 +420,8 @@ isa_inputs:
       method="POST"
       target="_top"
     >
-      <input name="form_event_type" type="hidden" value="{{ school.name }} Application"> 
+      <input name="school_name" type="hidden" value="{{ school.name }}"> 
+      <input name="form_event_type" type="hidden" value="Application"> 
       <input name="form_source_url" type="hidden" value="{{ school.url | append: page.url }}"> 
 
       <div class="col-12 col-sm-10 mx-auto">
