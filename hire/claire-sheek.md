@@ -67,3 +67,4 @@ projects:
   - name: Seymour
     desc: lant care web application
     url: https://feedmeseymour.netlify.app
+---
