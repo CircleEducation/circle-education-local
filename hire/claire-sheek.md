@@ -28,8 +28,8 @@ skills:
 github: https://github.com/clairesheek
 linkedin: https://www.linkedin.com/in/clairesheek
 
-email: # clairesheek@gmail.com
-phone: # 970-769-2851
+email: clairesheek@gmail.com
+phone: 970-769-2851
 
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
 
