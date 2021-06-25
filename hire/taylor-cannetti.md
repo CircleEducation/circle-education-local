@@ -41,7 +41,7 @@ workexperience:
 
 
 education:
-  - name: Austin Coding Acaademy
+  - name: Austin Coding Academy
     dates: Sept 2020 - June 2021
     degree: Web Development
 
@@ -49,3 +49,4 @@ projects:
   - name: Thrift Online # title of your project
     desc: Fully functioning e-commerce site for my side hustle, thrifting.# very short description of your project
     url: cannetti-capstone-ecommerce.netlify.app # link to your deployed project
+---
