@@ -1,7 +1,6 @@
 ---
 layout: resume
-categories:
-- hire
+categories: 
 - austincodingacademy
 fullname: Amber Jones
 jobtitle: Software Engineer

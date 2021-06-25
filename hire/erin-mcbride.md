@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, austincodingacademy ] # don't touch
+categories: [ austincodingacademy ] # don't touch
 
 fullname: Erin McBride
 jobtitle: JavaScript Developer

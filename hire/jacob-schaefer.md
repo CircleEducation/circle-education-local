@@ -3,7 +3,7 @@ layout: resume # don't touch
 categories: [hire, austincodingacademy] # don't touch
 
 fullname: Jacob Schaefer
-jobtitle: Electrician
+jobtitle: Software Developer
 
 location: Austin, TX
 blurb: "Get after It"
@@ -23,7 +23,7 @@ skills:
   - REST APIs
 
 github: https://github.com/aCodeReader
-linkedin: https://www.linkedin.com/jacob-schaefer-094711181/
+linkedin: https://www.linkedin.com/in/jacob-schaefer-094711181/
 
 email: jacobs0408@yahoo.com
 phone: 512-422-3439

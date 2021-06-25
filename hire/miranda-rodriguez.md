@@ -1,6 +1,6 @@
 ---
 layout: resume # don't touch
-categories: [ hire, graduation, austincodingacademy ] # don't touch
+categories: [ hire, austincodingacademy ] # don't touch
 
 fullname: Miranda Rodriguez
 jobtitle: Seeking a Junior Web Developer position 
