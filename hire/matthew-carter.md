@@ -6,9 +6,10 @@ fullname: Matthew Carter
 jobtitle: Software Developer
 
 location: Tampa, FL
-blurb: "Building the web one piece at a time”
+blurb: "Building the web one piece at a time"
 
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
+
 skills:
   - JavaScript
   - SQL
@@ -23,8 +24,8 @@ skills:
 github: https://github.com/cartermr
 linkedin: https://www.linkedin.com/in/matthewcarter-2020
 
-email: # Carter.matthew@me.com
-phone: # 813-748-8216
+email: Carter.matthew@me.com
+phone: 813-748-8216
 
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
 
@@ -49,3 +50,4 @@ projects:
   - name: Non-Verbal Identification System
     desc: Registration system to help first responders identify non-verbal people by physical descriptors and help them get back to family when lost.
     url: https://20210418t001249-dot-notional-analog-307302.ue.r.appspot.com
+---
