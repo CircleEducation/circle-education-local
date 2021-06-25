@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, austincodingacademy ] # don't touch
+categories: [ austincodingacademy ] # don't touch
 
 fullname: Chase Woods
 jobtitle: C#/.NET Developer
@@ -16,7 +16,7 @@ skills:
   - REST APIs
 
 github: https://github.com/chasewoods89
-linkedin: https://www.linkedin.com/in/chasewoods89
+linkedin: https://www.linkedin.com/in/chasewoods89w
 
 email: chasewoods89@gmail.com
 phone: 502-807-8191

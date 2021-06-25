@@ -1,6 +1,6 @@
 ---
 layout: resume #don't touch
-categories: [ hire, austincodingacademy ] # don't touch
+categories: [ austincodingacademy ] # don't touch
 
 fullname: David Bobb
 jobtitle: JavaScript Developer
@@ -25,7 +25,7 @@ skills:
   - REST APIs
 
 github: https://github.com/dbobb220
-linkedin: www.linkedin.com/in/dbobb220
+linkedin: https://www.linkedin.com/in/dbobb220
 
 email: david.bobb.220@gmail.com
 phone: (512) 663-1463
