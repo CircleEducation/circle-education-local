@@ -399,7 +399,7 @@ isa_inputs:
     <p>{{ page.admission_description }}</p>
     <div>
       {% for item in page.admission_list %}
-        <ul amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%">
+        <ul data-margin-start="1%" data-margin-end="20%">
           <!-- <li> -->
             {{ forloop.index }}. {{ item | liquify }}
           <!-- </li> -->

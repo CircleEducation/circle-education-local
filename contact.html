@@ -116,7 +116,7 @@ title: Contact
           </ul>
         </a>
       {% endfor %}
-      <amp-iframe width="600"
+      <iframe width="600"
         height="400"
         title="Google map pin on school location"
         layout="responsive"
@@ -125,7 +125,7 @@ title: Contact
         src="https://www.google.com/maps/embed/v1/place?q=place_id:{{ school.place_id }}&key={{ settings.google_maps_key }}
 
         ">
-      </amp-iframe>
+      </iframe>
     </div>
     <div class="col-xs-12 col-sm-6">
       {% include contact-form.html %}
