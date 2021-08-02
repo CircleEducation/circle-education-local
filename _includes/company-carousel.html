@@ -13,14 +13,14 @@
     >
       {% for logo in settings.logos %}
         <div class="d-flex align-items-center justify-content-center">
-          <amp-img
+          <img
             width="{{ logo.width }}"
             height="{{ logo.height }}"
             layout="responsive"
             class="w-100 h-auto mw-14r"
             src="{{ logo.src | liquify }}"
             alt="{{ logo.name | liquify }}"
-          ></amp-img>
+          ></img>
         </div>
       {% endfor %}
     </amp-carousel>
