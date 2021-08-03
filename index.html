@@ -195,7 +195,7 @@ schools:
           role="dialog"
       >
         <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center" style="height:100%;">
-          <iframe
+          <amp-youtube
           class="h-100"
           data-videoid="{% if school.lightbox_youtube.src_id != '' %}{{ school.lightbox_youtube.src_id }}{% else %}{{ page.default_video }}{% endif %}"
           width="266.656px"
@@ -206,7 +206,7 @@ schools:
           layout="responsive"
           title="Abby's new career as a software developer in Dallas"
           >
-        </iframe>
+          </amp-youtube>
         </div>
       </amp-lightbox>
   </div>
@@ -409,7 +409,7 @@ schools:
           {% for story in page.stories %}
             <div class="col-xs-12 col-sm-12 col-md-6">
               <div class="mt-4">
-                <iframe
+                <amp-youtube
                   data-videoid="{{ story.src_id }}"
                   width="266.656px"
                   height="150px"
@@ -418,7 +418,7 @@ schools:
                   layout="responsive"
                   title="{{ story.title | liquify }}"
                 >
-              </iframe>
+                </amp-youtube>
               </div>
               <div class="mt-3 d-flex justify-content-center">
                 <blockquote class="blockquote w-75">

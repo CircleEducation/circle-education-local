@@ -23,13 +23,13 @@ layout: default
   <!-- Description Section -->
   <div class="container space-top-1 d-flex flex-column">
     {% if page.img != nil and page.img != '' %}
-      <amp-img
+      <img
         src="{{ page.img | liquify }}"
         class="w-100 w-lg-80 mx-auto"
         layout="responsive"
         height="172"
         alt="{{ page.alt | liquify }}"
-      ></amp-img>
+      ></img>
     {% endif %}
     <div class="w-lg-80 mx-auto space-top-1">
       <h1 class="font-weight-bold">
@@ -40,12 +40,12 @@ layout: default
           <div class="row">
             <!-- htmllint preset="none" -->
             <div class="{% unless page.author_name %}d-none {% else %}d-flex {% endunless %}col-2 justify-content-center align-items-center">
-              <amp-img width="50" height="50"
+              <img width="50" height="50"
                 class="rounded-circle"
                 layout="fixed"
                 alt=" Gravatar icon for {{ page.author_name | liquify }}"
                 src="https://gravatar.com/avatar/{{ page.author_email | downcase | md5 }}?s=100&r=pg&d=mp"
-              ></amp-img>
+              ></img>
             </div>
             <div class="col">
               {% if page.author_email %}
@@ -77,13 +77,13 @@ layout: default
                   href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}&quote={{ page.head_title | replace: ' ', '%20' | liquify }}"
                   title="Share on Facebook"
                   target="_blank">
-                  <amp-img
+                  <img
                     alt="Share on Facebook"
                     src="/assets/uploads/Facebook.svg"
                     layout="fixed"
                     width="32px"
                     height="32px"
-                  ></amp-img>
+                  ></img>
                 </a>
                 <!-- htmllint preset="$previous" -->
               </li>
@@ -93,13 +93,13 @@ layout: default
                   href="https://twitter.com/intent/tweet?source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}&text={{ page.head_title | replace: ' ', '%20' | liquify }}:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}"
                   target="_blank"
                   title="Tweet">
-                  <amp-img
+                  <img
                     alt="Tweet"
                     src="/assets/uploads/Twitter.svg"
                     layout="fixed"
                     width="32px"
                     height="32px"
-                  ></amp-img>
+                  ></img>
                 </a>
                 <!-- htmllint preset="$previous" -->
               </li>
@@ -109,13 +109,13 @@ layout: default
                   href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}&title={{ page.head_title | replace: ' ', '%20' | liquify }}&summary=desc&source=http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}"
                   target="_blank"
                   title="Share on LinkedIn">
-                  <amp-img
+                  <img
                     alt="Share on LinkedIn"
                     src="/assets/uploads/LinkedIn.svg"
                     layout="fixed"
                     width="32px"
                     height="32px"
-                  ></amp-img>
+                  ></img>
                 </a>
                 <!-- htmllint preset="$previous" -->
               </li>
@@ -125,13 +125,13 @@ layout: default
                   href="mailto:?subject={{ page.head_title | replace: ' ', '%20' | liquify }}&body=desc:%20http%3A%2F%2Faustincodingacademy.com{{ page.permalink | liquify }}"
                   target="_blank"
                   title="Send email">
-                  <amp-img
+                  <img
                     alt="Send email"
                     src="/assets/uploads/Email.svg"
                     layout="fixed"
                     width="32px"
                     height="32px"
-                  ></amp-img>
+                  ></img>
                 </a>
                 <!-- htmllint preset="$previous" -->
               </li>

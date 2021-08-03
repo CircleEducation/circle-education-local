@@ -21,8 +21,6 @@
     <!-- htmllint preset="none" -->
     <h2
       {% if include.fade == true %}
-        amp-fx="fade-in"
-        data-duration="600ms"
         data-margin-start="1%"
         data-margin-end="20%"
       {% endif %}
@@ -50,11 +48,9 @@
       <!-- Image -->
       <div class="d-none d-md-flex flex-column justify-content-start mb-7 col-xs-11 col-sm-11 col-md-5 col-lg-5 mx-auto">
         <!-- htmllint preset="none" -->
-        <amp-img
+        <img
           class="rounded border"
           {% if include.fade == true %}
-            amp-fx="fade-in"
-            data-duration="600ms"
             data-margin-start="1%"
             data-margin-end="20%"
           {% endif %}
@@ -63,7 +59,7 @@
           height="756"
           src="{{ include.course_guide_img | default: school.course_guide_img }}"
           alt="What's inside our course guide"
-        ></amp-img>
+        ></img>
         <!-- htmllint preset="$previous" -->
       </div>
       <!-- Form -->
@@ -92,8 +88,6 @@
               <div
                 class="col-6"
                 {% if include.fade == true %}
-                  amp-fx="fade-in"
-                  data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
@@ -122,8 +116,6 @@
               <div
                 class="col-6"
                 {% if include.fade == true %}
-                  amp-fx="fade-in"
-                  data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
@@ -152,8 +144,6 @@
               <div
                 class="col-12"
                 {% if include.fade == true %}
-                  amp-fx="fade-in"
-                  data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
@@ -182,8 +172,6 @@
               <div
                 class="col-12"
                 {% if include.fade == true %}
-                  amp-fx="fade-in"
-                  data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
@@ -211,8 +199,6 @@
               <div
                 class="col-12 d-flex flex-column justify-content-end"
                 {% if include.fade == true %}
-                  amp-fx="fade-in"
-                  data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
@@ -224,8 +210,6 @@
               <div
                 class="col-12 d-flex flex-column justify-content-end mt-3"
                 {% if include.fade == true %}
-                  amp-fx="fade-in"
-                  data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
@@ -239,8 +223,6 @@
               <div
                 class="col-12 d-flex flex-column justify-content-end form-group"
                 {% if include.fade == true %}
-                  amp-fx="fade-in"
-                  data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}
@@ -264,8 +246,6 @@
               <div
                 class="col-12 d-flex align-items-end justify-content-center form-group"
                 {% if include.fade == true %}
-                  amp-fx="fade-in"
-                  data-duration="600ms"
                   data-margin-start="1%"
                   data-margin-end="20%"
                 {% endif %}

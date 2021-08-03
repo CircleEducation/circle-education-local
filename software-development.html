@@ -362,6 +362,7 @@ schools:
       <!-- htmllint preset="none" -->
       <a
         class="btn {% if school.inverted != true %}btn-round{% endif %} btn-outline-light {{ include.class | liquify }}"
+        role="button"
         tabindex="-1"
         href="#course-guide"
       >
@@ -369,17 +370,7 @@ schools:
         Course Guide
       </a>
     </div>
-      <!-- <amp-lightbox
-        id="course-guide-lightbox"
-        class="lightbox text-white mt-10 mt-sm-0 pb-8 pb-sm-0 pt-6 pt-sm-0 px-4 px-sm-0"
-        layout="nodisplay"
-        scrollable
-        on="tap:course-guide-lightbox.close"
-        tabindex="-1"
-        role="dialog"
-      >
-        {% include course-guide-form.html lightbox=true text_class="text-white" %}
-      </amp-lightbox> -->
+    
     {% endif %}
     <div class="ml-2">{% include btn-apply.html %}</div>
   </div>
@@ -500,8 +491,7 @@ schools:
             {% assign course = __course | hash_concat: _course %}
           {% endif %}
         {% endfor %}
-        <div
-          data-margin-start="1%" data-margin-end="20%"
+        <div data-margin-start="1%" data-margin-end="20%"
           class="w-100 border shadow mb-4 px-4 pt-4 pt-sm-0 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded course-hover"
           style="min-height: 350px;"
         >

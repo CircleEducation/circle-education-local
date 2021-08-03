@@ -469,31 +469,22 @@ schools:
       <h2 class="font-family-alt mb-6 text-center display-5">
         {{ category.title | liquify }}
       </h2>
-      <div class="container justify-content-center">
+        {% for faq in category.faqs %}
         <div class="accordion" id="accordionExample">
-      {% for faq in category.faqs %}
-          <section class="mb-3">
-          <div class="card shadow-sm border-0">
-            <div class="card-header" id="headingTwo-{{ forloop.index }}" style="background-color:#F7F7F7;">
-                <button class="btn btn-block text-left border-0 shadow-none" type="button" data-toggle="collapse" data-target="#collapseTwo-{{ forloop.index }}" aria-expanded="true" aria-controls="collapseTwo" style="background-color:#F7F7F7;">
-                  <h4 class="display-7 bg-light mb-0 px-2 p-1 rounded-top">
+          <div class="card mb-3">
+            <div class="card-header p-0" id="headingOne-{{ forloop.index }}">
+              <h4 class="text-left display-7 bg-light mb-0 px-2 p-1 border-0 rounded-top" type="button" data-toggle="collapse" data-target="#collapseOne-{{ forloop.index }}" aria-expanded="true" aria-controls="collapseOne">
                 {{ faq.question | liquify }}
-              </h4>
-                </button>   
-            </div>
-            <div id="collapseTwo-{{ forloop.index }}" class="collapse" aria-labelledby="headingTwo-{{ forloop.index }}" data-parent="#headingTwo-{{ forloop.index }}">
-              <div class="card-body border-muted border border-muted rounded-bottom p-2">
-                <p class="text-default px-2 py-1 border border-top-0 rounded-bottom">
-                {{ faq.answer | liquify }}
-              </p>
+                </h4>
               </div>
-            </div>
+              <div id="collapseOne-{{ forloop.index }}" class="collapse" aria-labelledby="headingOne-{{ forloop.index }}" data-parent="#headingOne-{{ forloop.index }}">
+                <p class="card-body text-default px-2 py-1 border border-top-0 rounded-bottom">
+              {{ faq.answer | liquify }}
+                </p>
           </div>
-          </section>
-          {% endfor %}
         </div>
-    </div>
-  </div>
+      </div>
+        {% endfor %}
     </div>
   {% endfor %}
   <section class="my-10">
