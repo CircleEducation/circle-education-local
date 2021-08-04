@@ -16,7 +16,7 @@
   {% endfor %}
 {% endif %}
 {% assign navigation = school.navigation.header | default: settings.navigation.header %}
-<amp-sidebar
+<!-- <amp-sidebar
   on="tap:sidebar.open"
   tabindex="-1"
   role="navigation"
@@ -76,17 +76,17 @@
           {% endfor %}
         </ul>
       {% else %}
-        <!-- htmllint preset="none" -->
-        <a class="{{ item.class | liquify }} hover-white" href="{{ item.url | liquify }}">
+        <---htmllint preset="none" -->
+        <!-- <a class="{{ item.class | liquify }} hover-white" href="{{ item.url | liquify }}"> -->
         <!-- htmllint preset="$previous" -->
-          <span class="h5 text-white hover-white">
+          <!-- <span class="h5 text-white hover-white">
             {{ item.title | liquify }}
           </span>
         </a>
       {% endif %}
     </div>
   {% endfor %}
-</amp-sidebar>
+</amp-sidebar> -->
 
 <!-- htmllint preset="none" -->
 <header id="header"
@@ -107,142 +107,116 @@
     </div>
   </div>
   <div class="u-header__section bg-{% if school.inverted %}white{% else %}textured{% endif %} py-2">
-  <!-- htmllint preset="$previous" -->
-    <div class="container-fluid px-md-0 px-lg-1">
-      <!-- Nav -->
-      <nav class="navbar navbar-expand-lg u-header__navbar u-header__navbar--no-space flex-row flex-wrap container">
-        <div class="flex-grow-1 d-flex justify-content-between {% if school.inverted %}{% endif %}">
-          <div class="flex-grow-1">
-            <!-- Logo -->
-            <a class="navbar-logo flex-grow-1" href="/" aria-label="Logo">
-              <!-- htmllint preset="none" -->
-              <img layout="{% if site.key == 'circlecoding' %}responsive{% else %}fixed{% endif %}" alt="{{ school.name }} Home" src="{% if page.url == '/locations/st-edwards/' %}/assets/uploads/aca-steds-logo.png{% else %}{{school.logo}}{% endif %}" height="90"></img>
-              <!-- htmllint preset="$previous" -->
-              <span class="sr-only">{{ school.name }} Logo</span>
-            </a>
-            <!-- End Logo -->
-          </div>
-
-          <!-- Responsive Toggle Button -->
-          <div class="d-flex flex-grow-0 align-items-center">
-            <button class="btn d-flex {% if school.inverted == true %}text-dark{% else %}btn-link text-white{% endif %} bg-brand-primary-dark justify-content-end d-lg-none"
-              on="tap:sidebar.open" tabindex="0" role="button">
-              <i class="fas fa-bars fa-2x" aria-hidden="true"></i><span class="sr-only">Open navigation menu</span>
-            </button>
-          </div>
-
-          <!-- End Responsive Toggle Button -->
-        </div>
-
-        <!-- Navigation -->
-        <div id="nav-bar"
-          class="collapse navbar-collapse u-header__navbar-collapse d-none d-lg-flex"
-        >
-          <ul class="navbar-nav u-header__navbar-nav ml-auto">
-            {% for item in navigation %}
-              {% if page.url == '/locations/st-edwards/' %}
-                {% if 'Courses,Locations' contains item.title %}
-                  {% continue %}
+    <!-- htmllint preset="$previous" -->
+      <div class="container-fluid px-md-0 px-lg-1">
+        <!-- Nav -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img style="width:300px;height:auto;max-width:60vw;" alt="{{ school.name }} Home" src="{{ school.logo }}"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav u-header__navbar-nav ml-auto">
+              {% for item in navigation %}
+                {% if page.url == '/locations/st-edwards/' %}
+                  {% if 'Courses,Locations' contains item.title %}
+                    {% continue %}
+                  {% endif %}
                 {% endif %}
-              {% endif %}
-              <li class="nav-item u-header__nav-item ml-4 py-3">
-              {% if item.links.size > 0 %}
-                <span class="{% if school.inverted != true %}text-white hover-white{% endif %}">
-                  {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
-                </span>
-                <ul class="nav-dropdown position-absolute list-unstyled rounded px-3 my-0" {% if school.inverted != true %}style="top:4rem;"{% endif %}>
-                  {% for link in item.links %}
-                    <li class="position-relative p-0 my-2">
-                      <!-- htmllint preset="none" -->
-                      {% if item.title != "Locations" %}
-                        <a class="p-0" {% if link.target %}target="_blank"{% endif %} href="{{ link.url | liquify }}">
-                          <!-- htmllint preset="$previous" -->
-                          <span class="text-white hover-white">
-                            {{ link.title | liquify }}
-                          </span>
-                        </a>
-                      {% else %}
-                        {% if link.url != "" %}
-                          <a href="{{ link.url | liquify }}">
+                <li class="nav-item u-header__nav-item ml-4 py-3">
+                {% if item.links.size > 0 %}
+                  <span class="{% if school.inverted != true %}text-white hover-white{% endif %}">
+                    {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
+                  </span>
+                  <ul class="nav-dropdown position-absolute list-unstyled rounded px-3 my-0" {% if school.inverted != true %}style="top:4rem;"{% endif %}>
+                    {% for link in item.links %}
+                      <li class="position-relative p-0 my-2">
+                        <!-- htmllint preset="none" -->
+                        {% if item.title != "Locations" %}
+                          <a class="p-0" {% if link.target %}target="_blank"{% endif %} href="{{ link.url | liquify }}">
+                            <!-- htmllint preset="$previous" -->
                             <span class="text-white hover-white">
                               {{ link.title | liquify }}
                             </span>
                           </a>
                         {% else %}
-                          <span class="text-white">
-                            {{ link.title | liquify }}
-                          </span>
-                        {% endif %}
-                      {% endif %}
-                    </li>
-                  {% endfor %}
-                </ul>
-                {% elsif item.title == 'Courses' %}
-                  <span class="{% if school.inverted != true %}text-white hover-white{% endif %}">
-                    {% if school.tracks.size == 1 %}Course{% else %}{{ item.title | liquify }}{% endif %} <i class="fas fa-caret-down"></i>
-                  </span>
-                  <ul class="nav-dropdown position-absolute list-unstyled rounded px-3" {% if school.inverted != true %}style="top:4rem;"{% endif %}>
-                    {% for _track in school.tracks %}
-                      {% for __track in settings.tracks %}
-                        {% if _track.name == __track.name %}
-                          {% assign track = __track %}
-                        {% endif %}
-                      {% endfor %}
-                      {% if track.category %}
-                        <li class="position-relative p-0 my-2 pb-1">
-                          <small class="text-muted">
-                            {{ track.category | liquify }}
-                          </small>
-                        </li>
-                        <li class="position-relative p-0 my-2">
-                          <!-- htmllint preset="none" -->
-                            {% if track.url == "/courses/wordpress-fundamentals/" and school.key != 'austincodingacademy' %}
-                              <a href="https://austincodingacademy.com/courses/wordpress-fundamentals/" target="_blank">
-                                <span class="text-white hover-white">
-                                  {{ track.name | liquify }}
-                                </span>
-                              </a>
-                            {% elsif track.url == "" %}
-                                <span class="text-white">
-                                  {{ track.name | liquify }}
-                                </span>
-                            {% else %}
-                              <a href="{{ track.url }}" class="hover-white">
-                                <span class="text-white hover-white">
-                                  {{ track.name | liquify }}
-                                </span>
-                              </a>
-                            {% endif %}
-                        </li>
-                      {% else %}
-                        <li class="position-relative p-0 my-2">
-                          <!-- htmllint preset="none" -->
-                          <a class="p-0" href="{{ track.url }}">
-                            <!-- htmllint preset="$previous" -->
-                            <span class="{% if school.inverted != true %}text-white{% endif %}">
-                              {{ track.name | liquify }}
+                          {% if link.url != "" %}
+                            <a href="{{ link.url | liquify }}">
+                              <span class="text-white hover-white">
+                                {{ link.title | liquify }}
+                              </span>
+                            </a>
+                          {% else %}
+                            <span class="text-white">
+                              {{ link.title | liquify }}
                             </span>
-                          </a>
-                        </li>
-                      {% endif %}
+                          {% endif %}
+                        {% endif %}
+                      </li>
                     {% endfor %}
                   </ul>
-                {% else %}
-                  <!-- htmllint preset="none" -->
-                  <a class="{% if school.inverted != true %}hover-white text-white{% else %}text-dark{% endif %} {{ item.class | liquify }} {% if page.hide_apply and item.title == 'Apply' %} {{ page.hide_apply }}{% endif%}" href="{{ item.url | liquify }}">
-                  <!-- htmllint preset="$previous" -->
-                    <span>{{ item.title | liquify }}</span>
-                  </a>
-              {% endif %}
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-        <!-- End Navigation -->
-      </nav>
-      <!-- End Nav -->
-    </div>
-  </div>
+                  {% elsif item.title == 'Courses' %}
+                    <span class="{% if school.inverted != true %}text-white hover-white{% endif %}">
+                      {% if school.tracks.size == 1 %}Course{% else %}{{ item.title | liquify }}{% endif %} <i class="fas fa-caret-down"></i>
+                    </span>
+                    <ul class="nav-dropdown position-absolute list-unstyled rounded px-3" {% if school.inverted != true %}style="top:4rem;"{% endif %}>
+                      {% for _track in school.tracks %}
+                        {% for __track in settings.tracks %}
+                          {% if _track.name == __track.name %}
+                            {% assign track = __track %}
+                          {% endif %}
+                        {% endfor %}
+                        {% if track.category %}
+                          <li class="position-relative p-0 my-2 pb-1">
+                            <small class="text-muted">
+                              {{ track.category | liquify }}
+                            </small>
+                          </li>
+                          <li class="position-relative p-0 my-2">
+                            <!-- htmllint preset="none" -->
+                              {% if track.url == "/courses/wordpress-fundamentals/" and school.key != 'austincodingacademy' %}
+                                <a href="https://austincodingacademy.com/courses/wordpress-fundamentals/" target="_blank">
+                                  <span class="text-white hover-white">
+                                    {{ track.name | liquify }}
+                                  </span>
+                                </a>
+                              {% elsif track.url == "" %}
+                                  <span class="text-white">
+                                    {{ track.name | liquify }}
+                                  </span>
+                              {% else %}
+                                <a href="{{ track.url }}" class="hover-white">
+                                  <span class="text-white hover-white">
+                                    {{ track.name | liquify }}
+                                  </span>
+                                </a>
+                              {% endif %}
+                          </li>
+                        {% else %}
+                          <li class="position-relative p-0 my-2">
+                            <!-- htmllint preset="none" -->
+                            <a class="p-0" href="{{ track.url }}">
+                              <!-- htmllint preset="$previous" -->
+                              <span class="{% if school.inverted != true %}text-white{% endif %}">
+                                {{ track.name | liquify }}
+                              </span>
+                            </a>
+                          </li>
+                        {% endif %}
+                      {% endfor %}
+                    </ul>
+                  {% else %}
+                    <!-- htmllint preset="none" -->
+                    <a class="{% if school.inverted != true %}hover-white text-white{% else %}text-dark{% endif %} {{ item.class | liquify }} {% if page.hide_apply and item.title == 'Apply' %} {{ page.hide_apply }}{% endif%}" href="{{ item.url | liquify }}">
+                    <!-- htmllint preset="$previous" -->
+                      <span>{{ item.title | liquify }}</span>
+                    </a>
+                {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </nav>
   {% if school.announcement.size > 0 %}
     <div class="text-center py-1 bg-primary-light">
       <span class="text-white">{{ school.announcement | liquify }}</span>
