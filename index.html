@@ -279,19 +279,16 @@ schools:
   </section>
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3 d-flex flex-column align-items-center">
     <!-- start date boxes -->
-    {% assign start_dates = site.data.startDates[school.hubspot_company_id] %}
-    {% if start_dates[0].start_date %}
+    {% for location in school.locations %}
+    {% assign start_dates = site.data.startDates[location.hubspot_company_id] %}
       <div class="display-6 mt-8 text-center">
-        Our Upcoming Start Dates
+        Our Upcoming Start Dates : {{ location.name }}
       </div>
       <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
       {% for start_date in start_dates %}
         <!-- htmllint preset="none" -->
         <div class="mx-0 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
         <!-- htmllint preset="$previous" -->
-          <div class="display-7 mb-4 text-center">
-            {{ start_date.course_type }}
-          </div>
           <div class="card shadow-black mx-auto p-2">
             <div class="card-body">
               <div class="display-6 pb-4 text-center">
@@ -383,7 +380,7 @@ schools:
       <div class="d-flex justify-content-center">
         {% include btn-apply.html %}
       </div>
-    {% endif %}
+    {% endfor %}
     <!-- start date boxes end -->
   </section>
   {% if school.course_guide != '' %}
