@@ -302,6 +302,11 @@ fields:
     - type: text
       name: url
       label: url
+    - name: hubspot_company_id
+      type: text
+      config:
+        required: false
+      label: hubspot_company_id
   - name: announcement
     type: text
     config:
