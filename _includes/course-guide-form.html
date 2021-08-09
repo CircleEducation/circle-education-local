@@ -49,12 +49,11 @@
       <div class="d-none d-md-flex flex-column justify-content-start mb-7 col-xs-11 col-sm-11 col-md-5 col-lg-5 mx-auto">
         <!-- htmllint preset="none" -->
         <img
-          class="rounded border"
+          class="rounded border img-fluid"
           {% if include.fade == true %}
             data-margin-start="1%"
             data-margin-end="20%"
           {% endif %}
-          layout="responsive"
           width="579"
           height="756"
           src="{{ include.course_guide_img | default: school.course_guide_img }}"
