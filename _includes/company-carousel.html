@@ -2,12 +2,11 @@
   <h2 class="font-family-alt font-weight-bold text-center display-6">
     Our Graduates Are Working At
   </h2>
-  <div id="logo-section" class="d-flex d-md-none w-100 w-sm-75 w-md-75 w-lg-75 mx-auto row justify-content-center align-items-center">
+  <!-- <div id="logo-section" class="d-flex d-md-none w-100 w-sm-75 w-md-75 w-lg-75 mx-auto row justify-content-center align-items-center">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
       {% for logo in settings.logos %}
-        <div class="d-flex align-items-center justify-content-center">
+        <div class="carousel-item-{{ forloop.index }} {% if forloop.counter == 1 %}active{% endif %} d-flex align-items-center justify-content-center" id="slide{{ forloop.counter }}">
           <img
             width="{{ logo.width }}"
             height="{{ logo.height }}"
@@ -28,8 +27,8 @@
     </div>
       {% endfor %}
     </div>
-  </div>
-  <div id="logo-img" class="d-none d-md-flex w-100 w-sm-75 w-md-75 w-lg-75 mx-auto row justify-content-center align-items-center">
+  </div> -->
+  <div id="logo-img" class="d-md-flex w-100 w-sm-75 w-md-75 w-lg-75 mx-auto row justify-content-center align-items-center">
     <!-- <div style="height: 300px; width: 600px;"> -->
       <img
         class="w-100 img-fluid h-auto img-fluid"
