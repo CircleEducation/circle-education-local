@@ -168,7 +168,7 @@ schools:
     <div class="col-9 p-0 m-0">
       <div id="my-overlay" class="click-to-play-overlay d-none d-md-block">
 
-        <div class="play-icon" role="button" tabindex="0" on="tap:call-us" style="position: absolute;
+        <div class="play-icon" data-toggle="modal" data-target="#exampleModal" role="button" tabindex="0" style="position: absolute;
         height: 150px;
         width: 150px;
         z-index: 2;
@@ -185,30 +185,21 @@ schools:
           src="/assets/uploads/coding-tutoring-session.jpg">
         </img>
       </div>
-      <amp-lightbox
-          id="call-us"
-          class="lightbox"
-          layout="nodisplay"
-          scrollable
-          on="tap:call-us.close"
-          tabindex="0"
-          role="dialog"
-      >
-        <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center" style="height:100%;">
-          <amp-youtube
-          class="h-100"
-          data-videoid="{% if school.lightbox_youtube.src_id != '' %}{{ school.lightbox_youtube.src_id }}{% else %}{{ page.default_video }}{% endif %}"
-          width="266.656px"
-          height="150px"
-          style="height:500px; width: 888.853333333px;"
-          tabindex="0"
-          role="presentation"
-          layout="responsive"
-          title="Abby's new career as a software developer in Dallas"
-          >
-          </amp-youtube>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-dialog">
+        <div class="m-2 p-2 modal-content d-flex mx-auto flex-column align-items-center" style="width: 70vw; height: auto; background-color: rgba(0,0,0,0.9);">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" 
+            title=""       
+            tabindex="0"
+            src="https://www.youtube.com//embed/{% if school.lightbox_youtube.src_id != '' %}{{ school.lightbox_youtube.src_id }}{% else %}{{ page.default_video }}{% endif %}" allowfullscreen></iframe>
+          </div>
         </div>
-      </amp-lightbox>
+      </div>
+      </div>
   </div>
   </div>
 </div>
