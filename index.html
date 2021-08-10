@@ -405,18 +405,11 @@ schools:
         <div class="row">
           {% for story in page.stories %}
             <div class="col-xs-12 col-sm-12 col-md-6">
-              <div class="mt-4">
-                <amp-youtube
-                  data-videoid="{{ story.src_id }}"
-                  width="266.656px"
-                  height="150px"
-                  tabindex="0"
-                  role="presentation"
-                  layout="responsive"
-                  title="{{ story.title | liquify }}"
-                >
-                </amp-youtube>
-              </div>
+                <div class="mt-4">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" title="{{ story.title | liquify }}" src="https://www.youtube.com//embed/{{ story.src_id }}" allowfullscreen></iframe>
+                  </div>
+                </div>
               <div class="mt-3 d-flex justify-content-center">
                 <blockquote class="blockquote w-75">
                   <p class="mb-0 text-white">
