@@ -55,7 +55,7 @@
             {% if field.required %}<span class="text-red-a">*</span>{% endif %}
           </label>
           <small>{{ field.description | liquify }}</small>
-          <amp-date-picker id="simple-date-picker" type="single" mode="overlay" layout="container" on="select:AMP.setState({date1: event.date, dateType1: event.id})" min="1900-01-01T15:50-04:00" format="YYYY-MM-DD" open-after-select input-selector="[name={{ field.name | liquify }}]" class="example-picker space-between">
+          <!-- <amp-date-picker id="simple-date-picker" type="single" mode="overlay" layout="container" on="select:AMP.setState({date1: event.date, dateType1: event.id})" min="1900-01-01T15:50-04:00" format="YYYY-MM-DD" open-after-select input-selector="[name={{ field.name | liquify }}]" class="example-picker space-between">
             <div class="icon-input"></div>
             <input  type="{{ field.type | liquify }}"
               id="{{ field.name | liquify }}"
@@ -66,7 +66,14 @@
             <template type="amp-mustache" info-template>
               <span [text]="{{ field.name | liquify }} != null ? 'You picked ' + {{ field.name }} + '.' : 'You will see your chosen date here.'">You will see your chosen date here.</span>
             </template>
-          </amp-date-picker>
+          </amp-date-picker> -->
+<input type="date" id="{{ field.name | liquify }}" 
+       name="{{ field.name | liquify }}"
+       value="2018-07-22"
+       min="1900-01-01" max="2018-12-31"
+       placeholder="{{ field.placeholder | liquify }}"
+       class="form-control"
+       aria-label="{{ field.label | liquify }}">
         </div>
       </div>
     {% else %}

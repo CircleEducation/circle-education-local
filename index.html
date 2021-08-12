@@ -9,13 +9,6 @@ description: At {{ school.name }}, we fit learning to code into your life with a
   &amp; affordable array of options, all taught by current industry professionals.
   Don’t wait - embark on a new career today!
 redirect_from: []
-amp_components:
-- amp-carousel
-- amp-lightbox
-- amp-video
-- amp-youtube
-- amp-fx
-- amp-recaptcha-input
 cover_video:
   src: "/assets/uploads/aca-intro.webm"
   src_mp4: "/assets/uploads/aca-intro.mp4"
@@ -190,9 +183,9 @@ schools:
           <span aria-hidden="true">&times;</span>
         </button>
         <div class="modal-dialog">
-        <div class="m-2 p-2 modal-content d-flex mx-auto flex-column align-items-center" style="width: 70vw; height: auto; background-color: rgba(0,0,0,0.9);">
+        <div class="modal-content d-flex mx-auto flex-column align-items-center" style="width: 70vw; height: auto; background-color: rgba(0,0,0,0.9);">
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" 
+            <iframe class="embed-responsive-item rounded" 
             title=""       
             tabindex="0"
             src="https://www.youtube.com//embed/{% if school.lightbox_youtube.src_id != '' %}{{ school.lightbox_youtube.src_id }}{% else %}{{ page.default_video }}{% endif %}" allowfullscreen></iframe>
@@ -273,7 +266,7 @@ schools:
     {% for location in school.locations %}
     {% assign start_dates = site.data.startDates[location.hubspot_company_id] %}
       <div class="display-6 mt-8 text-center">
-        Our Upcoming Start Dates : {{ location.name }}
+        Upcoming Start Dates : {{ location.name }}
       </div>
       <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
       {% for start_date in start_dates %}
@@ -397,7 +390,7 @@ schools:
           {% for story in page.stories %}
             <div class="col-xs-12 col-sm-12 col-md-6">
                 <div class="mt-4">
-                  <div class="embed-responsive embed-responsive-16by9">
+                  <div class="embed-responsive embed-responsive-16by9 rounded">
                     <iframe class="embed-responsive-item" title="{{ story.title | liquify }}" src="https://www.youtube.com//embed/{{ story.src_id }}" allowfullscreen></iframe>
                   </div>
                 </div>
