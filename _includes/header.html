@@ -16,65 +16,67 @@
   {% endfor %}
 {% endif %}
 {% assign navigation = school.navigation.header | default: settings.navigation.header %}
-{% for item in navigation %}
 
 <!-- htmllint preset="none" -->
 <!-- side nav -->
-<div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="sidenav .d-none .d-sm-block .d-md-none pl-3">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  {% if item.links.size > 0 %}
-    <span class="h5 text-white bg-dark py-1 mb-2" tabindex="0">
-      {{ item.title | liquify }}
-    </span>
-    <ul class="list-unstyled text-left pl-3 z-20">
-      {% for link in item.links %}
-        <li>
-          <a href="{{ link.url | liquify }}" class="hover-white">
-            {{ link.title | liquify }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% elsif item.title == 'Courses' %}
-    <span class="h5 text-white py-1 pl-3 mb-2" tabindex="0">
-      {{ item.title | liquify }}
-    </span>
-    <ul class="list-unstyled text-left pl-3 h-100">
-      {% for _track in school.tracks %}
-        {% for __track in settings.tracks %}
-          {% if _track.name == __track.name %}
-            {% assign track = __track %}
-          {% endif %}
-        {% endfor %}
-        {% if track.category %}
-          <li class="text-white">
-            {{ track.category | liquify }}
-          </li>
-          <li class="ml-3">
-            <a href="{{ track.url }}" class="hover-white">
-              {{ track.name | liquify }}
-            </a>
-          </li>
-        {% else %}
-          <li>
-            <a href="{{ track.url }}" class="hover-white">
-              {{ track.name | liquify }}
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  {% else %}
-    <!-- htmllint preset="none" -->
-    <a class="{{ item.class | liquify }} hover-white" href="{{ item.url | liquify }}">
-    <!-- htmllint preset="$previous" -->
-      <span class="h5 text-white hover-white">
-        {{ item.title | liquify }}
-      </span>
-    </a>
-  {% endif %}
-</div>
-{% endfor %}
+  {% for item in navigation %}
+    <div>
+      {% if item.links.size > 0 %}
+        <span class="h5 text-white py-1 mb-2" tabindex="0">
+          {{ item.title | liquify }}
+        </span>
+        <ul class="list-unstyled text-left pl-3 z-20">
+          {% for link in item.links %}
+            <li>
+              <a href="{{ link.url | liquify }}" class="hover-white">
+                {{ link.title | liquify }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% elsif item.title == 'Courses' %}
+        <span class="h5 text-white py-1 mb-3" tabindex="0">
+          {{ item.title | liquify }}
+        </span>
+        <ul class="list-unstyled text-left pl-3 h-100">
+          {% for _track in school.tracks %}
+            {% for __track in settings.tracks %}
+              {% if _track.name == __track.name %}
+                {% assign track = __track %}
+              {% endif %}
+            {% endfor %}
+            {% if track.category %}
+              <li class="text-white">
+                {{ track.category | liquify }}
+              </li>
+              <li class="ml-3">
+                <a href="{{ track.url }}" class="hover-white">
+                  {{ track.name | liquify }}
+                </a>
+              </li>
+            {% else %}
+              <li>
+                <a href="{{ track.url }}" class="hover-white">
+                  {{ track.name | liquify }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% else %}
+        <!-- htmllint preset="none" -->
+        <a class="{{ item.class | liquify }} hover-white" href="{{ item.url | liquify }}">
+        <!-- htmllint preset="$previous" -->
+          <span class="h5 text-white hover-white">
+            {{ item.title | liquify }}
+          </span>
+        </a>
+      {% endif %}
+    </div>
+  {% endfor %}
+  </div>
 <!-- side nav -->
   <div class="py-1 bg-primary-dark border-bottom border-white">
     <div class="container d-flex justify-content-end">

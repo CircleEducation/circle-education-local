@@ -659,7 +659,7 @@ a.btn.bg-primary-light:hover span {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 6;
+  z-index: 100;
   top: 0;
   right: 0;
   overflow-x: hidden;
@@ -669,12 +669,17 @@ a.btn.bg-primary-light:hover span {
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 2px 8px 2px 0px;
   text-decoration: none;
   font-size: 15px;
   color: #6ad5ea;
   display: block;
   transition: 0.3s;
+}
+
+.sidenav .btn {
+  width: 100px;
+  margin-top: 30px;
 }
 
 .sidenav a:hover {
