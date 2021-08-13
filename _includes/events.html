@@ -15,7 +15,7 @@
         </div>
         <div class="mb-4">
           {% assign name = event.name | split: " | "  %}
-          <h5 class="mb-1 text-default">{{ name[1] }}</h5>
+          <h5 class="mb-1 text-default">{{ name[1] | default: name[0] }}</h5>
           <p class="text-default">
             {{ event.venue_name }}
             <br/>
