@@ -156,44 +156,45 @@ schools:
   <!-- htmllint preset="$previous" -->
   <!-- Cover Video -->
   {% assign video = page.cover_video %}
-  <div class="col-12 d-flex justify-content-between p-0 bg-white">
-    <div class="col-3 bg-white m-0"></div>
-    <div class="col-9 p-0 m-0">
-      <div id="my-overlay" class="click-to-play-overlay d-none d-md-block">
+    <div class="col-12 d-flex justify-content-between p-0 bg-white">
+      <div class="col-3 bg-white m-0"></div>
+        <div class="col-9 p-0 m-0">
+         <div id="my-overlay" class="click-to-play-overlay d-none d-md-block">
 
-        <div class="play-icon" data-toggle="modal" data-target="#exampleModal" role="button" tabindex="0" style="position: absolute;
-        height: 150px;
-        width: 150px;
-        z-index: 2;
-        background-image: url(https://amp.dev/static/samples/img/play-icon.png);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        /* Align to the middle */
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        cursor: pointer;
-        opacity: 0.8;"></div>
-        <img class="poster-image img-fluid rounded shadow" layout="responsive"
-          src="/assets/uploads/coding-tutoring-session.jpg">
-        </img>
-      </div>
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-dialog">
-        <div class="modal-content d-flex mx-auto flex-column align-items-center" style="width: 70vw; height: auto; background-color: rgba(0,0,0,0.9);">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item rounded" 
-            title=""       
-            tabindex="0"
-            src="https://www.youtube.com//embed/{% if school.lightbox_youtube.src_id != '' %}{{ school.lightbox_youtube.src_id }}{% else %}{{ page.default_video }}{% endif %}" allowfullscreen></iframe>
+            <div class="play-icon" data-toggle="modal" data-target="#exampleModal" role="button" tabindex="0" style="position: absolute;
+            height: 150px;
+            width: 150px;
+            z-index: 2;
+            background-image: url(https://amp.dev/static/samples/img/play-icon.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            /* Align to the middle */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            opacity: 0.8;"></div>
+              <img class="poster-image img-fluid rounded shadow" layout="responsive"
+                src="/assets/uploads/coding-tutoring-session.jpg">
+              </img>
+          </div>
+        <div class="modal fade" id="exampleModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+           <div class="modal-dialog mt-11 .modal-lg">
+            <div class="modal-content">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item rounded"
+                title=""       
+                tabindex="0"
+                src="https://www.youtube.com//embed/{% if school.lightbox_youtube.src_id != '' %}{{ school.lightbox_youtube.src_id }}{% else %}{{ page.default_video }}{% endif %}" allowfullscreen></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-  </div>
+    </div>
   </div>
 </div>
 

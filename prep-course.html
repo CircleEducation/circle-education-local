@@ -28,7 +28,7 @@ prep_courses:
   end_time: 9:00pm
   course_length: 2 weeks
   tbd: false
-  - course_type: Tuesday/Thursday
+- course_type: Tuesday/Thursday
   course_subject: Software Development Prep Course
   start_date: 2021-10-05 18:30:00 -0500
   start_time: 6:30pm
@@ -106,11 +106,7 @@ form_fields:
     label: Coding Prep Course October 05, 2021
   - value: ',360345899,,,{{school.hubspot_company_id}}'
     label: Coding Prep Course October 19, 2021
-<!--   - value: ',510066259,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course November 02, 2021
-  - value: ',510203668,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course December 07, 2021 -->
-
+    
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -157,7 +153,7 @@ form_fields:
     {% assign start_dates = page.prep_courses %}
     {% if start_dates[0].start_date %}
       <div class="display-6 mt-8 text-center">
-       Upcoming Starter Courses
+        Our Upcoming Start Dates
       </div>
       <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
       {% for start_date in start_dates %}
