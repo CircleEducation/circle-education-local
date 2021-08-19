@@ -14,14 +14,16 @@
   <option value="" disabled selected>
     Please Select
   </option>
-  {% for start_date in site.data.startDates[school.hubspot_company_id] %}
+  {% for location in school.locations %}
+  <option disabled label="{{ location.name }}">
+    {% assign start_dates = site.data.startDates[location.hubspot_company_id] %}
     {% assign getaccept_entity_id = start_date.getaccept_entity_id | default: school.getaccept_entity_id %}
-    <optgroup label="{{ start_date.course_type }}">
+      {% for start_date in start_dates %}
         <option
-          value="{{ start_date.salesforce_id | append: ',' | append: start_date.hubspot_ticket_id | append: ',' | append: getaccept_entity_id | append: ',' | append: start_date.getaccept_template_id | append: ',' | append: school.hubspot_company_id }}"
-        >
-        {{ start_date.course_subject }} - {% if start_date.tbd == false %}{{ start_date.start_date | date: "%B %d, %Y" }}{% else %}TBD{% endif %} ({{ start_date.days }} {{ start_date.start_time }}-{{ start_date.end_time }})
+          value="{{ start_date.salesforce_id | append: ',' | append: start_date.hubspot_ticket_id | append: ',' | append: getaccept_entity_id | append: ',' | append: start_date.getaccept_template_id | append: ',' | append: location.hubspot_company_id }}"
+        >{{ start.date.course_subject }} - {% if start_date.tbd == false %}{{ start_date.start_date | date: "%B %d, %Y" }}{% else %}TBD{% endif %} ({{ start_date.days }} {{ start_date.start_time }}-{{ start_date.end_time }})
         </option>
-    </optgroup>
   {% endfor %}
+  {% endfor %}
+</option>
 </select>

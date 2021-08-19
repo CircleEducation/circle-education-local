@@ -282,7 +282,7 @@ schools:
     {% for location in school.locations %}
     {% assign start_dates = site.data.startDates[location.hubspot_company_id] %}
       <div class="display-6 mt-8 text-center">
-        Our Upcoming Start Dates : {{ location.name }}
+        Upcoming Start Dates : {{ location.name }}
       </div>
       <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
       {% for start_date in start_dates %}
