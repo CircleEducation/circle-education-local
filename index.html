@@ -9,13 +9,6 @@ description: At {{ school.name }}, we fit learning to code into your life with a
   &amp; affordable array of options, all taught by current industry professionals.
   Don’t wait - embark on a new career today!
 redirect_from: []
-amp_components:
-- amp-carousel
-- amp-lightbox
-- amp-video
-- amp-youtube
-- amp-fx
-- amp-recaptcha-input
 cover_video:
   src: "/assets/uploads/aca-intro.webm"
   src_mp4: "/assets/uploads/aca-intro.mp4"
@@ -163,53 +156,45 @@ schools:
   <!-- htmllint preset="$previous" -->
   <!-- Cover Video -->
   {% assign video = page.cover_video %}
-  <div class="col-12 d-flex justify-content-between p-0 bg-white">
-    <div class="col-3 bg-white m-0"></div>
-    <div class="col-9 p-0 m-0">
-      <div id="my-overlay" class="click-to-play-overlay d-none d-md-block">
+    <div class="col-12 d-flex justify-content-between p-0 bg-white">
+      <div class="col-3 bg-white m-0"></div>
+        <div class="col-9 p-0 m-0">
+         <div id="my-overlay" class="click-to-play-overlay d-none d-md-block">
 
-        <div class="play-icon" role="button" tabindex="0" on="tap:call-us" style="position: absolute;
-        height: 150px;
-        width: 150px;
-        z-index: 2;
-        background-image: url(https://amp.dev/static/samples/img/play-icon.png);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        /* Align to the middle */
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        cursor: pointer;
-        opacity: 0.8;"></div>
-        <img class="poster-image img-fluid rounded shadow" layout="responsive"
-          src="/assets/uploads/coding-tutoring-session.jpg">
-        </img>
-      </div>
-      <amp-lightbox
-          id="call-us"
-          class="lightbox"
-          layout="nodisplay"
-          scrollable
-          on="tap:call-us.close"
-          tabindex="0"
-          role="dialog"
-      >
-        <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center" style="height:100%;">
-          <amp-youtube
-          class="h-100"
-          data-videoid="{% if school.lightbox_youtube.src_id != '' %}{{ school.lightbox_youtube.src_id }}{% else %}{{ page.default_video }}{% endif %}"
-          width="266.656px"
-          height="150px"
-          style="height:500px; width: 888.853333333px;"
-          tabindex="0"
-          role="presentation"
-          layout="responsive"
-          title="Abby's new career as a software developer in Dallas"
-          >
-          </amp-youtube>
+            <div class="play-icon" data-toggle="modal" data-target="#exampleModal" role="button" tabindex="0" style="position: absolute;
+            height: 150px;
+            width: 150px;
+            z-index: 2;
+            background-image: url(https://amp.dev/static/samples/img/play-icon.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            /* Align to the middle */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            opacity: 0.8;"></div>
+              <img class="poster-image img-fluid rounded shadow" layout="responsive"
+                src="/assets/uploads/coding-tutoring-session.jpg">
+              </img>
+          </div>
+        <div class="modal fade" id="exampleModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+           <div class="modal-dialog mt-11 .modal-lg">
+            <div class="modal-content">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item rounded"
+                title=""       
+                tabindex="0"
+                src="https://www.youtube.com//embed/{% if school.lightbox_youtube.src_id != '' %}{{ school.lightbox_youtube.src_id }}{% else %}{{ page.default_video }}{% endif %}" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
         </div>
-      </amp-lightbox>
-  </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -238,28 +223,28 @@ schools:
                   style="max-width: 112px; max-height: 112px;"
                   class="col-3 mr-sm-4 mb-sm-3 d-none d-md-flex align-items-center justify-content-center "
                 >
-                  <amp-img
+                  <img
                     width="80px"
                     height="80px"
                     layout="responsive"
                     class="w-100"
                     src="{{ feature.img | liquify }}"
                     alt="{{ feature.alt | liquify }}"
-                  ></amp-img>
+                  ></img>
                 </div>
               {% else %}
                 <div
                   style="max-width: 112px; max-height: 84px;"
                   class="col-3 mr-sm-4 mb-sm-3 d-none d-md-flex align-items-center justify-content-center "
                 >
-                  <amp-img
+                  <img
                     width="80px"
                     height="60px"
                     layout="responsive"
                     class="w-100"
                     src="{{ feature.img | liquify }}"
                     alt="{{ feature.alt | liquify }}"
-                  ></amp-img>
+                  ></img>
                 </div>
               {% endif %}
               <!-- Text -->
@@ -405,18 +390,11 @@ schools:
         <div class="row">
           {% for story in page.stories %}
             <div class="col-xs-12 col-sm-12 col-md-6">
-              <div class="mt-4">
-                <amp-youtube
-                  data-videoid="{{ story.src_id }}"
-                  width="266.656px"
-                  height="150px"
-                  tabindex="0"
-                  role="presentation"
-                  layout="responsive"
-                  title="{{ story.title | liquify }}"
-                >
-                </amp-youtube>
-              </div>
+                <div class="mt-4">
+                  <div class="embed-responsive embed-responsive-16by9 rounded">
+                    <iframe class="embed-responsive-item" title="{{ story.title | liquify }}" src="https://www.youtube.com//embed/{{ story.src_id }}" allowfullscreen></iframe>
+                  </div>
+                </div>
               <div class="mt-3 d-flex justify-content-center">
                 <blockquote class="blockquote w-75">
                   <p class="mb-0 text-white">

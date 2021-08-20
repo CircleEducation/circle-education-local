@@ -60,23 +60,21 @@ card_breakdown: "<h4>Course Breakdown:</h4><ul><li><p>Day
 <section class="py-8 container">
   <div class="row d-flex flex-column align-items-center">
     <!-- course card start -->
-      <div
-        amp-fx="fade-in"
-        data-duration="600ms" data-margin-start="1%" data-margin-end="20%"
+      <div 
+        data-margin-start="1%"
+        data-margin-end="20%"
         class="w-100 border shadow mb-4 px-4 pt-4 pt-sm-0 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded course-hover"
         style="min-height: 350px;"
       >
         <div>
           <div
-            amp-fx="fade-in"
-            data-duration="600ms"
             data-margin-start="1%"
             data-margin-end="20%"
             class="display-6 mb-4 pl-2 pl-sm-0"
           >
           </div>
           <div>
-              <ul amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%">
+              <ul data-margin-start="1%" data-margin-end="20%">
                 <div class="d-flex justify-content-start text-center mb-3">
                   {{ page.card_text | liquify }}
                 </div>

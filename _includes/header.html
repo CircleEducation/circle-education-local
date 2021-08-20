@@ -16,25 +16,15 @@
   {% endfor %}
 {% endif %}
 {% assign navigation = school.navigation.header | default: settings.navigation.header %}
-<amp-sidebar
-  on="tap:sidebar.open"
-  tabindex="-1"
-  role="navigation"
-  id="sidebar"
-  class="m-0 px-5 bg-dark d-flex d-lg-none flex-column align-items-start justify-content-start"
-  layout="nodisplay"
-  side="right"
->
 
+<!-- htmllint preset="none" -->
+<!-- side nav -->
+<div id="mySidenav" class="sidenav pl-4">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   {% for item in navigation %}
-    <div
-      class="mt-4"
-      on="tap:sidebar.open"
-      role="dialog"
-      tabindex="-1"
-    >
+    <div>
       {% if item.links.size > 0 %}
-        <span class="h5 text-white bg-dark py-1 mb-2" tabindex="0">
+        <span class="h5 text-white py-1 mb-2" tabindex="0">
           {{ item.title | liquify }}
         </span>
         <ul class="list-unstyled text-left pl-3 z-20">
@@ -47,7 +37,7 @@
           {% endfor %}
         </ul>
       {% elsif item.title == 'Courses' %}
-        <span class="h5 text-white bg-dark py-1 mb-2" tabindex="0">
+        <span class="h5 text-white py-1 mb-3" tabindex="0">
           {{ item.title | liquify }}
         </span>
         <ul class="list-unstyled text-left pl-3 h-100">
@@ -86,12 +76,8 @@
       {% endif %}
     </div>
   {% endfor %}
-</amp-sidebar>
-
-<!-- htmllint preset="none" -->
-<header id="header"
-  class="u-header--navbar-bg w-100 z-30"
->
+  </div>
+<!-- side nav -->
   <div class="py-1 bg-primary-dark border-bottom border-white">
     <div class="container d-flex justify-content-end">
       {% include phone.html a_class="text-white" icon_class="fas fa-phone text-white" %}
@@ -116,7 +102,7 @@
             <!-- Logo -->
             <a class="navbar-logo flex-grow-1" href="/" aria-label="Logo">
               <!-- htmllint preset="none" -->
-              <amp-img layout="{% if site.key == 'circlecoding' %}responsive{% else %}fixed{% endif %}" alt="{{ school.name }} Home" src="{% if page.url == '/locations/st-edwards/' %}/assets/uploads/aca-steds-logo.png{% else %}{{school.logo}}{% endif %}" height="90"></amp-img>
+              <img layout="{% if site.key == 'circlecoding' %}responsive{% else %}fixed{% endif %}" alt="{{ school.name }} Home" src="{% if page.url == '/locations/st-edwards/' %}/assets/uploads/aca-steds-logo.png{% else %}{{school.logo}}{% endif %}" height="90"></img>
               <!-- htmllint preset="$previous" -->
               <span class="sr-only">{{ school.name }} Logo</span>
             </a>
@@ -125,18 +111,17 @@
 
           <!-- Responsive Toggle Button -->
           <div class="d-flex flex-grow-0 align-items-center">
-            <button class="btn d-flex {% if school.inverted == true %}text-dark{% else %}btn-link text-white{% endif %} bg-brand-primary-dark justify-content-end d-lg-none"
-              on="tap:sidebar.open" tabindex="0" role="button">
-              <i class="fas fa-bars fa-2x" aria-hidden="true"></i><span class="sr-only">Open navigation menu</span>
+            <button onclick="openNav()" class="btn navbar-toggler d-flex {% if school.inverted == true %}text-dark{% else %}btn-link text-white{% endif %} bg-brand-primary-dark justify-content-end d-lg-none"
+              tabindex="0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars fa-2x " aria-hidden="true"></i><span class="sr-only">Open navigation menu</span>
             </button>
           </div>
-
           <!-- End Responsive Toggle Button -->
         </div>
 
         <!-- Navigation -->
         <div id="nav-bar"
-          class="collapse navbar-collapse u-header__navbar-collapse d-none d-lg-flex"
+          class="collapse navbar-collapse u-header__navbar-collapse d-none d-lg-flex" id="navbarNavDropdown"
         >
           <ul class="navbar-nav u-header__navbar-nav ml-auto">
             {% for item in navigation %}
@@ -255,3 +240,15 @@
   {% endif %}
 </header>
 <!-- ========== END HEADER ========== -->
+
+<!-- SideBar JS -->
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "320px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+  <!-- End Sidebar -->

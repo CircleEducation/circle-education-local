@@ -5,7 +5,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "build": "npm run configs && npm run css && npm run jekyll-build && npm run jekyll-build-amp && npm run optimize",
+    "build": "npm run configs && npm run css && npm run jekyll-build",
     "cname": "echo $(echo $JEKYLL_ENV)$(echo $KEY) >> _site/CNAME",
     "configs": "node _javascripts/configs.js",
     "css": "node _javascripts/postcss.js && cat assets/css/main.min.css > _includes/css.html",

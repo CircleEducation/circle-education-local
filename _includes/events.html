@@ -4,14 +4,14 @@
     <div class="col-12 col-sm-6 col-md-6 col-lg-3 card card-frame shadow-black text-center m-2 mw-22r">
       <div class="card-body pt-6 pb-3 d-flex flex-column justify-content-between">
         <div class="mx-auto mb-4 flex-grow-1 w-100">
-          <amp-img
+          <img
             width="{{ event.width | default: 400 }}"
             height="{{ event.height | default: 200 }}"
             layout="responsive"
             class="img-fluid rounded border"
             src="{{ event.img }}"
             alt="{{ event.name }}"
-          ></amp-img>
+          ></img>
         </div>
         <div class="mb-4">
           {% assign name = event.name | split: " | "  %}

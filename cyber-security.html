@@ -88,16 +88,15 @@ course_guide: "/assets/uploads/ttca_cyber-security_course-guide-1.pdf"
       <!-- htmllint preset="none" -->
       <a
         class="btn {% if school.inverted != true %}btn-round{% endif %} btn-outline-light {{ include.class | liquify }}"
-        on="tap:course-guide-lightbox"
         role="button"
         tabindex="-1"
-        href="#"
+        href="#course-guide"
       >
       <!-- htmllint preset="$previous" -->
         Course Guide
       </a>
     </div>
-      <amp-lightbox
+      <!-- <amp-lightbox
         id="course-guide-lightbox"
         class="lightbox text-white mt-10 mt-sm-0 pb-8 pb-sm-0 pt-6 pt-sm-0 px-4 px-sm-0"
         layout="nodisplay"
@@ -107,7 +106,7 @@ course_guide: "/assets/uploads/ttca_cyber-security_course-guide-1.pdf"
         role="dialog"
       >
         {% include course-guide-form.html course_guide_href=page.course_guide lightbox=true text_class="text-white" %}
-      </amp-lightbox>
+      </amp-lightbox> -->
     {% endif %}
     <div class="ml-2">{% include btn-apply.html %}</div>
   </div>
@@ -119,15 +118,15 @@ course_guide: "/assets/uploads/ttca_cyber-security_course-guide-1.pdf"
     <!-- htmllint preset="$previous" -->
     <div class="row flex-column align-items-center">
       <div class="col-md-8 p-0 pl-sm-5 d-flex">
-        <h2 amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt display-5 mx-auto mt-2 mb-4 text-center text-sm-left">
+        <h2 data-margin-start="1%" data-margin-end="20%" class="font-family-alt display-5 mx-auto mt-2 mb-4 text-center text-sm-left">
           Program Overview
         </h2>
       </div>
       <!-- overview blocks -->
-      <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="container text-center text-sm-left">
+      <div data-margin-start="1%" data-margin-end="20%" class="container text-center text-sm-left">
         {% for item in page.overview %}
           {% if item.odd %}
-            <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="flex-wrap flex-sm-nowrap d-flex justify-content-between align-items-center mb-2 p-4">
+            <div data-margin-start="1%" data-margin-end="20%" class="flex-wrap flex-sm-nowrap d-flex justify-content-between align-items-center mb-2 p-4">
               <div class="w-100 w-sm-50 m-0 mr-sm-4 text-white">
                 <h4>
                   {{ item.title | liquify }}
@@ -137,27 +136,27 @@ course_guide: "/assets/uploads/ttca_cyber-security_course-guide-1.pdf"
                 </p>
               </div>
               <div class="w-100 w-sm-50 p-0 pl-sm-4 my-auto">
-                <amp-img
+                <img
                   layout="responsive"
                   class="img-fluid shadow-black"
                   width="3535"
                   height="2146"
                   src="{{ item.img_src | liquify }}"
                 >
-                </amp-img>
+                </img>
               </div>
             </div>
           {% else %}
-            <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="flex-wrap-reverse flex-sm-nowrap d-flex justify-content-between align-items-center my-2 p-4">
+            <div  data-margin-start="1%" data-margin-end="20%" class="flex-wrap-reverse flex-sm-nowrap d-flex justify-content-between align-items-center my-2 p-4">
               <div class="w-100 w-sm-50 p-0 pr-sm-4 my-auto">
-                <amp-img
+                <img
                   layout="responsive"
                   class="img-fluid shadow-black"
                   width="3535"
                   height="2146"
                   src="{{ item.img_src | liquify }}"
                 >
-                </amp-img>
+                </img>
               </div>
               <div class="w-100 w-sm-50 m-0 ml-sm-4">
                 <h4>
@@ -176,7 +175,7 @@ course_guide: "/assets/uploads/ttca_cyber-security_course-guide-1.pdf"
   </section>
 
   <section class="py-8 container">
-    <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt w-100 mx-auto display-5 mb-4 pt-2 text-center text-sm-left">
+    <div data-margin-start="1%" data-margin-end="20%" class="font-family-alt w-100 mx-auto display-5 mb-4 pt-2 text-center text-sm-left">
       Course Structure
     </div>
     <div class="row d-flex flex-column align-items-center">
@@ -188,15 +187,12 @@ course_guide: "/assets/uploads/ttca_cyber-security_course-guide-1.pdf"
           {% endif %}
         {% endfor %}
         <div
-          amp-fx="fade-in"
-          data-duration="600ms" data-margin-start="1%" data-margin-end="20%"
+          data-margin-start="1%" data-margin-end="20%"
           class="w-100 border shadow mb-4 px-4 pt-4 pt-sm-0 mx-auto d-flex flex-wrap align-items-center justify-content-between rounded course-hover"
           style="min-height: 350px;"
         >
           <div>
             <div
-              amp-fx="fade-in"
-              data-duration="600ms"
               data-margin-start="1%"
               data-margin-end="20%"
               class="display-6 mb-4 pl-2 pl-sm-0"
@@ -205,7 +201,7 @@ course_guide: "/assets/uploads/ttca_cyber-security_course-guide-1.pdf"
             </div>
             <div>
               {% for item in course.list %}
-                <ul amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%">
+                <ul data-margin-start="1%" data-margin-end="20%">
                   <li>
                     {{ item | liquify }}
                   </li>
@@ -216,8 +212,7 @@ course_guide: "/assets/uploads/ttca_cyber-security_course-guide-1.pdf"
           {{ course.length }}
           {% if course.length != '' and course.length != nil %}
             <div
-              amp-fx="fade-in"
-              data-duration="600ms" data-margin-start="1%" data-margin-end="20%"
+               data-margin-start="1%" data-margin-end="20%"
               class="display-6 card-body shadow rounded border col-md-3 mb-4 text-center"
             >
               {{ course.length | liquify }}
@@ -232,7 +227,7 @@ course_guide: "/assets/uploads/ttca_cyber-security_course-guide-1.pdf"
   <!-- htmllint preset="none" -->
   <section id="course-guide" class="container-fluid {{ page.hero | liquify }}-gradient text-white py-8">
   <!-- htmllint preset="$previous" -->
-    <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="row justify-content-center">
+    <div data-margin-start="1%" data-margin-end="20%" class="row justify-content-center">
       <div class="col-md-8">
         {% include course-guide-form.html course_guide_href=page.course_guide fade=true %}
       </div>
@@ -244,10 +239,10 @@ course_guide: "/assets/uploads/ttca_cyber-security_course-guide-1.pdf"
     <div class="row d-flex flex-column justify-content-center align-items-center mx-auto">
       <div class="d-none d-md-inline col-md-2 mw-10r"></div>
       <div class="col-md-8">
-        <h2 amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="font-family-alt font-weight-bold text-center display-6">
+        <h2  data-margin-start="1%" data-margin-end="20%" class="font-family-alt font-weight-bold text-center display-6">
           Still Have Questions?
         </h2>
-        <div amp-fx="fade-in" data-duration="600ms" data-margin-start="1%" data-margin-end="20%" class="mw-600 mx-auto p-2 p-md-0">
+        <div data-margin-start="1%" data-margin-end="20%" class="mw-600 mx-auto p-2 p-md-0">
           <h5 class="mb-4 text-center">
             From choosing the right course to understanding course details, we're here
             to help.
