@@ -469,18 +469,22 @@ schools:
       <h2 class="font-family-alt mb-6 text-center display-5">
         {{ category.title | liquify }}
       </h2>
-      <amp-accordion disable-session-states>
         {% for faq in category.faqs %}
-          <section class="mb-3">
-            <h4 class="display-7 bg-light mb-0 px-2 p-1 rounded-top">
-              {{ faq.question | liquify }}
-            </h4>
-            <p class="text-default px-2 py-1 border border-top-0 rounded-bottom">
+        <div class="accordion" id="accordionExample">
+          <div class="card mb-3">
+            <div class="card-header p-0" id="headingOne-{{ forloop.index }}">
+              <h4 class="text-left bg-light mb-0 px-2 p-1 rounded-top" type="button" data-toggle="collapse" data-target="#collapseOne-{{ forloop.index }}" aria-expanded="true" aria-controls="collapseOne">
+                {{ faq.question | liquify }}
+                </h4>
+              </div>
+              <div id="collapseOne-{{ forloop.index }}" class="collapse" aria-labelledby="headingOne-{{ forloop.index }}" data-parent="#headingOne-{{ forloop.index }}">
+                <p class="card-body text-default px-2 py-1 border border-top-1 mb-0 rounded-bottom">
               {{ faq.answer | liquify }}
-            </p>
-          </section>
+                </p>
+          </div>
+        </div>
+      </div>
         {% endfor %}
-      </amp-accordion>
     </div>
   {% endfor %}
   <section class="my-10">

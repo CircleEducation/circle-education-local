@@ -239,7 +239,7 @@ schools:
         <div class="col-sm-6 col-md-3 border p-2 mx-4 d-flex flex-column justify-content-between mt-4">
           <div class="shadow py-3 bg-light">
             {% if option.picture != '' %}
-              <img src="{{ option.picture }}" layout="responsive" alt="Tuition Picture">
+              <img src="{{ option.picture }}" class="img-fluid" alt="Tuition Picture">
             {% else %}
               <div class="bg-textured" style="height: 100px"></div>
             {% endif %}
@@ -267,16 +267,10 @@ schools:
   <div class="bg-light py-4">
     <div class="row justify-content-center">
       <div class="col-12 col-md-4 p-4">
-        <amp-youtube
-          data-videoid="{{ school.testimonial_video | default: 'AVMkl06b5IE' }}"
-          width="266.656px"
-          height="150px"
-          tabindex="0"
-          role="presentation"
-          layout="responsive"
-          title="Lilian Situ video review of Austin Coding Academy"
-        >
-        </amp-youtube>
+        <iframe class="embed-responsive-item rounded" 
+        title="Lilian Situ video review of Austin Coding Academy"      
+        tabindex="0"
+        src="https://www.youtube.com/embed/{{ school.testimonial_video | default: 'AVMkl06b5IE' }}" allowfullscreen></iframe>
       </div>
       <div class="mt-3 d-flex justify-content-center align-items-center col-12 col-md-4">
         <blockquote class="blockquote w-75">

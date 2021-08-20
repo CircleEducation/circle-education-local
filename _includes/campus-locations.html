@@ -32,7 +32,7 @@
           {{ location.city }}, {{ location.state | liquify }} {{ location.postal }}
         </small>
       </div>
-      <amp-iframe
+      <iframe
         src="{{ location.url }}"
         width="525"
         height="242"
@@ -41,7 +41,7 @@
         frameborder="0"
         class="shadow-black border-0"
         allowfullscreen>
-      </amp-iframe>
+      </iframe>
     </div>
   {% endfor %}
 </div>

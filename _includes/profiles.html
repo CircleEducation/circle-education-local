@@ -30,7 +30,7 @@
         {% for profile in profiles %}
           <div class="col-4 p-1">
             <!-- htmllint preset="none" -->
-            <amp-img
+            <img
               width="200"
               height="200"
               layout="responsive"
@@ -44,7 +44,7 @@
                 selectedTitle:'{{ profile.title | liquify }}'
               })"
               tabindex="0"
-            ></amp-img>
+            ></img>
             <!-- htmllint preset="$previous" -->
               <p class="p-1 text-center">
                 {% if profile.links.size > 0 %}

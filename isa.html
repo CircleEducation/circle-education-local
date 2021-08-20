@@ -64,8 +64,6 @@ isa_pdf_download_form_guid: ff0dbcb6-3bd2-479c-80a5-f26dea2c092d
 </section>
 <section class="py-8 mt-4 container">
   <h2
-    amp-fx="fade-in"
-    data-duration="600ms"
     data-margin-start="1%"
     data-margin-end="20%"
     class="col-12 font-family-alt font-weight-bold text-center display-5 mb-8"
@@ -75,10 +73,8 @@ isa_pdf_download_form_guid: ff0dbcb6-3bd2-479c-80a5-f26dea2c092d
   <div class="row d-flex justify-content-center px-5">
     <div class="d-none d-md-flex flex-column justify-content-center mb-7 col-xs-11 col-sm-11 col-md-5 col-lg-5 mx-auto">
       <!-- htmllint preset="none" -->
-      <amp-img
+      <img
         class="rounded border"
-        amp-fx="fade-in"
-        data-duration="600ms"
         data-margin-start="1%"
         data-margin-end="20%"
         layout="responsive"
@@ -86,7 +82,7 @@ isa_pdf_download_form_guid: ff0dbcb6-3bd2-479c-80a5-f26dea2c092d
         height="756"
         src="{{ page.info_img }}"
         alt="What's inside our course guide"
-      ></amp-img>
+      ></img>
       <!-- htmllint preset="$previous" -->
     </div>
     <!-- Form -->
@@ -110,8 +106,6 @@ isa_pdf_download_form_guid: ff0dbcb6-3bd2-479c-80a5-f26dea2c092d
           <!-- htmllint preset="none" -->
           <div
             class="col-6"
-            amp-fx="fade-in"
-            data-duration="600ms"
             data-margin-start="1%"
             data-margin-end="20%"
           >
@@ -138,8 +132,6 @@ isa_pdf_download_form_guid: ff0dbcb6-3bd2-479c-80a5-f26dea2c092d
           <!-- htmllint preset="none" -->
           <div
             class="col-6"
-            amp-fx="fade-in"
-            data-duration="600ms"
             data-margin-start="1%"
             data-margin-end="20%"
           >
@@ -166,8 +158,6 @@ isa_pdf_download_form_guid: ff0dbcb6-3bd2-479c-80a5-f26dea2c092d
           <!-- htmllint preset="none" -->
           <div
             class="col-12"
-            amp-fx="fade-in"
-            data-duration="600ms"
             data-margin-start="1%"
             data-margin-end="20%"
           >
@@ -194,8 +184,6 @@ isa_pdf_download_form_guid: ff0dbcb6-3bd2-479c-80a5-f26dea2c092d
           <!-- htmllint preset="none" -->
           <div
             class="col-12"
-            amp-fx="fade-in"
-            data-duration="600ms"
             data-margin-start="1%"
             data-margin-end="20%"
           >
@@ -220,8 +208,6 @@ isa_pdf_download_form_guid: ff0dbcb6-3bd2-479c-80a5-f26dea2c092d
 
           <div
             class="col-12 d-flex flex-column justify-content-end mt-3"
-            amp-fx="fade-in"
-            data-duration="600ms"
             data-margin-start="1%"
             data-margin-end="20%"
           >
@@ -234,8 +220,6 @@ isa_pdf_download_form_guid: ff0dbcb6-3bd2-479c-80a5-f26dea2c092d
           <!-- htmllint preset="none" -->
           <div
             class="col-12 d-flex align-items-end justify-content-center form-group"
-            amp-fx="fade-in"
-            data-duration="600ms"
             data-margin-start="1%"
             data-margin-end="20%"
           >
@@ -251,7 +235,7 @@ isa_pdf_download_form_guid: ff0dbcb6-3bd2-479c-80a5-f26dea2c092d
           </div>
           <div class="text-center">
           <div submit-error>
-            <template type="amp-mustache">
+            <template>
               <p class="text-danger">There was an error with your request. Please try again.</p>
             </template>
           </div>
@@ -278,18 +262,31 @@ isa_pdf_download_form_guid: ff0dbcb6-3bd2-479c-80a5-f26dea2c092d
         {% endfor %}
       {% endif %}
     {% endfor %}
-    <amp-accordion disable-session-states>
-      {% for faq in faqs %}
+    <div class="container justify-content-center">
+      <div class="accordion" id="accordionExample">
+        {% for faq in faqs %}
         <section class="mb-3">
-          <h4 class="display-7 bg-light mb-0 px-2 p-1 rounded-top">
-            {{ faq.question | liquify }}
-          </h4>
-          <p class="text-default px-2 py-1 border border-top-0 rounded-bottom">
-            {{ faq.answer | liquify }}
-          </p>
+        <div class="card shadow-sm border-0">
+          <div class="card-header" id="headingTwo-{{ forloop.index }}" style="background-color:#F7F7F7;">
+              <button class="btn btn-block text-left border-0 shadow-none" type="button" data-toggle="collapse" data-target="#collapseTwo-{{ forloop.index }}" aria-expanded="true" aria-controls="collapseTwo" style="background-color:#F7F7F7;">
+                <h4 class="display-7 bg-light mb-0 px-2 p-1 rounded-top">
+              {{ faq.question | liquify }}
+            </h4>
+              </button>   
+          </div>
+          <div id="collapseTwo-{{ forloop.index }}" class="collapse" aria-labelledby="headingTwo-{{ forloop.index }}" data-parent="#headingTwo-{{ forloop.index }}">
+            <div class="card-body border-muted border border-muted rounded-bottom p-2">
+              <p class="text-default px-2 py-1 border border-top-0 rounded-bottom">
+              {{ faq.answer | liquify }}
+            </p>
+            </div>
+          </div>
+        </div>
         </section>
-      {% endfor %}
-    </amp-accordion>
+        {% endfor %}
+      </div>
+  </div>
+</div>
   </div>
 </section>
 <section class="my-4 container">

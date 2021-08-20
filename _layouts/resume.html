@@ -15,12 +15,12 @@ title: {{ page.fullname }}
               <div class="card-body text-center">
                 <div class="mb-3">
                   <!-- htmllint preset="none" -->
-                  <amp-img width="150" height="150"
+                  <img width="150" height="150"
                     layout="fixed"
                     class="u-lg-avatar rounded-circle"
                     src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}?s=200&r=pg&d=retro"
                     alt="Gravatar for {{ page.fullname | liquify }}"
-                  ></amp-img>
+                  ></img>
                   <!-- htmllint preset="$previous" -->
                 </div>
                 <h5 class="m-0">
@@ -299,8 +299,8 @@ title: {{ page.fullname }}
                   <!-- Author -->
                   <div class="media mb-3">
                     <div>
-                      <amp-img width="80" height="80" layout="fixed" class="u-avatar rounded-circle mr-3" src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}"
-                        alt="{{ review.name | liquify }}"></amp-img>
+                      <img width="80" height="80" layout="fixed" class="u-avatar rounded-circle mr-3" src="https://www.gravatar.com/avatar/{{ page.email | remove: ' ' | strip_newlines | downcase | md5 }}"
+                        alt="{{ review.name | liquify }}"></img>
                     </div>
                     <div class="media-body align-self-center">
                       <h4 class="d-inline-block mb-1">
