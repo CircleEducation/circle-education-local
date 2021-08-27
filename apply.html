@@ -416,6 +416,7 @@ isa_inputs:
       action="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.preapplication_form_guid }}"
       method="POST"
       target="_top"
+      id="demo-form"
     >
       <input name="school_name" type="hidden" value="{{ school.name }}"> 
       <input name="form_event_type" type="hidden" value="Application"> 
@@ -453,7 +454,9 @@ isa_inputs:
           {% endif %}
           <div class="my-4 d-flex flex-column align-items-center">
             <!-- htmllint preset="none" -->
-            <button class="mb-4 btn cta-gradient hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" >
+            <button class=" g-recaptcha mb-4 btn cta-gradient hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" data-sitekey="reCAPTCHA_site_key" 
+            data-callback='onSubmit' 
+            data-action='submit' >
             <!-- htmllint preset="$previous" -->
               Submit
             </button>
