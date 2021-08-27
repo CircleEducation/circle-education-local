@@ -38,7 +38,7 @@
     {% endif %}
 
     <form
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.contact_form_guid }}"
+      action="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.contact_form_guid }}"
       method="POST"
       target="_top"
     >
