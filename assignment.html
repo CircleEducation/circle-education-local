@@ -52,7 +52,7 @@ resources:
   <div class="col-xs-10 col-sm-10 mx-auto my-5 col-md-7 col-lg-7 d-flex flex-column justify-content-center align-items-center">
     <p class="mb-4">Thank you for taking the time to apply to {{ school.name | liquify }}! Below you will find the two parts of the Admissions Assignment: the first is a short essay, and the second is a coding challenge. Please complete both before submitting at the bottom of the page.</p>
     <form
-      action="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.assignment_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ settings.assignment_form_guid }}"
       target="_top"
       method="POST"
     >
