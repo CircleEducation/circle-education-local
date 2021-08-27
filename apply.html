@@ -8,6 +8,8 @@ redirect_from:
 - "/application/"
 - "/application/1/"
 title: Application
+amp_components:
+- amp-recaptcha-input
 admission_heading: How to Apply
 admission_description: 'Ready to begin this exciting adventure to your new career
   or just looking to learn more? The first step to take is to begin your application
@@ -413,7 +415,7 @@ isa_inputs:
         {{ page.app_descript }}
       </p>
     <form
-      action="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.preapplication_form_guid }}"
+      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.preapplication_form_guid }}"
       method="POST"
       target="_top"
       id="demo-form"
@@ -454,9 +456,8 @@ isa_inputs:
           {% endif %}
           <div class="my-4 d-flex flex-column align-items-center">
             <!-- htmllint preset="none" -->
-            <button class=" g-recaptcha mb-4 btn cta-gradient hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" data-sitekey="reCAPTCHA_site_key" 
-            data-callback='onSubmit' 
-            data-action='submit' >
+            <button class="mb-4 btn cta-gradient hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" >
+
             <!-- htmllint preset="$previous" -->
               Submit
             </button>
