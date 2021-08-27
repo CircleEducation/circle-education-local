@@ -94,11 +94,11 @@
   src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
 ></script>
 
-<!-- <script
+<script
   async
   custom-element="amp-form"
   src="https://cdn.ampproject.org/v0/amp-form-0.1.js"
-></script> -->
+></script>
 
 <script
   async
@@ -113,13 +113,13 @@
 ></script>
 
 {% if page.amp_components contains 'amp-recaptcha-input' %}
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
-  function onSubmit(token) {
-    document.getElementById("demo-form").submit();
-  }
-</script>
-{% endif %}
+<script
+  async
+  custom-element="amp-recaptcha-input"
+  src="https://cdn.ampproject.org/v0/amp-recaptcha-input-0.1.js"
+></script>
+{% endif %} 
+
 
 {% if page.amp_components contains 'amp-carousel' %}
 <script
