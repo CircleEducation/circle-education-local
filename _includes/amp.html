@@ -112,13 +112,14 @@
   src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"
 ></script>
 
-<!-- {% if page.amp_components contains 'amp-recaptcha-input' %}
-<script
-  async
-  custom-element="amp-recaptcha-input"
-  src="https://cdn.ampproject.org/v0/amp-recaptcha-input-0.1.js"
-></script>
-{% endif %} -->
+{% if page.amp_components contains 'amp-recaptcha-input' %}
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+  function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+  }
+</script>
+{% endif %}
 
 {% if page.amp_components contains 'amp-carousel' %}
 <script
