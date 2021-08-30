@@ -154,7 +154,8 @@ form_fields:
   </section>
   
   <section class="mb-4">
-    {% assign start_dates = page.prep_courses %}
+    {% for location in school.locations %}
+    {% assign start_dates = site.data.startDates[location.hubspot_company_id] %}
     {% if start_dates[0].start_date %}
       <div class="display-6 mt-8 text-center">
         Upcoming Starter Courses
@@ -263,6 +264,7 @@ form_fields:
         </a>
       </div>
     {% endif %}
+    {% endfor %}
   </section>
   
   <section id="prep-course-application" class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
