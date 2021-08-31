@@ -7,34 +7,6 @@ title: Prep Course
 amp_components:
 - amp-recaptcha-input
 prep_courses:
-- course_type: Tuesday/Thursday
-  course_subject: Software Development Prep Course
-  start_date: 2021-08-17 18:30:00 -0500
-  start_time: 6:30pm
-  end_time: 9:00pm
-  course_length: 2 weeks
-  tbd: false
-- course_type: Tuesday/Thursday
-  course_subject: Software Development Prep Course
-  start_date: 2021-08-31 18:30:00 -0500
-  start_time: 6:30pm
-  end_time: 9:00pm
-  course_length: 2 weeks
-  tbd: false
-- course_type: Tuesday/Thursday
-  course_subject: Software Development Prep Course
-  start_date: 2021-09-14 18:30:00 -0500
-  start_time: 6:30pm
-  end_time: 9:00pm
-  course_length: 2 weeks
-  tbd: false
-- course_type: Tuesday/Thursday
-  course_subject: Software Development Prep Course
-  start_date: 2021-10-05 18:30:00 -0500
-  start_time: 6:30pm
-  end_time: 9:00pm
-  course_length: 2 weeks
-  tbd: false
 form_fields:
 - name: redirect_url
   label: ''
@@ -154,20 +126,15 @@ form_fields:
   </section>
   
   <section class="mb-4">
-    {% for location in school.locations %}
-    {% assign start_dates = site.data.startDates[location.hubspot_company_id] %}
-    {% if start_dates[0].start_date %}
       <div class="display-6 mt-8 text-center">
         Upcoming Starter Courses
       </div>
-      <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
+      {% assign start_dates = site.data.prepDates %}
       {% for start_date in start_dates %}
+      <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
         <!-- htmllint preset="none" -->
-        <div class="mx-0 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
+        <div class="mx-0 mx-sm-5 mw-350 w-50 {% cycle '', 'mt-4 mt-sm-0' %}">
         <!-- htmllint preset="$previous" -->
-          <div class="display-7 mb-4 text-center">
-            {{ start_date.course_type }}
-          </div>
           <div class="card shadow-black mx-auto p-2">
             <div class="card-body">
               <div class="display-6 pb-4 text-center">
@@ -175,10 +142,10 @@ form_fields:
               </div>
               <div class="shadow border text-center py-5">
                 <div class="display-7 text-center mb-5 px-2">
-                  {{ start_date.course_subject }}
+                  Software Development Prep Course
                 </div>
                 <div>
-                  {{ start_date.days }}
+                  Tuesday/Thursday
                 </div>
                 <div class="mb-3">
                   {{ start_date.start_time }}-{{ start_date.end_time }}
@@ -187,7 +154,7 @@ form_fields:
                   Length:
                 </div>
                 <div class="mb-3">
-                  {{ start_date.course_length }}
+                 Two Weeks
                 </div>
                 <div class="mt-6 {%if school.inverted %}px-6{% endif %}">
                   <a class="btn bg-primary-light text-white hover-white {% if school.inverted != true %}btn-round{% else %}w-100{% endif %}" href="#prep-course-application">
@@ -255,7 +222,6 @@ form_fields:
             }
           }
         </script>
-      {% endfor %}
       </div>
     {% else %}
       <div class="d-flex justify-content-center">
@@ -263,7 +229,6 @@ form_fields:
           <span class="{% if school.inverted != true %}hover-white text-white{% else %}text-primary-dark{% endif %}">Register Now!</span>
         </a>
       </div>
-    {% endif %}
     {% endfor %}
   </section>
   

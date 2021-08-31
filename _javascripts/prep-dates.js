@@ -6,7 +6,7 @@ const { groupBy } = require('lodash');
 
 const fetchStartDates = async () => {
   try {
-    let objects = await ( await fetch('ZQL_START_DATES_URL')).json();
+    let objects = await ( await fetch(process.env.ZQL_PREP_DATES_URL)).json();
     objects = objects.results.map(object => {
       let days = ''
       if(object.days){
@@ -38,8 +38,7 @@ const fetchStartDates = async () => {
         tbd: object.hs_pipeline_stage === '1597876' ? true : false
       }
     })
-    objects = groupBy(objects, 'company_id')
-    writeFileSync('_data/startDates.yml', safeDump(objects));
+    writeFileSync('_data/prepDates.yml', safeDump(objects));
     return objects;
   }catch (error) {
     console.log(error);
