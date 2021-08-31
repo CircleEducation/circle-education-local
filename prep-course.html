@@ -58,30 +58,6 @@ form_fields:
   small_width: "12"
   medium_width: "6"
   options: []
-- name: start_date
-  label: Please Select a Prep Course Start Date
-  description: ''
-  type: select
-  value: ''
-  placeholder: Select One
-  required: true
-  small_width: "12"
-  medium_width: "6"
-  options:
-  - value: ',360360585,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course Aug 17, 2021
-  - value: ',360372391,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course Aug 31, 2021
-  - value: ',360366874,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course Septemper 14, 2021
-  - value: ',360372035,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course October 05, 2021
-  - value: ',360345899,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course October 19, 2021
-  - value: ',510066259,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course November 02, 2021
-  - value: ',510203668,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course December 07, 2021
 
 ---
 {% for _page in site.pages %}
@@ -246,8 +222,11 @@ form_fields:
 
       <div class="row d-flex justify-content-center p-sm-2 p-md-5">
         {% include fields.html fields=page.form_fields %}
+      <div class="col-6">
+        {% include select-prep-date.html %}
       </div>
-      
+    </div>
+    
       <div class="my-4 d-flex flex-column align-items-center">
         <!-- htmllint preset="none" -->
         <button type="submit" class="mb-4 btn bg-primary-light hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" >
