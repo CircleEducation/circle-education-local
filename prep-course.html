@@ -6,7 +6,7 @@ description: ''
 title: Prep Course
 amp_components:
 - amp-recaptcha-input
-prep_courses:
+prep_courses: []
 form_fields:
 - name: redirect_url
   label: ''
@@ -59,6 +59,7 @@ form_fields:
   medium_width: "6"
   options: []
 
+
 ---
 {% for _page in site.pages %}
   {% if _page.settings %}
@@ -79,13 +80,13 @@ form_fields:
 {% endif %}
 
 <main>
-  <section class="pt-8 container-fluid d-flex flex-column align-items-center">
+  <section class="pt-8 px-5 px-md-2 container-fluid d-flex flex-column align-items-center">
     <div class="row justify-content-center">
-      <div class="col-md-8 p-0 pl-sm-5 d-flex flex-column align-items-center text-center">
+      <div class="col-md-8 p-0 px-sm-5 d-flex flex-column align-items-center text-center">
         <h2 class="font-family-alt">
           Software Development Prep Course
         </h2>
-        <p class="my-5">
+        <p class="my-5 px-sm-2">
           During this FREE two week introductory prep course, you will be introduced to the 
           three main technologies of the internet: HTML, CSS, and JavaScript. From helping you 
           set up your coding environment to building your first website, our dedicated instructors 
@@ -102,14 +103,15 @@ form_fields:
   </section>
   
   <section class="mb-4">
-      <div class="display-6 mt-8 text-center font-family-alt">
+    {% assign start_dates = site.data.prepDates %}
+    {% if start_dates[0].start_date %}
+      <div class="display-6 mt-8 text-center">
         Upcoming Starter Courses
       </div>
-      {% assign start_dates = site.data.prepDates %}
-      {% for start_date in start_dates %}
-      <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
+      <div class="mt-6 mt-sm-8 d-flex flex-wrap justify-content-center">
+      {% for start_date in start_dates limit:2 %}
         <!-- htmllint preset="none" -->
-        <div class="mx-0 mx-sm-5 mw-350 w-50 {% cycle '', 'mt-4 mt-sm-0' %}">
+        <div class="mx-2 mb-4 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
         <!-- htmllint preset="$previous" -->
           <div class="card shadow-black mx-auto p-2">
             <div class="card-body">
@@ -130,7 +132,7 @@ form_fields:
                   Length:
                 </div>
                 <div class="mb-3">
-                 Two Weeks
+                  2 Weeks
                 </div>
                 <div class="mt-6 {%if school.inverted %}px-6{% endif %}">
                   <a class="btn bg-primary-light text-white hover-white {% if school.inverted != true %}btn-round{% else %}w-100{% endif %}" href="#prep-course-application">
@@ -198,6 +200,7 @@ form_fields:
             }
           }
         </script>
+      {% endfor %}
       </div>
     {% else %}
       <div class="d-flex justify-content-center">
@@ -205,7 +208,7 @@ form_fields:
           <span class="{% if school.inverted != true %}hover-white text-white{% else %}text-primary-dark{% endif %}">Register Now!</span>
         </a>
       </div>
-    {% endfor %}
+    {% endif %}
   </section>
   
   <section id="prep-course-application" class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
@@ -222,11 +225,11 @@ form_fields:
 
       <div class="row d-flex justify-content-center p-sm-2 p-md-5">
         {% include fields.html fields=page.form_fields %}
-      <div class="col-6">
-        {% include select-prep-date.html %}
+          <div class="col-md-6 col-sm-8">
+            {% include select-prep-date.html %}
+          </div>
       </div>
-    </div>
-    
+      
       <div class="my-4 d-flex flex-column align-items-center">
         <!-- htmllint preset="none" -->
         <button type="submit" class="mb-4 btn bg-primary-light hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" >

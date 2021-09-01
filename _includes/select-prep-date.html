@@ -19,7 +19,7 @@
       {% for start_date in start_dates %}
        <option
           value="{{ start_date.salesforce_id | append: ',' | append: start_date.hubspot_ticket_id | append: ',' | append: getaccept_entity_id | append: ',' | append: start_date.getaccept_template_id | append: ',' | append: location.hubspot_company_id }}"
-        >Coding Prep Course - {% if start_date.tbd == false %}{{ start_date.start_date | date: "%B %d, %Y" }}{% else %}TBD{% endif %} ({{ start_date.days }} {{ start_date.start_time }}-{{ start_date.end_time }})
+        >Prep Course - {% if start_date.tbd == false %}{{ start_date.start_date | date: "%B %d, %Y" }}{% else %}TBD{% endif %} ({{ start_date.days }} {{ start_date.start_time }}-{{ start_date.end_time }})
         </option>
   {% endfor %}
 </option>

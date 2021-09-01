@@ -19,9 +19,10 @@
 
 <!-- htmllint preset="none" -->
 <!-- side nav -->
-<div id="mySidenav" class="sidenav pl-4">
+<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   {% for item in navigation %}
+  <div class="pl-4">
     <div>
       {% if item.links.size > 0 %}
         <span class="h5 text-white py-1 mb-2" tabindex="0">
@@ -77,6 +78,7 @@
     </div>
   {% endfor %}
   </div>
+</div>
 <!-- side nav -->
   <div class="py-1 bg-primary-dark border-bottom border-white">
     <div class="container d-flex justify-content-end">
