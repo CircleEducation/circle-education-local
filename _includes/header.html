@@ -19,10 +19,10 @@
 
 <!-- htmllint preset="none" -->
 <!-- side nav -->
-<div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="sidenav ml-4">
+  <div class="pl-4">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   {% for item in navigation %}
-  <div class="pl-4">
     <div>
       {% if item.links.size > 0 %}
         <span class="h5 text-white py-1 mb-2" tabindex="0">
@@ -137,7 +137,7 @@
                 <span class="{% if school.inverted != true %}text-white hover-white{% endif %}">
                   {{ item.title | liquify }} <i class="fas fa-caret-down"></i>
                 </span>
-                <ul class="nav-dropdown position-absolute list-unstyled rounded px-3 my-0" {% if school.inverted != true %}style="top:4rem;"{% endif %}>
+                <ul class="nav-dropdown position-absolute z-30 list-unstyled rounded px-3 my-0" {% if school.inverted != true %}style="top:4rem;"{% endif %}>
                   {% for link in item.links %}
                     <li class="position-relative p-0 my-2">
                       <!-- htmllint preset="none" -->
