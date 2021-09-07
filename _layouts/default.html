@@ -24,9 +24,11 @@
 
   <body class="d-flex justify-content-between flex-column min-vh-100">
     {% include google-tag-manager-body.html %}
-
+  
+    <div class="position-relative z-30">
     {% include header.html %}
-
+    </div>
+    
     {{ content }}
 
     {% include footer.html %}
