@@ -262,17 +262,17 @@ schools:
       </div>
     </div>
   </section>
-  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3 d-flex flex-column align-items-center">
-    <!-- start date boxes -->
+  
+  <section class="mb-4">
+    <div class="display-6 mt-8 font-family-alt text-center">
+      Upcoming Start Dates
+    </div>
     {% for location in school.locations %}
     {% assign start_dates = site.data.startDates[location.hubspot_company_id] %}
-      <div class="display-6 mt-8 text-center">
-        Upcoming Start Dates : {{ location.name }}
-      </div>
-      <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
-      {% for start_date in start_dates %}
+      <div class="mt-6 mt-sm-8 d-flex flex-wrap justify-content-center">
+        {% for start_date in start_dates limit: 2 %}
         <!-- htmllint preset="none" -->
-        <div class="mx-0 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
+        <div class="mx-2 mb-4 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
         <!-- htmllint preset="$previous" -->
           <div class="card shadow-black mx-auto p-2">
             <div class="card-body">
@@ -281,6 +281,9 @@ schools:
               </div>
               <div class="shadow border text-center py-5">
                 <div class="display-7 text-center mb-5 px-2">
+                  <h3 class="font-family-alt">
+                    {{ location.name }}
+                  </h3>
                   {{ start_date.course_subject }}
                 </div>
                 <div>
@@ -296,8 +299,8 @@ schools:
                   {{ start_date.course_length }}
                 </div>
                 <div class="mt-6 {%if school.inverted %}px-6{% endif %}">
-                 {% include btn-apply.html %}
-                </div>
+                  {% include btn-apply.html %}
+                 </div>
               </div>
             </div>
           </div>
@@ -363,11 +366,13 @@ schools:
       </div>
     {% else %}
       <div class="d-flex justify-content-center">
-        {% include btn-apply.html %}
+        <a class="btn bg-primary-light text-white hover-white {% if school.inverted != true %}btn-round{% else %}w-100{% endif %}" href="#prep-course-application">
+          <span class="{% if school.inverted != true %}hover-white text-white{% else %}text-primary-dark{% endif %}">Register Now!</span>
+        </a>
       </div>
     {% endfor %}
-    <!-- start date boxes end -->
   </section>
+  
   {% if school.course_guide != '' %}
   <!-- Course Guide Form -->
   <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">

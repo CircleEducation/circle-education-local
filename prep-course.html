@@ -6,35 +6,7 @@ description: ''
 title: Prep Course
 amp_components:
 - amp-recaptcha-input
-prep_courses:
-- course_type: Tuesday/Thursday
-  course_subject: Software Development Prep Course
-  start_date: 2021-09-14 18:30:00 -0500
-  start_time: 6:30pm
-  end_time: 9:00pm
-  course_length: 2 weeks
-  tbd: false
-- course_type: Tuesday/Thursday
-  course_subject: Software Development Prep Course
-  start_date: 2021-10-05 18:30:00 -0500
-  start_time: 6:30pm
-  end_time: 9:00pm
-  course_length: 2 weeks
-  tbd: false
-- course_type: Tuesday/Thursday
-  course_subject: Software Development Prep Course
-  start_date: 2021-10-19 18:30:00 -0500
-  start_time: 6:30pm
-  end_time: 9:00pm
-  course_length: 2 weeks
-  tbd: false
-- course_type: Tuesday/Thursday
-  course_subject: Software Development Prep Course
-  start_date: 2021-11-02 18:30:00 -0500
-  start_time: 6:30pm
-  end_time: 9:00pm
-  course_length: 2 weeks
-  tbd: false
+prep_courses: []
 form_fields:
 - name: redirect_url
   label: ''
@@ -86,28 +58,6 @@ form_fields:
   small_width: "12"
   medium_width: "6"
   options: []
-- name: start_date
-  label: Please Select a Prep Course Start Date
-  description: ''
-  type: select
-  value: ''
-  placeholder: Select One
-  required: true
-  small_width: "12"
-  medium_width: "6"
-  options:
-  - value: ',360372391,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course Aug 31, 2021
-  - value: ',360366874,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course Septemper 14, 2021
-  - value: ',360372035,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course October 05, 2021
-  - value: ',360345899,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course October 19, 2021
-  - value: ',510066259,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course November 02, 2021
-  - value: ',510203668,,,{{school.hubspot_company_id}}'
-    label: Coding Prep Course December 07, 2021
 
 ---
 {% for _page in site.pages %}
@@ -129,13 +79,13 @@ form_fields:
 {% endif %}
 
 <main>
-  <section class="pt-8 container-fluid d-flex flex-column align-items-center">
+  <section class="pt-8 px-5 px-md-2 container-fluid d-flex flex-column align-items-center">
     <div class="row justify-content-center">
-      <div class="col-md-8 p-0 pl-sm-5 d-flex flex-column align-items-center text-center">
+      <div class="col-md-8 p-0 px-sm-5 d-flex flex-column align-items-center text-center">
         <h2 class="font-family-alt">
           Software Development Prep Course
         </h2>
-        <p class="my-5">
+        <p class="my-4 px-sm-3">
           During this FREE two week introductory prep course, you will be introduced to the 
           three main technologies of the internet: HTML, CSS, and JavaScript. From helping you 
           set up your coding environment to building your first website, our dedicated instructors 
@@ -152,19 +102,16 @@ form_fields:
   </section>
   
   <section class="mb-4">
-    {% assign start_dates = page.prep_courses %}
+    {% assign start_dates = site.data.prepDates %}
     {% if start_dates[0].start_date %}
-      <div class="display-6 mt-8 text-center">
+      <div class="display-6 mt-8 font-family-alt text-center">
         Upcoming Starter Courses
       </div>
-      <div class="mt-6 mt-sm-8 d-flex flex-wrap flex-sm-nowrap justify-content-center container">
-      {% for start_date in start_dates %}
+      <div class="mt-6 mt-sm-8 d-flex flex-wrap justify-content-center">
+      {% for start_date in start_dates limit:2 %}
         <!-- htmllint preset="none" -->
-        <div class="mx-0 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
+        <div class="mx-2 mb-4 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
         <!-- htmllint preset="$previous" -->
-          <div class="display-7 mb-4 text-center">
-            {{ start_date.course_type }}
-          </div>
           <div class="card shadow-black mx-auto p-2">
             <div class="card-body">
               <div class="display-6 pb-4 text-center">
@@ -172,10 +119,10 @@ form_fields:
               </div>
               <div class="shadow border text-center py-5">
                 <div class="display-7 text-center mb-5 px-2">
-                  {{ start_date.course_subject }}
+                  Software Development Prep Course
                 </div>
                 <div>
-                  {{ start_date.days }}
+                  Tuesday/Thursday
                 </div>
                 <div class="mb-3">
                   {{ start_date.start_time }}-{{ start_date.end_time }}
@@ -184,7 +131,7 @@ form_fields:
                   Length:
                 </div>
                 <div class="mb-3">
-                  {{ start_date.course_length }}
+                  2 Weeks
                 </div>
                 <div class="mt-6 {%if school.inverted %}px-6{% endif %}">
                   <a class="btn bg-primary-light text-white hover-white {% if school.inverted != true %}btn-round{% else %}w-100{% endif %}" href="#prep-course-application">
@@ -277,6 +224,9 @@ form_fields:
 
       <div class="row d-flex justify-content-center p-sm-2 p-md-5">
         {% include fields.html fields=page.form_fields %}
+          <div class="col-md-6 col-sm-8">
+            {% include select-prep-date.html %}
+          </div>
       </div>
       
       <div class="my-4 d-flex flex-column align-items-center">
