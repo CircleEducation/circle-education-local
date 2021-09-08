@@ -82,34 +82,6 @@ course_guide: "/assets/uploads/ttca_cyber-security_course-guide-1.pdf"
   <p class="text-white text-center mx-auto px-2 mw-600">
     {{ page.hero_text | liquify }}
   </p>
-  <div class="d-flex mt-4 align-items-center justify-content-center">
-    {% if school.course_guide != '' %}
-    <div class="mr-2">
-      <!-- htmllint preset="none" -->
-      <a
-        class="btn {% if school.inverted != true %}btn-round{% endif %} btn-outline-light {{ include.class | liquify }}"
-        role="button"
-        tabindex="-1"
-        href="#course-guide"
-      >
-      <!-- htmllint preset="$previous" -->
-        Course Guide
-      </a>
-    </div>
-      <!-- <amp-lightbox
-        id="course-guide-lightbox"
-        class="lightbox text-white mt-10 mt-sm-0 pb-8 pb-sm-0 pt-6 pt-sm-0 px-4 px-sm-0"
-        layout="nodisplay"
-        scrollable
-        on="tap:course-guide-lightbox.close"
-        tabindex="-1"
-        role="dialog"
-      >
-        {% include course-guide-form.html course_guide_href=page.course_guide lightbox=true text_class="text-white" %}
-      </amp-lightbox> -->
-    {% endif %}
-    <div class="ml-2">{% include btn-apply.html %}</div>
-  </div>
 </div>
 
 <main>

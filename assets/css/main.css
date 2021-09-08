@@ -653,6 +653,10 @@ a.btn.bg-primary-light:hover span {
   display: block;
 }
 
+.dropdown-menu {
+  z-index: 500
+}
+
 /* Side Nav */
 
 .sidenav {
@@ -705,6 +709,10 @@ a.btn.bg-primary-light:hover span {
 .nav-dropdown {
   top: 3rem;
   background-color: rgba(0, 0, 0, 0.85);
+}
+
+#nav-bar {
+  z-index: 999;
 }
 
 /* Hide Dropdowns */
