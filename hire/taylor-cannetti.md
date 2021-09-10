@@ -1,7 +1,7 @@
 ---
 
 layout: resume # don't touch
-categories: [ hire, graduation, austincodingacademy ] # don't touch
+categories: [ hire, austincodingacademy ] # don't touch
 
 fullname: Taylor Cannetti
 jobtitle: Sales & Operations
