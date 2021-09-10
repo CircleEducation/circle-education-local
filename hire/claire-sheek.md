@@ -1,6 +1,6 @@
 ---
 layout: resume # don't touch
-categories: [ hire, graduation, austincodingacademy ] # don't touch
+categories: [ austincodingacademy ] # don't touch
 
 fullname: Claire Sheek
 jobtitle: JavaScript Developer
