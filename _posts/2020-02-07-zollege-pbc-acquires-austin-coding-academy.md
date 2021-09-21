@@ -20,7 +20,7 @@ school_keys:
 - austincodingacademy
 - circlecoding
 - lubbockcodingacademy
-img: "/assets/uploads/0220_Zollege_YouTubeArt.jpg"
+img: "/assets/uploads/0220_Zollege_YouTubeArt.webp"
 
 ---
 **Austin, TX – January 2020** –  [Zollege Public Benefit Corporation](https://zollege.com/ "Zollege Public Benefit Corporation") has announced the acquisition of [Austin Coding Academy](https://austincodingacademy.com/ "Austin Coding Academy"), one of the largest coding bootcamps in the state of Texas and a leader in technology education. Austin Coding Academy currently serves over 200 students in Austin and Lubbock ([Lubbock Coding Academy](https://lubbockcodingacademy.com/ "Lubbock Coding Academy")), providing practical and accessible technical training in software development, as well as partnering with universities and companies to source tech talent and create innovative training solutions to help build a stronger workforce.

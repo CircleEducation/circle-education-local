@@ -4,7 +4,7 @@ title: Austin Coding Academy Partners with Austin Public Library to Teach Teens 
 created_at: 2018-10-11 05:00:00 +0000
 updated_at: 2018-10-11 05:00:00 +0000
 date: 2019-01-23 19:36:58 +0000
-img: "/assets/uploads/ACA-APL-Glitch-Teen-Coding.png"
+img: "/assets/uploads/ACA-APL-Glitch-Teen-Coding.webp"
 tags:
 - learn to code
 categories:
@@ -25,7 +25,7 @@ On Monday night, Austin Coding Academy teamed up with [Austin Public Library](h
 
 All of the students began the night with no coding experience, but after 120 minutes, all were able to create and deploy their own websites on a topic they were interested in. “We covered HTML, CSS, and JavaScript,” said ACA’s CEO Chris Lofton, who instructed the class. “One student built her website about books and movies she loves. Another student's website consisted of pictures from all the places she traveled. One even built a site that included instructions on how to play his favorite video game!”
 
-!\[Teenage student builds website displaying places she's traveled\](/assets/uploads/student-travel-site.jpg =595x)
+!\[Teenage student builds website displaying places she's traveled\](/assets/uploads/student-travel-site.webp =595x)
 
 During the course, students worked together to solve different problems they encountered while building their sites. Each of the students was fully engaged through the process of brainstorming, designing, and building their pages while getting feedback and guidance from their instructor. By the end of the night, they each had an active website to take home and continue building on their own.
 

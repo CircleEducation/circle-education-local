@@ -17,7 +17,7 @@ author_name: Circle Coding Academy
 author_email: info@circlecodingacademy.com
 school_keys:
 - circlecoding
-img: "/assets/uploads/make-time-for-web-development-training.jpg"
+img: "/assets/uploads/make-time-for-web-development-training.webp"
 
 ---
 _This piece was written by Erica Freedman, Content Specialist at SwitchUp._

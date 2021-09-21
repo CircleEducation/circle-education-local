@@ -14,7 +14,7 @@ author_name: Zollege
 author_email: 'info@zollege.com'
 school_keys:
 - texastechcodingacademy
-img: "/assets/uploads/Web Designer Online Course Instagram Portrait.png"
+img: "/assets/uploads/Web Designer Online Course Instagram Portrait.webp"
 
 ---
 

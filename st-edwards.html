@@ -24,20 +24,20 @@ overview:
     career transition while continuing to support yourself. Led by instructors who
     work as professional software developers, classes focus on in-depth, practical
     projects that prepare you for success in your new career.
-  img_src: "/assets/uploads/dan-blog.jpg"
+  img_src: "/assets/uploads/dan-blog.webp"
 - title: Outside of Class
   text: Students are expected to utilize their e-textbook, unlimited tutoring, and
     organized group study sessions to practice course material outside of class –
     part of our flipped classroom approach. By studying outside of class, students
     can use class time to build their projects and get feedback from their instructor.
-  img_src: "/assets/uploads/aca_stedwards_021_ck1.jpg"
+  img_src: "/assets/uploads/aca_stedwards_021_ck1.webp"
 - title: Job Readiness
   odd: true
   text: "{{ school.name }}’s Full Stack Software Development Track is designed to
     take students from no experience to job ready in under a year. After graduating,
     students continue to receive support in finding their first job from our Job Placement
     Course, Director of Job Placement, and various hiring partners."
-  img_src: "/assets/uploads/cap-factory-web-dev-3.jpg"
+  img_src: "/assets/uploads/cap-factory-web-dev-3.webp"
 job_placement:
   stats:
   - stat: 91%
@@ -49,40 +49,40 @@ job_placement:
     text: Our courses are designed to teach you relevant skills through practical
       application. Learn in-demand technologies by building real-life projects with
       feedback from professional developers.
-    img_src: "/assets/uploads/icon-curriculum.png"
+    img_src: "/assets/uploads/icon-curriculum.webp"
     img_width: 90px
   - heading: Director of Job Assistance
     text: Receive one-on-one attention from our Director of Job Assistance, who provides
       resume feedback, sets up interviews and events with companies, helps with applying,
       and more.
-    img_src: "/assets/uploads/icon-director-of-placement.png"
+    img_src: "/assets/uploads/icon-director-of-placement.webp"
     img_width: 90px
   - heading: Job Assistance Course
     text: Hone your online presence, resume, and interview skills in our 4-week job
       assistance course. This course is led by both a professional developer and a
       recruiter and is free to all {{ school.name }} graduates.
-    img_src: "/assets/uploads/icon-grad-course.png"
+    img_src: "/assets/uploads/icon-grad-course.webp"
     img_width: 90px
   - heading: Hiring Partnerships
     text: "{{ school.name }} maintains working relationships with a host of local
       companies that depend on our graduates to fill open software development positions."
-    img_src: "/assets/uploads/icon-jobs.png"
+    img_src: "/assets/uploads/icon-jobs.webp"
     img_width: 90px
 successes:
 - name: Luke Stenis
   title: Analytics Implementation Engineer
   company: Pluralsight
-  img_src: "/assets/uploads/luke-stenis-headshot.jpeg"
+  img_src: "/assets/uploads/luke-stenis-headshot.webp"
   learn_url: https://austincodingacademy.com/blog/alumni-spotlight/luke-stenis/why-i-left-marketing-to-learn-coding/
 - name: Lillian Situ
   title: Software Engineer
   company: data.world
-  img_src: "/assets/uploads/lillian-situ-headshot.jpeg"
+  img_src: "/assets/uploads/lillian-situ-headshot.webp"
   learn_url: https://austincodingacademy.com/blog/student-highlight/lillian-situ/
 - name: Greg Swan
   title: Web Application Developer
   company: OpenSymmetry
-  img_src: "/assets/uploads/greg-swan-headshot.jpeg"
+  img_src: "/assets/uploads/greg-swan-headshot.webp"
   learn_url: https://austincodingacademy.com/blog/student-highlight/greg-swan/
 - name: Student Brian
   title: Software Engineer
@@ -104,23 +104,23 @@ features:
   text: These languages and frameworks are in the top technologies used, with JavaScript
     being the world’s most-used programming language, with nearly 70% of the world’s
     developers using JS in their work according to Stack Overflow.
-  img_src: "/assets/uploads/icon-javascript.png"
+  img_src: "/assets/uploads/icon-javascript.webp"
   img_width: 65px
 - heading: Design Engaging, Responsive Front-Ends
   text: 'Discover the power of JavaScript: a language used by nearly every website
     on the internet to display, animate, and make webpages come to life.'
-  img_src: "/assets/uploads/icon-frontend.png"
+  img_src: "/assets/uploads/icon-frontend.webp"
   img_width: 90px
 - heading: Use {{ school.backend }} to Build Powerful Back-Ends
   text: Learn how to collect and process data using {{ school.backend }} – and also
     how to manage databases with SQL.
-  img_src: "/assets/uploads/icon-databases.png"
+  img_src: "/assets/uploads/icon-databases.webp"
   img_width: 90px
 - heading: Tap Into The Tech Scene
   text: As the most in-demand language for small to mid-level companies, {{ school.backend
     }} and Javascript powers the thriving start-up scene, with new jobs opportunities
     arising daily.
-  img_src: "/assets/uploads/icon-jobs.png"
+  img_src: "/assets/uploads/icon-jobs.webp"
   img_width: 90px
 schools:
 - key: austincodingacademy
@@ -334,6 +334,7 @@ schools:
               <div class="w-100 w-sm-50 p-0 pl-sm-4 my-auto">
                 <img
                   layout="responsive"
+                  loading="lazy"
                   class="img-fluid shadow-black"
                   src="{{ item.img_src | liquify }}"
                 >
@@ -416,7 +417,7 @@ schools:
   <!-- htmllint preset="$previous" -->
     <div data-margin-start="1%" data-margin-end="20%" class="row justify-content-center">
       <div class="col-md-8">
-        {% include course-guide-form.html fade=true course_guide_href="/assets/uploads/ACA-at-StEdwardUniversity_CourseGuide.pdf" course_guide_img="/assets/uploads/ACA-St-Edwards-University_Cover-Photo.png" %}
+        {% include course-guide-form.html fade=true course_guide_href="/assets/uploads/ACA-at-StEdwardUniversity_CourseGuide.pdf" course_guide_img="/assets/uploads/ACA-St-Edwards-University_Cover-Photo.webp" %}
       </div>
     </div>
   </section>
@@ -483,6 +484,7 @@ schools:
               style="filter: grayscale(100%);"
               width="500"
               height="500"
+              loading="lazy"
               src="{{ success.img_src | liquify }}"
               alt="Student Success"
             >

@@ -20,7 +20,7 @@ school_keys:
 - austincodingacademy
 - circlecoding
 - lubbockcodingacademy
-img: "/assets/uploads/austincodingacademy_ck7_009.jpg"
+img: "/assets/uploads/austincodingacademy_ck7_009.webp"
 canonical_link: ''
 
 ---
