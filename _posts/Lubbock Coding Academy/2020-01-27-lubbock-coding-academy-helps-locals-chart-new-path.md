@@ -15,7 +15,7 @@ author_name: Lubbock Coding Academy
 author_email: info@lubbockcodingacademy.com
 school_keys:
 - lubbockcodingacademy
-img: "/assets/uploads/lca-blog-first-post.png"
+img: "/assets/uploads/lca-blog-first-post.webp"
 
 ---
 

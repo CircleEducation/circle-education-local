@@ -23,7 +23,7 @@ school_keys:
 - lubbockcodingacademy
 - austincodingacademy
 - texastechcodingacademy
-img: "/assets/uploads/steve-jobs2.jpg"
+img: "/assets/uploads/steve-jobs2.webp"
 
 ---
 These 23 successful tech moguls never graduated college
@@ -33,7 +33,7 @@ These 23 successful tech moguls never graduated college
 
 <https://www.businessinsider.com/mark-zuckerberg-steve-jobs-tech-executives-never-graduated-college-dropouts-2019-5>
 
-![](/assets/uploads/steve-jobs.jpg)
+![](/assets/uploads/steve-jobs.webp)
 
 The late Apple CEO Steve Jobs never finished college. Julia Malakie/AP Images
 
@@ -50,7 +50,7 @@ Here are 23 successful executives in tech who never got their college degrees:
 Mark Zuckerberg --- cofounder and CEO, Facebook
 -----------------------------------
 
-![](/assets/uploads/zuckerberg.jpg)
+![](/assets/uploads/zuckerberg.webp)
 
 Getty
 
@@ -59,7 +59,7 @@ Zuckerberg never did complete either of his two majors (psychology and computer 
 Matt Mullenweg --- founder, WordPress
 -----------------------------------
 
-![](/assets/uploads/mullenweg.jpg)
+![](/assets/uploads/mullenweg.webp)
 
 [Brian Ach / Getty](http://www.gettyimages.com/photos/matt-mullenweg?agreementtypes=ed&family=editorial&phrase=Matt%20Mullenweg&sort=mostpopular&excludenudity=true)
 
@@ -68,7 +68,7 @@ Mullenweg developed the open-source software for blogging platform WordPress as 
 James Park --- cofounder and CEO, Fitbit
 --------------------------------------
 
-![](/assets/uploads/james-park.jpg)
+![](/assets/uploads/james-park.webp)
 
 [Flickr/frf_kmeron](https://www.flickr.com/photos/frf_kmeron/8248589975/in/photolist-dyUbqx-dyUc5D-dyUbma-dyZDR9-dyUb8B-dyZEaS-dyZEfq-gK6K5A-gK6kNe-gK7MLH-gK85aV-gK72e8-gK6BGC-gK7bXz-onqayT-oiCgPm-oksFeJ-oiCsUs-o4aqB2-o4ajD1-o4azbX-o4aGe3-o4aaab-oksmoY-o4aGRf-okC7rY-o4bAMZ-o4aoVM-oiCtsm-okC9V5-o4aupd-okCh55-onpSZR-o4ad8L-onq5GZ-o4a8xU-o4a7Th-o4auZ1-okE3Hz-okCuEq-o4atCT-o4buFv-oksyPj-okCrYJ-onpZxk-o4aixT-okEhDF-o4aME4-o4bqYR-onpRP4)
 
@@ -77,7 +77,7 @@ Like many successful tech moguls, Park dropped out of Harvard. [In 1998](https:/
 John and Patrick Collison --- cofounders, Stripe
 ----------------------------------------------
 
-![](/assets/uploads/collison-brothers.jpg)
+![](/assets/uploads/collison-brothers.webp)
 
 The Collison brothers grew up in Ireland and both [came to Boston for college](https://www.businessinsider.com/stripe-cofounder-john-collison-youngest-self-made-billionaire-2018-6): Patrick Collison at MIT, John Collison at Harvard. They hatched the idea for their first business --- an [online auction management company](http://fortune.com/the-ledger-40-under-40/patrick-and-john-collison-4/) named Auctomatic --- at a local pub, and dropped out of college to build the company's technology in San Francisco.
 
@@ -86,7 +86,7 @@ They sold Auctomatic in 2008 [for $5 million](https://www.cnet.com/news/canadian
 Jack Dorsey --- cofounder and CEO, Twitter and Square
 ---------------------------------------------------
 
-![](/assets/uploads/dorsey.jpg)
+![](/assets/uploads/dorsey.webp)
 
 Twitter founder Jack Dorsey REUTERS/Anushree Fadnavis
 
@@ -95,7 +95,7 @@ Dorsey is a two-time college dropout. He [first enrolled at](https://www.stltoda
 Daniel Ek --- cofounder and CEO, Spotify
 --------------------------------------
 
-![](/assets/uploads/daniel-ek.jpg)
+![](/assets/uploads/daniel-ek.webp)
 
 Daniel Ek, cofounder and CEO of Spotify Greg Sandoval/Business Insider
 
@@ -104,7 +104,7 @@ Ek grew up in Sweden, and enrolled in college in 2002 at the country's KTH Royal
 Larry Ellison --- cofounder, Oracle
 ---------------------------------
 
-![](/assets/uploads/ellison.jpg)
+![](/assets/uploads/ellison.webp)
 
 Oracle cofounder Larry Ellison. Justin Sullivan/Getty Images
 
@@ -115,7 +115,7 @@ After dropping out a second time, Ellison moved to California amid the burgeonin
 Sean Parker --- cofounder of Napster and former president of Facebook
 -------------------------------------------------------------------
 
-![](/assets/uploads/sean-parker.jpg)
+![](/assets/uploads/sean-parker.webp)
 
 Former president of Facebook Sean Parker. Theo Wargo/Getty Images for Global Citizen
 
@@ -124,7 +124,7 @@ As a senior in high school, Parker [was making $80,000 a year](https://www.forbe
 Evan Williams --- cofounder and former CEO, Twitter
 -------------------------------------------------
 
-![](/assets/uploads/evan-williams.jpg)
+![](/assets/uploads/evan-williams.webp)
 
 Stephen Lam/Reuters
 
@@ -133,7 +133,7 @@ Williams grew up in a small town in Nebraska, and [enrolled for college at the n
 Steve Jobs --- cofounder and former CEO, Apple
 --------------------------------------------
 
-![](/assets/uploads/steve-jobs2.jpg)
+![](/assets/uploads/steve-jobs2.webp)
 
 David Paul Morris/Getty Images
 
@@ -142,7 +142,7 @@ Jobs attended Reed College in Portland, Oregon, a private university [he once sa
 Jan Koum --- cofounder, WhatsApp
 ------------------------------
 
-![](/assets/uploads/koum.jpg)
+![](/assets/uploads/koum.webp)
 
 David Ramos / Getty Images
 
@@ -153,7 +153,7 @@ Koum switched jobs to become an infrastructure engineer at Yahoo, and was soon i
 Dustin Moskovitz --- cofounder, Facebook and Asana
 ------------------------------------------------
 
-![](/assets/uploads/moskovitz.jpg)
+![](/assets/uploads/moskovitz.webp)
 
 Asana co-founder Dustin Moskovitz speaks onstage at Day 1 of TechCrunch Disrupt SF 2011 held at the San Francisco Design Center Concourse on Sept. 12, 2011 in San Francisco, California. Araya Diaz/Getty Images
 
@@ -162,7 +162,7 @@ Moskovitz studied computer science at Harvard, where he was roommates with Mark 
 Travis Kalanick --- cofounder and former CEO, Uber
 ------------------------------------------------
 
-![](/assets/uploads/kalanick.jpg)
+![](/assets/uploads/kalanick.webp)
 
 Justin Sullivan/Getty Images
 
@@ -172,7 +172,7 @@ Kalanick [dropped out of school](https://www.businessinsider.com/uber-travis-kal
 
 Arash Ferdowsi --- cofounder, Dropbox
 
-![](/assets/uploads/ferdowsi.jpg)
+![](/assets/uploads/ferdowsi.webp)
 
 Arash Ferdowsi, cofounder of Dropbox. AP Photo/Richard Drew
 
@@ -181,7 +181,7 @@ Ferdowsi attended MIT and studied computer science. In the summer of 2007, recen
 Richard Branson --- founder, Virgin Group
 ---------------------------------------
 
-![](/assets/uploads/branson.jpg)
+![](/assets/uploads/branson.webp)
 
 Hollis Johnson/Business Insider
 
@@ -192,7 +192,7 @@ As a [15-year-old student](https://money.cnn.com/2018/04/26/news/companies/richa
 Bob Pittman --- CEO, iHeartMedia
 ------------------------------
 
-![](/assets/uploads/bob-pittman.jpg)
+![](/assets/uploads/bob-pittman.webp)
 
 Michael Seto/Business Insider
 
@@ -201,14 +201,14 @@ Pittman grew up in Mississippi, and was already working as an announcer on the r
 David Karp --- founder, Tumblr
 ------------------------------------
 
-![](/assets/uploads/david-karp.jpg)Reuters/Robert Galbraith
+![](/assets/uploads/david-karp.webp)Reuters/Robert Galbraith
 
 Karp never even finished high school in New York City --- [he dropped out at 14](https://www.nytimes.com/2013/05/21/technology/david-karp-quit-school-to-get-serious-about-start-ups.html). Instead of heading to college, he entered the tech scene, and quickly became the chief technology officer for a now-defunct online messaging board called UrbanBaby that was bought by CNET in 2006.
 
 Michael Dell --- founder and CEO, Dell
 ------------------------------------
 
-![](/assets/uploads/michael-dell.jpg)
+![](/assets/uploads/michael-dell.webp)
 
 Justin Sullivan/Getty Images
 
@@ -217,7 +217,7 @@ Dell attended the University of Texas in 1983 [as a premed student](https://www.
 Kevin Rose --- venture capitalist and cofounder, Digg
 ---------------------------------------------------
 
-![](/assets/uploads/kevin-rose.jpg)
+![](/assets/uploads/kevin-rose.webp)
 
 Steve Jennings/Getty Images for TechCrunch
 
@@ -226,7 +226,7 @@ By the time Rose enrolled as a computer science student at the University of Nev
 Barry Diller --- founder and chairman, IAC
 ----------------------------------------
 
-![](/assets/uploads/diller.jpg)
+![](/assets/uploads/diller.webp)
 
 Cindy Ord/Getty Images for Yahoo
 
@@ -235,7 +235,7 @@ Diller grew up in Beverly Hills, and attended UCLA in nearby Los Angeles for col
 Paul Allen --- cofounder, Microsoft
 ---------------------------------
 
-![](/assets/uploads/paul-allen.jpg)
+![](/assets/uploads/paul-allen.webp)
 
 Steve Dykes / Getty Images
 
@@ -244,7 +244,7 @@ Allen dropped out of Washington State University in 1974 after two years [to wor
 Bill Gates --- cofounder, Microsoft
 ---------------------------------
 
-![](/assets/uploads/bill-gates.jpg)
+![](/assets/uploads/bill-gates.webp)
 
 Thierry Chesnot/Getty Images
 

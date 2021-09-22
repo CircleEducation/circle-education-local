@@ -16,7 +16,7 @@ author_name: Texas Tech Coding Academy
 author_email: info@texastechcodingacademy.com
 school_keys:
 - texastechcodingacademy
-img: "/assets/uploads/coding-isnt-just-for-programmers.jpeg"
+img: "/assets/uploads/coding-isnt-just-for-programmers.webp"
 
 ---
 
