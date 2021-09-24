@@ -5,7 +5,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "build": "npm run configs && npm run css && npm run jekyll-build",
+    "build": "npm run configs && npm run css && npm run jekyll-build && npm run jekyll-build-amp && npm run optimize",
     "cname": "echo $(echo $JEKYLL_ENV)$(echo $KEY) >> _site/CNAME",
     "configs": "node _javascripts/configs.js",
     "css": "node _javascripts/postcss.js && cat assets/css/main.min.css > _includes/css.html",
@@ -40,6 +40,7 @@
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
     "csv-parser": "^2.3.3",
+    "dotenv": "^10.0.0",
     "front": "austincodingacademy/front#a51873d0901db4ff119c87215efaede0491c793d",
     "front-matter": "^4.0.2",
     "gh-pages": "^3.1.0",
