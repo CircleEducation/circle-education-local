@@ -19,7 +19,7 @@ permalink: "/blog/5-tips-to-help-you-learn-coding-faster/"
 author_name: Circle Coding Academy
 author_email: ''
 school_keys: []
-img: "/assets/uploads/5-tips-to-master-programming-faster.png"
+img: "/assets/uploads/5-tips-to-master-programming-faster.webp"
 
 ---
 Mastering a new skill can take years of focus and practice. But what if you want to speed things up a little? When it comes to getting a job as a developer, you may not want to wait for years to get started. Good news: there are some things you can do in your spare time every day that will help you get better in less time. Here are five things to try to learn to program faster.

@@ -21,7 +21,7 @@ school_keys:
 - lubbockcodingacademy
 - austincodingacademy
 - texastechcodingacademy
-img: "/assets/uploads/untitled-design-2-1.png"
+img: "/assets/uploads/untitled-design-2-1.webp"
 
 ---
 # SpaceX’s Crew Dragon Touchscreen is powered by JavaScript
@@ -42,7 +42,7 @@ All of this is achieved through software created by teams of engineers who code 
 
 The Dragon spacecraft’s cockpit consists of a trio of touchscreens. NASA Astronauts Behnken and Hurley tested the software during their recent voyage to the Space Station. The craft only has a few buttons that are to trigger emergency operations. Dragon’s displays provide real-time information on anything from its position in space, to possible destinations, and the environment onboard. A simple tap on a screen is capable of igniting Dragon’s integrated space thrusters to alter the craft’s direction.
 
-![](/assets/uploads/space1.png)
+![](/assets/uploads/space1.webp)
 
 Photo by [SpaceX](https://unsplash.com/@spacex?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
 
@@ -52,7 +52,7 @@ It’s known that Crew Dragon displays are running Chromium and JS. Is it using 
 
 > _Yes, they use Chromium and they do use a reactive library that they developed in house._
 
-![](/assets/uploads/space2.jpeg)
+![](/assets/uploads/space2.webp)
 
 Photo by [SpaceX](https://unsplash.com/@spacex?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
 
@@ -64,7 +64,7 @@ They take reliability & performance very seriously, and just like other vehicle 
 
 # Is the Docking Simulator developed by the Crew Displays Software Team itself?
 
-![](/assets/uploads/space3.jpeg)
+![](/assets/uploads/space3.webp)
 
 Photo by [SpaceX](https://unsplash.com/@spacex?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
 
@@ -80,7 +80,7 @@ In some shots of mission control, it’s noticeable that UI is very similar to t
 
 SpaceX Engineer Jeff responded that “They can and do run the exact same code that’s on the Crew displays on the ground. The only limitation is that they don’t necessarily get all of the same telemetry that they have in the cockpit on the ground due to limitations in our RF budget. They could but they generalize prioritize getting other critical telemetry instead.”
 
-![](/assets/uploads/space5.jpeg)
+![](/assets/uploads/space5.webp)
 
 Photo by [SpaceX](https://unsplash.com/@spacex?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
 

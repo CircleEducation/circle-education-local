@@ -16,7 +16,7 @@ author_name: Austin Coding Academy
 author_email: info@austincodingacademy.com
 school_keys:
 - austincodingacademy
-img: "/assets/uploads/student highligt (1).png"
+img: "/assets/uploads/student highligt (1).webp"
 
 ---
 We had the opportunity to sit down with Austin Coding Academy alumnus, Seth, and talk about his coding journey.  He is a User Experience Developer at Indeed! He shared some insider tips and tricks for prospective and current students.

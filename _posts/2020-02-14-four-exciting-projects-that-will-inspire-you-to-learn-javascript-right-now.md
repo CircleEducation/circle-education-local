@@ -21,7 +21,7 @@ author_name: Circle Coding Academy
 author_email: ''
 school_keys:
 - circlecoding
-img: "/assets/uploads/learn-javascript-four-projects.png"
+img: "/assets/uploads/learn-javascript-four-projects.webp"
 
 ---
 JavaScript (JS) is the [most commonly-used coding language](https://stackify.com/popular-programming-languages-2018/) for developers in 2020. JS earned its popularity because it’s easy to learn, dynamically typed, fast to run, and works across most platforms, including all modern web browsers. Coders from all different specialties will need a basic understanding of JavaScript to complete most designs—especially front-end designs.

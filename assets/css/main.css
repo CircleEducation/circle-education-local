@@ -370,11 +370,11 @@ a.btn.bg-primary-light:hover span {
 /* filter over video */
 #hero-index {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/uploads/hero-index.jpg');
+    url('/assets/uploads/hero-index.webp');
   background-position: -820px 0px;
 }
 #hero-circle {
-  /* background-image: url('/assets/uploads/coding-tutoring-session.jpg');   */
+  /* background-image: url('/assets/uploads/coding-tutoring-session.webp');   */
   background-position: -820px 0px;
   /* background-size: contain; */
 }
@@ -386,7 +386,7 @@ a.btn.bg-primary-light:hover span {
 @media (max-width: 768px) and (orientation: landscape) {
   #hero-index {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-      url('/assets/uploads/hero-index.jpg');
+      url('/assets/uploads/hero-index.webp');
     background-position: top;
     height: 100vh;
   }
@@ -408,7 +408,7 @@ a.btn.bg-primary-light:hover span {
 
 #hero-corporate {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/uploads/hero-corporate.jpg');
+    url('/assets/uploads/hero-corporate.webp');
   background-size: cover;
   background-position: -20px 70px;
 }
@@ -416,7 +416,7 @@ a.btn.bg-primary-light:hover span {
 @media (min-width: 768px) {
   #hero-corporate {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-      url('/assets/uploads/hero-corporate.jpg');
+      url('/assets/uploads/hero-corporate.webp');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -424,7 +424,7 @@ a.btn.bg-primary-light:hover span {
 
 #hero-js {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/uploads/hero-javascript.jpg');
+    url('/assets/uploads/hero-javascript.webp');
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -433,7 +433,7 @@ a.btn.bg-primary-light:hover span {
 @media (min-width: 768px) {
   #hero-js {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-      url('/assets/uploads/hero-javascript.jpg');
+      url('/assets/uploads/hero-javascript.webp');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -442,7 +442,7 @@ a.btn.bg-primary-light:hover span {
 
 #hero-st-edwards {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/uploads/austin-coding-academy-st-edwards-university-1601573585.jpg');
+    url('/assets/uploads/austin-coding-academy-st-edwards-university-1601573585.webp');
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -451,7 +451,7 @@ a.btn.bg-primary-light:hover span {
 @media (min-width: 768px) {
   #hero-st-edwards {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-      url('/assets/uploads/austin-coding-academy-st-edwards-university-1601573585.jpg');
+      url('/assets/uploads/austin-coding-academy-st-edwards-university-1601573585.webp');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -460,7 +460,7 @@ a.btn.bg-primary-light:hover span {
 
 #hero-blog {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/uploads/dan-blog.jpg');
+    url('/assets/uploads/dan-blog.webp');
   background-position: -330px 0px;
   background-size: cover;
 }
@@ -468,7 +468,7 @@ a.btn.bg-primary-light:hover span {
 @media (min-width: 768px) {
   #hero-blog {
     background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-      url('/assets/uploads/dan-blog.jpg');
+      url('/assets/uploads/dan-blog.webp');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -476,7 +476,7 @@ a.btn.bg-primary-light:hover span {
 
 #hero-landing {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/uploads/hero-landing.jpg');
+    url('/assets/uploads/hero-landing.webp');
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -484,14 +484,14 @@ a.btn.bg-primary-light:hover span {
 
 #hero-events-capitol {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/uploads/hero-landing.jpg');
+    url('/assets/uploads/hero-landing.webp');
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #hero-events-other {
   background: linear-gradient(rgba(var(--hero-overlay), 0.7), rgba(var(--hero-overlay), 0.7)),
-    url('/assets/uploads/laura-class.jpg');
+    url('/assets/uploads/laura-class.webp');
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -876,7 +876,7 @@ ul.share-buttons img {
 
 .background-logo {
   min-height: 100vh;
-  background-image: url('/assets/uploads/ACA-logo-white-large.png');
+  background-image: url('/assets/uploads/ACA-logo-white-large.webp');
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
