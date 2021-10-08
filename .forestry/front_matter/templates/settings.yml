@@ -538,6 +538,14 @@ fields:
     config:
       required: false
     label: tik_tok_pixel_id
+  - name: typeform_id
+    type: text
+    config:
+      required: false
+    label: typeform_id
+  - name: typeform_active
+    type: boolean
+    label: typeform_active
 - type: field_group_list
   name: logos
   label: logos
