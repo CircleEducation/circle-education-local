@@ -142,14 +142,6 @@ fields:
   - type: text
     name: name
     label: name
-  - name: typeform_id
-    type: text
-    config:
-      required: false
-    label: typeform_id
-  - name: typeform_active
-    type: boolean
-    label: typeform_active
   - type: field_group
     name: navigation
     label: navigation
