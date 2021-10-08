@@ -538,11 +538,11 @@ fields:
     config:
       required: false
     label: tik_tok_pixel_id
-  - name: typeform_id
+  - name: typeform_application_id
     type: text
     config:
       required: false
-    label: typeform_id
+    label: typeform_application_id
   - name: typeform_active
     type: boolean
     label: typeform_active
