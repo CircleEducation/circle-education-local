@@ -3,6 +3,7 @@ const { DateTime } = require('luxon');
 const { safeDump } = require('js-yaml');
 const { writeFileSync } = require('fs');
 const { groupBy } = require('lodash');
+const { updateStartDates } = require('./typeform');
 
 const fetchStartDates = async () => {
   try {
@@ -39,7 +40,8 @@ const fetchStartDates = async () => {
       }
     })
     objects = groupBy(objects, 'company_id')
-    writeFileSync('_data/startDates.yml', safeDump(objects));
+    await updateStartDates(objects);
+    // writeFileSync('_data/startDates.yml', safeDump(objects));
     return objects;
   }catch (error) {
     console.log(error);

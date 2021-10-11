@@ -40,21 +40,21 @@ process:
 - heading: Apply
   text: Get started by filling out our application and setting up a call with our
     admissions team.
-  img_src: "/assets/uploads/wp-apply.webp"
+  img_src: "/assets/uploads/wp-apply.png"
   time: "(~ 5 Minutes)"
   img_width: "70"
   img_height: "70"
 - heading: Assignment
   text: After speaking with our admissions team, you’ll be asked to complete a brief
     assignment.
-  img_src: "/assets/uploads/wp-assignment.webp"
+  img_src: "/assets/uploads/wp-assignment.png"
   time: "(~ 1-2 Hours)"
   img_width: "70"
   img_height: "70"
 - heading: Acceptance Decision
   text: Once you’ve successfully completed your assignment, you’ll be able to begin
     class.
-  img_src: "/assets/uploads/wp-enroll.webp"
+  img_src: "/assets/uploads/wp-enroll.png"
   time:
   img_width: "70"
   img_height: "70"
@@ -392,14 +392,6 @@ isa_inputs:
         Ready for your future career in coding? Fill out our application below!
       </h4>
     {% endif %}
-    {% if site.key == 'lubbockcodingacademy' %}
-      <h4 class=" mt-5 mt-sm-10 text-center">
-        After you've applied, be sure to 
-          <a href="https://www.southplainscollege.edu/community/continuinged/codingacademy.php">register as an LCA student with SPC</a> 
-          & 
-          <a href="https://lubbockcodingacademy.com/prep-course/">join a prep course</a>!
-      </h4>
-    {% endif %}
     <h2 class="font-family-alt mt-5 mt-sm-10 mb-md-4 mb-sm-10 display-5 text-center col-12 col-sm-10">
       {{ page.admission_heading }}
     </h2>
@@ -414,68 +406,18 @@ isa_inputs:
       {% endfor %}
     </div>
   </div>
-  <div class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center">
-      <h2 id="start-application" class="font-family-alt mt-5 mt-sm-10 mb-md-4 mb-sm-10 display-5 text-center col-12 col-sm-10">
+  <div 
+    id="application"
+    class="my-5 my-sm-10 px-4 p-lg-0 border mx-auto d-flex flex-column align-items-center"
+    style="margin-top: 25px;/*  height: 85vh; */"
+  >
+      <!-- <h2 id="start-application" class="font-family-alt mt-5 mt-sm-10 mb-md-4 mb-sm-10 display-5 text-center col-12 col-sm-10">
         {{ page.heading }}
-      </h2>
+      </h2> -->
       <!-- Proccess Application -->
-      <p class="text-center col-12 col-sm-10 mb-4">
+      <!-- <p class="text-center col-12 col-sm-10 mb-4">
         {{ page.app_descript }}
-      </p>
-    <form
-      action-xhr="{{ settings.form_url }}/{{ settings.hubspot_portal_id }}/{{ school.preapplication_form_guid }}"
-      method="POST"
-      target="_top"
-      id="demo-form"
-    >
-      <input name="school_name" type="hidden" value="{{ school.name }}"> 
-      <input name="form_event_type" type="hidden" value="Application"> 
-      <input name="form_source_url" type="hidden" value="{{ school.url | append: page.url }}"> 
-
-      <div class="col-12 col-sm-10 mx-auto">
-        <h2 class="font-family-alt my-5 my-sm-10 display-5 text-center">
-          About You
-        </h2>
-        <div class="row d-flex justify-content-center p-sm-2 p-md-5">
-          {% include fields.html fields=page.form_fields %}
-          <div class="col-12 my-5">
-            <h2 class="text-center font-weight-bold mb-5">
-              Education &amp; Work Experience
-            </h2>
-          </div>
-
-          {% include fields.html fields=page.edu_work_fields %}
-          <div class="col-12 col-md-6 mb-4">
-            {% include select-start-date.html %}
-          </div>
-          {% include fields.html fields=page.prep_class_field %}
-          <div class="col-12 col-md-6 mb-4">
-            {% include select-payment-plan.html %}
-          </div>
-          {% include fields.html fields=page.coupon_input %}
-          <div class="col-12 col-md-6 mb-4">
-            {% include referral-question.html %}
-          </div>
-          {% include fields.html fields=page.coding_inputs %}
-          {% if site.key == 'austincodingacademy' %}
-            <div id="isa-questions" class="d-none col-12 p-0">
-              {% include fields.html fields=page.isa_inputs %}
-            </div>
-          {% endif %}
-          <div class="my-4 d-flex flex-column align-items-center">
-            <!-- htmllint preset="none" -->
-            <button class="mb-4 btn cta-gradient hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" >
-
-            <!-- htmllint preset="$previous" -->
-              Submit
-            </button>
-            <div class="d-flex flex-column align-items-center">
-              {% include data-agreement.html %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
+      </p> -->
   </div>
 </div>
 {% if site.key == 'austincodingacademy' %}
@@ -506,5 +448,39 @@ isa_inputs:
       }
     })
   });
+</script>
+<script>
+  const formId = 'Mut42wfQ';
+  const setIframe = async () => {
+    const ip = await (await fetch('https://rpw3001.ngrok.io/ip')).json();
+    setTimeout(function() {
+      var hutkCookie = document.cookie.split(';').find(function(cookie) { 
+        return cookie.includes('hubspotutk')
+      });
+      if (hutkCookie) {
+        var hutk = hutkCookie.trim().split('=')[1];
+      } else hutk = 'No hutk';
+      const { title, baseURI, URL } = document;
+      // document.querySelector('#application').innerHTML = (`
+      //   <iframe 
+      //     src="https://zollege.typeform.com/to/${formId}#&page_name=${title}&page_uri=${baseURI}&form_source_url=${URL}"
+      //     width="100%"
+      //     height="100%"
+      //     frameBorder="0"
+      //   >
+      //   </iframe>
+      // `)
+      document.querySelector('#application').innerHTML = (`
+        <iframe 
+          src="https://zollege.typeform.com/to/${formId}#ip_address=${ip}&hutk=${hutk}&page_name=${title}&page_uri=${baseURI}&form_source_url=${URL}"
+          width="100%"
+          height="700px"
+          frameBorder="0"
+        >
+        </iframe>
+      `)
+    }, 3000);
+  }
+  setIframe();
 </script>
 {% endif %}
