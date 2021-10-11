@@ -420,7 +420,7 @@ isa_inputs:
       <script>
         const typeform_id = '{{ school.typeform_application_id }}';
         const setIframe = async () => {
-          const ip = await (await fetch('https://rpw3001.ngrok.io/ip')).json();
+          const ip = await (await fetch('https://4runw89p71.execute-api.us-west-1.amazonaws.com/latest/ip')).json();
           setTimeout(function() {
             var hutkCookie = document.cookie.split(';').find(function(cookie) { 
               return cookie.includes('hubspotutk')
