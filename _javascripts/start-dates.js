@@ -41,7 +41,7 @@ const fetchStartDates = async () => {
     })
     objects = groupBy(objects, 'company_id')
     await updateStartDates(objects);
-    // writeFileSync('_data/startDates.yml', safeDump(objects));
+    writeFileSync('_data/startDates.yml', safeDump(objects));
     return objects;
   }catch (error) {
     console.log(error);

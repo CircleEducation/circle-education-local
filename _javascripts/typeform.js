@@ -2,9 +2,8 @@ const fetch = require('node-fetch');
 const { DateTime } = require('luxon');
 const typeformUrl = 'https://api.typeform.com/forms';
 const workspaceIds = {
-  parent: 'HQ2eHx',
   children_coding: 'eUAwCt',
-  children_dev: 'v9fyUJ'
+  children_coding_dev: 'v9fyUJ'
 };
 const headers = {
   'Content-Type': 'application/json',
@@ -34,23 +33,6 @@ const updateForm = async (formId, form) => {
   const updatedForm = await (await fetch(`${typeformUrl}/${formId}`, options)).json();
   updatedForm.code ? console.log(`${form.variables.school_key}: ${JSON.stringify(updatedForm, null, 2)}`) : console.log(form.variables.school_key);
 };
-
-// const assignDateQualifier = (startDateObj, schoolType) => {
-//   let dateFilter;
-//   if (schoolType === 'Dental') dateFilter = 12727400;
-//   else if (schoolType === 'Medical') dateFilter = 31557600;
-//   const { start_date, full } = startDateObj;
-//   const now = (new Date().getTime() / 1000);
-//   const date = (DateTime.fromISO(start_date).valueOf() / 1000);
-//   const futureLimit = now + dateFilter;
-//   const pastLimit = now - 604800;
-//   const afterLimit = now + 604800;
-//   const fourWeeksPast = now - 2419200;
-//   let qualifier;
-//   if (full || (date <= now && date <= afterLimit)) qualifier = 'Class full!';
-//   else if (date >= now && date <= afterLimit && (schoolType === 'Dental' || schoolType === 'Medical')) qualifier = 'Few seats left!';
-//   return qualifier;
-// };
 
 const createVariableLogic = (fieldRef, choiceRef, variable, value) => {
   const logic = {
@@ -82,26 +64,26 @@ const createVariableLogic = (fieldRef, choiceRef, variable, value) => {
   return logic;
 };
 
-// const skipPaymentLogic = {
-//   action: "jump",
-//   details: {
-//     to: {
-//       type: "thankyou",
-//       value: "01F8D6ED9JRA3V6RY3DTFC1QPV"
-//     }
-//   },
-//   condition: {
-//     op: "always",
-//     vars: []
-//   }
-// };
+const skipPaymentLogic = {
+  action: "jump",
+  details: {
+    to: {
+      type: "thankyou",
+      value: "01F8D6ED9JRA3V6RY3DTFC1QPV"
+    }
+  },
+  condition: {
+    op: "always",
+    vars: []
+  }
+};
 
 const updateStartDates = async startDates => {
   const { items } = await getForms(workspaceIds.children_coding);
   for (const { id } of items) {
     const form = await getForm(id);
     const { fields, logic, variables } = form;
-    const { school_type, getaccept_entity_id } = variables;
+    const { getaccept_entity_id } = variables;
     const startDateFields = fields.filter(field => field.title.split(' ').includes('Start'));
     startDateFields.forEach(startDateField => {
       const { choices } = startDateField.properties;
@@ -120,7 +102,8 @@ const updateStartDates = async startDates => {
           const { hubspot_ticket_id, start_date, start_time, end_time } = startDate;
           const startDatePretty = DateTime.fromISO(start_date).toLocaleString(DateTime.DATE_FULL);
           const label = `${startDatePretty} (${start_time}-${end_time})`;
-          choices.push({
+          if (startDate.full) description += `${label}\n`;
+          else choices.push({
             ref: hubspot_ticket_id,
             label
           })
@@ -139,7 +122,6 @@ const updateStartDates = async startDates => {
       }
     })
     updateForm(id, form);
-    // console.log('form: ', JSON.stringify(form.logic, null, 2));
   }
 };
 
