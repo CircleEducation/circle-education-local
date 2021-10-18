@@ -27,6 +27,7 @@ title: Application Submission
   </div>
 </div>
 
+{% if school.typeform_active == true %}
 <script>
   let params = new URLSearchParams(document.location.search.substring(1));
   let firstName = params.get("firstName"); 
@@ -38,3 +39,4 @@ title: Application Submission
   document.querySelector(".schedule").setAttribute("href", document.querySelector(".schedule").getAttribute("href") + "?firstName=" + firstName + "&lastName=" + lastName + "&phone=" + phone + "&email=" + email);
 
 </script>
+{% endif %}
