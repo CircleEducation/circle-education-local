@@ -26,3 +26,15 @@ title: Application Submission
     <a class="btn {% if school.inverted != true %}btn-round{%endif%} bg-primary-light" href="{{ school.url }}/apply/scheduling">Schedule</a>
   </div>
 </div>
+
+<script>
+  let params = new URLSearchParams(document.location.search.substring(1));
+  let firstName = params.get("firstName"); 
+  let lastName = params.get("lastName");
+  let phone = parseInt(params.get("phone"), 10); 
+  let email = params.get("email");
+  
+  document.querySelector(".deposit").setAttribute("href", document.querySelector(".deposit").getAttribute("href") + "?firstName=" + firstName + "&lastName=" + lastName + "&phone=" + phone + "&email=" + email);
+  document.querySelector(".schedule").setAttribute("href", document.querySelector(".schedule").getAttribute("href") + "?firstName=" + firstName + "&lastName=" + lastName + "&phone=" + phone + "&email=" + email);
+
+</script>
