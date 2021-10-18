@@ -17,13 +17,13 @@ title: Application Submission
   <div class="col-12 d-flex flex-column align-items-center justify-content-center">
     <h4>Secure Your Spot with a deposit (optional)</h4>
     <p>Classes fill up fast, so get to the front of the line and guarantee yourself a place in class with a refundable deposit. An admission’s rep will be reaching out to you shortly after your payment is made! Acceptance conditional on your Admissions Interview. Don’t forget to schedule below!</p>
-    <a class="btn {% if school.inverted != true %}btn-round{%endif%} bg-primary-light" target="_blank" href="{{ school.url }}/deposit">Complete Deposit</a>
+    <a class="btn deposit {% if school.inverted != true %}btn-round{%endif%} bg-primary-light" target="_blank" href="{{ school.url }}/deposit">Complete Deposit</a>
   </div>
   <div class="my-4">or</div>
   <div class="col-12 d-flex flex-column align-items-center justify-content-center">
     <h4>Schedule an Appointment</h4>
     <p>Book a time with one of our Admissions Advisors to get all your questions answered and see if you’re a great fit for our program. After this call, you may be given a short coding assignment to complete for your acceptance. Don’t worry! We’ll help you with it if you need it.</p>
-    <a class="btn {% if school.inverted != true %}btn-round{%endif%} bg-primary-light" href="{{ school.url }}/apply/scheduling">Schedule</a>
+    <a class="btn schedule{% if school.inverted != true %}btn-round{%endif%} bg-primary-light" href="{{ school.url }}/apply/scheduling">Schedule</a>
   </div>
 </div>
 
