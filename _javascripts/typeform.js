@@ -82,17 +82,14 @@ const updateStartDates = async startDates => {
   const { items } = await getForms(workspaceIds.children_coding);
   for (const { id } of items) {
     const form = await getForm(id);
-    const { fields, logic, variables } = form;
-    const { getaccept_entity_id } = variables;
+    const { fields, logic, variables: { getaccept_entity_id } } = form;
     const startDateFields = fields.filter(field => field.title.split(' ').includes('Start'));
     startDateFields.forEach(startDateField => {
       const { choices } = startDateField.properties;
       const { actions } = logic.find(logicObj => logicObj.ref === startDateField.ref);
-      const getAcceptLogic = !getaccept_entity_id ? actions.pop() : null;
+      const jumpLogic = !getaccept_entity_id ? actions.pop() : null;
       choices.splice(0);
       actions.splice(0);
-      delete startDateField.properties.description;
-      let description = '';
       const currentStartDates = startDates[startDateField.ref];
       if (currentStartDates) {
         let i = 0;
@@ -102,17 +99,15 @@ const updateStartDates = async startDates => {
           const { hubspot_ticket_id, start_date, start_time, end_time } = startDate;
           const startDatePretty = DateTime.fromISO(start_date).toLocaleString(DateTime.DATE_FULL);
           const label = `${startDatePretty} (${start_time}-${end_time})`;
-          if (startDate.full) description += `${label}\n`;
-          else choices.push({
+          choices.push({
             ref: hubspot_ticket_id,
             label
           })
           actions.push(createVariableLogic(startDateField.ref, hubspot_ticket_id, 'start_date_ticket_id'));
-          if (!getaccept_entity_id) actions.push(getAcceptLogic);
           i++;
         }
-        if (description) startDateField.properties.description = description;
       }
+      if (!getaccept_entity_id) actions.push(jumpLogic);
       if (!choices.length) {
         choices.push({
           ref: '306210152',
