@@ -96,9 +96,9 @@ const updateStartDates = async startDates => {
         let max = currentStartDates.length < 6 ? currentStartDates.length : 6;
         while (i < max) {
           const startDate = currentStartDates[i];
-          const { hubspot_ticket_id, start_date, days, start_time, end_time } = startDate;
+          const { hubspot_ticket_id, course_type, start_date, days, start_time, end_time } = startDate;
           const startDatePretty = DateTime.fromISO(start_date).toLocaleString(DateTime.DATE_FULL);
-          const label = `${startDatePretty} (${days}, ${start_time}-${end_time})`;
+          const label = `${startDatePretty} (${days}, ${start_time}-${end_time} — ${course_type})`;
           choices.push({
             ref: hubspot_ticket_id,
             label
