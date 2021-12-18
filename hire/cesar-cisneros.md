@@ -2,7 +2,7 @@
 # This is a Markdown file that will be converted to YAML, anything after a `#` is a comment and won't be read
 
 layout: resume # don't touch
-categories: [ hire, graduation, austincodingacademy ] # don't touch
+categories: [ hire, austincodingacademy ] # don't touch
 
 fullname: Cesar Cisneros
 jobtitle: Full Stack Web Developer
