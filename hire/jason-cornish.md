@@ -27,14 +27,14 @@ skills:
   - Client Relations
 
 github: https://github.com/mainrotor
-linkedin: www.linkedin.com/in/jason-cornish-4ab702228
+linkedin: https://www.linkedin.com/in/jason-cornish-4ab702228
 
 email: jason.cornish1997@gmail.com # email for professional use
 phone: 512-775-6311 # cell number
 
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
 
-workexperience:
+workexperience: 
   - company: Financial Software Innovations
     dates: October 2016 - Currently
     title: Software Engineer
@@ -48,8 +48,8 @@ education:
     degree: Web Development
 
 projects:
-  - name: Arboretum Creek Restoration Website# A
-    desc: I designed and built a website to advertise the ecological need for a creek in the Seatle Arboretum park to prevent flooding. # very short description of your project
-    url: www.arboretumcreek.org # link to your deployed project
+  - name: Arboretum Creek Restoration Website
+    desc: I designed and built a website to advertise the ecological need for a creek in the Seattle Arboretum park to prevent flooding. # very short description of your project
+    url: https://www.arboretumcreek.org # link to your deployed project
 
 ---
