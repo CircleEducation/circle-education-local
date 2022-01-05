@@ -53,8 +53,8 @@ education:
     degree: Web Development
 
 projects:
-  - name: # title of your project
-    desc: # very short description of your project
-    url: # link to your deployed project
+  - name: Costume # title of your project
+    desc: Costume Organization App # very short description of your project
+    url: https://costume-capstone.herokuapp.com/ # link to your deployed project
 
 ---
