@@ -4,7 +4,7 @@
 layout: resume # don't touch
 categories: [ hire, graduation, austincodingacademy ] # don't touch
 
-fullname: Chris Greene
+fullname: Chris Greene 
 jobtitle: Project Manager
 
 location: Austin, TX
@@ -12,7 +12,6 @@ blurb: "I embarked on my coding adventures to future proof my career!" # tells u
 
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
 skills:
-  
   - HTML
   - CSS
   - Git/GitHub
