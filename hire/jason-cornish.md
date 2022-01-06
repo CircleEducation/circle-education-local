@@ -29,22 +29,26 @@ skills:
 github: https://github.com/mainrotor
 linkedin: https://www.linkedin.com/in/jason-cornish-4ab702228
 
-email: jason.cornish1997@gmail.com # email for professional use
-phone: 512-775-6311 # cell number
+email: jason.cornish1997@gmail.com
+phone: 512-775-6311
 
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
 
 workexperience:
   - company: Financial Software Innovations
-    dates: October 2016 - Currently
+    dates: October 2016 - Present
     title: Software Engineer
     location: Austin, TX
 
 
 education:
   - name: Austin Coding Academy
-    dates: Feb 2017 - Dec 2019
+    dates: Jan 2021 - Dec 2021
     degree: Web Development
+
+  - name: Texas State University
+    dates: Aug 2011 - May 2015
+    degree: B.S. Fashion Merchandising
 
 projects:
   - name: Arboretum Creek Restoration Website
