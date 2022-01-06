@@ -8,12 +8,12 @@ fullname: Jason Cornish
 jobtitle: Software Engineer
 
 location: Austin, TX
-blurb: "I love the process of building out a powerful front-end, with a focus on the user's experience. I have a background working on Legacy code, speaking/co-operating with Clients, and an education with field experience in modern day web development." # tells us what your mission is, why you learned coding, or what makes you special
+blurb: "I love the process of building out a powerful front-end, with a focus on the user's experience. I have a background working on Legacy code, speaking/co-operating with Clients, and an education with field experience in modern day web development."
 
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
 skills:
   - React
-  - Javascript
+  - JavaScript
   - Express
   - Redux
   - SQL
@@ -27,29 +27,32 @@ skills:
   - Client Relations
 
 github: https://github.com/mainrotor
-linkedin: www.linkedin.com/in/jason-cornish-4ab702228
+linkedin: https://www.linkedin.com/in/jason-cornish-4ab702228
 
-email: jason.cornish1997@gmail.com # email for professional use
-phone: 512-775-6311 # cell number
+email: jason.cornish1997@gmail.com
+phone: 512-775-6311
 
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
 
 workexperience:
   - company: Financial Software Innovations
-    dates: October 2016 - Currently
+    dates: October 2016 - Present
     title: Software Engineer
     location: Austin, TX
-    note : Please contact me before reaching out to my company
 
 
 education:
   - name: Austin Coding Academy
-    dates: Feb 2017 - Dec 2019
+    dates: Jan 2021 - Dec 2021
     degree: Web Development
 
+  - name: Texas State University
+    dates: Aug 2011 - May 2015
+    degree: B.S. Fashion Merchandising
+
 projects:
-  - name: Arboretum Creek Restoration Website# A
-    desc: I designed and built a website to advertise the ecological need for a creek in the Seatle Arboretum park to prevent flooding. # very short description of your project
-    url: www.arboretumcreek.org # link to your deployed project
+  - name: Arboretum Creek Restoration Website
+    desc: I designed and built a website to advertise the ecological need for a creek in the Seattle Arboretum park to prevent flooding.
+    url: https://www.arboretumcreek.org
 
 ---

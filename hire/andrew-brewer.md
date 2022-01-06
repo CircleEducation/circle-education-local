@@ -8,13 +8,10 @@ fullname: Andrew Brewer
 jobtitle: Full-Stack Developer
 
 location: Lubbock, TX
-blurb: "After Fundamentaly improving myself in the US Army, I found a great sense of pride and love for the people around me. I wanted to use my talents in technology
- to help those around me in the ways a programmer could. I took a fortunate oppurtunity with the Lubbock Coding Academy and in doing so reassured the passion
- I thought was just a hobby to be a necessary life long step into my lifes greatest works. May God be with us, in all we do, that is righteous." # tells us what your mission is, why you learned coding, or what makes you special
+blurb: "After fundamentally improving myself in the US Army, I found a great sense of pride and love for the people around me. I wanted to use my talents in technology to help those around me in the ways a programmer could. I took a fortunate opportunity with the Lubbock Coding Academy and in doing so reassured the passion I thought was just a hobby to be a necessary life long step into my life's greatest works. May God be with us, in all we do, that is righteous." # tells us what your mission is, why you learned coding, or what makes you special
 
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
 skills:
-
   - HTML
   - CSS
   - JavaScript
@@ -54,6 +51,6 @@ education:
 projects:
   - name: Contact List (Capstone Project) # title of your project
     desc: A simple Angular web app to present the skills of interacting with data through a data base, using controllers, and using different frameworks  # very short description of your project
-    url:https://github.com/ericcoker18/Capstone # link to your deployed project
+    url: https://github.com/ericcoker18/Capstone # link to your deployed project
 
 ---
