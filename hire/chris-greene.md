@@ -12,9 +12,14 @@ blurb: "I embarked on my coding adventures to future proof my career!" # tells u
 
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
 skills:
+skills:
+  - JavaScript
+  - SQL
   - HTML
   - CSS
+  - Testing
   - Git/GitHub
+  - REST APIs
 
 github: https://github.com/ykiffykowboy
 linkedin: https://www.linkedin.com/in/christopherperrygreene
@@ -47,8 +52,8 @@ education:
     degree: Full Stack Web Development
 
 projects:
-  - name:  Capstone
-    desc:  Basic CRUD app using Okta Login
-    url:  https://capfrontend-5yiwm5g3d-kiffykowboy.vercel.app/
+  - name: Capstone
+    desc: Basic CRUD app using Okta Login
+    url: https://capfrontend-5yiwm5g3d-kiffykowboy.vercel.app/
 
 ---
