@@ -8,7 +8,7 @@ fullname: Jason Cornish
 jobtitle: Software Engineer
 
 location: Austin, TX
-blurb: "I love the process of building out a powerful front-end, with a focus on the user's experience. I have a background working on Legacy code, speaking/co-operating with Clients, and an education with field experience in modern day web development." # tells us what your mission is, why you learned coding, or what makes you special
+blurb: "I love the process of building out a powerful front-end, with a focus on the user's experience. I have a background working on Legacy code, speaking/co-operating with Clients, and an education with field experience in modern day web development."
 
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
 skills:
@@ -34,7 +34,7 @@ phone: 512-775-6311 # cell number
 
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
 
-workexperience: 
+workexperience:
   - company: Financial Software Innovations
     dates: October 2016 - Currently
     title: Software Engineer
@@ -48,7 +48,7 @@ education:
 
 projects:
   - name: Arboretum Creek Restoration Website
-    desc: I designed and built a website to advertise the ecological need for a creek in the Seattle Arboretum park to prevent flooding. # very short description of your project
-    url: https://www.arboretumcreek.org # link to your deployed project
+    desc: I designed and built a website to advertise the ecological need for a creek in the Seattle Arboretum park to prevent flooding.
+    url: https://www.arboretumcreek.org
 
 ---
