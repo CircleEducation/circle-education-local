@@ -30,6 +30,7 @@ linkedin: https://www.linkedin.com/in/michael-fares-52613960/
 
 email: mjfares@gmail.com # email for professional use
 phone: 703-244-0370 # cell number
+website: https://michaelfares.netlify.app/
 
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
 
