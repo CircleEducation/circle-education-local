@@ -13,7 +13,7 @@ blurb: "I love the process of building out a powerful front-end, with a focus on
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
 skills:
   - React
-  - Javascript
+  - JavaScript
   - Express
   - Redux
   - SQL
@@ -39,7 +39,6 @@ workexperience:
     dates: October 2016 - Currently
     title: Software Engineer
     location: Austin, TX
-    note : Please contact me before reaching out to my company
 
 
 education:
