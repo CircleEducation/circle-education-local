@@ -46,13 +46,9 @@ education:
     dates: Jan 2021 - Dec 2021
     degree: Web Development
 
-  - name: Texas State University
-    dates: Aug 2011 - May 2015
-    degree: B.S. Fashion Merchandising
-
 projects:
-  - name: Arboretum Creek Restoration Website
-    desc: I designed and built a website to advertise the ecological need for a creek in the Seattle Arboretum park to prevent flooding.
+  - name: Arboretum Creek Restoration
+    desc: A website to advertise the ecological need for a creek in the Seattle Arboretum park.
     url: https://www.arboretumcreek.org
 
 ---
