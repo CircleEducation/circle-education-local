@@ -8,7 +8,7 @@ fullname: Jason Cornish
 jobtitle: Software Engineer
 
 location: Austin, TX
-blurb: "I love the process of building out a powerful front-end, with a focus on the user's experience."
+blurb: "I love the process of building out a powerful front-end, with a focus onn the user's experience."
 
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
 skills:
@@ -18,13 +18,11 @@ skills:
   - SQL
   - HTML
   - CSS
-  
+
 github: https://github.com/mainrotor
-linkedin: https://www.linkedin.com/in/jason-cornish-4ab702228/
-
-email: jason.cornish1997@gmail.com # email for professional use
+linkedin: https://www.linkedin.com/in/jason-cornish-4ab702228
+email: jason.cornish1997@gmail.com
 phone: 512-775-6311
-
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
 
 workexperience:
@@ -33,7 +31,6 @@ workexperience:
     title: Software Engineer
     location: Austin, TX
 
-
 education:
   - name: Austin Coding Academy
     dates: Jan 2021 - Dec 2021
@@ -41,7 +38,7 @@ education:
 
 projects:
   - name: Arboretum Creek Restoration
-    desc: A website to advertise the ecological need for a creek in the Seattle Arboretum park.
-    url: https://www.arboretumcreek.org
+    desc: A website to advertise the ecological need for a creek ion the Seattle Arboretum Park.
+    url: http://www.arboretumcreek.org
 
 ---
