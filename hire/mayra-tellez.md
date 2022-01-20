@@ -5,26 +5,26 @@ layout: resume # don't touch
 categories: [ hire, graduation, austincodingacademy ] # don't touch
 
 fullname: Mayra Téllez
-jobtitle: Web Developer
+jobtitle: Front End Web Developer
 
 location: Austin, TX
-blurb: "My mission is to add value to a team and overall wellbeing of a growing company." # tells us what your mission is, why you learned coding, or what makes you special
+blurb: "Front End Developer with a pixel perfect mindset. I work best when I'm learning, problem solving, and am excited for the opportunity to contribute to the success of a team." # tells us what your mission is, why you learned coding, or what makes you special
 
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
 skills:
   - JavaScript
-  - SQL
-  - HTML
   - CSS
+  - HTML
+  - SQL
   - Testing
   - Vercel
   - Git/GitHub
   - WebPack
   - REST APIs
 
-github: https://github.com/MayraNT
-linkedin: https://www.linkedin.com/in/mayra-téllez-b3b015b6
-
+github: https://github.com/mayra-tellez
+linkedin: https://www.linkedin.com/in/mayra-tellez/
+website: https://mayra-tellez.github.io/Portfolio/
 email: mayranicoletellez@gmail.com # email for professional use
 phone: 210-385-3133 # cell number
 
@@ -33,7 +33,7 @@ phone: 210-385-3133 # cell number
 workexperience:
   - company: Wildflowers Boutique
     dates: June 2017 - March 2020
-    title: Manager / Key Holder
+    title: Manager
     location: Austin, TX
 
   - company: Beautifully Loved
@@ -50,7 +50,7 @@ workexperience:
 education:
   - name: Austin Coding Academy
     dates: Jan 2021 - Dec 2021
-    degree: Web Development
+    degree: Full Stack Web Development
 
   - name: Texas State University
     dates: Aug 2011 - May 2015
@@ -60,9 +60,5 @@ projects:
   - name: billy # title of your project
     desc: Monthly Bills Tracker App # very short description of your project
     url: https://bills-tracker.vercel.app/ # link to your deployed project
-
-  - name: Hair Salon
-    desc: Website Mockup for a Hair Salon
-    url: https://mayrant.github.io/hairSalonWebsite/
 
 ---
