@@ -277,7 +277,7 @@ schools:
     {% for location in school.locations %}
     {% assign start_dates = site.data.startDates[location.hubspot_company_id] %}
       <div class="mt-6 mt-sm-8 d-flex flex-wrap justify-content-center">
-        {% for start_date in start_dates limit: 2 %}
+        {% for start_date in start_dates limit: 3 %}
         <!-- htmllint preset="none" -->
         <div class="mx-2 mb-4 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
         <!-- htmllint preset="$previous" -->
