@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "subject": "Coding Prep Course (5/24/22)",
+      "canonical_company_id": null,
+      "start_date": "2022-05-24",
+      "hs_object_id": "902777777",
+      "currently_enrolling": "true",
+      "cohort_start": "true",
+      "course_type": null,
+      "course_subject": null,
+      "course_length": "2 weeks",
+      "days": "Tuesday;Thursday",
+      "start_time": "18:30",
+      "end_time": "21:00",
+      "hs_pipeline_stage": "1532448"
+    },
+    {
+      "subject": "Coding Prep Course (6/14/22)",
+      "canonical_company_id": null,
+      "start_date": "2022-06-14",
+      "hs_object_id": "902760756",
+      "currently_enrolling": "true",
+      "cohort_start": "true",
+      "course_type": "remote",
+      "course_subject": null,
+      "course_length": "2 weeks",
+      "days": "Tuesday;Thursday",
+      "start_time": "18:30",
+      "end_time": "21:00",
+      "hs_pipeline_stage": "1532448"
+    }
+  ]
+}
