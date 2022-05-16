@@ -6,8 +6,7 @@ const { groupBy } = require('lodash');
 
 const fetchStartDates = async () => {
   try {
-    // let objects = await ( await fetch(process.env.ZQL_PREP_DATES_URL)).json();
-    let objects = require('../_temp/tempPrepDates.json');
+    let objects = await ( await fetch(process.env.ZQL_PREP_DATES_URL)).json();
     objects = objects.results.map(object => {
       let days = ''
       if(object.days){
