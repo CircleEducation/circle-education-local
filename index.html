@@ -5,6 +5,8 @@ head_title: "{{ school.name }} | Learn to Code, Change Your Life"
 hero: index
 circle_hero: circle
 title: Homepage
+amp_components:
+- amp-recaptcha-input
 description: At {{ school.name }}, we fit learning to code into your life with a flexible
   &amp; affordable array of options, all taught by current industry professionals.
   Don’t wait - embark on a new career today!
@@ -137,7 +139,6 @@ schools:
 <div class="position-relative d-flex justify-content-center flex-column overflow-hidden p-0 container-lg">
   <div class="pl-3 pl-sm-2 m-md-6 m-sm-1 py-7 pb-md-11 position-absolute z-20 d-sm-block d-md-flex justify-content-center bg-white mw-600 rounded shadow-lg">
     <div class="col-sm-11 col-md-10 col-lg-10 pl-0">
-      <!-- <div class="my-md-11"></div> -->
       <h1 class="font-family-alt font-weight-bold display-responsive col-sm-12 col-md-9 pl-0">
         {{ page.heading | liquify }}
       </h1>
@@ -259,6 +260,14 @@ schools:
             </div>
           </div>
         {% endfor %}
+        <h2 class="font-family-alt font-weight-bold text-center display-5 mt-6 mb-0 p-5">
+          Download Our Course Guide
+        </h2>
+          <a href="./assets/uploads/2022_ACACourseGuide.pdf" class="btn btn-primary-light hover-white {% if school.inverted != true %}btn-round{% else %}w-100{% endif %}">
+          <button target="_blank" type="submit" class="btn text-black {% if school.inverted != true %}btn-round{% endif %} btn-md-block bg-primary-light hover-white">
+            View Guide
+          </button>
+          </a>
       </div>
     </div>
   </section>
@@ -270,7 +279,7 @@ schools:
     {% for location in school.locations %}
     {% assign start_dates = site.data.startDates[location.hubspot_company_id] %}
       <div class="mt-6 mt-sm-8 d-flex flex-wrap justify-content-center">
-        {% for start_date in start_dates limit: 2 %}
+        {% for start_date in start_dates limit: 3 %}
         <!-- htmllint preset="none" -->
         <div class="mx-2 mb-4 mx-sm-5 mw-350 w-100 {% cycle '', 'mt-4 mt-sm-0' %}">
         <!-- htmllint preset="$previous" -->
@@ -372,18 +381,6 @@ schools:
       </div>
     {% endfor %}
   </section>
-  
-  {% if school.course_guide != '' %}
-  <!-- Course Guide Form -->
-  <section class="mb-6 mt-4 py-5 container-fluid px-lg-3">
-  {% if school.course_guide_online != '' %}
-    {% assign href = school.course_guide_online %}
-  {% else %}
-    {% assign href = school.course_guide %}
-  {% endif %}
-    {% include course-guide-form.html course_guide_href=href %}
-  </section>
-  {% endif %}
 
   {% if site.key == 'austincodingacademy' %}
     <section class="py-8 bg-textured">
