@@ -510,7 +510,7 @@ isa_inputs:
   });
 </script>
 {% endif %}
-<script>
+<script data-cfasync="false">
   window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('[name="email"]').insertAdjacentHTML('afterend', '<div class="invalid-feedback application-exists"></div>')
     const checkForApplication = async () => {
