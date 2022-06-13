@@ -531,7 +531,7 @@ isa_inputs:
         document.querySelectorAll('.application-exists').forEach(el => {
           el.classList.remove('d-block')
           el.innerHTML = '';
-        })
+        });
       }
     }
     if (document.querySelector('[name="email"]').value && !decodeURLParams(window.location.search)['force']) checkForApplication()
