@@ -464,7 +464,8 @@ isa_inputs:
           {% endif %}
           <div class="my-4 d-flex flex-column align-items-center">
             <!-- htmllint preset="none" -->
-            <button class="mb-4 btn cta-gradient hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" >
+            <div class="my-4 text-center invalid-feedback application-exists"></div>
+            <button id="submit-button" class="mb-4 btn cta-gradient hover-white text-white hover-white {% if school.inverted != true %}btn-round{% endif %} {{ include.class | liquify }}" >
 
             <!-- htmllint preset="$previous" -->
               Submit
@@ -506,6 +507,30 @@ isa_inputs:
         referralCode.removeAttribute('disabled')
       }
     })
+    document.querySelector('[name="email"]').insertAdjacentHTML('afterend', '<div class="invalid-feedback application-exists"></div>')
+    const checkForApplication = async () => {
+      const email = document.querySelector('[name="email"]').value;
+      const hasApplied = await (await fetch(`{{ settings.amp_proxy }}/application-exists?email=${encodeURIComponent(email)}`)).json();
+      if (hasApplied) {
+        document.querySelector('#submit-button').disabled = true;
+        document.querySelector('#submit-button').classList.add('disabled');
+        document.querySelector('[name="email"]').classList.add('is-invalid');
+        document.querySelectorAll('.application-exists').forEach(el => {
+          el.classList.add('d-block')
+          el.innerHTML = 'If you\'ve already applied with this email, please contact us.';
+        });
+      } else {
+        document.querySelector('#submit-button').removeAttribute('disabled');
+        document.querySelector('[name="email"]').classList.remove('is-invalid');
+        document.querySelector('#submit-button').classList.remove('disabled');
+        document.querySelectorAll('.application-exists').forEach(el => {
+          el.classList.remove('d-block')
+          el.innerHTML = '';
+        })
+      }
+    }
+    if (document.querySelector('[name="email"]').value && !decodeURLParams(window.location.search)['force']) checkForApplication()
+    document.querySelector('[name="email"]').addEventListener('blur', checkForApplication);
   });
 </script>
 {% endif %}
