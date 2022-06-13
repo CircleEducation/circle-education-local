@@ -507,6 +507,11 @@ isa_inputs:
         referralCode.removeAttribute('disabled')
       }
     })
+  });
+</script>
+{% endif %}
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('[name="email"]').insertAdjacentHTML('afterend', '<div class="invalid-feedback application-exists"></div>')
     const checkForApplication = async () => {
       const email = document.querySelector('[name="email"]').value;
@@ -533,4 +538,3 @@ isa_inputs:
     document.querySelector('[name="email"]').addEventListener('blur', checkForApplication);
   });
 </script>
-{% endif %}
