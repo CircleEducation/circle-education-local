@@ -6,27 +6,22 @@ description: ''
 redirect_from: []
 title: Student Grievance Policy
 policy_paragraphs:
-- It is the school’s policy to resolve student grievances by working directly with
-  the student, instructor, and other students if affected. Students with grievances
-  should initially contact their instructor and articulate their grievance in writing.
-  The instructor will notify the Director of Student Services of student grievance
-  and attempt to resolve the grievance.
-- Attempts to resolve the grievance will be documented in email by the instructor
-  and copied to the Director of Student Services. If the instructor and student are
-  unable to resolve the grievance, the grievance will be escalated to the Director
-  of Student Services. The Director of Student Services will review prior resolution
-  documentation, identify student concerns, needs, desires, and attempt to resolve
-  the grievance with the student. The Director of Services will document this process
-  in writing in a student report file.
-- If the Director of Student Services is unable to resolve the student grievance,
-  the Director of Student Services will convene a committee of 2 student peers, 2
-  other certified instructors, and the Director of Student Services to resolve the
-  student grievance. The committee will review articulated grievance and documented
-  attempts to resolve and form a majority decision for grievance resolution and present
-  to student for approval. The Director of Student Services will document their resolution
-  in the student report file.
+- "Dear Students:\n\nAustin Coding Academy has a Certificate of Approval from the
+  Texas Workforce Commission (TWC). \nThe TWC-assigned school number is: S5117-Austin
+  Coding Academy\n\nThe school’s programs are approved by TWC.\n\nStudents must address
+  their concerns about this school or any of its educational programs by following
+  the grievance process outlined in the school’s catalog. Schools are responsible
+  for ensuring and documenting that all students have received a copy of the school’s
+  grievance procedures and for describing these procedures in the school’s published
+  catalog. If, as a student, you were not provided with this information, please inform
+  the school’s administrative staff.\n\nStudents dissatisfied with this school’s response
+  to their complaint or who are not able to file a complaint with the school, can
+  file a formal complaint with TWC, as well as with other relevant agencies or accreditors,
+  if applicable.\n\nInformation on filing a complaint with TWC can be found on TWC’s
+  website at: www.texasworkforce.org/careerschoolstudents\n\nComplaints may be directed
+  to the school via email: S5117Director@zollege.com"
 contact_name: ''
-contact_phone: 512-488-9802
+contact_phone: ''
 contact_email: S5117Director@zollege.com
 schools:
 - key: austincodingacademy
@@ -72,28 +67,5 @@ schools:
     {% for paragraph in page.policy_paragraphs %}
       <p>{{ paragraph }}</p>
     {% endfor %}
-    <ul class="list-unstyled text-muted pl-5">
-      <li>{{ page.contact_name }}</li>
-      <li>{{ page.contact_phone }}</li>
-      <li>{{ page.contact_email }}</li>
-    </ul>
-    {% if site.key == 'austincodingacademy' %}
-      <p>
-        {{ school.p1 }}
-      </p>
-      <ul class="list-unstyled text-muted pl-5">
-        {% for item in school.twc_info %}
-          <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
-      <p>
-        {{ school.p2 }}
-      </p>
-      <p>{{ school.twc_num_heading }} </p>
-      <ul class="list-unstyled text-muted pl-5">
-        <li>{{ school.twc_north }}</li>
-        <li>{{ school.twc_austin }}</li>
-      </ul>
-    {% endif %}
   </div>
 </div>
