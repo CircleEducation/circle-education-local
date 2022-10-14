@@ -8,7 +8,7 @@ fullname: Max Homsi
 jobtitle: Fullstack Developer
 
 location: Austin, TX
-blurb: "" # I learned to be able to work remotely to take care of my mom""
+blurb: "I learned to be able to work remotely to take care of my mom"
 
 # the first 3 will display on the card display, but list as many as you want, they will be visible on your hire page
 skills:
@@ -36,9 +36,9 @@ workexperience:
     title: Tech
     location: Austin, TX
 
-
 education:
   - name: Austin Coding Academy
-    dates: JAN 2022 - OCT 2022
+    dates: Jan 2022 - Oct 2022
     degree: Web Development
 
+---
