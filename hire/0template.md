@@ -21,12 +21,11 @@ skills:
   
 github: https://github.com/RacMcT
 linkedin: https://www.linkedin.com/in/rachel-mctavish/
-
 email: raccmct@gmail.com # email for professional use
 phone: ""
 
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
-
+ 
 workexperience:
   - company: Calendars.com
     dates: June 2021 - Present
