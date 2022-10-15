@@ -30,11 +30,11 @@ website: https://www.loom.com/share/9576cf41216949ec96c3bad49fe55507
 # Make sure to edit these to be accurate for your work! The more relevant the better if the role was technical, don't feel like you need to put every job you've had.
 
 workexperience:
- - company:
+  - company: Reliant Rehabilitation 
     dates: Jan 2020 - Present
     title: Occupational Therapy Assistant 
     location: Austin, TX
-  - company:
+  - company: Creative Solutions
     dates: Sept 2020 - Jan 2022
     title: Director of Rehabilitation 
     location: Eagle Pass, TX
@@ -48,4 +48,5 @@ projects:
   - name: Foodie App
     desc: Based on user geolocation, my app will allow the user to filter restaurants by category, radius and price in order to streamline the decision-making process of where to eat.
     url: https://foodpair.netlify.app/
+
 ---
