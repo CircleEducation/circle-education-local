@@ -68,7 +68,7 @@
     "qs": "^6.9.4",
     "sitemap-generator-cli": "^6.2.6",
     "staticrypt": "^1.3.2",
-    "stylelint": "^13.7.2",
+    "stylelint": "^15.10.1",
     "stylelint-config-recommended": "^3.0.0",
     "url-parse": "^1.4.7",
     "yaml": "^1.10.0"
