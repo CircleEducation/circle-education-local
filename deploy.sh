@@ -30,11 +30,6 @@ if [ "${CIRCLE_BRANCH}" == "preview" ] || [ "${CIRCLE_BRANCH}" == "master" ]; th
       npm run optimize
       if [ "${CIRCLE_BRANCH}" == "preview" ]; then npm run encrypt; fi
       npm run deploy
-      if [[ "${KEY}" == "austincodingacademy.com" ]] && [[ "${CIRCLE_BRANCH}" == "master" ]]; then
-        node _javascripts/aca.stedwards.js
-        echo "aca.stedwards.edu" >> _site/locations/st-edwards/CNAME
-        npx gh-pages -d _site/locations/st-edwards/ -r git@github.com:CircleEducation/aca.stedwards.edu.git
-      fi
     fi
     ((ITER++))
   done
